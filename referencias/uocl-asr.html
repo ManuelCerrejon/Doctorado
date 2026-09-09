@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        UOCL for ASR | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/adaptacion-aprendizaje-continuo.html"
+                    class="volver"
+                >
+                    ← Volver a Adaptación y aprendizaje continuo
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Unsupervised Online
+                    Continual Learning
+                </h1>
+
+
+                <h2>
+                    Unsupervised Online Continual Learning
+                    for Automatic Speech Recognition
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Vander Eeckt, S. & Van hamme, H.
+                    · Interspeech 2024
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>ASR</span>
+                    <span>Online Continual Learning</span>
+                    <span>Unsupervised Learning</span>
+                    <span>Self-Training</span>
+                    <span>Pseudo-Labels</span>
+                    <span>AOS-U</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Steven Vander Eeckt
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        Interspeech 2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        2845–2849
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Vander Eeckt, S., & Van hamme, H. (2024).
+                    <em>
+                        Unsupervised Online Continual Learning
+                        for Automatic Speech Recognition.
+                    </em>
+                    Interspeech 2024,
+                    2845–2849.
+                    DOI: 10.21437/Interspeech.2024-136.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Aprender continuamente sin etiquetas
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Un sistema de reconocimiento desplegado
+                    puede recibir continuamente habla
+                    procedente de nuevos acentos,
+                    micrófonos, hablantes y dominios.
+                </p>
+
+                <p>
+                    En Online Continual Learning,
+                    estas muestras forman un flujo
+                    no i.i.d. en el que el modelo
+                    desconoce a qué tarea pertenece
+                    cada batch.
+                </p>
+
+                <p>
+                    Además, cada batch solamente
+                    puede utilizarse una vez y las
+                    fronteras entre tareas no son conocidas.
+                </p>
+
+                <p>
+                    Este trabajo añade una dificultad
+                    adicional: los nuevos datos
+                    tampoco disponen de transcripciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OCL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    ONLINE CONTINUAL LEARNING
+                </p>
+
+                <h2>
+                    Flujo continuo sin fronteras conocidas
+                </h2>
+
+                <p>
+                    El modelo recibe batches sucesivos
+                    pertenecientes a tareas desconocidas.
+                </p>
+
+                <p>
+                    Debe utilizar cada batch para aprender
+                    nueva información manteniendo
+                    simultáneamente el conocimiento
+                    adquirido anteriormente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRES CONDICIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ESCENARIO
+                </p>
+
+                <h2>
+                    Tres restricciones de OCL
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Unknown Boundaries
+                    </strong>
+
+                    <span>
+                        Fronteras desconocidas
+                    </span>
+
+                    <p>
+                        El sistema no recibe una
+                        señal indicando cuándo cambia
+                        el dominio.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Unknown Tasks
+                    </strong>
+
+                    <span>
+                        Tarea desconocida
+                    </span>
+
+                    <p>
+                        Cada batch llega sin indicar
+                        de qué acento, dominio
+                        o condición procede.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Single Pass
+                    </strong>
+
+                    <span>
+                        Una sola oportunidad
+                    </span>
+
+                    <p>
+                        Una vez procesado el batch,
+                        se pierde el acceso directo
+                        a esos datos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             UOCL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · UOCL
+                </p>
+
+                <h2>
+                    Online Continual Learning sin etiquetas
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        SUPERVISED OCL
+                    </p>
+
+                    <h3>
+                        Audio + Ground Truth
+                    </h3>
+
+                    <ul>
+                        <li>Flujo continuo</li>
+                        <li>Fronteras desconocidas</li>
+                        <li>Transcripciones disponibles</li>
+                        <li>Catastrophic forgetting</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        UNSUPERVISED OCL
+                    </p>
+
+                    <h3>
+                        Solo Audio
+                    </h3>
+
+                    <ul>
+                        <li>Flujo continuo</li>
+                        <li>Fronteras desconocidas</li>
+                        <li>Sin transcripciones</li>
+                        <li>Pseudo-labels</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SELF TRAINING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · SELF-TRAINING
+                </p>
+
+                <h2>
+                    El modelo crea sus propias etiquetas
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio sin etiquetar
+                        </h3>
+
+                        <p>
+                            Se recibe un nuevo batch
+                            del flujo continuo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Inferencia
+                        </h3>
+
+                        <p>
+                            El propio sistema ASR
+                            genera una transcripción
+                            provisional.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pseudo-Label
+                        </h3>
+
+                        <p>
+                            La predicción pasa a
+                            utilizarse como objetivo
+                            de entrenamiento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Continual Update
+                        </h3>
+
+                        <p>
+                            El modelo actualiza
+                            sus parámetros antes
+                            de continuar con
+                            el siguiente batch.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PSEUDO LABELS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · PSEUDO-LABELING
+                </p>
+
+                <h2>
+                    Tres estrategias
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        GREEDY CTC
+                    </p>
+
+                    <h3>
+                        CTC
+                    </h3>
+
+                    <ul>
+                        <li>Rápido</li>
+                        <li>Sin decoder</li>
+                        <li>Basado directamente en evidencia acústica</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        HYBRID
+                    </p>
+
+                    <h3>
+                        CTC + Decoder
+                    </h3>
+
+                    <ul>
+                        <li>Combina ambas distribuciones</li>
+                        <li>Utiliza el LM interno del decoder</li>
+                        <li>Mayor información lingüística</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        BERT-CTC
+                    </p>
+
+                    <h3>
+                        CTC + BERT
+                    </h3>
+
+                    <ul>
+                        <li>LM externo</li>
+                        <li>Útil ante text-domain shift</li>
+                        <li>Reduce dependencia del LM interno antiguo</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OCL METHODS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · MÉTODOS OCL
+                </p>
+
+                <h2>
+                    Controlar el olvido
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Fine-Tuning
+                    </strong>
+
+                    <span>
+                        FT
+                    </span>
+
+                    <p>
+                        Actualización directa
+                        sin ningún mecanismo
+                        explícito contra el olvido.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Experience Replay
+                    </strong>
+
+                    <span>
+                        ER
+                    </span>
+
+                    <p>
+                        Conserva una pequeña memoria
+                        con muestras de tareas anteriores
+                        y las mezcla con los nuevos datos.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        AOS
+                    </strong>
+
+                    <span>
+                        Averaging for Online CL
+                    </span>
+
+                    <p>
+                        Mantiene un modelo adaptado
+                        y otro estable y transfiere
+                        gradualmente las actualizaciones.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · AOS
+                </p>
+
+                <h2>
+                    Modelo adaptado + modelo estable
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Adapted Model
+                    </h3>
+
+                    <p>
+                        Aprende rápidamente
+                        de los nuevos batches.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Weight Averaging
+                    </h3>
+
+                    <p>
+                        Las actualizaciones se
+                        incorporan gradualmente
+                        al modelo final.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Final Model
+                    </h3>
+
+                    <p>
+                        Evoluciona más lentamente
+                        para reducir el olvido.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AOS-U
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROPUESTA DEL ARTÍCULO
+                </p>
+
+                <h2>
+                    AOS-U
+                </h2>
+
+                <p>
+                    Los autores modifican AOS
+                    específicamente para el escenario
+                    Unsupervised Online Continual Learning.
+                </p>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Adapted model → Pseudo-labels
+                        </h3>
+
+                        <p>
+                            El modelo que aprende más
+                            rápidamente se utiliza
+                            para generar las pseudoetiquetas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Sin Knowledge Distillation
+                        </h3>
+
+                        <p>
+                            Se elimina la regularización KD
+                            utilizada originalmente por AOS
+                            para no limitar demasiado
+                            el aprendizaje del modelo adaptado.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Procesamiento múltiple
+                        </h3>
+
+                        <p>
+                            Antes de actualizar,
+                            cada batch se procesa varias
+                            veces aprovechando dropout
+                            y data augmentation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            K = 2
+                        </h3>
+
+                        <p>
+                            Los experimentos utilizan
+                            dos versiones aleatorias
+                            del batch antes de realizar
+                            una única actualización.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXPERIMENTO 1
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · EXPERIMENTO 1
+                </p>
+
+                <h2>
+                    LibriSpeech → Libri-Adapt
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    El primer experimento estudia
+                    adaptación continua ante cambios
+                    simultáneos de acento y micrófono.
+                </p>
+
+                <p>
+                    El modelo inicial se entrena
+                    sobre LibriSpeech 360 h y después
+                    recibe seis tareas Libri-Adapt
+                    de forma secuencial.
+                </p>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>Source</span>
+                    <strong>LibriSpeech 360 h</strong>
+                </article>
+
+                <article>
+                    <span>Target tasks</span>
+                    <strong>6</strong>
+                </article>
+
+                <article>
+                    <span>Acentos</span>
+                    <strong>US · IN · GB</strong>
+                </article>
+
+                <article>
+                    <span>Micrófonos</span>
+                    <strong>USB · Matrix</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIBRIADAPT TASKS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    SECUENCIA
+                </p>
+
+                <h2>
+                    Seis dominios consecutivos
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>GB / Matrix</strong>
+                    <span>British English</span>
+                </article>
+
+                <article>
+                    <strong>US / USB</strong>
+                    <span>US English</span>
+                </article>
+
+                <article>
+                    <strong>IN / USB</strong>
+                    <span>Indian English</span>
+                </article>
+
+                <article>
+                    <strong>IN / Matrix</strong>
+                    <span>Indian English</span>
+                </article>
+
+                <article>
+                    <strong>US / Matrix</strong>
+                    <span>US English</span>
+                </article>
+
+                <article>
+                    <strong>GB / USB</strong>
+                    <span>British English</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODEL EXP1
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MODELO · EXPERIMENTO 1
+                </p>
+
+                <h2>
+                    Conformer + Transformer
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        INPUT
+                    </p>
+
+                    <h3>
+                        MFCC
+                    </h3>
+
+                    <ul>
+                        <li>Características acústicas</li>
+                        <li>Sin modelo SSL frontal</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        ENCODER
+                    </p>
+
+                    <h3>
+                        12 × Conformer
+                    </h3>
+
+                    <ul>
+                        <li>4 attention heads</li>
+                        <li>47 M parámetros totales</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        DECODER
+                    </p>
+
+                    <h3>
+                        6 × Transformer
+                    </h3>
+
+                    <ul>
+                        <li>Hybrid CTC / Decoder</li>
+                        <li>SentencePiece</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXP 1 RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · RESULTADOS · EXPERIMENTO 1
+                </p>
+
+                <h2>
+                    WER después de aprender todas las tareas
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>Tipo</th>
+                            <th>Average WER ↓</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Initial Model</td>
+                            <td>Sin adaptación</td>
+                            <td>13,18</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Supervised FT</td>
+                            <td>Supervisado</td>
+                            <td>10,55</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Supervised ER</td>
+                            <td>Supervisado</td>
+                            <td>
+                                <strong>9,05</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Supervised AOS</td>
+                            <td>Supervisado</td>
+                            <td>9,41</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>UOCL · FT + CTC</td>
+                            <td>Sin etiquetas</td>
+                            <td>10,76</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>UOCL · ER + Hybrid</td>
+                            <td>Sin etiquetas</td>
+                            <td>9,56</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                AOS-U + CTC
+                            </td>
+                            <td>
+                                Sin etiquetas
+                            </td>
+                            <td>
+                                <strong>9,52</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AOS U
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        EXPERIMENTO 1
+                    </span>
+
+                    <strong>
+                        9,52
+                    </strong>
+
+                    <p>
+                        Average WER · AOS-U + CTC
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Sin almacenar datos pasados
+                    </h3>
+
+                    <p>
+                        AOS-U alcanza un rendimiento
+                        próximo a Experience Replay
+                        sin necesitar conservar
+                        una memoria de muestras
+                        de dominios anteriores.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXP 2
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · EXPERIMENTO 2
+                </p>
+
+                <h2>
+                    LibriSpeech → TED-LIUM → Common Voice
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            LibriSpeech
+                        </h3>
+
+                        <p>
+                            Dominio inicial
+                            del sistema.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            TED-LIUM 3
+                        </h3>
+
+                        <p>
+                            Se utilizan aproximadamente
+                            100.000 utterances.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Common Voice English
+                        </h3>
+
+                        <p>
+                            Aproximadamente 135.000
+                            utterances correspondientes
+                            a tres acentos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    También cambia el dominio textual
+                </h3>
+
+                <p>
+                    Common Voice presenta frases
+                    más cortas y un vocabulario
+                    diferente, mientras que TED-LIUM
+                    contiene habla más espontánea.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODEL EXP2
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MODELO · EXPERIMENTO 2
+                </p>
+
+                <h2>
+                    HuBERT-Large + ASR
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        FRONTEND
+                    </p>
+
+                    <h3>
+                        HuBERT-Large
+                    </h3>
+
+                    <ul>
+                        <li>Preentrenado con Libri-Light</li>
+                        <li>Permanece congelado</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        ENCODER
+                    </p>
+
+                    <h3>
+                        6 × Conformer
+                    </h3>
+
+                    <ul>
+                        <li>Representaciones acústicas</li>
+                        <li>Linear pre-encoder</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        DECODER
+                    </p>
+
+                    <h3>
+                        6 × Transformer
+                    </h3>
+
+                    <ul>
+                        <li>CTC + Decoder</li>
+                        <li>5.000 tokens</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMMON HYPERPARAMS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · CONFIGURACIÓN
+                </p>
+
+                <h2>
+                    Entrenamiento y OCL
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>CTC weight</span>
+                    <strong>0,3</strong>
+                </article>
+
+                <article>
+                    <span>Vocabulary</span>
+                    <strong>5.000</strong>
+                </article>
+
+                <article>
+                    <span>Dropout</span>
+                    <strong>0,1</strong>
+                </article>
+
+                <article>
+                    <span>Initial training</span>
+                    <strong>80 epochs</strong>
+                </article>
+
+                <article>
+                    <span>Optimizer OCL</span>
+                    <strong>SGD</strong>
+                </article>
+
+                <article>
+                    <span>Learning rate</span>
+                    <strong>0,01</strong>
+                </article>
+
+                <article>
+                    <span>AOS-U K</span>
+                    <strong>2</strong>
+                </article>
+
+                <article>
+                    <span>Metric</span>
+                    <strong>WER</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXP2 RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · RESULTADOS · EXPERIMENTO 2
+                </p>
+
+                <h2>
+                    Text-domain shift
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>LIB</th>
+                            <th>TED</th>
+                            <th>CV</th>
+                            <th>Average ↓</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Initial Model</td>
+                            <td>6,4</td>
+                            <td>14,0</td>
+                            <td>18,8</td>
+                            <td>13,08</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Supervised FT</td>
+                            <td>8,4</td>
+                            <td>12,5</td>
+                            <td>16,0</td>
+                            <td>12,33</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Supervised ER</td>
+                            <td>7,6</td>
+                            <td>12,1</td>
+                            <td>16,0</td>
+                            <td>11,88</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Supervised AOS</td>
+                            <td>6,7</td>
+                            <td>12,5</td>
+                            <td>16,1</td>
+                            <td>
+                                <strong>11,75</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>AOS-U + CTC</td>
+                            <td>6,6</td>
+                            <td>12,9</td>
+                            <td>17,0</td>
+                            <td>12,15</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>AOS-U + BERT-CTC</td>
+                            <td>6,5</td>
+                            <td>12,8</td>
+                            <td>16,8</td>
+                            <td>
+                                <strong>12,01</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BERT CTC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    TEXT-DOMAIN SHIFT
+                </p>
+
+                <h3>
+                    BERT-CTC obtiene el mejor resultado UOCL
+                </h3>
+
+                <p>
+                    Cuando cambia también el dominio textual,
+                    el language model interno del decoder
+                    puede permanecer sesgado hacia
+                    el dominio original.
+                </p>
+
+                <p>
+                    BERT-CTC incorpora información
+                    lingüística externa partiendo
+                    de las predicciones CTC
+                    y obtiene 12,01 WER medio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PARADOX
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    RESULTADO CLAVE
+                </p>
+
+                <h2>
+                    Las pseudoetiquetas pueden provocar menos olvido
+                </h2>
+
+                <p>
+                    El aprendizaje supervisado dispone
+                    de objetivos más precisos y por tanto
+                    aprende mejor el nuevo dominio.
+                </p>
+
+                <p>
+                    Sin embargo, precisamente por producir
+                    actualizaciones más fuertes también
+                    puede olvidar más conocimiento anterior.
+                </p>
+
+                <p>
+                    En varios experimentos, el self-training
+                    no supervisado aprende de forma menos
+                    agresiva y reduce el catastrophic forgetting.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ABLATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    13 · ABLATION · AOS-U
+                </p>
+
+                <h2>
+                    De 10,17 a 9,52 WER
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Configuración</th>
+                            <th>Exp. 1</th>
+                            <th>Exp. 2</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                AOS + CTC pseudo-labels
+                            </td>
+                            <td>10,17</td>
+                            <td>12,33</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                + cambios (1) y (2)
+                            </td>
+                            <td>9,70</td>
+                            <td>12,17</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                + cambios (1), (2) y (3)
+                            </td>
+                            <td>
+                                <strong>9,52</strong>
+                            </td>
+                            <td>
+                                <strong>12,15</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MEMORY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    14 · MEMORIA
+                </p>
+
+                <h2>
+                    Experience Replay vs AOS-U
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>ER</th>
+                            <th>AOS-U</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Datos antiguos</td>
+                            <td>Almacenados</td>
+                            <td>No necesarios</td>
+                        </tr>
+
+                        <tr>
+                            <td>Memoria</td>
+                            <td>2.000 utterances</td>
+                            <td>Sin replay buffer</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pseudo-labels</td>
+                            <td>Posibles</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Modelo rápido</td>
+                            <td>Único modelo</td>
+                            <td>Adapted model</td>
+                        </tr>
+
+                        <tr>
+                            <td>Modelo estable</td>
+                            <td>Regularizado por replay</td>
+                            <td>Final model</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Pseudo-label errors
+                    </h3>
+
+                    <p>
+                        El modelo aprende a partir
+                        de sus propias predicciones
+                        y puede propagar errores.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Equilibrio estabilidad-plasticidad
+                    </h3>
+
+                    <p>
+                        Aprender rápidamente mejora
+                        el nuevo dominio, pero puede
+                        aumentar el olvido.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Memoria
+                    </h3>
+
+                    <p>
+                        Experience Replay es eficaz,
+                        pero requiere almacenar
+                        audio o pseudoetiquetas anteriores.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Confianza
+                    </h3>
+
+                    <p>
+                        El trabajo utiliza self-training,
+                        pero no plantea como núcleo
+                        un mecanismo explícito de
+                        incertidumbre calibrada para
+                        decidir cuándo aprender.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    SGEM · Dynamic SUTA · UOCL
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>SGEM</th>
+                            <th>Dynamic SUTA</th>
+                            <th>UOCL</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Sin etiquetas</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Flujo continuo</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Conserva aprendizaje</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Task boundaries conocidas</td>
+                            <td>No necesarias</td>
+                            <td>No necesarias</td>
+                            <td>No</td>
+                        </tr>
+
+                        <tr>
+                            <td>Una pasada por batch</td>
+                            <td>No es el paradigma</td>
+                            <td>No es el foco central</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Self-training</td>
+                            <td>No como estrategia principal</td>
+                            <td>No como núcleo</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Replay</td>
+                            <td>No</td>
+                            <td>Buffer temporal</td>
+                            <td>Evaluado como alternativa</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    El escenario más cercano a un sistema desplegado
+                </h2>
+
+                <p>
+                    UOCL plantea una situación especialmente
+                    realista para un sistema acústico
+                    que funciona continuamente.
+                </p>
+
+                <p>
+                    Los datos llegan como un flujo,
+                    el sistema desconoce cuándo
+                    cambia el dominio y no dispone
+                    necesariamente de anotaciones humanas.
+                </p>
+
+                <p>
+                    El trabajo demuestra que
+                    el self-training puede utilizarse
+                    para aprender continuamente,
+                    pero también deja abierta
+                    la cuestión de qué pseudoetiquetas
+                    deberían aceptarse.
+                </p>
+
+                <p>
+                    Una extensión natural para la tesis
+                    consiste en combinar Online Continual
+                    Learning con estimaciones de
+                    incertidumbre y detección OOD.
+                </p>
+
+                <p>
+                    Las muestras fiables podrían utilizarse
+                    para adaptar el modelo, mientras que
+                    las predicciones dudosas podrían
+                    descartarse, almacenarse temporalmente
+                    o requerir supervisión.
+                </p>
+
+                <p>
+                    De este modo, la confianza pasaría
+                    a convertirse en un mecanismo
+                    de control del aprendizaje continuo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA DERIVADA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Confidence-Guided Continual Adaptation
+                </h2>
+
+                <p>
+                    No aprender automáticamente
+                    de todas las predicciones.
+                </p>
+
+                <p>
+                    Antes de actualizar el modelo,
+                    evaluar confianza, cambio de dominio
+                    y consistencia de la pseudoetiqueta.
+                </p>
+
+                <p>
+                    Adaptar únicamente cuando exista
+                    evidencia suficiente para considerar
+                    fiable la actualización.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        LoRA-Whisper | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/adaptacion-aprendizaje-continuo.html"
+                    class="volver"
+                >
+                    ← Volver a Adaptación y aprendizaje continuo
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    LoRA-Whisper
+                </h1>
+
+
+                <h2>
+                    Parameter-Efficient and
+                    Extensible Multilingual ASR
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Song, Z. et al. · Interspeech 2024
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Whisper</span>
+                    <span>LoRA</span>
+                    <span>PEFT</span>
+                    <span>Multilingual ASR</span>
+                    <span>Continual Learning</span>
+                    <span>Language Expansion</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Zheshu Song
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        Interspeech 2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.21437/Interspeech.2024-892
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Song, Z., Zhuo, J., Yang, Y.,
+                    Ma, Z., Zhang, S., & Chen, X. (2024).
+                    <em>
+                        LoRA-Whisper:
+                        Parameter-Efficient and
+                        Extensible Multilingual ASR.
+                    </em>
+                    Interspeech 2024,
+                    3934–3938.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Añadir idiomas sin destruir los anteriores
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los sistemas ASR multilingües deben
+                    aprender simultáneamente lenguas
+                    con diferentes cantidades de datos,
+                    pronunciaciones y características.
+                </p>
+
+                <p>
+                    Esto puede producir interferencia:
+                    mejorar una lengua puede deteriorar
+                    el rendimiento en otra.
+                </p>
+
+                <p>
+                    El segundo problema aparece al
+                    incorporar posteriormente una nueva lengua.
+                </p>
+
+                <p>
+                    Realizar fine-tuning del modelo completo
+                    únicamente con los nuevos datos puede
+                    producir catastrophic forgetting
+                    de las lenguas aprendidas anteriormente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Un LoRA diferente para cada lengua
+                </h2>
+
+                <p>
+                    El modelo Whisper original permanece
+                    congelado y almacena la información
+                    compartida entre idiomas.
+                </p>
+
+                <p>
+                    Cada lengua dispone de un módulo
+                    LoRA independiente encargado de
+                    capturar información específica.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Whisper compartido + LoRA específico
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Speech
+                    </h3>
+
+                    <p>
+                        Audio correspondiente
+                        a una lengua concreta.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>BASE MODEL</span>
+
+                    <h3>
+                        Whisper-small
+                    </h3>
+
+                    <p>
+                        Parámetros compartidos
+                        y congelados.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    +
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LANGUAGE</span>
+
+                    <h3>
+                        LoRA-k
+                    </h3>
+
+                    <p>
+                        Módulo específico
+                        para la lengua activa.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Transcription
+                    </h3>
+
+                    <p>
+                        Texto reconocido
+                        en la lengua correspondiente.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LORA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · LOW-RANK ADAPTATION
+                </p>
+
+                <h2>
+                    W permanece congelada
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    ACTUALIZACIÓN
+                </p>
+
+                <h2>
+                    W' = W + BA
+                </h2>
+
+                <p>
+                    En lugar de modificar directamente
+                    la matriz original W, LoRA aprende
+                    dos matrices de bajo rango
+                    A y B.
+                </p>
+
+                <p>
+                    Solo estos nuevos parámetros
+                    participan en el entrenamiento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RANK
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · SELECCIÓN DEL RANK
+                </p>
+
+                <h2>
+                    Experimento sobre Polish
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Rank</th>
+                            <th>Parámetros LoRA</th>
+                            <th>WER</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>8</td>
+                            <td>3,2 M</td>
+                            <td>9,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>16</td>
+                            <td>6,5 M</td>
+                            <td>8,54</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>32</strong>
+                            </td>
+                            <td>
+                                <strong>13,0 M</strong>
+                            </td>
+                            <td>
+                                <strong>7,94</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>48</td>
+                            <td>19,5 M</td>
+                            <td>8,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>64</td>
+                            <td>26,0 M</td>
+                            <td>8,00</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Configuración seleccionada
+                </h3>
+
+                <p>
+                    Los autores seleccionan
+                    r = 32 para el resto
+                    de los experimentos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DONDE SE INSERTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · INSERCIÓN DE LORA
+                </p>
+
+                <h2>
+                    Encoder y Decoder
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        ATTENTION
+                    </p>
+
+                    <h3>
+                        Wk · Wq · Wv
+                    </h3>
+
+                    <ul>
+                        <li>Key projection</li>
+                        <li>Query projection</li>
+                        <li>Value projection</li>
+                        <li>Todos los bloques Transformer</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        FEED-FORWARD
+                    </p>
+
+                    <h3>
+                        Wfc
+                    </h3>
+
+                    <ul>
+                        <li>Capa fully-connected</li>
+                        <li>Encoder</li>
+                        <li>Decoder</li>
+                        <li>Base model congelado</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAIN CONFIG
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Configuración experimental
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>Modelo</span>
+                    <strong>Whisper-small</strong>
+                </article>
+
+                <article>
+                    <span>Rank</span>
+                    <strong>32</strong>
+                </article>
+
+                <article>
+                    <span>LoRA / lengua</span>
+                    <strong>13 M</strong>
+                </article>
+
+                <article>
+                    <span>Whisper FT</span>
+                    <strong>240 M</strong>
+                </article>
+
+                <article>
+                    <span>Optimizador</span>
+                    <strong>AdamW</strong>
+                </article>
+
+                <article>
+                    <span>Peak LR</span>
+                    <strong>1e-4</strong>
+                </article>
+
+                <article>
+                    <span>Épocas</span>
+                    <strong>10</strong>
+                </article>
+
+                <article>
+                    <span>GPU</span>
+                    <strong>2 × RTX 3090</strong>
+                </article>
+
+                <article>
+                    <span>VRAM</span>
+                    <strong>24 GB</strong>
+                </article>
+
+                <article>
+                    <span>Beam size</span>
+                    <strong>5</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · DATASETS
+                </p>
+
+                <h2>
+                    Ocho lenguas
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        BASE · MLS
+                    </span>
+
+                    <h3>
+                        Polish
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        103 h
+                    </strong>
+
+                    <p>
+                        Test: 2 h
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        BASE · MLS
+                    </span>
+
+                    <h3>
+                        Portuguese
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        160 h
+                    </strong>
+
+                    <p>
+                        Test: 5 h
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        BASE · MLS
+                    </span>
+
+                    <h3>
+                        Italian
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        247 h
+                    </strong>
+
+                    <p>
+                        Test: 5 h
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        BASE · FLEURS
+                    </span>
+
+                    <h3>
+                        Chinese
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        9,7 h
+                    </strong>
+
+                    <p>
+                        Test: 3,1 h
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        NEW · FLEURS
+                    </span>
+
+                    <h3>
+                        Danish
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        7,5 h
+                    </strong>
+
+                    <p>
+                        Test: 2,9 h
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        NEW · FLEURS
+                    </span>
+
+                    <h3>
+                        Greek
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        10,0 h
+                    </strong>
+
+                    <p>
+                        Test: 1,9 h
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        NEW · FLEURS
+                    </span>
+
+                    <h3>
+                        Welsh
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        12,2 h
+                    </strong>
+
+                    <p>
+                        Test: 4,3 h
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        NEW · FLEURS
+                    </span>
+
+                    <h3>
+                        Japanese
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        7,4 h
+                    </strong>
+
+                    <p>
+                        Test: 2,4 h
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXPERIMENT 1
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · EXPERIMENTO 1
+                </p>
+
+                <h2>
+                    Multilingual ASR
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Trainable</th>
+                            <th>PL</th>
+                            <th>PT</th>
+                            <th>IT</th>
+                            <th>ZH</th>
+                            <th>Media</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Whisper-small</td>
+                            <td>—</td>
+                            <td>10,90</td>
+                            <td>13,82</td>
+                            <td>20,43</td>
+                            <td>9,25</td>
+                            <td>13,60</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Full multilingual
+                            </td>
+                            <td>240 M</td>
+                            <td>8,30</td>
+                            <td>13,34</td>
+                            <td>10,69</td>
+                            <td>14,37</td>
+                            <td>11,68</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Full monolingual
+                            </td>
+                            <td>240 M × 4</td>
+                            <td>7,65</td>
+                            <td>10,21</td>
+                            <td>10,27</td>
+                            <td>8,64</td>
+                            <td>
+                                <strong>9,19</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                LoRA-Whisper
+                            </td>
+                            <td>13 M × 4</td>
+                            <td>7,94</td>
+                            <td>10,81</td>
+                            <td>10,49</td>
+                            <td>8,82</td>
+                            <td>
+                                <strong>9,52</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        MULTILINGUAL ASR
+                    </span>
+
+                    <strong>
+                        18,5 %
+                    </strong>
+
+                    <p>
+                        relative gain
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Frente al full multilingual
+                    </h3>
+
+                    <p>
+                        La media mejora desde
+                        11,68 hasta 9,52
+                        utilizando muchos menos
+                        parámetros entrenables.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LANGUAGE EXPANSION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · LANGUAGE EXPANSION
+                </p>
+
+                <h2>
+                    Añadir cuatro lenguas nuevas
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores incorporan Danish,
+                    Greek, Welsh y Japanese después
+                    de haber entrenado el sistema
+                    sobre las cuatro lenguas base.
+                </p>
+
+                <p>
+                    El objetivo es aprender las nuevas
+                    lenguas sin deteriorar Polish,
+                    Portuguese, Italian y Chinese.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FULL FORGETTING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    CATASTROPHIC FORGETTING
+                </p>
+
+                <h2>
+                    Full fine-tuning destruye parte del conocimiento previo
+                </h2>
+
+                <p>
+                    Al realizar fine-tuning completo
+                    únicamente con las nuevas lenguas,
+                    el WER medio de las lenguas base
+                    pasa de 11,68 a 32,29.
+                </p>
+
+                <p>
+                    Algunas lenguas se deterioran
+                    especialmente; Chinese alcanza
+                    68,93 WER.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXPANSION RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADOS
+                </p>
+
+                <h2>
+                    Nuevas lenguas vs lenguas anteriores
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>New Avg ↓</th>
+                            <th>Base Avg ↓</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Full fine-tuning
+                            </td>
+                            <td>28,33</td>
+                            <td>32,29</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Full + base replay
+                            </td>
+                            <td>30,13</td>
+                            <td>13,35</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                LoRA
+                            </td>
+                            <td>22,97</td>
+                            <td>
+                                <strong>9,52</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                LoRA Warm Start
+                            </td>
+                            <td>21,83</td>
+                            <td>
+                                <strong>9,52</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                LoRA MoE
+                            </td>
+                            <td>
+                                <strong>21,81</strong>
+                            </td>
+                            <td>
+                                <strong>9,52</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WARM START
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · LORA WARM START
+                </p>
+
+                <h2>
+                    Reutilizar una lengua similar
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Nueva lengua
+                        </h3>
+
+                        <p>
+                            Se seleccionan M muestras
+                            del nuevo idioma.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Language Detection
+                        </h3>
+
+                        <p>
+                            Whisper genera una
+                            distribución de probabilidad
+                            sobre las lenguas base.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Similarity
+                        </h3>
+
+                        <p>
+                            Se determina qué lengua
+                            existente es más similar
+                            a la nueva.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            LoRA Initialization
+                        </h3>
+
+                        <p>
+                            El nuevo módulo LoRA
+                            se inicializa a partir
+                            del módulo de la lengua
+                            más próxima.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Continual Training
+                        </h3>
+
+                        <p>
+                            Solo el nuevo módulo
+                            continúa entrenándose.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SIMILAR LANG
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    SIMILITUD
+                </p>
+
+                <h2>
+                    Relaciones encontradas
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Nueva lengua</th>
+                            <th>Lengua más similar</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Danish</td>
+                            <td>Portuguese</td>
+                        </tr>
+
+                        <tr>
+                            <td>Greek</td>
+                            <td>Portuguese</td>
+                        </tr>
+
+                        <tr>
+                            <td>Welsh</td>
+                            <td>Polish</td>
+                        </tr>
+
+                        <tr>
+                            <td>Japanese</td>
+                            <td>Chinese</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    No es similitud lingüística manual
+                </h3>
+
+                <p>
+                    Estas relaciones son las obtenidas
+                    por el procedimiento de detección
+                    utilizado en el artículo y no una
+                    clasificación lingüística propuesta
+                    por los autores.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULT 23
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        LANGUAGE EXPANSION
+                    </span>
+
+                    <strong>
+                        23 %
+                    </strong>
+
+                    <p>
+                        relative gain
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        LoRA Warm Start
+                    </h3>
+
+                    <p>
+                        Los autores reportan
+                        aproximadamente un 23 %
+                        de mejora relativa frente
+                        al full fine-tuning para
+                        incorporación de nuevas lenguas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Full Fine-Tuning vs LoRA-Whisper
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Full Fine-Tuning</th>
+                            <th>LoRA-Whisper</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Modelo base</td>
+                            <td>Modificado</td>
+                            <td>Congelado</td>
+                        </tr>
+
+                        <tr>
+                            <td>Parámetros / adaptación</td>
+                            <td>240 M</td>
+                            <td>13 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Módulo por lengua</td>
+                            <td>Modelo completo</td>
+                            <td>LoRA</td>
+                        </tr>
+
+                        <tr>
+                            <td>Interferencia</td>
+                            <td>Puede aparecer</td>
+                            <td>Reducida</td>
+                        </tr>
+
+                        <tr>
+                            <td>Nueva lengua</td>
+                            <td>Modifica pesos comunes</td>
+                            <td>Añade nuevo LoRA</td>
+                        </tr>
+
+                        <tr>
+                            <td>Olvido previo</td>
+                            <td>Elevado en el experimento</td>
+                            <td>Evitado sobre las lenguas base</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Un módulo por lengua
+                    </h3>
+
+                    <p>
+                        El número total de módulos
+                        aumenta a medida que
+                        se incorporan idiomas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Language ID
+                    </h3>
+
+                    <p>
+                        El sistema necesita conocer
+                        qué LoRA debe activarse
+                        durante la inferencia.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Adaptación supervisada
+                    </h3>
+
+                    <p>
+                        El entrenamiento de las nuevas
+                        lenguas utiliza pares
+                        de audio y transcripción.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Evaluación limitada
+                    </h3>
+
+                    <p>
+                        Los experimentos se realizan
+                        sobre ocho lenguas y
+                        Whisper-small.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    LoRA-Whisper constituye un ejemplo
+                    especialmente claro de adaptación
+                    modular y eficiente.
+                </p>
+
+                <p>
+                    Separar conocimiento compartido
+                    y conocimiento específico permite
+                    incorporar nueva información
+                    sin modificar continuamente
+                    todos los pesos del modelo.
+                </p>
+
+                <p>
+                    Esta idea puede extenderse
+                    conceptualmente más allá de las lenguas:
+                    un sistema podría disponer de
+                    módulos específicos para hablantes,
+                    entornos, dispositivos o dominios
+                    acústicos.
+                </p>
+
+                <p>
+                    El problema científico consistiría
+                    entonces en determinar automáticamente
+                    qué módulo debe utilizarse,
+                    cuándo crear uno nuevo,
+                    cuándo reutilizar uno existente
+                    y cuándo actualizarlo.
+                </p>
+
+                <p>
+                    Estas decisiones podrían combinarse
+                    con mecanismos de incertidumbre
+                    y detección de cambio de distribución
+                    para evitar adaptaciones innecesarias
+                    o potencialmente perjudiciales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

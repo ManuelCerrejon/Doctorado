@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        LIME | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/explicabilidad-habla-audio.html"
+                    class="volver"
+                >
+                    ← Volver a Explicabilidad
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    LIME
+                </h1>
+
+
+                <h2>
+                    “Why Should I Trust You?”:
+                    Explaining the Predictions
+                    of Any Classifier
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Ribeiro, Singh & Guestrin · KDD 2016
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>XAI</span>
+                    <span>Model-Agnostic</span>
+                    <span>Local Explanation</span>
+                    <span>Perturbation</span>
+                    <span>K-LASSO</span>
+                    <span>Post hoc</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Marco Tulio Ribeiro
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2016
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        KDD 2016
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        1135–1144
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Ribeiro, M. T., Singh, S.,
+                    & Guestrin, C. (2016).
+                    <em>
+                        “Why Should I Trust You?”:
+                        Explaining the Predictions
+                        of Any Classifier.
+                    </em>
+                    Proceedings of the 22nd ACM SIGKDD
+                    International Conference on Knowledge
+                    Discovery and Data Mining,
+                    1135–1144.
+                    DOI: 10.1145/2939672.2939778.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    ¿Por qué debería confiar
+                    en esta predicción?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Un modelo puede alcanzar una elevada
+                    precisión y, sin embargo, basar
+                    determinadas predicciones en
+                    características incorrectas
+                    o poco generalizables.
+                </p>
+
+                <p>
+                    Por ello, observar únicamente
+                    la salida del clasificador
+                    no permite determinar si
+                    su comportamiento es razonable.
+                </p>
+
+                <p>
+                    LIME intenta explicar una predicción
+                    individual mostrando qué características
+                    contribuyen localmente a la decisión
+                    del modelo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LOCAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    No explicar todo el modelo:
+                    explicar una predicción
+                </h2>
+
+                <p>
+                    Un modelo complejo puede ser imposible
+                    de aproximar mediante una explicación
+                    sencilla en todo su espacio de entrada.
+                </p>
+
+                <p>
+                    Sin embargo, alrededor de una muestra
+                    concreta puede existir una aproximación
+                    local mucho más simple.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODEL AGNOSTIC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · MODEL-AGNOSTIC
+                </p>
+
+                <h2>
+                    Tratar el modelo como una caja negra
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        x
+                    </h3>
+
+                    <p>
+                        Muestra que queremos
+                        explicar.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>BLACK BOX</span>
+
+                    <h3>
+                        f(x)
+                    </h3>
+
+                    <p>
+                        Clasificador original,
+                        independientemente
+                        de su arquitectura.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>EXPLANATION</span>
+
+                    <h3>
+                        g
+                    </h3>
+
+                    <p>
+                        Modelo sencillo que
+                        aproxima localmente
+                        a f.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REPRESENTATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · REPRESENTACIÓN INTERPRETABLE
+                </p>
+
+                <h2>
+                    x ≠ x'
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    LIME distingue entre la representación
+                    que utiliza internamente el modelo
+                    y una representación que resulte
+                    comprensible para una persona.
+                </p>
+
+                <p>
+                    Esta representación interpretable
+                    se denota mediante x'.
+                </p>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        TEXT
+                    </p>
+
+                    <h3>
+                        Palabras
+                    </h3>
+
+                    <ul>
+                        <li>Representación binaria</li>
+                        <li>Palabra presente / ausente</li>
+                        <li>Bag of Words interpretable</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        IMAGE
+                    </p>
+
+                    <h3>
+                        Superpixels
+                    </h3>
+
+                    <ul>
+                        <li>Regiones de la imagen</li>
+                        <li>Presente / ocultada</li>
+                        <li>Explicación visual</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PERTURBACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · PERTURBACIONES
+                </p>
+
+                <h2>
+                    Crear ejemplos alrededor
+                    de la muestra original
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Muestra original
+                        </h3>
+
+                        <p>
+                            Se parte de la instancia
+                            x que queremos explicar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Perturbar
+                        </h3>
+
+                        <p>
+                            Se activan o desactivan
+                            componentes de la representación
+                            interpretable.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Consultar caja negra
+                        </h3>
+
+                        <p>
+                            Cada nueva muestra z
+                            se introduce en el
+                            clasificador original f.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Registrar f(z)
+                        </h3>
+
+                        <p>
+                            Se almacena la predicción
+                            obtenida para cada perturbación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ponderar proximidad
+                        </h3>
+
+                        <p>
+                            Las muestras más parecidas
+                            a x reciben mayor importancia
+                            durante la aproximación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LOCALITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    LOCALIDAD
+                </p>
+
+                <h2>
+                    πx(z)
+                </h2>
+
+                <p>
+                    LIME utiliza una función de proximidad
+                    para determinar cuánto debe influir
+                    cada muestra perturbada en
+                    la explicación de x.
+                </p>
+
+                <p>
+                    Las perturbaciones próximas
+                    a la instancia original pesan
+                    más que las perturbaciones lejanas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OPTIMIZACION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · OBJETIVO
+                </p>
+
+                <h2>
+                    Fidelidad local +
+                    interpretabilidad
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    LIME
+                </p>
+
+                <h2>
+                    ξ(x) =
+                    arg min [ L(f,g,πx) + Ω(g) ]
+                </h2>
+
+                <p>
+                    El primer término mide
+                    cuánto se aproxima g
+                    al comportamiento local
+                    del modelo original f.
+                </p>
+
+                <p>
+                    Ω(g) penaliza explicaciones
+                    excesivamente complejas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LOSS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    FIDELIDAD LOCAL
+                </p>
+
+                <h2>
+                    Ajustar g a las predicciones
+                    de la caja negra
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    LOSS
+                </p>
+
+                <h2>
+                    Σ πx(z) · [f(z) − g(z')]²
+                </h2>
+
+                <p>
+                    Las diferencias entre f y g
+                    se ponderan según la proximidad
+                    de cada perturbación a la
+                    muestra que queremos explicar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             K LASSO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · EXPLICACIÓN DISPERSA
+                </p>
+
+                <h2>
+                    K-LASSO
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Limitar a K características
+                        </h3>
+
+                        <p>
+                            La explicación debe mostrar
+                            únicamente un número reducido
+                            de elementos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            LASSO
+                        </h3>
+
+                        <p>
+                            Se utiliza el camino
+                            de regularización para
+                            seleccionar K características.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Least Squares
+                        </h3>
+
+                        <p>
+                            Una vez seleccionadas,
+                            se estiman sus pesos
+                            mediante mínimos cuadrados.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Explicación
+                        </h3>
+
+                        <p>
+                            Los pesos indican
+                            qué componentes favorecen
+                            o perjudican la clase.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EJEMPLO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    EJEMPLO CONCEPTUAL
+                </p>
+
+                <h2>
+                    Predicción local
+                </h2>
+
+                <p>
+                    CLASE A
+                </p>
+
+                <p>
+                    Feature 2 → +0,61
+                </p>
+
+                <p>
+                    Feature 5 → +0,38
+                </p>
+
+                <p>
+                    Feature 7 → −0,24
+                </p>
+
+                <p>
+                    La explicación muestra únicamente
+                    las características seleccionadas
+                    por el modelo interpretable local.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEXT EXPERIMENT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · EJEMPLO DEL ARTÍCULO
+                </p>
+
+                <h2>
+                    Alta precisión ≠ modelo fiable
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores muestran un clasificador
+                    de texto diseñado para distinguir
+                    documentos sobre Cristianismo
+                    y Ateísmo.
+                </p>
+
+                <p>
+                    Aunque el clasificador obtiene
+                    aproximadamente 94 % de accuracy,
+                    LIME revela que parte de la
+                    decisión depende de palabras
+                    como encabezados y términos
+                    asociados accidentalmente
+                    a los grupos del dataset.
+                </p>
+
+                <p>
+                    El modelo acierta,
+                    pero utiliza razones que
+                    difícilmente generalizarán
+                    correctamente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IMAGE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · IMAGEN
+                </p>
+
+                <h2>
+                    Superpixels
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Para imágenes, LIME divide
+                    la entrada en superpixels.
+                </p>
+
+                <p>
+                    Las perturbaciones se generan
+                    ocultando algunos de ellos
+                    y observando cómo cambia
+                    la predicción.
+                </p>
+
+                <p>
+                    De esta manera se identifican
+                    regiones que favorecen
+                    una determinada clase.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FAITHFULNESS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        FAITHFULNESS
+                    </span>
+
+                    <strong>
+                        &gt; 90 %
+                    </strong>
+
+                    <p>
+                        feature recall
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Modelos interpretables conocidos
+                    </h3>
+
+                    <p>
+                        En los experimentos donde
+                        los autores conocen qué
+                        características utiliza realmente
+                        el clasificador, LIME recupera
+                        más del 90 % de ellas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             GLOBAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · SP-LIME
+                </p>
+
+                <h2>
+                    De explicar una muestra
+                    a comprender el modelo
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    LIME produce explicaciones locales.
+                </p>
+
+                <p>
+                    Para obtener una visión más global,
+                    los autores proponen seleccionar
+                    un conjunto reducido de ejemplos
+                    cuyas explicaciones sean
+                    representativas y no redundantes.
+                </p>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Explicar instancias
+                        </h3>
+
+                        <p>
+                            Se calculan explicaciones
+                            LIME para múltiples muestras.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Matriz de explicaciones
+                        </h3>
+
+                        <p>
+                            Se registra qué características
+                            son relevantes en cada caso.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Importancia global
+                        </h3>
+
+                        <p>
+                            Se estima qué características
+                            aparecen de forma recurrente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Submodular Pick
+                        </h3>
+
+                        <p>
+                            Se seleccionan ejemplos
+                            diversos que cubran
+                            distintas razones
+                            utilizadas por el modelo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IMPORTANT AUDIO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    El artículo original no utiliza audio
+                </h3>
+
+                <p>
+                    LIME se demuestra principalmente
+                    sobre clasificación de texto
+                    e imágenes.
+                </p>
+
+                <p>
+                    Su aplicación al habla y al sonido
+                    requiere definir posteriormente
+                    una representación interpretable
+                    y una estrategia de perturbación
+                    adecuada para señales acústicas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO ADAPTATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    APLICACIÓN A AUDIO
+                </p>
+
+                <h2>
+                    ¿Qué podríamos activar
+                    y desactivar?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Frames
+                    </strong>
+
+                    <span>
+                        Temporal regions
+                    </span>
+
+                    <p>
+                        Ocultar pequeños
+                        intervalos temporales.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Time-Frequency
+                    </strong>
+
+                    <span>
+                        Spectrogram regions
+                    </span>
+
+                    <p>
+                        Modificar determinadas
+                        regiones del espectrograma.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Phonemes
+                    </strong>
+
+                    <span>
+                        Linguistic units
+                    </span>
+
+                    <p>
+                        Utilizar segmentos
+                        alineados fonéticamente.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Acoustic Events
+                    </strong>
+
+                    <span>
+                        Semantic units
+                    </span>
+
+                    <p>
+                        Analizar la presencia
+                        o ausencia de eventos
+                        concretos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO PROBLEM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA FUNDAMENTAL EN AUDIO
+                </p>
+
+                <h2>
+                    ¿Qué significa "eliminar"
+                    una región acústica?
+                </h2>
+
+                <p>
+                    Silenciar una región,
+                    introducir ceros,
+                    eliminar una banda
+                    o reemplazarla por ruido
+                    no son operaciones equivalentes.
+                </p>
+
+                <p>
+                    Cada una puede generar
+                    una señal artificial distinta
+                    y provocar respuestas diferentes
+                    del modelo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos críticos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Dependencia de perturbaciones
+                    </h3>
+
+                    <p>
+                        La explicación depende
+                        del procedimiento utilizado
+                        para generar muestras vecinas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Localidad
+                    </h3>
+
+                    <p>
+                        Una explicación válida alrededor
+                        de una muestra no describe
+                        necesariamente el comportamiento
+                        global del modelo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Aproximación lineal
+                    </h3>
+
+                    <p>
+                        Si el modelo original
+                        es muy no lineal incluso
+                        localmente, la aproximación
+                        puede perder fidelidad.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Representación
+                    </h3>
+
+                    <p>
+                        Una representación interpretable
+                        inadecuada puede ocultar
+                        el verdadero comportamiento
+                        del modelo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Audio OOD
+                    </h3>
+
+                    <p>
+                        Las perturbaciones acústicas
+                        pueden producir señales
+                        fuera de la distribución
+                        natural.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Coste
+                    </h3>
+
+                    <p>
+                        Explicar una predicción
+                        requiere realizar numerosas
+                        consultas al modelo original.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IG VS LIME
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Integrated Gradients vs LIME
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Integrated Gradients</th>
+                            <th>LIME</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Método</td>
+                            <td>Gradientes</td>
+                            <td>Perturbaciones</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Model-agnostic</td>
+                            <td>No completamente</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Necesita gradientes</td>
+                            <td>Sí</td>
+                            <td>No</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Modelo auxiliar</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Explicación</td>
+                            <td>Atribuciones</td>
+                            <td>Modelo local interpretable</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Baseline</td>
+                            <td>Crítico</td>
+                            <td>No es el mecanismo central</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Perturbaciones</td>
+                            <td>Camino baseline → input</td>
+                            <td>
+                                <strong>Muestras vecinas</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Una herramienta útil,
+                    pero con una advertencia importante
+                </h2>
+
+                <p>
+                    LIME ofrece una estrategia
+                    model-agnostic especialmente útil
+                    para analizar modelos acústicos
+                    cuya arquitectura interna
+                    resulte difícil de inspeccionar.
+                </p>
+
+                <p>
+                    Sin embargo, en audio la definición
+                    de la perturbación pasa a formar
+                    parte esencial de la explicación.
+                </p>
+
+                <p>
+                    Una perturbación artificial puede
+                    provocar que el modelo responda
+                    a una señal fuera de distribución
+                    y no a la ausencia real
+                    de una evidencia acústica.
+                </p>
+
+                <p>
+                    Para la tesis resulta interesante
+                    estudiar perturbaciones estructuradas
+                    sobre unidades acústicas comprensibles,
+                    como fonemas, eventos o regiones
+                    temporales completas.
+                </p>
+
+                <p>
+                    También sería posible contrastar
+                    las explicaciones obtenidas mediante
+                    LIME con Integrated Gradients
+                    y con mecanismos intrínsecos
+                    neurodifusos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA DERIVADA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Perturbaciones acústicamente plausibles
+                </h2>
+
+                <p>
+                    En lugar de borrar arbitrariamente
+                    bins de un espectrograma,
+                    las perturbaciones podrían aplicarse
+                    sobre unidades acústicas estructuradas.
+                </p>
+
+                <p>
+                    Esto permitiría estudiar si
+                    las explicaciones mantienen su
+                    fidelidad cuando las señales
+                    perturbadas continúan siendo
+                    acústicamente plausibles.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        BEATs | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/procesamiento-audio-general.html"
+                    class="volver"
+                >
+                    ← Volver a Procesamiento de audio general
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    BEATs
+                </h1>
+
+
+                <h2>
+                    Audio Pre-Training with Acoustic Tokenizers
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Chen, S. et al. · 2023
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Audio SSL</span>
+                    <span>Acoustic Tokens</span>
+                    <span>Masked Audio Modeling</span>
+                    <span>Knowledge Distillation</span>
+                    <span>AudioSet</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Sanyuan Chen
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        ICML 2023 · PMLR 202
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        5178–5193
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Chen, S., Wu, Y., Wang, C., Liu, S.,
+                    Tompkins, D., Chen, Z., Che, W.,
+                    Yu, X., & Wei, F. (2023).
+                    <em>
+                        BEATs: Audio Pre-Training
+                        with Acoustic Tokenizers.
+                    </em>
+                    Proceedings of the 40th International
+                    Conference on Machine Learning,
+                    PMLR 202, 5178–5193.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    De reconstruir audio a comprenderlo
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Modelos como Audio-MAE aprenden representaciones
+                    tratando de reconstruir regiones ocultas
+                    del espectrograma.
+                </p>
+
+                <p>
+                    Sin embargo, reconstruir correctamente
+                    características tiempo-frecuencia puede obligar
+                    al modelo a dedicar capacidad a detalles acústicos
+                    de bajo nivel que no son necesariamente relevantes
+                    para comprender el significado del sonido.
+                </p>
+
+                <p>
+                    BEATs propone sustituir la reconstrucción
+                    por una tarea de predicción de etiquetas
+                    acústicas discretas con contenido semántico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Semantic-rich acoustic tokens
+                </h2>
+
+                <p>
+                    El modelo no intenta reconstruir exactamente
+                    la región acústica que ha sido ocultada.
+                </p>
+
+                <p>
+                    En su lugar, intenta identificar qué token
+                    acústico discreto representa esa región.
+                </p>
+
+                <p>
+                    El objetivo es que dichos tokens capturen
+                    progresivamente información de mayor nivel
+                    semántico y descarten detalles acústicos
+                    redundantes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FLUJO GENERAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · METODOLOGÍA GENERAL
+                </p>
+
+                <h2>
+                    Entrenamiento iterativo
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Tokenizar el audio
+                        </h3>
+
+                        <p>
+                            Un tokenizador acústico convierte
+                            los patches del audio en una secuencia
+                            de etiquetas discretas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Entrenar BEATs
+                        </h3>
+
+                        <p>
+                            Parte de la entrada se oculta
+                            y el Transformer intenta predecir
+                            los tokens acústicos correspondientes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            BEATs se convierte en teacher
+                        </h3>
+
+                        <p>
+                            Una vez entrenado, el propio modelo
+                            proporciona representaciones utilizadas
+                            para mejorar el tokenizador.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Refinar el tokenizador
+                        </h3>
+
+                        <p>
+                            Mediante knowledge distillation,
+                            el nuevo tokenizador aprende
+                            representaciones acústicas con
+                            mayor contenido semántico.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Nueva iteración
+                        </h3>
+
+                        <p>
+                            Las nuevas etiquetas discretas
+                            se utilizan como objetivos para
+                            entrenar otra versión de BEATs.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ITERACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · ITERACIONES
+                </p>
+
+                <h2>
+                    Tokenizador y modelo se refinan mutuamente
+                </h2>
+
+            </div>
+
+
+            <div class="iteraciones-hubert">
+
+
+                <article>
+
+                    <div class="iteracion-etiqueta">
+                        ITERACIÓN 1
+                    </div>
+
+                    <h3>
+                        Random Projection
+                    </h3>
+
+                    <strong>
+                        Cold start
+                    </strong>
+
+                    <p>
+                        Como todavía no existe un modelo BEATs
+                        entrenado, las primeras etiquetas
+                        se obtienen mediante un tokenizador
+                        inicializado aleatoriamente.
+                    </p>
+
+                </article>
+
+
+                <div class="iteracion-flecha">
+                    →
+                </div>
+
+
+                <article>
+
+                    <div class="iteracion-etiqueta">
+                        ITERACIÓN 2
+                    </div>
+
+                    <h3>
+                        Self-Distilled
+                    </h3>
+
+                    <strong>
+                        BEATs iter1 como teacher
+                    </strong>
+
+                    <p>
+                        El tokenizador aprende utilizando
+                        conocimiento extraído del modelo
+                        entrenado en la primera iteración.
+                    </p>
+
+                </article>
+
+
+                <div class="iteracion-flecha">
+                    →
+                </div>
+
+
+                <article>
+
+                    <div class="iteracion-etiqueta">
+                        ITERACIÓN 3
+                    </div>
+
+                    <h3>
+                        Refinamiento
+                    </h3>
+
+                    <strong>
+                        BEATs iter2 como teacher
+                    </strong>
+
+                    <p>
+                        El proceso se repite para generar
+                        etiquetas acústicas progresivamente
+                        más relacionadas con la semántica.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ITER3+
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    BEATS ITER3+
+                </p>
+
+                <h3>
+                    Una variante importante
+                </h3>
+
+                <p>
+                    BEATs iter3+ utiliza como teacher
+                    un BEATs iter2 que previamente ha sido
+                    fine-tuned mediante información supervisada.
+                </p>
+
+                <p>
+                    Por tanto, esta variante no utiliza
+                    exclusivamente información auto-supervisada:
+                    conocimiento procedente de las etiquetas
+                    downstream entra también en el proceso
+                    de generación del nuevo tokenizador.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TOKENIZADOR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · ACOUSTIC TOKENIZER
+                </p>
+
+                <h2>
+                    Primera iteración
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Patch
+                    </h3>
+
+                    <p>
+                        Región de la representación acústica.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>PROJECTION</span>
+
+                    <h3>
+                        Random Linear
+                    </h3>
+
+                    <p>
+                        Una proyección lineal aleatoria
+                        transforma el patch.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CODEBOOK</span>
+
+                    <h3>
+                        Nearest Neighbor
+                    </h3>
+
+                    <p>
+                        Se busca el embedding más cercano
+                        dentro del codebook.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Discrete Token
+                    </h3>
+
+                    <p>
+                        El índice del embedding elegido
+                        se utiliza como etiqueta.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SELF-DISTILLED TOKENIZER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · SELF-DISTILLED TOKENIZER
+                </p>
+
+                <h2>
+                    Aprender tokens más semánticos
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        12-layer Transformer
+                    </h3>
+
+                    <p>
+                        El encoder del tokenizador transforma
+                        los patches acústicos.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Codebook
+                    </h3>
+
+                    <p>
+                        Las representaciones se cuantizan
+                        mediante embeddings aprendibles.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        3-layer estimator
+                    </h3>
+
+                    <p>
+                        Intenta reproducir las representaciones
+                        generadas por el modelo teacher.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Knowledge distillation
+                </h3>
+
+                <p>
+                    El objetivo del tokenizador incluye
+                    similitud coseno con las representaciones
+                    producidas por el teacher.
+                </p>
+
+                <p>
+                    Esto permite que las etiquetas discretas
+                    incorporen progresivamente información
+                    aprendida por el modelo BEATs.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PREPROCESADO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · PREPROCESADO
+                </p>
+
+                <h2>
+                    Representación acústica
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Resampling
+                        </h3>
+
+                        <p>
+                            La forma de onda se convierte
+                            a 16 kHz.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mel Filterbank
+                        </h3>
+
+                        <p>
+                            Se extraen características
+                            Mel de 128 dimensiones.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ventanas
+                        </h3>
+
+                        <p>
+                            Se utilizan ventanas Povey
+                            de 25 ms y desplazamiento
+                            de 10 ms.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Normalización
+                        </h3>
+
+                        <p>
+                            Las características se normalizan
+                            a media 0 y desviación estándar 0,5.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Patches
+                        </h3>
+
+                        <p>
+                            La representación se divide
+                            en patches de 16 × 16.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODELO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · MODELO
+                </p>
+
+                <h2>
+                    Audio Transformer
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        BEATS
+                    </p>
+
+                    <h3>
+                        90 M parámetros
+                    </h3>
+
+                    <ul>
+                        <li>12 capas Transformer</li>
+                        <li>Hidden size: 768</li>
+                        <li>8 cabezas de atención</li>
+                        <li>Backbone ViT</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        POSICIÓN
+                    </p>
+
+                    <h3>
+                        Relative Position
+                    </h3>
+
+                    <ul>
+                        <li>Convolutional positional embedding</li>
+                        <li>Gated relative position bias</li>
+                        <li>DeepNorm para estabilidad</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MASKED AUDIO MODELING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · PREENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Masked Audio Modeling
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Tokenizar
+                        </h3>
+
+                        <p>
+                            El tokenizador genera la etiqueta
+                            discreta correspondiente a cada patch.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mask 75 %
+                        </h3>
+
+                        <p>
+                            Se oculta aleatoriamente el 75 %
+                            de los patches de entrada.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Encoder
+                        </h3>
+
+                        <p>
+                            El ViT procesa únicamente
+                            los patches no enmascarados.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Label Predictor
+                        </h3>
+
+                        <p>
+                            Las representaciones visibles
+                            se utilizan para predecir las
+                            etiquetas acústicas ocultas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Cross Entropy
+                        </h3>
+
+                        <p>
+                            La pérdida se calcula únicamente
+                            sobre las posiciones enmascaradas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATOS Y ENTRENAMIENTO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    AudioSet-2M
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>Dataset</span>
+                    <strong>AudioSet-2M</strong>
+                </article>
+
+                <article>
+                    <span>Pasos BEATs</span>
+                    <strong>400k</strong>
+                </article>
+
+                <article>
+                    <span>Batch</span>
+                    <strong>5,6k s</strong>
+                </article>
+
+                <article>
+                    <span>Peak LR</span>
+                    <strong>5e-4</strong>
+                </article>
+
+                <article>
+                    <span>Codebook</span>
+                    <strong>1024</strong>
+                </article>
+
+                <article>
+                    <span>Embedding</span>
+                    <strong>256</strong>
+                </article>
+
+                <article>
+                    <span>Masking</span>
+                    <strong>75 %</strong>
+                </article>
+
+                <article>
+                    <span>Parámetros</span>
+                    <strong>90 M</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FINE-TUNING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · FINE-TUNING
+                </p>
+
+                <h2>
+                    Clasificación downstream
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        BEATs encoder
+                    </h3>
+
+                    <p>
+                        Se elimina el label predictor
+                        empleado durante el preentrenamiento.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Mean Pooling
+                    </h3>
+
+                    <p>
+                        Se agregan las representaciones
+                        producidas para los patches.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Linear Classifier
+                    </h3>
+
+                    <p>
+                        Se incorpora un clasificador específico
+                        para cada tarea downstream.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    SpecAugment
+                </h3>
+
+                <p>
+                    Durante el fine-tuning se aplica
+                    enmascaramiento aleatorio en las dimensiones
+                    temporal y frecuencial.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EVALUACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Seis tareas de audio y habla
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        AudioSet-2M
+                    </strong>
+
+                    <span>
+                        Audio Classification
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        AudioSet-20K
+                    </strong>
+
+                    <span>
+                        Audio Classification
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        ESC-50
+                    </strong>
+
+                    <span>
+                        Environmental Sounds
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Speech Commands V1
+                    </strong>
+
+                    <span>
+                        Keyword Spotting
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Speech Commands V2
+                    </strong>
+
+                    <span>
+                        Keyword Spotting
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        IEMOCAP
+                    </strong>
+
+                    <span>
+                        Emotion Recognition
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · RESULTADOS
+                </p>
+
+                <h2>
+                    Rendimiento de BEATs iter3+
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        AUDIOSET-2M
+                    </span>
+
+                    <strong>
+                        48,6
+                    </strong>
+
+                    <p>
+                        mAP · single model
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Frente a Audio-MAE Large
+                    </h3>
+
+                    <p>
+                        Audio-MAE Large alcanza 47,4 mAP
+                        utilizando aproximadamente 304 M
+                        parámetros, mientras BEATs iter3+
+                        alcanza 48,6 con aproximadamente 90 M.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>AS-2M</th>
+                            <th>AS-20K</th>
+                            <th>ESC-50</th>
+                            <th>KS1</th>
+                            <th>KS2</th>
+                            <th>ER</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>BEATs iter1</td>
+                            <td>47,9</td>
+                            <td>36,0</td>
+                            <td>94,0</td>
+                            <td>98,0</td>
+                            <td>98,3</td>
+                            <td>65,9</td>
+                        </tr>
+
+                        <tr>
+                            <td>BEATs iter2</td>
+                            <td>48,1</td>
+                            <td>38,3</td>
+                            <td>95,1</td>
+                            <td>97,7</td>
+                            <td>98,3</td>
+                            <td>66,1</td>
+                        </tr>
+
+                        <tr>
+                            <td>BEATs iter3</td>
+                            <td>48,0</td>
+                            <td>38,3</td>
+                            <td>95,6</td>
+                            <td>97,7</td>
+                            <td>98,3</td>
+                            <td>64,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>BEATs iter3+</td>
+                            <td>48,6</td>
+                            <td>38,9</td>
+                            <td>98,1</td>
+                            <td>98,1</td>
+                            <td>98,1</td>
+                            <td>65,0</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p class="tabla-nota">
+                AS-2M y AS-20K utilizan mAP.
+                ESC-50, KS1, KS2 y ER utilizan accuracy.
+                BEATs iter3+ incorpora conocimiento supervisado
+                durante la generación de sus objetivos.
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN AUDIOMAE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Audio-MAE vs BEATs
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Audio-MAE</th>
+                            <th>BEATs</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Entrada</td>
+                            <td>Spectrogram patches</td>
+                            <td>Acoustic patches</td>
+                        </tr>
+
+                        <tr>
+                            <td>Masking</td>
+                            <td>80 %</td>
+                            <td>75 %</td>
+                        </tr>
+
+                        <tr>
+                            <td>Objetivo</td>
+                            <td>Reconstrucción</td>
+                            <td>Predicción de tokens</td>
+                        </tr>
+
+                        <tr>
+                            <td>Target</td>
+                            <td>Características originales</td>
+                            <td>Etiqueta discreta</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pérdida</td>
+                            <td>MSE</td>
+                            <td>Cross Entropy</td>
+                        </tr>
+
+                        <tr>
+                            <td>Énfasis</td>
+                            <td>Detalles acústicos</td>
+                            <td>Abstracción semántica</td>
+                        </tr>
+
+                        <tr>
+                            <td>Proceso iterativo</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos a tener en cuenta
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Dependencia del tokenizador
+                    </h3>
+
+                    <p>
+                        La calidad del objetivo de preentrenamiento
+                        depende directamente de la calidad de
+                        las etiquetas generadas por el tokenizador.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Proceso iterativo
+                    </h3>
+
+                    <p>
+                        El refinamiento requiere entrenar
+                        repetidamente modelos y tokenizadores.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Iter3+ usa supervisión
+                    </h3>
+
+                    <p>
+                        El mejor modelo incorpora conocimiento
+                        procedente del fine-tuning supervisado
+                        dentro del proceso de preentrenamiento.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    BEATs es especialmente interesante porque
+                    muestra cómo transformar una señal acústica
+                    continua en unidades discretas con mayor
+                    contenido semántico.
+                </p>
+
+                <p>
+                    Estas unidades pueden proporcionar una interfaz
+                    compacta entre modelos perceptivos y sistemas
+                    posteriores de comprensión o razonamiento.
+                </p>
+
+                <p>
+                    Además, el refinamiento iterativo entre
+                    tokenizador y modelo plantea una conexión
+                    natural con aprendizaje continuo y adaptación:
+                    las unidades utilizadas para representar
+                    el audio podrían modificarse a medida que
+                    cambia el dominio acústico.
+                </p>
+
+                <p>
+                    Al mismo tiempo, esta posibilidad obliga
+                    a estudiar cómo controlar la estabilidad
+                    del aprendizaje y evitar que una adaptación
+                    incorrecta deteriore las representaciones
+                    previamente aprendidas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

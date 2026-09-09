@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Aprendizaje auto-supervisado | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 02
+                </p>
+
+
+                <h1>
+                    Aprendizaje auto-supervisado
+                    de representaciones del habla
+                </h1>
+
+
+                <p class="tema-introduccion">
+
+                    El aprendizaje auto-supervisado busca reducir
+                    la dependencia de grandes colecciones de audio
+                    transcrito mediante objetivos de entrenamiento
+                    generados a partir de la propia señal acústica.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    ¿Qué problema intenta resolver?
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+
+                    Uno de los principales problemas históricos
+                    del procesamiento del habla es la necesidad
+                    de disponer de grandes colecciones de grabaciones
+                    correctamente transcritas.
+
+                </p>
+
+
+                <p>
+
+                    El aprendizaje auto-supervisado reduce esta
+                    dependencia utilizando el propio audio para
+                    generar objetivos de entrenamiento.
+
+                </p>
+
+
+                <p>
+
+                    El modelo aprende primero una representación
+                    general a partir de audio sin transcribir y,
+                    posteriormente, dicha representación puede
+                    adaptarse a una tarea concreta utilizando una
+                    cantidad menor de datos etiquetados.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             FUNCIONAMIENTO
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    METODOLOGÍA GENERAL
+                </p>
+
+                <h2>
+                    ¿Cómo funciona?
+                </h2>
+
+            </div>
+
+
+            <div class="pasos-grid">
+
+
+                <article class="paso-card">
+
+                    <span>01</span>
+
+                    <h3>
+                        Audio sin etiquetar
+                    </h3>
+
+                    <p>
+                        El modelo recibe grandes cantidades
+                        de señal acústica sin necesidad de
+                        disponer de una transcripción humana.
+                    </p>
+
+                </article>
+
+
+
+                <article class="paso-card">
+
+                    <span>02</span>
+
+                    <h3>
+                        Representación
+                    </h3>
+
+                    <p>
+                        La señal se transforma en representaciones
+                        internas que capturan información acústica
+                        y lingüística.
+                    </p>
+
+                </article>
+
+
+
+                <article class="paso-card">
+
+                    <span>03</span>
+
+                    <h3>
+                        Objetivo auto-supervisado
+                    </h3>
+
+                    <p>
+                        Se ocultan, reconstruyen, discriminan
+                        o predicen determinadas partes de la
+                        propia señal.
+                    </p>
+
+                </article>
+
+
+
+                <article class="paso-card">
+
+                    <span>04</span>
+
+                    <h3>
+                        Adaptación
+                    </h3>
+
+                    <p>
+                        El modelo preentrenado puede posteriormente
+                        adaptarse a una tarea concreta con una
+                        cantidad menor de datos etiquetados.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             MODELOS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MODELOS PRINCIPALES
+                </p>
+
+                <h2>
+                    Modelos estudiados
+                </h2>
+
+                <p>
+                    Principales enfoques identificados en
+                    la revisión bibliográfica.
+                </p>
+
+            </div>
+
+
+
+            <div class="modelos-lista">
+
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            wav2vec 2.0
+                        </h3>
+
+                        <p>
+                            Procesa directamente la forma de onda,
+                            genera representaciones latentes,
+                            enmascara determinados intervalos
+                            temporales y utiliza aprendizaje
+                            contrastivo junto con cuantización.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Contrastive Learning</span>
+                            <span>Quantization</span>
+                            <span>Masked Learning</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/wav2vec-2.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            HuBERT
+                        </h3>
+
+                        <p>
+                            Utiliza agrupamiento para generar
+                            unidades acústicas discretas aproximadas
+                            y entrena al modelo para predecir
+                            dichas unidades en las regiones
+                            enmascaradas.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Clustering</span>
+                            <span>Masked Prediction</span>
+                            <span>Discrete Units</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/hubert.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            WavLM
+                        </h3>
+
+                        <p>
+                            Extiende el aprendizaje auto-supervisado incorporando
+                            conjuntamente predicción enmascarada y eliminación
+                            de ruido, con el objetivo de aprender representaciones
+                            útiles para múltiples tareas del habla.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Denoising</span>
+                            <span>Masked Prediction</span>
+                            <span>Speaker</span>
+                            <span>Full-stack Speech</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/wavlm.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        04
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            XLS-R
+                        </h3>
+
+                        <p>
+                            Extiende wav2vec 2.0 al aprendizaje
+                            auto-supervisado multilingüe mediante
+                            preentrenamiento conjunto sobre grandes
+                            cantidades de habla perteneciente a
+                            numerosas lenguas.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Cross-lingual</span>
+                            <span>Multilingual</span>
+                            <span>Low-resource</span>
+                            <span>wav2vec 2.0</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/xls-r.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             COMPARACIÓN
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Diferencias principales
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Modelo</th>
+
+                            <th>
+                                Estrategia principal
+                            </th>
+
+                            <th>
+                                Característica destacada
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                wav2vec 2.0
+                            </td>
+
+                            <td>
+                                Aprendizaje contrastivo
+                            </td>
+
+                            <td>
+                                Cuantización de representaciones
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                HuBERT
+                            </td>
+
+                            <td>
+                                Predicción enmascarada
+                            </td>
+
+                            <td>
+                                Unidades obtenidas mediante clustering
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                WavLM
+                            </td>
+
+                            <td>
+                                Predicción + eliminación de ruido
+                            </td>
+
+                            <td>
+                                Representación útil para múltiples tareas
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                XLS-R
+                            </td>
+
+                            <td>
+                                Preentrenamiento multilingüe
+                            </td>
+
+                            <td>
+                                Transferencia entre idiomas
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             EVALUACIÓN
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EVALUACIÓN
+                </p>
+
+                <h2>
+                    Transferencia a otras tareas
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    SUPERB
+                </h3>
+
+                <p>
+
+                    SUPERB permite estudiar hasta qué punto
+                    una representación preentrenada puede
+                    transferirse a diferentes tareas utilizando
+                    cabezas de predicción ligeras y manteniendo
+                    congelado el codificador principal.
+
+                </p>
+
+
+                <p>
+
+                    Incluye tareas relacionadas con contenido
+                    lingüístico, características del hablante,
+                    semántica y procesamiento paralingüístico.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Problemas todavía abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Coste computacional
+                    </h3>
+
+                    <p>
+                        El preentrenamiento continúa requiriendo
+                        grandes volúmenes de audio y una elevada
+                        capacidad computacional.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Sesgo de los datos
+                    </h3>
+
+                    <p>
+                        Los modelos pueden reproducir distribuciones
+                        desequilibradas de lenguas, hablantes
+                        y condiciones acústicas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Robustez
+                    </h3>
+
+                    <p>
+                        Una buena transferencia media no garantiza
+                        robustez frente a cambios de micrófono,
+                        ruido, acento, edad o pronunciación.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             RELACIÓN CON TESIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Por qué es relevante?
+                </h2>
+
+                <p>
+
+                    Las representaciones auto-supervisadas constituyen
+                    una base especialmente interesante para investigar
+                    sistemas acústicos capaces de adaptarse a nuevas
+                    condiciones utilizando cantidades reducidas de
+                    datos etiquetados.
+
+                </p>
+
+                <p>
+
+                    Esta línea conecta directamente con el estudio
+                    de adaptación de dominio, aprendizaje continuo,
+                    personalización y desarrollo de representaciones
+                    robustas y transferibles.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

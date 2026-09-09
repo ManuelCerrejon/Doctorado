@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SGEM | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/adaptacion-aprendizaje-continuo.html"
+                    class="volver"
+                >
+                    ← Volver a Adaptación y aprendizaje continuo
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    SGEM
+                </h1>
+
+
+                <h2>
+                    Test-Time Adaptation for Automatic
+                    Speech Recognition via Sequential-Level
+                    Generalized Entropy Minimization
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Kim, C. et al. · Interspeech 2023
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>ASR</span>
+                    <span>Test-Time Adaptation</span>
+                    <span>Beam Search</span>
+                    <span>Entropy Minimization</span>
+                    <span>Negative Sampling</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Changhun Kim
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        Interspeech 2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.21437/Interspeech.2023-1282
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Kim, C., Park, J., Shim, H.,
+                    & Yang, E. (2023).
+                    <em>
+                        SGEM: Test-Time Adaptation for
+                        Automatic Speech Recognition via
+                        Sequential-Level Generalized
+                        Entropy Minimization.
+                    </em>
+                    Interspeech 2023,
+                    3367–3371.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Adaptarse cuando el dominio cambia
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Un sistema ASR puede encontrar durante
+                    la inferencia hablantes, palabras,
+                    acentos o ruidos que no aparecieron
+                    durante su entrenamiento.
+                </p>
+
+                <p>
+                    En el escenario considerado por SGEM
+                    no se dispone de transcripciones
+                    del nuevo dominio ni de los datos
+                    originales utilizados para entrenar
+                    el reconocedor.
+                </p>
+
+                <p>
+                    La adaptación debe realizarse
+                    utilizando únicamente la propia
+                    grabación recibida durante test.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    TEST-TIME ADAPTATION
+                </p>
+
+                <h2>
+                    Sin etiquetas y sin datos fuente
+                </h2>
+
+                <p>
+                    SGEM utiliza una configuración
+                    single-utterance TTA.
+                </p>
+
+                <p>
+                    Para cada grabación recibida,
+                    el modelo realiza varias actualizaciones
+                    no supervisadas utilizando únicamente
+                    esa misma señal.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA SUTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MOTIVACIÓN
+                </p>
+
+                <h2>
+                    ¿Por qué no basta con greedy decoding?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Métodos anteriores como SUTA
+                    utilizaban las predicciones obtenidas
+                    mediante greedy decoding para
+                    realizar la adaptación.
+                </p>
+
+                <p>
+                    Los autores argumentan que este enfoque
+                    no representa adecuadamente la naturaleza
+                    secuencial de modelos ASR modernos,
+                    especialmente cuando utilizan
+                    decodificación autoregresiva
+                    o beam search.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Adaptarse a nivel de secuencia
+                </h2>
+
+                <p>
+                    SGEM utiliza beam search para obtener
+                    una secuencia de salida plausible
+                    y utiliza los logits asociados
+                    a esa secuencia para construir
+                    los objetivos de adaptación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PIPELINE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · METODOLOGÍA
+                </p>
+
+                <h2>
+                    Pipeline SGEM
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Target Utterance
+                        </h3>
+
+                        <p>
+                            El sistema recibe una
+                            única grabación sin
+                            transcripción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Beam Search
+                        </h3>
+
+                        <p>
+                            Se exploran diferentes
+                            hipótesis de transcripción
+                            y se selecciona la secuencia
+                            más plausible.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Logit Acquisition
+                        </h3>
+
+                        <p>
+                            La secuencia seleccionada
+                            se introduce nuevamente
+                            en el modelo para obtener
+                            los logits correspondientes
+                            a cada timestep.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Generalized Entropy
+                        </h3>
+
+                        <p>
+                            Se reduce la incertidumbre
+                            de las predicciones mediante
+                            una generalización de
+                            la entropía de Shannon.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Negative Sampling
+                        </h3>
+
+                        <p>
+                            Se penalizan las clases
+                            que presentan probabilidades
+                            suficientemente bajas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Adaptation
+                        </h3>
+
+                        <p>
+                            Los parámetros seleccionados
+                            del ASR se actualizan utilizando
+                            ambos objetivos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        07
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Decode
+                        </h3>
+
+                        <p>
+                            El modelo adaptado genera
+                            la transcripción final
+                            de la grabación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BEAM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · BEAM SEARCH
+                </p>
+
+                <h2>
+                    Obtener logits más fiables
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIO</span>
+
+                    <h3>
+                        x
+                    </h3>
+
+                    <p>
+                        Grabación del nuevo dominio.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>SEARCH</span>
+
+                    <h3>
+                        Beam Search
+                    </h3>
+
+                    <p>
+                        Explora varias secuencias
+                        de salida.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>SEQUENCE</span>
+
+                    <h3>
+                        ŷ
+                    </h3>
+
+                    <p>
+                        Hipótesis considerada
+                        más plausible.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LOGITS</span>
+
+                    <h3>
+                        o₁ ... oL
+                    </h3>
+
+                    <p>
+                        Distribuciones utilizadas
+                        para adaptar el modelo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             GEM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · GENERALIZED ENTROPY
+                </p>
+
+                <h2>
+                    Rényi Entropy
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    En lugar de utilizar únicamente
+                    la entropía convencional,
+                    SGEM introduce Rényi entropy
+                    con un parámetro α.
+                </p>
+
+                <p>
+                    Esto permite controlar la forma
+                    en que se penaliza la incertidumbre
+                    de las distribuciones generadas
+                    por el reconocedor.
+                </p>
+
+                <p>
+                    Los timesteps dominados por
+                    el blank token se ignoran
+                    para reducir el problema
+                    de desequilibrio entre clases.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NEGATIVE SAMPLING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · NEGATIVE SAMPLING
+                </p>
+
+                <h2>
+                    Penalizar clases poco plausibles
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    INTUICIÓN
+                </p>
+
+                <h2>
+                    No sé cuál es la clase correcta,
+                    pero sí cuáles parecen incorrectas
+                </h2>
+
+                <p>
+                    Como no existe ground truth,
+                    SGEM identifica como negativas
+                    las clases cuya probabilidad
+                    se encuentra por debajo
+                    de un determinado umbral.
+                </p>
+
+                <p>
+                    Posteriormente penaliza la
+                    probabilidad acumulada asignada
+                    a esas clases.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LOSS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    OBJETIVO FINAL
+                </p>
+
+                <h2>
+                    L = L<sub>GEM</sub>
+                    + λ<sub>NS</sub>L<sub>NS</sub>
+                </h2>
+
+                <p>
+                    La adaptación combina Generalized
+                    Entropy Minimization y Negative
+                    Sampling mediante una suma ponderada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EPISODIC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    MUY IMPORTANTE
+                </p>
+
+                <h3>
+                    SGEM no es aprendizaje continuo
+                </h3>
+
+                <p>
+                    La adaptación es episódica.
+                </p>
+
+                <p>
+                    Después de procesar cada grabación,
+                    el modelo vuelve a sus parámetros
+                    originales preentrenados.
+                </p>
+
+                <p>
+                    Por tanto, el conocimiento aprendido
+                    con una muestra no se conserva
+                    para la siguiente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODELOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · MODELOS
+                </p>
+
+                <h2>
+                    Tres arquitecturas ASR
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        CTC
+                    </p>
+
+                    <h3>
+                        wav2vec 2.0
+                    </h3>
+
+                    <ul>
+                        <li>LibriSpeech 960 h</li>
+                        <li>CTC-based</li>
+                        <li>Feature extractor adaptado</li>
+                        <li>4-gram LM disponible</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONFORMER
+                    </p>
+
+                    <h3>
+                        Conformer-CTC
+                    </h3>
+
+                    <ul>
+                        <li>Entrenado con LibriSpeech</li>
+                        <li>Encoder adaptado</li>
+                        <li>4-gram LM disponible</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        TRANSDUCER
+                    </p>
+
+                    <h3>
+                        Conformer-Transducer
+                    </h3>
+
+                    <ul>
+                        <li>NeMo ASRSET</li>
+                        <li>Arquitectura autoregresiva</li>
+                        <li>Encoder adaptado</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · DOMAIN SHIFTS
+                </p>
+
+                <h2>
+                    Tres tipos de cambio
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        UNSEEN SPEAKERS / WORDS
+                    </span>
+
+                    <h3>
+                        Nuevos dominios
+                    </h3>
+
+                    <p>
+                        CHiME-3,
+                        TED-LIUM 2,
+                        Common Voice
+                        y Valentini.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        BACKGROUND NOISE
+                    </span>
+
+                    <h3>
+                        LibriSpeech + Noise
+                    </h3>
+
+                    <p>
+                        Ocho ruidos diferentes
+                        procedentes de MS-SNSD
+                        con SNR = 10 dB.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        ACCENT SHIFT
+                    </span>
+
+                    <h3>
+                        L2-Arctic
+                    </h3>
+
+                    <p>
+                        Habla inglesa no nativa
+                        con seis lenguas maternas
+                        diferentes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOISES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RUIDOS
+                </p>
+
+                <h2>
+                    Ocho condiciones · 10 dB SNR
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>Air Conditioner</strong>
+                </article>
+
+                <article>
+                    <strong>Airport Announcement</strong>
+                </article>
+
+                <article>
+                    <strong>Babble</strong>
+                </article>
+
+                <article>
+                    <strong>Copy Machine</strong>
+                </article>
+
+                <article>
+                    <strong>Munching</strong>
+                </article>
+
+                <article>
+                    <strong>Neighbors</strong>
+                </article>
+
+                <article>
+                    <strong>Shutting Door</strong>
+                </article>
+
+                <article>
+                    <strong>Typing</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAIN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · CONFIGURACIÓN
+                </p>
+
+                <h2>
+                    Adaptación por utterance
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>Iteraciones</span>
+                    <strong>10</strong>
+                </article>
+
+                <article>
+                    <span>Temperatura</span>
+                    <strong>2,5</strong>
+                </article>
+
+                <article>
+                    <span>Umbral NS</span>
+                    <strong>0,4 / C</strong>
+                </article>
+
+                <article>
+                    <span>Optimizador</span>
+                    <strong>AdamW</strong>
+                </article>
+
+                <article>
+                    <span>Scheduler</span>
+                    <strong>Cosine Annealing</strong>
+                </article>
+
+                <article>
+                    <span>Adaptación</span>
+                    <strong>Single utterance</strong>
+                </article>
+
+                <article>
+                    <span>Source data</span>
+                    <strong>No</strong>
+                </article>
+
+                <article>
+                    <span>Target labels</span>
+                    <strong>No</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LATENCY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        ADAPTATION COST
+                    </span>
+
+                    <strong>
+                        0,771 s
+                    </strong>
+
+                    <p>
+                        por 1 s de audio
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Media de los tres modelos
+                    </h3>
+
+                    <p>
+                        El artículo reporta este tiempo
+                        medio utilizando TITAN Xp
+                        y RTX 3090.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · RESULTADOS
+                </p>
+
+                <h2>
+                    WER medio · Greedy decoding
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Arquitectura</th>
+                            <th>Sin adaptar</th>
+                            <th>SUTA</th>
+                            <th>SGEM</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                wav2vec 2.0 · CTC
+                            </td>
+                            <td>41,4</td>
+                            <td>34,1</td>
+                            <td>
+                                <strong>33,4</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Conformer
+                            </td>
+                            <td>43,1</td>
+                            <td>39,3</td>
+                            <td>
+                                <strong>38,4</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Transducer
+                            </td>
+                            <td>22,4</td>
+                            <td>20,8</td>
+                            <td>
+                                <strong>20,6</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BEAM RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    BEAM SEARCH INFERENCE
+                </p>
+
+                <h2>
+                    wav2vec 2.0 + Language Model
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        WER MEDIO
+                    </span>
+
+                    <strong>
+                        37,2 → 32,4
+                    </strong>
+
+                    <p>
+                        Unadapted → SGEM
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        SUTA: 32,9
+                    </h3>
+
+                    <p>
+                        SGEM también obtiene
+                        una ligera mejora respecto
+                        a SUTA cuando la inferencia
+                        utiliza beam search
+                        y un language model externo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ACCENT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · ACCENT SHIFT
+                </p>
+
+                <h2>
+                    L2-Arctic
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Acento / L1</th>
+                            <th>Sin adaptar</th>
+                            <th>SUTA</th>
+                            <th>SGEM</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Arabic</td>
+                            <td>32,5</td>
+                            <td>27,1</td>
+                            <td>26,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mandarin</td>
+                            <td>28,5</td>
+                            <td>23,3</td>
+                            <td>23,1</td>
+                        </tr>
+
+                        <tr>
+                            <td>Hindi</td>
+                            <td>15,7</td>
+                            <td>12,5</td>
+                            <td>12,3</td>
+                        </tr>
+
+                        <tr>
+                            <td>Korean</td>
+                            <td>23,3</td>
+                            <td>19,7</td>
+                            <td>19,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>Spanish</td>
+                            <td>35,7</td>
+                            <td>29,8</td>
+                            <td>29,3</td>
+                        </tr>
+
+                        <tr>
+                            <td>Vietnamese</td>
+                            <td>18,5</td>
+                            <td>15,7</td>
+                            <td>15,4</td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <strong>Media</strong>
+                            </td>
+                            <td>25,7</td>
+                            <td>21,4</td>
+                            <td>
+                                <strong>21,0</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ABLATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · ABLATION
+                </p>
+
+                <h2>
+                    ¿Qué aporta cada componente?
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Beam</th>
+                            <th>GEM</th>
+                            <th>NS</th>
+                            <th>CTC</th>
+                            <th>Conformer</th>
+                            <th>Transducer</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>✗</td>
+                            <td>✗</td>
+                            <td>✗</td>
+                            <td>31,2</td>
+                            <td>28,7</td>
+                            <td>11,8</td>
+                        </tr>
+
+                        <tr>
+                            <td>✗</td>
+                            <td>✓</td>
+                            <td>✗</td>
+                            <td>24,9</td>
+                            <td>24,7</td>
+                            <td>10,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>✗</td>
+                            <td>✗</td>
+                            <td>✓</td>
+                            <td>25,2</td>
+                            <td>25,0</td>
+                            <td>10,1</td>
+                        </tr>
+
+                        <tr>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>
+                                <strong>24,7</strong>
+                            </td>
+                            <td>
+                                <strong>24,5</strong>
+                            </td>
+                            <td>
+                                <strong>9,9</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SUTA VS SGEM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    SUTA vs SGEM
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>SUTA</th>
+                            <th>SGEM</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Sin etiquetas</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sin source data</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Single utterance</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Greedy logits</td>
+                            <td>Sí</td>
+                            <td>No</td>
+                        </tr>
+
+                        <tr>
+                            <td>Beam search</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Entropy</td>
+                            <td>Sí</td>
+                            <td>Generalized</td>
+                        </tr>
+
+                        <tr>
+                            <td>Negative Sampling</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Qué todavía no resuelve
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        No aprende continuamente
+                    </h3>
+
+                    <p>
+                        El modelo se reinicia
+                        después de cada utterance
+                        y no conserva la adaptación.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Coste de inferencia
+                    </h3>
+
+                    <p>
+                        Cada muestra requiere varias
+                        actualizaciones mediante
+                        backpropagation.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Confianza inicial
+                    </h3>
+
+                    <p>
+                        La adaptación continúa dependiendo
+                        de las distribuciones producidas
+                        por el propio modelo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        No siempre mejora
+                    </h3>
+
+                    <p>
+                        En algunas condiciones concretas
+                        de ruido, el modelo sin adaptación
+                        puede obtener mejores resultados.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    SGEM demuestra que un sistema ASR
+                    puede modificar sus parámetros durante
+                    la propia inferencia sin utilizar
+                    transcripciones del nuevo dominio.
+                </p>
+
+                <p>
+                    Esto resulta especialmente relevante
+                    para escenarios donde aparecen
+                    progresivamente nuevos hablantes,
+                    acentos, canales o condiciones
+                    de ruido.
+                </p>
+
+                <p>
+                    Sin embargo, SGEM reinicia el modelo
+                    después de cada grabación.
+                </p>
+
+                <p>
+                    Por tanto, resuelve adaptación local
+                    pero no aprendizaje continuo.
+                </p>
+
+                <p>
+                    Para la tesis, una extensión natural
+                    consiste en conservar únicamente
+                    las adaptaciones que sean fiables,
+                    acumular conocimiento útil entre
+                    muestras y utilizar incertidumbre
+                    para decidir cuándo actualizar
+                    o restaurar el modelo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Explicabilidad en habla y audio | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 08
+                </p>
+
+                <h1>
+                    Explicabilidad en modelos
+                    de habla y audio
+                </h1>
+
+                <p class="tema-introduccion">
+
+                    Una predicción correcta no basta
+                    si no podemos determinar qué información
+                    acústica ha utilizado realmente
+                    el modelo para producirla.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    PROBLEMA CENTRAL
+                </p>
+
+                <h2>
+                    ¿Por qué ha tomado esta decisión?
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    Los modelos neuronales modernos pueden
+                    realizar predicciones muy precisas,
+                    pero sus representaciones internas
+                    resultan difíciles de interpretar.
+                </p>
+
+                <p>
+                    En una imagen es posible atribuir
+                    importancia a determinadas regiones
+                    espaciales.
+                </p>
+
+                <p>
+                    En audio, la explicación resulta
+                    más compleja porque debe considerar
+                    simultáneamente tiempo, frecuencia,
+                    contenido lingüístico y contexto.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FORMAS DE EXPLICAR
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EVIDENCIA ACÚSTICA
+                </p>
+
+                <h2>
+                    ¿Qué puede constituir una explicación?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Tiempo
+                    </strong>
+
+                    <span>
+                        Temporal intervals
+                    </span>
+
+                    <p>
+                        Qué fragmentos concretos
+                        de la grabación influyen
+                        en la decisión.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Frecuencia
+                    </strong>
+
+                    <span>
+                        Spectral regions
+                    </span>
+
+                    <p>
+                        Qué bandas o regiones
+                        del espectrograma son
+                        relevantes.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Fonemas
+                    </strong>
+
+                    <span>
+                        Phonetic evidence
+                    </span>
+
+                    <p>
+                        Qué unidades fonéticas
+                        están relacionadas con
+                        una predicción.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Palabras
+                    </strong>
+
+                    <span>
+                        Linguistic evidence
+                    </span>
+
+                    <p>
+                        Qué partes de la secuencia
+                        lingüística explican
+                        la salida.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Prosodia
+                    </strong>
+
+                    <span>
+                        Pitch · Rhythm · Pauses
+                    </span>
+
+                    <p>
+                        Características relacionadas
+                        con entonación, ritmo,
+                        intensidad o pausas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Eventos
+                    </strong>
+
+                    <span>
+                        Acoustic events
+                    </span>
+
+                    <p>
+                        Qué sonidos observables
+                        sustentan la clasificación
+                        o inferencia.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             POST HOC
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    POST HOC XAI
+                </p>
+
+                <h2>
+                    Explicar después de predecir
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <!-- INTEGRATED GRADIENTS -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Integrated Gradients
+                        </h3>
+
+                        <p>
+                            Atribuye la salida del modelo
+                            a las características de entrada
+                            integrando gradientes a lo largo
+                            de un camino entre un baseline
+                            y la muestra analizada.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Gradients</span>
+                            <span>Attribution</span>
+                            <span>Baseline</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/integrated-gradients.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIME -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            LIME
+                        </h3>
+
+                        <p>
+                            Explica una predicción concreta aproximando
+                            localmente el comportamiento de un modelo
+                            complejo mediante un modelo interpretable
+                            entrenado sobre perturbaciones de la entrada.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Local Explanation</span>
+                            <span>Perturbation</span>
+                            <span>Model-Agnostic</span>
+                            <span>Sparse Linear Model</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/lime.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SHAP -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            SHAP
+                        </h3>
+
+                        <p>
+                            Unifica diferentes métodos de atribución
+                            mediante valores inspirados en la teoría
+                            de juegos cooperativos para estimar
+                            cuánto contribuye cada característica
+                            a una predicción concreta.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Shapley Values</span>
+                            <span>Feature Attribution</span>
+                            <span>Local Explanation</span>
+                            <span>Kernel SHAP</span>
+                            <span>Deep SHAP</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/shap.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO PROBLEM
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA EN AUDIO
+                </p>
+
+                <h2>
+                    Perturbar la señal puede crear audio irreal
+                </h2>
+
+                <p>
+                    Eliminar frames, regiones temporales
+                    o bandas de frecuencia puede producir
+                    señales que no pertenecen a la distribución
+                    utilizada durante el entrenamiento.
+                </p>
+
+                <p>
+                    La reacción del modelo ante una perturbación
+                    artificial puede confundirse entonces
+                    con una explicación de su decisión original.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO-SPECIFIC
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EXPLICABILIDAD ACÚSTICA
+                </p>
+
+                <h2>
+                    Métodos específicamente relacionados con audio
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        04
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Explanations for Automatic Speech Recognition
+                        </h3>
+
+                        <p>
+                            Explica una transcripción ASR mediante
+                            un subconjunto de frames de audio que
+                            constituye una causa mínima y suficiente
+                            para mantener la salida del reconocedor.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>X-ASR</span>
+                            <span>SFL</span>
+                            <span>Causal</span>
+                            <span>LIME</span>
+                            <span>Audio Frames</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/explanations-asr.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+               <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        05
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Phoneme Discretized Saliency Maps
+                        </h3>
+
+                        <p>
+                            Convierte mapas de saliencia continuos
+                            en explicaciones discretas alineadas
+                            con fronteras fonéticas, permitiendo
+                            expresar la evidencia del clasificador
+                            mediante fonemas concretos.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>PDSM</span>
+                            <span>Phonemes</span>
+                            <span>Saliency</span>
+                            <span>Deepfake Voice</span>
+                            <span>Faithfulness</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/pdsm.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        06
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Faithfulness in
+                            Anomalous Sound Detection
+                        </h3>
+
+                        <p>
+                            Propone un framework cuantitativo para
+                            comprobar si las regiones frecuenciales
+                            señaladas por un método XAI corresponden
+                            realmente con las frecuencias que utiliza
+                            el detector de sonidos anómalos.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Faithfulness</span>
+                            <span>ASD</span>
+                            <span>Frequency Perturbation</span>
+                            <span>Spearman</span>
+                            <span>DCASE</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/faithfulness-asd.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTERPRETABILITY
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DISTINCIÓN FUNDAMENTAL
+                </p>
+
+                <h2>
+                    Interpretabilidad ≠ fidelidad
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Interpretabilidad</th>
+                            <th>Fidelidad</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Pregunta</td>
+                            <td>
+                                ¿Lo entiende una persona?
+                            </td>
+                            <td>
+                                ¿Representa realmente
+                                el comportamiento del modelo?
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Ejemplo</td>
+                            <td>
+                                Fonemas o reglas legibles
+                            </td>
+                            <td>
+                                Cambiar la evidencia altera
+                                realmente la predicción
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Riesgo</td>
+                            <td>
+                                Explicación demasiado compleja
+                            </td>
+                            <td>
+                                Explicación convincente
+                                pero falsa
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NEUROFUZZY
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    EXPLICABILIDAD INTRÍNSECA
+                </p>
+
+                <h2>
+                    Sistemas neurodifusos
+                </h2>
+
+                <p>
+                    Una alternativa consiste en no explicar
+                    únicamente un modelo opaco después
+                    de producir la predicción.
+                </p>
+
+                <p>
+                    Un encoder neuronal puede extraer
+                    características acústicas y un sistema
+                    difuso representar posteriormente
+                    relaciones mediante reglas lingüísticas.
+                </p>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Encoder acústico
+                        </h3>
+
+                        <p>
+                            Extrae representaciones
+                            de la señal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Variables interpretables
+                        </h3>
+
+                        <p>
+                            Energía, frecuencia,
+                            ritmo, pausas,
+                            prosodia o eventos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Sistema difuso
+                        </h3>
+
+                        <p>
+                            Convierte valores continuos
+                            en conceptos lingüísticos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Reglas
+                        </h3>
+
+                        <p>
+                            Construye relaciones
+                            auditables entre evidencia
+                            y decisión.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RULE EXAMPLE
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    EJEMPLO CONCEPTUAL
+                </p>
+
+                <h3>
+                    Explicación lingüística
+                </h3>
+
+                <p>
+                    SI la energía en frecuencias medias
+                    es elevada
+                </p>
+
+                <p>
+                    Y el patrón temporal es irregular
+                </p>
+
+                <p>
+                    ENTONCES la evidencia de anomalía
+                    es moderada-alta.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ANFIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="modelos-lista">
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        07
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            ANFIS
+                        </h3>
+
+                        <p>
+                            Integra un sistema de inferencia difusa
+                            dentro de una red adaptativa, permitiendo
+                            aprender funciones de pertenencia y
+                            consecuentes a partir de datos sin perder
+                            una estructura basada en reglas if-then.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Neurofuzzy</span>
+                            <span>Fuzzy Rules</span>
+                            <span>Takagi-Sugeno</span>
+                            <span>Hybrid Learning</span>
+                            <span>Adaptive Network</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/anfis.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RETO
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    RETO
+                </p>
+
+                <h2>
+                    Evitar un sistema difuso decorativo
+                </h2>
+
+                <p>
+                    Las reglas deben participar realmente
+                    en el proceso de decisión.
+                </p>
+
+                <p>
+                    Si simplemente se generan después
+                    de que una red neuronal haya decidido,
+                    podrían convertirse en otra explicación
+                    post hoc sin fidelidad garantizada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Explicabilidad acústica multinivel
+                </h2>
+
+                <p>
+                    Una posible contribución consiste
+                    en integrar evidencia temporal,
+                    frecuencial, fonética y prosódica
+                    dentro de un mismo mecanismo explicativo.
+                </p>
+
+                <p>
+                    Los métodos post hoc pueden utilizarse
+                    como herramientas de análisis,
+                    pero la línea pretende estudiar también
+                    mecanismos intrínsecamente auditables.
+                </p>
+
+                <p>
+                    La integración neurodifusa permitiría
+                    transformar representaciones neuronales
+                    en conceptos y reglas lingüísticas,
+                    siempre que pueda demostrarse
+                    que dichas reglas participan realmente
+                    en la decisión.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

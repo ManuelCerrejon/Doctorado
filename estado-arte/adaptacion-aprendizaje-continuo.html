@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Adaptación y aprendizaje continuo | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 07
+                </p>
+
+                <h1>
+                    Adaptación de dominio,
+                    personalización y aprendizaje continuo
+                </h1>
+
+                <p class="tema-introduccion">
+
+                    Los modelos acústicos se despliegan
+                    en entornos donde hablantes, micrófonos,
+                    ruido, lenguas y eventos pueden cambiar
+                    continuamente respecto a los datos
+                    utilizados durante el entrenamiento.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DOMAIN SHIFT
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    PROBLEMA CENTRAL
+                </p>
+
+                <h2>
+                    Domain shift
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    Un modelo suele entrenarse suponiendo
+                    que los datos futuros seguirán una
+                    distribución similar a la observada
+                    durante el entrenamiento.
+                </p>
+
+                <p>
+                    En condiciones reales esta hipótesis
+                    puede dejar de cumplirse debido a
+                    cambios de hablante, acento, micrófono,
+                    ruido, lengua, entorno o tipo
+                    de evento acústico.
+                </p>
+
+                <p>
+                    La adaptación pretende modificar
+                    el comportamiento del modelo para
+                    mantener su rendimiento bajo
+                    estas nuevas condiciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CAMBIOS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    CAMBIOS DE DISTRIBUCIÓN
+                </p>
+
+                <h2>
+                    ¿Qué puede cambiar?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Hablante
+                    </strong>
+
+                    <span>
+                        Speaker
+                    </span>
+
+                    <p>
+                        Pronunciación, velocidad,
+                        timbre o forma de hablar.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Acento
+                    </strong>
+
+                    <span>
+                        Accent / Dialect
+                    </span>
+
+                    <p>
+                        Variaciones fonéticas
+                        no suficientemente representadas
+                        durante el entrenamiento.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Dispositivo
+                    </strong>
+
+                    <span>
+                        Microphone / Channel
+                    </span>
+
+                    <p>
+                        Distintas respuestas frecuenciales,
+                        códecs o condiciones de captura.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Ruido
+                    </strong>
+
+                    <span>
+                        Environment
+                    </span>
+
+                    <p>
+                        Cambios progresivos o bruscos
+                        de las condiciones acústicas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Lengua
+                    </strong>
+
+                    <span>
+                        Language Expansion
+                    </span>
+
+                    <p>
+                        Incorporación de idiomas
+                        que no estaban presentes
+                        inicialmente.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Evento
+                    </strong>
+
+                    <span>
+                        Acoustic Domain
+                    </span>
+
+                    <p>
+                        Nuevas máquinas, sonidos
+                        o situaciones acústicas.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TIPOS ADAPTACION
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    ESTRATEGIAS
+                </p>
+
+                <h2>
+                    Diferentes formas de adaptación
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        SUPERVISADA
+                    </p>
+
+                    <h3>
+                        Target labels
+                    </h3>
+
+                    <ul>
+                        <li>Datos del nuevo dominio</li>
+                        <li>Transcripciones disponibles</li>
+                        <li>Fine-tuning o PEFT</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        NO SUPERVISADA
+                    </p>
+
+                    <h3>
+                        Unlabeled data
+                    </h3>
+
+                    <ul>
+                        <li>Sin transcripciones</li>
+                        <li>Pseudoetiquetas</li>
+                        <li>Entropy minimization</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        TEST-TIME
+                    </p>
+
+                    <h3>
+                        Durante inferencia
+                    </h3>
+
+                    <ul>
+                        <li>Datos de test</li>
+                        <li>Actualizaciones online</li>
+                        <li>Sin datos fuente</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONTINUAL
+                    </p>
+
+                    <h3>
+                        Flujo temporal
+                    </h3>
+
+                    <ul>
+                        <li>Dominios sucesivos</li>
+                        <li>Fronteras desconocidas</li>
+                        <li>Estabilidad a largo plazo</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PERSONALIZACIÓN
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PERSONALIZACIÓN
+                </p>
+
+                <h2>
+                    Adaptación a una situación concreta
+                </h2>
+
+                <p>
+                    En reconocimiento del habla,
+                    personalizar puede significar adaptar
+                    el sistema a la pronunciación,
+                    vocabulario o características acústicas
+                    de una persona determinada.
+                </p>
+
+                <p>
+                    En monitorización sonora puede consistir
+                    en aprender el ruido de fondo o
+                    el comportamiento normal de una
+                    máquina concreta.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIAS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIAS PRINCIPALES
+                </p>
+
+                <h2>
+                    De la adaptación eficiente
+                    al aprendizaje continuo
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <!-- LORA WHISPER -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            LoRA-Whisper
+                        </h3>
+
+                        <p>
+                            Utiliza módulos LoRA específicos
+                            por lengua para reducir la
+                            interferencia multilingüe y
+                            añadir nuevos idiomas sin modificar
+                            el modelo Whisper original.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>LoRA</span>
+                            <span>Whisper</span>
+                            <span>PEFT</span>
+                            <span>Language Expansion</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/lora-whisper.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SGEM -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            SGEM
+                        </h3>
+
+                        <p>
+                            Adapta modelos ASR durante la inferencia
+                            utilizando únicamente la propia muestra
+                            de test, sin transcripciones ni acceso
+                            a los datos originales de entrenamiento.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Test-Time Adaptation</span>
+                            <span>Beam Search</span>
+                            <span>Generalized Entropy</span>
+                            <span>Negative Sampling</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/sgem.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DSUTA -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Dynamic SUTA
+                        </h3>
+
+                        <p>
+                            Extiende la adaptación en tiempo de prueba
+                            hacia un escenario continuo mediante una
+                            estrategia fast-slow y un mecanismo de
+                            reinicio automático ante cambios de dominio.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Continual TTA</span>
+                            <span>Fast-Slow</span>
+                            <span>Entropy Minimization</span>
+                            <span>Dynamic Reset</span>
+                            <span>Domain Shift</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/dynamic-suta.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- UOCL -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        04
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Unsupervised Online Continual Learning
+                        </h3>
+
+                        <p>
+                            Estudia cómo un sistema ASR puede aprender
+                            continuamente de un flujo de audio no etiquetado,
+                            con tareas y fronteras desconocidas, reduciendo
+                            el olvido catastrófico mediante self-training.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Online Continual Learning</span>
+                            <span>Self-Training</span>
+                            <span>Pseudo-Labels</span>
+                            <span>AOS-U</span>
+                            <span>Catastrophic Forgetting</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/uocl-asr.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EVOLUCIÓN
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EVOLUCIÓN
+                </p>
+
+                <h2>
+                    De adaptar una vez a adaptarse continuamente
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Fine-tuning
+                        </h3>
+
+                        <p>
+                            Adaptar el modelo
+                            a un dominio concreto
+                            utilizando datos específicos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            PEFT
+                        </h3>
+
+                        <p>
+                            Modificar únicamente
+                            una pequeña fracción
+                            de los parámetros.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Test-Time Adaptation
+                        </h3>
+
+                        <p>
+                            Adaptar el sistema utilizando
+                            las propias muestras
+                            recibidas durante inferencia.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Continual TTA
+                        </h3>
+
+                        <p>
+                            Mantener conocimiento adquirido
+                            entre muestras sucesivas
+                            y distintos dominios.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Online Continual Learning
+                        </h3>
+
+                        <p>
+                            Aprender continuamente
+                            de un flujo real sin conocer
+                            cuándo empieza o termina
+                            cada dominio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CATASTROPHIC FORGETTING
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA PRINCIPAL
+                </p>
+
+                <h2>
+                    Catastrophic Forgetting
+                </h2>
+
+                <p>
+                    Aprender de nuevos datos puede mejorar
+                    el rendimiento en el dominio actual,
+                    pero deteriorar el conocimiento
+                    adquirido anteriormente.
+                </p>
+
+                <p>
+                    Un sistema verdaderamente continuo
+                    debe aprender nueva información
+                    sin destruir la que continúa
+                    siendo útil.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ESTRATEGIAS OLVIDO
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    ESTRATEGIAS
+                </p>
+
+                <h2>
+                    Cómo limitar el olvido
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Replay
+                    </strong>
+
+                    <span>
+                        Conservar ejemplos
+                    </span>
+
+                    <p>
+                        Mezclar información anterior
+                        durante nuevas actualizaciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Regularización
+                    </strong>
+
+                    <span>
+                        Restringir cambios
+                    </span>
+
+                    <p>
+                        Penalizar modificaciones
+                        excesivas de parámetros
+                        importantes.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Componentes específicos
+                    </strong>
+
+                    <span>
+                        Modularidad
+                    </span>
+
+                    <p>
+                        Mantener partes diferentes
+                        para dominios, hablantes
+                        o lenguas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Model ensembles
+                    </strong>
+
+                    <span>
+                        Especialización
+                    </span>
+
+                    <p>
+                        Combinar modelos adaptados
+                        a condiciones diferentes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             STABILITY PLASTICITY
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPROMISO
+                </p>
+
+                <h2>
+                    Stability vs Plasticity
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        DEMASIADA ESTABILIDAD
+                    </p>
+
+                    <h3>
+                        No aprende
+                    </h3>
+
+                    <ul>
+                        <li>Protege el modelo anterior</li>
+                        <li>Actualizaciones pequeñas</li>
+                        <li>Mala adaptación al nuevo dominio</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        DEMASIADA PLASTICIDAD
+                    </p>
+
+                    <h3>
+                        Olvida
+                    </h3>
+
+                    <ul>
+                        <li>Adaptación rápida</li>
+                        <li>Cambios elevados</li>
+                        <li>Catastrophic forgetting</li>
+                        <li>Amplificación de pseudoerrores</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONTROL
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA ABIERTO
+                </p>
+
+                <h2>
+                    ¿Cuándo debemos adaptar?
+                </h2>
+
+                <p>
+                    En audio las fronteras entre dominios
+                    no suelen venir indicadas.
+                </p>
+
+                <p>
+                    El ruido puede cambiar gradualmente,
+                    un hablante puede modificar su forma
+                    de pronunciar y una máquina puede
+                    degradarse durante semanas.
+                </p>
+
+                <p>
+                    Por ello, un sistema adaptativo
+                    debería detectar el cambio,
+                    decidir si la adaptación es necesaria
+                    y evitar actualizarse cuando
+                    la confianza sea insuficiente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Uno de los pilares centrales
+                </h2>
+
+                <p>
+                    La tesis pretende avanzar desde
+                    modelos estáticos hacia sistemas
+                    capaces de modificar su comportamiento
+                    conforme cambian las condiciones acústicas.
+                </p>
+
+                <p>
+                    No basta con demostrar que la adaptación
+                    reduce el error inmediatamente después
+                    de una actualización.
+                </p>
+
+                <p>
+                    También será necesario estudiar
+                    estabilidad, olvido, coste de adaptación,
+                    detección de cambios y recuperación
+                    ante actualizaciones incorrectas.
+                </p>
+
+                <p>
+                    Además, la adaptación debería estar
+                    conectada con la incertidumbre:
+                    un modelo no debería actualizarse
+                    automáticamente a partir de ejemplos
+                    sobre los que no tiene suficiente confianza.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

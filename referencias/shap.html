@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SHAP | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/explicabilidad-habla-audio.html"
+                    class="volver"
+                >
+                    ← Volver a Explicabilidad
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    SHAP
+                </h1>
+
+
+                <h2>
+                    A Unified Approach
+                    to Interpreting Model Predictions
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Lundberg & Lee · NeurIPS 2017
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>XAI</span>
+                    <span>Shapley Values</span>
+                    <span>Feature Attribution</span>
+                    <span>Kernel SHAP</span>
+                    <span>Deep SHAP</span>
+                    <span>Post hoc</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Scott M. Lundberg
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2017
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        NeurIPS 2017
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        4765–4774
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Lundberg, S. M., & Lee, S.-I. (2017).
+                    <em>
+                        A Unified Approach to
+                        Interpreting Model Predictions.
+                    </em>
+                    Advances in Neural Information
+                    Processing Systems 30,
+                    4765–4774.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Unificar métodos de explicación
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Antes de SHAP existían diferentes
+                    métodos para explicar predicciones
+                    de modelos complejos, pero no estaba
+                    claro cómo se relacionaban entre sí.
+                </p>
+
+                <p>
+                    Los autores muestran que varios
+                    de estos métodos pueden expresarse
+                    dentro de una misma familia:
+                    los métodos de atribución
+                    aditiva de características.
+                </p>
+
+                <p>
+                    SHAP proporciona un marco común
+                    en el que cada característica
+                    recibe una contribución
+                    para una predicción concreta.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    De una predicción base
+                    a la predicción final
+                </h2>
+
+                <p>
+                    SHAP interpreta la salida de un modelo
+                    como la suma de un valor base
+                    y las contribuciones de cada
+                    característica.
+                </p>
+
+                <p>
+                    Cada valor φᵢ indica cuánto
+                    contribuye una característica
+                    a desplazar la predicción
+                    respecto al valor de referencia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FORMULA ADITIVA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    EXPLANATION MODEL
+                </p>
+
+                <h2>
+                    g(z') =
+                    φ₀ + Σ φᵢ z'ᵢ
+                </h2>
+
+                <p>
+                    φ₀ representa el valor base.
+                </p>
+
+                <p>
+                    Cada φᵢ representa la contribución
+                    atribuida a una característica.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTUICION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · INTUICIÓN
+                </p>
+
+                <h2>
+                    Características como jugadores
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los valores de Shapley proceden
+                    de la teoría de juegos cooperativos.
+                </p>
+
+                <p>
+                    Podemos imaginar que cada característica
+                    de la entrada es un jugador
+                    que participa en una coalición.
+                </p>
+
+                <p>
+                    La predicción del modelo constituye
+                    el resultado obtenido por
+                    la coalición de características.
+                </p>
+
+                <p>
+                    El objetivo consiste en repartir
+                    de forma fundamentada ese resultado
+                    entre los distintos participantes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COALICIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Sin la característica
+                        </h3>
+
+                        <p>
+                            Se considera una coalición
+                            donde la característica i
+                            todavía no está presente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Añadir característica i
+                        </h3>
+
+                        <p>
+                            Se incorpora la característica
+                            a la coalición.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Medir el cambio
+                        </h3>
+
+                        <p>
+                            Se observa cuánto cambia
+                            la predicción cuando
+                            se incorpora i.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Repetir
+                        </h3>
+
+                        <p>
+                            El cálculo se considera
+                            para diferentes subconjuntos
+                            de características.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Promediar
+                        </h3>
+
+                        <p>
+                            La contribución final
+                            tiene en cuenta los diferentes
+                            órdenes y contextos
+                            en que aparece la característica.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BASE VALUE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    BASE VALUE
+                </p>
+
+                <h2>
+                    E[f(x)]
+                </h2>
+
+                <p>
+                    La explicación comienza
+                    desde una predicción esperada
+                    de referencia.
+                </p>
+
+                <p>
+                    Las contribuciones positivas
+                    y negativas de las características
+                    desplazan ese valor hasta
+                    la predicción de la instancia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             VISUAL CONCEPT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    EJEMPLO CONCEPTUAL
+                </p>
+
+                <h3>
+                    Base → contribuciones → predicción
+                </h3>
+
+                <p>
+                    Predicción base = 0,40
+                </p>
+
+                <p>
+                    Característica A = +0,25
+                </p>
+
+                <p>
+                    Característica B = +0,10
+                </p>
+
+                <p>
+                    Característica C = −0,05
+                </p>
+
+                <p>
+                    Predicción final = 0,70
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRES PROPIEDADES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · PROPIEDADES
+                </p>
+
+                <h2>
+                    Tres requisitos fundamentales
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        PROPERTY 1
+                    </p>
+
+                    <h3>
+                        Local Accuracy
+                    </h3>
+
+                    <p>
+                        La suma de las contribuciones
+                        debe reconstruir la predicción
+                        del modelo para la instancia
+                        explicada.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        PROPERTY 2
+                    </p>
+
+                    <h3>
+                        Missingness
+                    </h3>
+
+                    <p>
+                        Una característica considerada
+                        ausente debe recibir
+                        contribución cero.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        PROPERTY 3
+                    </p>
+
+                    <h3>
+                        Consistency
+                    </h3>
+
+                    <p>
+                        Si aumenta la contribución
+                        marginal de una característica,
+                        su atribución no debería disminuir.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             UNIQUE SOLUTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    RESULTADO TEÓRICO
+                </p>
+
+                <h2>
+                    Una única solución
+                </h2>
+
+                <p>
+                    Dentro de la familia de modelos
+                    de atribución aditiva,
+                    los autores demuestran que existe
+                    una única solución que satisface
+                    simultáneamente Local Accuracy,
+                    Missingness y Consistency.
+                </p>
+
+                <p>
+                    Esa solución corresponde
+                    a los valores de Shapley.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SIX METHODS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · UNIFICACIÓN
+                </p>
+
+                <h2>
+                    Seis métodos bajo un mismo marco
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        LIME
+                    </strong>
+
+                    <span>
+                        Local surrogate
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        DeepLIFT
+                    </strong>
+
+                    <span>
+                        Deep attribution
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Layer-wise
+                        Relevance Propagation
+                    </strong>
+
+                    <span>
+                        LRP
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Shapley Regression
+                    </strong>
+
+                    <span>
+                        Shapley values
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Shapley Sampling
+                    </strong>
+
+                    <span>
+                        Sampling approximation
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Quantitative
+                        Input Influence
+                    </strong>
+
+                    <span>
+                        QII
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             KERNEL SHAP
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · KERNEL SHAP
+                </p>
+
+                <h2>
+                    LIME + Shapley
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Kernel SHAP utiliza una formulación
+                    basada en regresión lineal
+                    sobre representaciones binarias
+                    de características presentes
+                    y ausentes.
+                </p>
+
+                <p>
+                    La diferencia respecto a Linear LIME
+                    reside en la elección específica
+                    de la función de ponderación,
+                    la pérdida y la regularización.
+                </p>
+
+                <p>
+                    Con estas elecciones,
+                    la regresión recupera
+                    los valores de Shapley.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             KERNEL PIPELINE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Seleccionar subconjuntos
+                        </h3>
+
+                        <p>
+                            Se generan combinaciones
+                            de características presentes
+                            y ausentes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Evaluar el modelo
+                        </h3>
+
+                        <p>
+                            Se obtiene la salida
+                            de la caja negra
+                            para cada combinación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Shapley Kernel
+                        </h3>
+
+                        <p>
+                            Cada coalición recibe
+                            un peso específico.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Regresión lineal
+                        </h3>
+
+                        <p>
+                            Se ajusta un modelo
+                            de atribución aditiva.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            SHAP values
+                        </h3>
+
+                        <p>
+                            Los coeficientes obtenidos
+                            representan las contribuciones
+                            de las características.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DEEP SHAP
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · DEEP SHAP
+                </p>
+
+                <h2>
+                    Aproximación para redes profundas
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    El artículo introduce también
+                    Deep SHAP como una aproximación
+                    específica para modelos profundos.
+                </p>
+
+                <p>
+                    Esta estrategia conecta las ideas
+                    de SHAP con mecanismos de atribución
+                    utilizados por DeepLIFT.
+                </p>
+
+                <p>
+                    El objetivo es aproximar
+                    valores SHAP evitando evaluar
+                    explícitamente todas las posibles
+                    coaliciones de características.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHY APPROXIMATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA COMPUTACIONAL
+                </p>
+
+                <h2>
+                    2ᴹ coaliciones
+                </h2>
+
+                <p>
+                    Considerar todas las combinaciones
+                    posibles resulta inviable
+                    cuando el número de características
+                    M es elevado.
+                </p>
+
+                <p>
+                    Por ello, los métodos prácticos
+                    necesitan aproximaciones,
+                    muestreo o explotar
+                    la estructura del modelo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIME VS SHAP
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    LIME vs SHAP
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>LIME</th>
+                            <th>SHAP</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Explicación</td>
+                            <td>Local</td>
+                            <td>Local</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Modelo interpretable</td>
+                            <td>Lineal local</td>
+                            <td>Aditivo</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Perturbaciones</td>
+                            <td>Sí</td>
+                            <td>Dependiendo del método</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Pesos</td>
+                            <td>Kernel heurístico</td>
+                            <td>Shapley kernel</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Local Accuracy</td>
+                            <td>
+                                No garantizada
+                                con configuración original
+                            </td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Consistency</td>
+                            <td>
+                                No garantizada
+                            </td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Fundamento</td>
+                            <td>Surrogate local</td>
+                            <td>Shapley values</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IG / LIME / SHAP
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN GENERAL
+                </p>
+
+                <h2>
+                    IG · LIME · SHAP
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Integrated Gradients</th>
+                            <th>LIME</th>
+                            <th>SHAP</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Principio</td>
+                            <td>Gradientes</td>
+                            <td>Perturbación</td>
+                            <td>Shapley</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Model-agnostic</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                            <td>Kernel SHAP: sí</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Baseline / referencia</td>
+                            <td>Explícito</td>
+                            <td>No central</td>
+                            <td>Valor esperado / background</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Modelo auxiliar</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                            <td>Según variante</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Atribución</td>
+                            <td>Por gradiente integrado</td>
+                            <td>Coeficientes locales</td>
+                            <td>Valores SHAP</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Coste potencial</td>
+                            <td>Varias backward passes</td>
+                            <td>Muchas evaluaciones</td>
+                            <td>Combinatorio / aproximado</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ORIGINAL PAPER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    El artículo original no es de audio
+                </h3>
+
+                <p>
+                    SHAP se presenta como un marco
+                    general para interpretar
+                    predicciones de modelos.
+                </p>
+
+                <p>
+                    La aplicación a habla o sonido
+                    requiere decidir posteriormente
+                    cuáles serán las características
+                    acústicas que actuarán
+                    como "jugadores".
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    APLICACIÓN A AUDIO
+                </p>
+
+                <h2>
+                    ¿Qué sería una característica?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Frames
+                    </strong>
+
+                    <span>
+                        Temporal units
+                    </span>
+
+                    <p>
+                        Intervalos concretos
+                        de la grabación.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Time-Frequency
+                    </strong>
+
+                    <span>
+                        Spectrogram regions
+                    </span>
+
+                    <p>
+                        Regiones localizadas
+                        en tiempo y frecuencia.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Phonemes
+                    </strong>
+
+                    <span>
+                        Phonetic units
+                    </span>
+
+                    <p>
+                        Segmentos fonéticos
+                        alineados con la señal.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Words
+                    </strong>
+
+                    <span>
+                        Linguistic units
+                    </span>
+
+                    <p>
+                        Palabras relacionadas
+                        con regiones acústicas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Events
+                    </strong>
+
+                    <span>
+                        Sound events
+                    </span>
+
+                    <p>
+                        Fuentes o eventos
+                        acústicos identificables.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Prosody
+                    </strong>
+
+                    <span>
+                        Acoustic descriptors
+                    </span>
+
+                    <p>
+                        Pitch, energía,
+                        duración o pausas.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO COALITION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    EJEMPLO ACÚSTICO
+                </p>
+
+                <h2>
+                    Evento A + Evento B + Prosodia
+                </h2>
+
+                <p>
+                    En una señal acústica,
+                    SHAP podría estudiar
+                    cuánto cambia una predicción
+                    cuando se dispone de diferentes
+                    combinaciones de evidencias.
+                </p>
+
+                <p>
+                    El problema científico pasa
+                    a ser cómo representar correctamente
+                    la ausencia de una de esas evidencias.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FEATURE DEPENDENCE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    PROBLEMA EN AUDIO
+                </p>
+
+                <h2>
+                    Las características acústicas
+                    no son independientes
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los componentes de una señal
+                    de audio presentan fuertes
+                    dependencias temporales,
+                    espectrales y lingüísticas.
+                </p>
+
+                <p>
+                    Un fonema depende de los frames
+                    vecinos, una palabra depende
+                    de una secuencia y un evento
+                    puede solaparse con otros sonidos.
+                </p>
+
+                <p>
+                    Por ello, eliminar una característica
+                    sin tener en cuenta sus dependencias
+                    puede producir entradas
+                    acústicamente irreales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES AUDIO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES PARA AUDIO
+                </p>
+
+                <h2>
+                    Aspectos críticos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Coste combinatorio
+                    </h3>
+
+                    <p>
+                        Una señal puede contener
+                        miles de frames o bins,
+                        haciendo inviable trabajar
+                        directamente con todas
+                        las coaliciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Background
+                    </h3>
+
+                    <p>
+                        La elección de una referencia
+                        o distribución de fondo
+                        afecta a las atribuciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Dependencias
+                    </h3>
+
+                    <p>
+                        Tiempo, frecuencia y fonética
+                        no pueden tratarse siempre
+                        como características independientes.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Perturbación OOD
+                    </h3>
+
+                    <p>
+                        Las combinaciones de presencia
+                        y ausencia pueden producir
+                        audio fuera de distribución.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Resolución
+                    </h3>
+
+                    <p>
+                        Valores SHAP sobre miles
+                        de elementos no constituyen
+                        por sí mismos una explicación
+                        comprensible.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Fidelidad semántica
+                    </h3>
+
+                    <p>
+                        Una puntuación elevada
+                        debe relacionarse después
+                        con una evidencia acústica
+                        interpretable.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    De contribuciones numéricas
+                    a evidencias acústicas
+                </h2>
+
+                <p>
+                    SHAP ofrece un marco sólido
+                    para asignar contribuciones
+                    a las características utilizadas
+                    por un modelo.
+                </p>
+
+                <p>
+                    Sin embargo, aplicar directamente
+                    SHAP a cada bin de un espectrograma
+                    produciría una explicación
+                    demasiado extensa y difícil
+                    de interpretar.
+                </p>
+
+                <p>
+                    Para la tesis resulta más interesante
+                    estudiar unidades acústicas
+                    jerárquicas:
+                </p>
+
+                <p>
+                    frames → segmentos →
+                    fonemas / eventos →
+                    conceptos acústicos.
+                </p>
+
+                <p>
+                    Los valores de atribución podrían
+                    agregarse sobre estas unidades
+                    y posteriormente convertirse
+                    en variables lingüísticas.
+                </p>
+
+                <p>
+                    Un sistema neurodifuso podría
+                    utilizar finalmente estas variables
+                    para construir reglas auditables.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA DERIVADA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Hierarchical Acoustic SHAP
+                </h2>
+
+                <p>
+                    En lugar de explicar miles
+                    de bins independientemente,
+                    agrupar la evidencia acústica
+                    en unidades progresivamente
+                    más interpretables.
+                </p>
+
+                <p>
+                    De esta forma podrían obtenerse
+                    atribuciones a nivel temporal,
+                    fonético, prosódico y semántico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

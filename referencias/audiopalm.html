@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AudioPaLM | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/modelos-lenguaje-audio-habla.html"
+                    class="volver"
+                >
+                    ← Volver a Modelos de lenguaje de audio y habla
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    AudioPaLM
+                </h1>
+
+
+                <h2>
+                    A Large Language Model
+                    That Can Speak and Listen
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Rubenstein, P. K. et al. · 2023
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Speech</span>
+                    <span>Text</span>
+                    <span>Multimodal LLM</span>
+                    <span>Speech Translation</span>
+                    <span>Speech-to-Speech</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Paul K. Rubenstein
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Tipo
+                    </span>
+
+                    <strong>
+                        Technical Report
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Identificador
+                    </span>
+
+                    <strong>
+                        arXiv:2306.12925
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Rubenstein, P. K. et al. (2023).
+                    <em>
+                        AudioPaLM: A Large Language Model
+                        That Can Speak and Listen.
+                    </em>
+                    arXiv:2306.12925.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Unir conocimiento textual y habla
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los grandes modelos de lenguaje textual
+                    aprenden conocimiento lingüístico y semántico
+                    a partir de cantidades muy elevadas de texto.
+                </p>
+
+                <p>
+                    Sin embargo, un sistema basado únicamente
+                    en texto no puede recibir directamente
+                    una señal hablada ni conservar propiedades
+                    acústicas como voz, entonación o condiciones
+                    de grabación.
+                </p>
+
+                <p>
+                    Por otro lado, modelos acústicos como AudioLM
+                    pueden generar habla y preservar parte de
+                    esta información, pero no disponen del mismo
+                    conocimiento lingüístico adquirido por los
+                    grandes modelos textuales.
+                </p>
+
+                <p>
+                    AudioPaLM intenta reunir ambas capacidades
+                    dentro de un único modelo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Ampliar el vocabulario del LLM con audio
+                </h2>
+
+                <p>
+                    AudioPaLM parte de un Transformer
+                    decoder-only preentrenado con texto.
+                </p>
+
+                <p>
+                    Su vocabulario se amplía incorporando
+                    nuevos identificadores correspondientes
+                    a tokens acústicos.
+                </p>
+
+                <p>
+                    Una vez realizado este cambio, el mismo
+                    modelo puede procesar secuencias formadas
+                    por tokens de texto, tokens de audio
+                    o combinaciones de ambos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    El Transformer prácticamente no cambia
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>TEXT</span>
+
+                    <h3>
+                        Text Tokens
+                    </h3>
+
+                    <p>
+                        Tokens pertenecientes al
+                        vocabulario original del LLM.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    ↘
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>VOCABULARY</span>
+
+                    <h3>
+                        Shared Embeddings
+                    </h3>
+
+                    <p>
+                        La matriz de embeddings
+                        se amplía para incorporar
+                        también tokens acústicos.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        Decoder-only LLM
+                    </h3>
+
+                    <p>
+                        Modela autoregresivamente
+                        texto y audio utilizando
+                        la misma arquitectura.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Text / Audio
+                    </h3>
+
+                    <p>
+                        Puede producir tokens
+                        lingüísticos o acústicos.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TOKENIZACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · TOKENIZACIÓN DEL HABLA
+                </p>
+
+                <h2>
+                    Audio como secuencia discreta
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Forma de onda
+                        </h3>
+
+                        <p>
+                            La grabación constituye la entrada
+                            del tokenizador acústico.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Speech Encoder
+                        </h3>
+
+                        <p>
+                            Los autores experimentan con
+                            representaciones procedentes
+                            de w2v-BERT y USM.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Quantization
+                        </h3>
+
+                        <p>
+                            Las representaciones acústicas
+                            se convierten en identificadores
+                            discretos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio Tokens
+                        </h3>
+
+                        <p>
+                            El resultado puede introducirse
+                            directamente en el vocabulario
+                            del modelo de lenguaje.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TOKENIZADORES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    TOKENIZADORES COMPARADOS
+                </p>
+
+                <h2>
+                    La representación acústica importa
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        W2V-BERT
+                    </p>
+
+                    <h3>
+                        25 tokens/s
+                    </h3>
+
+                    <ul>
+                        <li>Representación auto-supervisada</li>
+                        <li>Vocabulario acústico: 1.024</li>
+                        <li>Baseline de tokenización</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        USM-v1
+                    </p>
+
+                    <h3>
+                        25 tokens/s
+                    </h3>
+
+                    <ul>
+                        <li>Universal Speech Model</li>
+                        <li>Encoder multilingüe de 2B parámetros</li>
+                        <li>Mejor representación lingüística</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        USM-v2
+                    </p>
+
+                    <h3>
+                        Mejor resultado
+                    </h3>
+
+                    <ul>
+                        <li>Cuantizador mejorado</li>
+                        <li>Pérdida ASR auxiliar</li>
+                        <li>Mayor rendimiento multilingüe</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ABLATION TOKENIZER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EXPERIMENTO
+                </p>
+
+                <h2>
+                    Efecto del tokenizador
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Tokens</th>
+                            <th>CoVoST2 AST · BLEU</th>
+                            <th>CoVoST2 ASR · WER</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>w2v-BERT</td>
+                            <td>15,2</td>
+                            <td>50,1</td>
+                        </tr>
+
+                        <tr>
+                            <td>USM-v1</td>
+                            <td>18,5</td>
+                            <td>40,2</td>
+                        </tr>
+
+                        <tr>
+                            <td>USM-v2</td>
+                            <td>26,9</td>
+                            <td>22,3</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Conclusión
+                </h3>
+
+                <p>
+                    Manteniendo el resto de la configuración,
+                    cambiar únicamente el tokenizador produce
+                    diferencias muy importantes.
+                </p>
+
+                <p>
+                    Por tanto, la forma de discretizar el audio
+                    constituye una parte crítica de este tipo
+                    de modelos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TAREAS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · TAREAS
+                </p>
+
+                <h2>
+                    Un mismo modelo para diferentes transformaciones
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        ASR
+                    </strong>
+
+                    <span>
+                        Speech → Text
+                    </span>
+
+                    <p>
+                        Reconocimiento automático
+                        del habla.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        AST
+                    </strong>
+
+                    <span>
+                        Speech → Translated Text
+                    </span>
+
+                    <p>
+                        Traducción automática
+                        de habla a texto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        S2ST
+                    </strong>
+
+                    <span>
+                        Speech → Speech
+                    </span>
+
+                    <p>
+                        Traducción directa entre
+                        señales habladas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        TTS
+                    </strong>
+
+                    <span>
+                        Text → Speech
+                    </span>
+
+                    <p>
+                        Generación de habla
+                        a partir de texto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        MT
+                    </strong>
+
+                    <span>
+                        Text → Text
+                    </span>
+
+                    <p>
+                        Traducción automática
+                        convencional.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MULTITASK
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · MULTITAREA
+                </p>
+
+                <h2>
+                    Descomponer tareas complejas
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio
+                        </h3>
+
+                        <p>
+                            El modelo recibe directamente
+                            los tokens de la señal hablada.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            ASR
+                        </h3>
+
+                        <p>
+                            Puede generar primero
+                            la transcripción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Translation
+                        </h3>
+
+                        <p>
+                            Posteriormente puede generar
+                            la traducción utilizando
+                            el mismo contexto.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Speech Generation
+                        </h3>
+
+                        <p>
+                            En tareas speech-to-speech
+                            puede continuar generando
+                            tokens acústicos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CHAIN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    RESULTADO METODOLÓGICO
+                </p>
+
+                <h3>
+                    ASR → Translation mejora AST
+                </h3>
+
+                <p>
+                    Los autores comprobaron que entrenar
+                    al modelo para producir primero una
+                    transcripción y después la traducción
+                    mejora el rendimiento de la tarea
+                    de traducción de habla.
+                </p>
+
+                <p>
+                    A diferencia de una cascada tradicional,
+                    continúa siendo un único Transformer:
+                    durante la generación de la traducción
+                    puede atender tanto al audio original
+                    como a los tokens textuales anteriores.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · DATASETS
+                </p>
+
+                <h2>
+                    Entrenamiento multilingüe
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        COVOST2 / CVSS
+                    </span>
+
+                    <h3>
+                        Speech Translation
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        21 pares
+                    </strong>
+
+                    <p>
+                        Traducción de múltiples
+                        lenguas hacia inglés.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        VOXPOPULI
+                    </span>
+
+                    <h3>
+                        ASR + S2ST
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        Multilingual
+                    </strong>
+
+                    <p>
+                        Habla parlamentaria, transcripciones
+                        y traducciones realizadas
+                        por intérpretes.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        COMMON VOICE 11
+                    </span>
+
+                    <h3>
+                        ASR
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        98 lenguas
+                    </strong>
+
+                    <p>
+                        Grabaciones multilingües
+                        asociadas a texto.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        YOUTUBE
+                    </span>
+
+                    <h3>
+                        ASR
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        56 lenguas
+                    </strong>
+
+                    <p>
+                        Audio transcrito automáticamente
+                        mediante USM-2B.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        WMT / TED
+                    </span>
+
+                    <h3>
+                        Synthetic Speech
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        X → English
+                    </strong>
+
+                    <p>
+                        Datos textuales transformados
+                        en ejemplos de habla mediante TTS.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODEL SIZE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · MODELOS
+                </p>
+
+                <h2>
+                    Configuraciones principales
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUDIOPALM
+                    </p>
+
+                    <h3>
+                        8B
+                    </h3>
+
+                    <ul>
+                        <li>Inicializado desde PaLM 8B</li>
+                        <li>Vocabulario ampliado con audio</li>
+                        <li>AST, ASR y S2ST</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUDIOPALM-2
+                    </p>
+
+                    <h3>
+                        8B
+                    </h3>
+
+                    <ul>
+                        <li>Inicializado desde PaLM-2</li>
+                        <li>Mayor capacidad textual multilingüe</li>
+                        <li>Especialmente evaluado en AST</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEXT PRETRAINING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · TRANSFERENCIA DESDE TEXTO
+                </p>
+
+                <h2>
+                    ¿Sirve realmente empezar desde un LLM?
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Inicialización</th>
+                            <th>CoVoST2 AST</th>
+                            <th>CoVoST2 ASR</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>1B desde cero</td>
+                            <td>6,5 BLEU</td>
+                            <td>66,0 WER</td>
+                        </tr>
+
+                        <tr>
+                            <td>8B desde cero</td>
+                            <td>6,9 BLEU</td>
+                            <td>63,3 WER</td>
+                        </tr>
+
+                        <tr>
+                            <td>PaLM 8B preentrenado</td>
+                            <td>18,4 BLEU</td>
+                            <td>40,2 WER</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Resultado importante
+                </h3>
+
+                <p>
+                    El salto no se explica únicamente
+                    por aumentar el número de parámetros.
+                </p>
+
+                <p>
+                    Inicializar el modelo con conocimiento
+                    textual previamente aprendido produce
+                    una mejora considerable frente a entrenar
+                    exactamente la misma arquitectura desde cero.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · RESULTADOS
+                </p>
+
+                <h2>
+                    Speech Translation
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        COVOST2 · AST
+                    </span>
+
+                    <strong>
+                        37,8
+                    </strong>
+
+                    <p>
+                        BLEU · AudioPaLM-2 8B
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Frente a otros sistemas
+                    </h3>
+
+                    <p>
+                        La configuración AudioPaLM-2
+                        obtiene un resultado superior
+                        a los baselines de traducción
+                        de habla comparados en el trabajo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>CoVoST2 AST</th>
+                            <th>CVSS S2ST</th>
+                            <th>VoxPopuli ASR</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Whisper Large-v2</td>
+                            <td>29,1 BLEU</td>
+                            <td>—</td>
+                            <td>13,6 WER</td>
+                        </tr>
+
+                        <tr>
+                            <td>AudioPaLM 8B AST</td>
+                            <td>35,4 BLEU</td>
+                            <td>—</td>
+                            <td>11,1 WER</td>
+                        </tr>
+
+                        <tr>
+                            <td>AudioPaLM 8B S2ST</td>
+                            <td>36,2 BLEU</td>
+                            <td>32,5 ASR-BLEU</td>
+                            <td>16,0 WER</td>
+                        </tr>
+
+                        <tr>
+                            <td>AudioPaLM-2 8B AST</td>
+                            <td>37,8 BLEU</td>
+                            <td>—</td>
+                            <td>9,8 WER</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SPEECH GENERATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · GENERACIÓN DE HABLA
+                </p>
+
+                <h2>
+                    De tokens a una nueva voz
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIOPALM</span>
+
+                    <h3>
+                        Audio Tokens
+                    </h3>
+
+                    <p>
+                        El LLM produce la secuencia
+                        acústica de alto nivel.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>GENERATION</span>
+
+                    <h3>
+                        AudioLM / SoundStorm
+                    </h3>
+
+                    <p>
+                        Generan tokens SoundStream
+                        condicionados por la secuencia.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CODEC</span>
+
+                    <h3>
+                        SoundStream
+                    </h3>
+
+                    <p>
+                        Convierte finalmente los
+                        códigos en forma de onda.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             VOICE PRESERVATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    SPEECH-TO-SPEECH
+                </p>
+
+                <h2>
+                    Traducir conservando la voz
+                </h2>
+
+                <p>
+                    Para sintetizar la salida puede utilizarse
+                    una muestra de aproximadamente tres segundos
+                    de la voz original como condicionamiento.
+                </p>
+
+                <p>
+                    Esto permite que la traducción hablada
+                    conserve características relacionadas con
+                    la identidad del hablante y las condiciones
+                    acústicas originales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ZERO SHOT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · ZERO-SHOT
+                </p>
+
+                <h2>
+                    Transferencia entre lenguas
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores evalúan también la traducción
+                    de habla sobre lenguas para las que determinadas
+                    combinaciones de entrada y salida no habían
+                    aparecido explícitamente durante el entrenamiento.
+                </p>
+
+                <p>
+                    Los resultados muestran que parte del
+                    conocimiento multilingüe adquirido previamente
+                    por el modelo textual puede transferirse
+                    posteriormente al procesamiento del habla.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO LM VS AUDIOPALM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    AudioLM vs AudioPaLM
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>AudioLM</th>
+                            <th>AudioPaLM</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Texto</td>
+                            <td>No necesario</td>
+                            <td>Integrado explícitamente</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio tokens</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Modelo textual preentrenado</td>
+                            <td>No</td>
+                            <td>PaLM / PaLM-2</td>
+                        </tr>
+
+                        <tr>
+                            <td>ASR</td>
+                            <td>No es el objetivo</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speech Translation</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speech-to-Speech</td>
+                            <td>Generación/continuación</td>
+                            <td>Traducción</td>
+                        </tr>
+
+                        <tr>
+                            <td>Conocimiento textual</td>
+                            <td>Limitado</td>
+                            <td>Transferido desde el LLM</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Problemas que siguen abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Tokenización
+                    </h3>
+
+                    <p>
+                        El rendimiento depende fuertemente
+                        de la información que conserve
+                        el tokenizador acústico.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Secuencias largas
+                    </h3>
+
+                    <p>
+                        A 25 tokens acústicos por segundo,
+                        el audio continúa produciendo
+                        secuencias mucho más largas
+                        que el texto equivalente.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Escala
+                    </h3>
+
+                    <p>
+                        Las configuraciones principales
+                        utilizan modelos de aproximadamente
+                        8.000 millones de parámetros.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Fundamentación acústica
+                    </h3>
+
+                    <p>
+                        Integrar audio y lenguaje no garantiza
+                        por sí mismo que las decisiones del modelo
+                        estén basadas correctamente en la
+                        evidencia acústica.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    AudioPaLM demuestra que es posible
+                    incorporar una nueva modalidad acústica
+                    a un gran modelo textual mediante
+                    un vocabulario de unidades discretas.
+                </p>
+
+                <p>
+                    El experimento de inicialización resulta
+                    especialmente relevante: el conocimiento
+                    adquirido previamente a partir de texto
+                    mejora posteriormente tareas de habla,
+                    incluso aunque los tokens acústicos sean
+                    completamente nuevos para el modelo.
+                </p>
+
+                <p>
+                    Al mismo tiempo, el fuerte efecto producido
+                    por cambiar únicamente el tokenizador muestra
+                    que la representación de entrada constituye
+                    una pieza crítica del sistema.
+                </p>
+
+                <p>
+                    Para la tesis esto conecta directamente
+                    con la búsqueda de representaciones acústicas
+                    compactas, adaptables y multimodales y con
+                    el estudio de qué información debe conservarse
+                    para permitir comprensión y razonamiento
+                    sin generar secuencias innecesariamente largas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

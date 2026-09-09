@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        HuBERT | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/aprendizaje-auto-supervisado.html"
+                    class="volver"
+                >
+                    ← Volver a Aprendizaje auto-supervisado
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    HuBERT
+                </h1>
+
+
+                <h2>
+                    Self-Supervised Speech Representation Learning
+                    by Masked Prediction of Hidden Units
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Hsu, W.-N. et al. · 2021
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Self-Supervised Learning</span>
+                    <span>Clustering</span>
+                    <span>Masked Prediction</span>
+                    <span>ASR</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INFORMACIÓN BIBLIOGRÁFICA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Autores
+                    </span>
+
+                    <strong>
+                        Hsu, Bolte, Tsai, Lakhotia,
+                        Salakhutdinov y Mohamed
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2021
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        IEEE/ACM TASLP · Vol. 29
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        3451–3460
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Hsu, W.-N., Bolte, B., Tsai, Y.-H. H.,
+                    Lakhotia, K., Salakhutdinov, R., & Mohamed, A.
+                    (2021).
+                    <em>
+                        HuBERT: Self-Supervised Speech
+                        Representation Learning by Masked
+                        Prediction of Hidden Units.
+                    </em>
+                    IEEE/ACM Transactions on Audio, Speech,
+                    and Language Processing, 29, 3451–3460.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    ¿Qué intenta resolver?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    En el habla no existe durante el preentrenamiento
+                    un vocabulario conocido de unidades acústicas
+                    equivalente a las palabras o subpalabras utilizadas
+                    en modelos de lenguaje textual.
+                </p>
+
+                <p>
+                    Además, una señal contiene múltiples unidades
+                    acústicas cuya duración y fronteras temporales
+                    no se conocen previamente.
+                </p>
+
+                <p>
+                    HuBERT propone descubrir automáticamente unidades
+                    ocultas mediante clustering y utilizarlas como
+                    objetivos de una tarea de predicción enmascarada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA CENTRAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Hidden Units
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    DIFERENCIA FUNDAMENTAL
+                </p>
+
+                <h2>
+                    Primero descubre las etiquetas y después aprende a predecirlas
+                </h2>
+
+                <p>
+                    HuBERT separa el descubrimiento de unidades acústicas
+                    de la tarea de representación. Un algoritmo de clustering
+                    genera etiquetas discretas aproximadas para cada frame
+                    y posteriormente el Transformer aprende a predecirlas
+                    cuando parte de la entrada se encuentra enmascarada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · DATASETS
+                </p>
+
+                <h2>
+                    Datos utilizados
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        PREENTRENAMIENTO
+                    </span>
+
+                    <h3>
+                        LibriSpeech
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        960 horas
+                    </strong>
+
+                    <p>
+                        Utilizado como conjunto principal para
+                        estudiar el preentrenamiento auto-supervisado
+                        y las primeras iteraciones de HuBERT.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        PREENTRENAMIENTO
+                    </span>
+
+                    <h3>
+                        Libri-Light
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        60.000 horas
+                    </strong>
+
+                    <p>
+                        Utilizado para el preentrenamiento a gran escala
+                        de los modelos HuBERT Large y X-Large.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        FINE-TUNING
+                    </span>
+
+                    <h3>
+                        Libri-Light
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        10 min · 1 h · 10 h
+                    </strong>
+
+                    <p>
+                        Subconjuntos etiquetados utilizados para estudiar
+                        el rendimiento cuando existe muy poca cantidad
+                        de habla transcrita.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        FINE-TUNING
+                    </span>
+
+                    <h3>
+                        LibriSpeech
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        100 h · 960 h
+                    </strong>
+
+                    <p>
+                        Escenarios supervisados de mayor tamaño utilizados
+                        para adaptar y evaluar los modelos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             GENERACIÓN DE UNIDADES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · GENERACIÓN DE OBJETIVOS
+                </p>
+
+                <h2>
+                    Clustering de unidades acústicas
+                </h2>
+
+                <p>
+                    Esta es una de las principales diferencias
+                    metodológicas respecto a wav2vec 2.0.
+                </p>
+
+            </div>
+
+
+            <div class="iteraciones-hubert">
+
+                <article>
+
+                    <div class="iteracion-etiqueta">
+                        ITERACIÓN 1
+                    </div>
+
+                    <h3>
+                        MFCC
+                    </h3>
+
+                    <strong>
+                        k-means · 100 clusters
+                    </strong>
+
+                    <p>
+                        Las primeras etiquetas se generan mediante
+                        k-means aplicado sobre características MFCC
+                        de 39 dimensiones.
+                    </p>
+
+                    <p>
+                        Estas características contienen 13 coeficientes
+                        y sus derivadas de primer y segundo orden.
+                    </p>
+
+                </article>
+
+
+                <div class="iteracion-flecha">
+                    →
+                </div>
+
+
+                <article>
+
+                    <div class="iteracion-etiqueta">
+                        HU<span>BERT</span>
+                    </div>
+
+                    <h3>
+                        Preentrenamiento
+                    </h3>
+
+                    <strong>
+                        Masked prediction
+                    </strong>
+
+                    <p>
+                        El modelo aprende a predecir las etiquetas
+                        obtenidas mediante clustering utilizando
+                        el contexto acústico disponible.
+                    </p>
+
+                </article>
+
+
+                <div class="iteracion-flecha">
+                    →
+                </div>
+
+
+                <article>
+
+                    <div class="iteracion-etiqueta">
+                        ITERACIÓN 2
+                    </div>
+
+                    <h3>
+                        Representaciones HuBERT
+                    </h3>
+
+                    <strong>
+                        k-means · 500 clusters
+                    </strong>
+
+                    <p>
+                        Las características internas aprendidas por
+                        HuBERT sustituyen a los MFCC para generar
+                        objetivos acústicos de mayor calidad.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · MODELO
+                </p>
+
+                <h2>
+                    Arquitectura
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENTRADA</span>
+
+                    <h3>
+                        Audio
+                    </h3>
+
+                    <p>
+                        Forma de onda muestreada a 16 kHz.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>FEATURE ENCODER</span>
+
+                    <h3>
+                        CNN
+                    </h3>
+
+                    <p>
+                        Siete capas convolucionales transforman
+                        la forma de onda en características acústicas.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MASKING</span>
+
+                    <h3>
+                        Máscara
+                    </h3>
+
+                    <p>
+                        Determinados intervalos de la representación
+                        acústica son ocultados.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENCODER</span>
+
+                    <h3>
+                        Transformer
+                    </h3>
+
+                    <p>
+                        Utiliza el contexto para predecir la unidad
+                        acústica correspondiente a cada región oculta.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        HUBERT BASE
+                    </p>
+
+                    <h3>
+                        95 M parámetros
+                    </h3>
+
+                    <ul>
+                        <li>12 capas Transformer</li>
+                        <li>Dimensión: 768</li>
+                        <li>FFN: 3.072</li>
+                        <li>8 cabezas de atención</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        HUBERT LARGE
+                    </p>
+
+                    <h3>
+                        317 M parámetros
+                    </h3>
+
+                    <ul>
+                        <li>24 capas Transformer</li>
+                        <li>Dimensión: 1.024</li>
+                        <li>FFN: 4.096</li>
+                        <li>16 cabezas de atención</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        HUBERT X-LARGE
+                    </p>
+
+                    <h3>
+                        964 M parámetros
+                    </h3>
+
+                    <ul>
+                        <li>48 capas Transformer</li>
+                        <li>Dimensión: 1.280</li>
+                        <li>FFN: 5.120</li>
+                        <li>16 cabezas de atención</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PREENTRENAMIENTO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · PREENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Predicción enmascarada
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Extraer características
+                        </h3>
+
+                        <p>
+                            La CNN transforma la forma de onda
+                            en una secuencia acústica latente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Enmascarar
+                        </h3>
+
+                        <p>
+                            Se selecciona aleatoriamente un conjunto
+                            de posiciones y se ocultan intervalos
+                            consecutivos de la secuencia.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Procesar contexto
+                        </h3>
+
+                        <p>
+                            El Transformer analiza las regiones
+                            visibles de la señal y sus relaciones
+                            temporales.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Predecir unidad oculta
+                        </h3>
+
+                        <p>
+                            Para cada región enmascarada, HuBERT
+                            intenta predecir la etiqueta de cluster
+                            correspondiente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>Inicio de máscara</span>
+                    <strong>p = 8 %</strong>
+                </article>
+
+                <article>
+                    <span>Longitud del span</span>
+                    <strong>10 frames</strong>
+                </article>
+
+                <article>
+                    <span>Optimizador</span>
+                    <strong>Adam</strong>
+                </article>
+
+                <article>
+                    <span>β Adam</span>
+                    <strong>0,9 / 0,98</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ENTRENAMIENTO ITERATIVO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Refinamiento iterativo
+                </h2>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    HuBERT Base
+                </h3>
+
+                <p>
+                    Se entrena durante dos iteraciones sobre
+                    las 960 horas de LibriSpeech.
+                </p>
+
+                <p>
+                    La primera iteración utiliza etiquetas obtenidas
+                    mediante clustering de MFCC y se entrena durante
+                    250.000 pasos.
+                </p>
+
+                <p>
+                    Para la segunda iteración se extraen representaciones
+                    de la sexta capa Transformer del modelo anterior,
+                    se vuelven a agrupar y el nuevo modelo se entrena
+                    durante 400.000 pasos.
+                </p>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    HuBERT Large y X-Large
+                </h3>
+
+                <p>
+                    Los modelos de mayor tamaño se entrenan sobre
+                    aproximadamente 60.000 horas de Libri-Light
+                    durante 400.000 pasos.
+                </p>
+
+                <p>
+                    Sus objetivos se generan utilizando representaciones
+                    obtenidas de la novena capa de la segunda iteración
+                    de HuBERT Base.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FINE-TUNING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · FINE-TUNING
+                </p>
+
+                <h2>
+                    Adaptación a ASR
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        HuBERT preentrenado
+                    </h3>
+
+                    <p>
+                        Se parte de las representaciones aprendidas
+                        durante la fase auto-supervisada.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Capa Softmax
+                    </h3>
+
+                    <p>
+                        Las capas utilizadas para predecir clusters
+                        se sustituyen por una nueva capa de salida.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        CTC
+                    </h3>
+
+                    <p>
+                        El modelo se adapta al reconocimiento
+                        automático del habla mediante CTC.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Codificador convolucional congelado
+                </h3>
+
+                <p>
+                    Durante el fine-tuning los parámetros del
+                    codificador convolucional de la forma de onda
+                    permanecen congelados.
+                </p>
+
+                <p>
+                    Se utiliza además un periodo inicial durante
+                    el cual el Transformer permanece congelado
+                    y únicamente se entrena la nueva capa de salida.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Resultados principales
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        HUBERT X-LARGE
+                    </span>
+
+                    <strong>
+                        ~1B
+                    </strong>
+
+                    <p>
+                        parámetros
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Mejora al aumentar la escala
+                    </h3>
+
+                    <p>
+                        El modelo X-Large obtiene hasta una reducción
+                        relativa del WER del 19 % en dev-other y del
+                        13 % en test-other frente al modelo Large
+                        cuando se preentrena sobre Libri-Light.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    Resultado global
+                </h3>
+
+                <p>
+                    HuBERT iguala o mejora el rendimiento de
+                    wav2vec 2.0 en los escenarios evaluados con
+                    10 minutos, 1 hora, 10 horas, 100 horas y
+                    960 horas de datos etiquetados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DIFERENCIA CON WAV2VEC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    HuBERT vs wav2vec 2.0
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>wav2vec 2.0</th>
+                            <th>HuBERT</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Objetivo</td>
+                            <td>Contrastivo</td>
+                            <td>Predicción de clusters</td>
+                        </tr>
+
+                        <tr>
+                            <td>Unidades objetivo</td>
+                            <td>Cuantización interna</td>
+                            <td>Clustering offline</td>
+                        </tr>
+
+                        <tr>
+                            <td>Negativos</td>
+                            <td>Sí</td>
+                            <td>No son necesarios</td>
+                        </tr>
+
+                        <tr>
+                            <td>Refinamiento</td>
+                            <td>No es el mecanismo central</td>
+                            <td>Clustering iterativo</td>
+                        </tr>
+
+                        <tr>
+                            <td>Idea fundamental</td>
+                            <td>
+                                Distinguir el objetivo correcto
+                                frente a distractores
+                            </td>
+                            <td>
+                                Predecir unidades acústicas
+                                ocultas desde el contexto
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RELACIÓN CON TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi línea de investigación?
+                </h2>
+
+                <p>
+                    HuBERT muestra que no es necesario disponer
+                    inicialmente de etiquetas lingüísticas correctas
+                    para aprender representaciones útiles del habla.
+                </p>
+
+                <p>
+                    Resulta especialmente interesante para la tesis
+                    porque permite investigar unidades acústicas
+                    aprendidas automáticamente y su evolución cuando
+                    cambian el hablante, el dominio o las condiciones
+                    acústicas.
+                </p>
+
+                <p>
+                    El refinamiento iterativo de las representaciones
+                    también conecta directamente con las líneas de
+                    adaptación y aprendizaje continuo planteadas
+                    en la investigación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

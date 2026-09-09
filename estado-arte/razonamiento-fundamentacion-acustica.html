@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Razonamiento y fundamentación acústica | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 06
+                </p>
+
+                <h1>
+                    Razonamiento y fundamentación acústica
+                </h1>
+
+                <p class="tema-introduccion">
+
+                    Comprender globalmente una grabación
+                    no implica necesariamente ser capaz
+                    de razonar correctamente sobre los eventos
+                    que contiene ni justificar qué evidencia
+                    acústica sustenta cada conclusión.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    PROBLEMA CENTRAL
+                </p>
+
+                <h2>
+                    Una respuesta plausible puede ser incorrectamente fundamentada
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    Incorporar un gran modelo de lenguaje
+                    a un sistema de audio no garantiza que
+                    sus respuestas estén realmente basadas
+                    en la señal acústica.
+                </p>
+
+                <p>
+                    El modelo puede aprovechar conocimiento previo,
+                    correlaciones lingüísticas o patrones frecuentes
+                    para producir una respuesta aparentemente
+                    razonable incluso cuando el audio no proporciona
+                    evidencia suficiente.
+                </p>
+
+                <p>
+                    Por ello, la evaluación debe avanzar
+                    desde comprobar únicamente si una respuesta
+                    es correcta hacia determinar también
+                    qué evidencias permiten justificarla.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TIPOS DE RAZONAMIENTO
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RAZONAMIENTO ACÚSTICO
+                </p>
+
+                <h2>
+                    ¿Qué debería ser capaz de hacer el modelo?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        Orden temporal
+                    </strong>
+
+                    <span>
+                        Before / After
+                    </span>
+
+                    <p>
+                        Determinar qué evento sucede
+                        primero y cuál ocurre después.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Simultaneidad
+                    </strong>
+
+                    <span>
+                        Overlap
+                    </span>
+
+                    <p>
+                        Determinar si varias fuentes
+                        acústicas aparecen al mismo tiempo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Conteo
+                    </strong>
+
+                    <span>
+                        Event Counting
+                    </span>
+
+                    <p>
+                        Identificar cuántas veces
+                        aparece un determinado evento.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Hablantes
+                    </strong>
+
+                    <span>
+                        Speaker Relations
+                    </span>
+
+                    <p>
+                        Comparar quién habla,
+                        cuándo interviene y cómo
+                        se relacionan sus intervenciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Composición
+                    </strong>
+
+                    <span>
+                        Multiple Events
+                    </span>
+
+                    <p>
+                        Combinar información procedente
+                        de varios eventos dentro
+                        de una misma inferencia.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Verbal + no verbal
+                    </strong>
+
+                    <span>
+                        Multimodal Audio
+                    </span>
+
+                    <p>
+                        Utilizar conjuntamente lo que
+                        se dice y cómo suena
+                        la situación acústica.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODELOS / BENCHMARKS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIAS PRINCIPALES
+                </p>
+
+                <h2>
+                    Cómo se está evaluando el problema
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <!-- MMAU -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            MMAU
+                        </h3>
+
+                        <p>
+                            Benchmark diseñado para evaluar
+                            comprensión y razonamiento avanzado
+                            sobre habla, sonidos ambientales
+                            y música.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Speech</span>
+                            <span>Sound</span>
+                            <span>Music</span>
+                            <span>Reasoning</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/mmau.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POLYBENCH -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            PolyBench
+                        </h3>
+
+                        <p>
+                            Benchmark diseñado para evaluar razonamiento
+                            composicional cuando varios eventos acústicos
+                            se producen simultáneamente.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Polyphonic Audio</span>
+                            <span>Concurrency</span>
+                            <span>Counting</span>
+                            <span>Temporal Reasoning</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/polybench.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TIMESTAMP -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Timestamp-Grounded Speech Reasoning
+                        </h3>
+
+                        <p>
+                            Método de razonamiento sobre habla que obliga
+                            al modelo a vincular sus inferencias con
+                            intervalos temporales explícitos de la señal.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Timestamp</span>
+                            <span>Grounding</span>
+                            <span>Speech Reasoning</span>
+                            <span>GRPO</span>
+                            <span>Evidence</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/timestamp-grounded-speech-reasoning.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CORRECTO VS FUNDAMENTADO
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DISTINCIÓN
+                </p>
+
+                <h2>
+                    Respuesta correcta ≠ respuesta fundamentada
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>Respuesta correcta</th>
+                            <th>Respuesta fundamentada</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Resultado final</td>
+                            <td>Correcto</td>
+                            <td>Correcto</td>
+                        </tr>
+
+                        <tr>
+                            <td>Usa realmente el audio</td>
+                            <td>No necesariamente</td>
+                            <td>Debe hacerlo</td>
+                        </tr>
+
+                        <tr>
+                            <td>Evidencia temporal</td>
+                            <td>No requerida</td>
+                            <td>Identificada</td>
+                        </tr>
+
+                        <tr>
+                            <td>Auditable</td>
+                            <td>Limitado</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Permite comprobar errores</td>
+                            <td>Difícil</td>
+                            <td>Mucho más fácilmente</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESOLUCIÓN
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    COMPROMISO FUNDAMENTAL
+                </p>
+
+                <h2>
+                    Semántica frente a resolución temporal
+                </h2>
+
+                <p>
+                    Los LLM trabajan mejor con secuencias
+                    relativamente compactas.
+                </p>
+
+                <p>
+                    Sin embargo, comprimir excesivamente
+                    una señal acústica puede eliminar
+                    eventos breves, transiciones,
+                    solapamientos o cambios de hablante.
+                </p>
+
+                <p>
+                    Una representación adecuada para
+                    razonamiento debe encontrar un equilibrio
+                    entre eficiencia y conservación
+                    de evidencias locales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             JERARQUÍA
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DIRECCIÓN DE INVESTIGACIÓN
+                </p>
+
+                <h2>
+                    Representación jerárquica
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Evidencia acústica
+                        </h3>
+
+                        <p>
+                            Detectar y segmentar
+                            unidades relevantes
+                            dentro de la señal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Eventos y hablantes
+                        </h3>
+
+                        <p>
+                            Construir representaciones
+                            estructuradas de eventos,
+                            fuentes y participantes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Relaciones
+                        </h3>
+
+                        <p>
+                            Representar orden,
+                            simultaneidad y otras
+                            relaciones temporales.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Razonamiento
+                        </h3>
+
+                        <p>
+                            Un modelo lingüístico
+                            o neuro-simbólico utiliza
+                            la representación estructurada
+                            para producir la inferencia.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Explicación
+                        </h3>
+
+                        <p>
+                            La conclusión se relaciona
+                            de nuevo con los segmentos
+                            acústicos que la sustentan.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Uno de los núcleos diferenciales
+                </h2>
+
+                <p>
+                    La tesis no pretende únicamente construir
+                    modelos capaces de responder preguntas
+                    sobre una grabación.
+                </p>
+
+                <p>
+                    El objetivo es investigar mecanismos
+                    que permitan relacionar las respuestas
+                    con evidencias temporales, espectrales,
+                    fonéticas o acústicas observables.
+                </p>
+
+                <p>
+                    Esto conecta directamente con explicabilidad,
+                    auditabilidad e incertidumbre:
+                    si no existe evidencia suficiente,
+                    el sistema debería poder reconocer
+                    que su respuesta no es fiable.
+                </p>
+
+                <p>
+                    Una posible arquitectura jerárquica
+                    permitiría además incorporar reglas
+                    lingüísticas o neurodifusas sobre eventos,
+                    hablantes y relaciones temporales,
+                    haciendo el proceso de decisión
+                    más interpretable.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

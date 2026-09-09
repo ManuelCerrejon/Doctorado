@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Modelos de lenguaje de audio y habla | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- CABECERA -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 05
+                </p>
+
+                <h1>
+                    Modelos de lenguaje de audio y habla
+                </h1>
+
+                <p class="tema-introduccion">
+
+                    La tokenización del audio permite representar
+                    una señal continua mediante secuencias discretas
+                    y aplicar sobre ellas técnicas propias de los
+                    modelos de lenguaje.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- IDEA -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Convertir audio en tokens
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    Una forma de integrar audio y modelos de lenguaje
+                    consiste en transformar la señal acústica continua
+                    en una secuencia de unidades discretas.
+                </p>
+
+                <p>
+                    Estas unidades pueden representar distintos
+                    niveles de información: fonética, semántica,
+                    prosodia, identidad del hablante o detalles
+                    acústicos necesarios para reconstruir la señal.
+                </p>
+
+                <p>
+                    Una vez obtenida la secuencia, es posible
+                    entrenar modelos autoregresivos para predecir
+                    los siguientes tokens de forma similar
+                    al modelado del lenguaje textual.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TIPOS DE REPRESENTACIÓN -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REPRESENTACIONES
+                </p>
+
+                <h2>
+                    ¿Qué puede conservar un token acústico?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Semántica
+                    </strong>
+
+                    <span>
+                        Contenido de alto nivel
+                    </span>
+
+                    <p>
+                        Información relacionada con
+                        fonética, palabras y estructura
+                        temporal de largo alcance.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Identidad
+                    </strong>
+
+                    <span>
+                        Speaker
+                    </span>
+
+                    <p>
+                        Características acústicas propias
+                        de la persona que habla.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Prosodia
+                    </strong>
+
+                    <span>
+                        Expresividad
+                    </span>
+
+                    <p>
+                        Entonación, ritmo y otros
+                        elementos no representados
+                        directamente mediante texto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Fidelidad acústica
+                    </strong>
+
+                    <span>
+                        Codec tokens
+                    </span>
+
+                    <p>
+                        Información necesaria para
+                        reconstruir una señal de audio
+                        de elevada calidad.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODELOS -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MODELOS PRINCIPALES
+                </p>
+
+                <h2>
+                    Evolución del área
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <!-- AUDIOLM -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            AudioLM
+                        </h3>
+
+                        <p>
+                            Combina tokens semánticos con tokens
+                            generados por un códec neuronal para
+                            conseguir simultáneamente coherencia
+                            de largo plazo y elevada fidelidad acústica.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Semantic Tokens</span>
+                            <span>Codec Tokens</span>
+                            <span>Autoregressive</span>
+                            <span>Audio Generation</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/audiolm.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- AUDIOPALM -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            AudioPaLM
+                        </h3>
+
+                        <p>
+                            Integra tokens acústicos dentro de un
+                            gran modelo de lenguaje textual para
+                            procesar y generar tanto habla como texto.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Speech Tokens</span>
+                            <span>PaLM</span>
+                            <span>Speech Translation</span>
+                            <span>Speech-to-Speech</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/audiopalm.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SPIRIT LM -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            SpiRit-LM
+                        </h3>
+
+                        <p>
+                            Integra texto y habla dentro de una única
+                            secuencia autoregresiva, permitiendo cambiar
+                            de modalidad incluso dentro de una misma
+                            generación.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Speech Tokens</span>
+                            <span>Text Tokens</span>
+                            <span>Interleaving</span>
+                            <span>Expressive Speech</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/spirit-lm.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SALMONN -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        04
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            SALMONN
+                        </h3>
+
+                        <p>
+                            Integra codificadores especializados de habla
+                            y audio con un gran modelo de lenguaje para
+                            desarrollar capacidades generales de audición
+                            sobre habla, sonidos y música.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Whisper</span>
+                            <span>BEATs</span>
+                            <span>Q-Former</span>
+                            <span>Vicuna</span>
+                            <span>LoRA</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/salmonn.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- QWEN -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        05
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Qwen2-Audio
+                        </h3>
+
+                        <p>
+                            Integra un encoder acústico con un gran
+                            modelo de lenguaje para comprender habla,
+                            sonidos, música y grabaciones mixtas mediante
+                            instrucciones textuales o habladas.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Whisper-large-v3</span>
+                            <span>Qwen-7B</span>
+                            <span>Voice Chat</span>
+                            <span>Audio Analysis</span>
+                            <span>DPO</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/qwen2-audio.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MOSHI -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        06
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Moshi
+                        </h3>
+
+                        <p>
+                            Modelo conversacional speech-to-speech
+                            capaz de escuchar y hablar simultáneamente,
+                            gestionando interrupciones, solapamientos
+                            y diálogo de baja latencia.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Speech-to-Speech</span>
+                            <span>Full-Duplex</span>
+                            <span>Mimi</span>
+                            <span>Inner Monologue</span>
+                            <span>Real-time</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/moshi.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ESTRATEGIAS -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    INTEGRACIÓN
+                </p>
+
+                <h2>
+                    Tres estrategias principales
+                </h2>
+
+            </div>
+
+
+            <div class="pasos-grid">
+
+
+                <article class="paso-card">
+
+                    <span>01</span>
+
+                    <h3>
+                        Audio → texto → LLM
+                    </h3>
+
+                    <p>
+                        El audio se transcribe primero
+                        y el modelo de lenguaje trabaja
+                        posteriormente sobre el texto.
+                    </p>
+
+                </article>
+
+
+                <article class="paso-card">
+
+                    <span>02</span>
+
+                    <h3>
+                        Representaciones continuas
+                    </h3>
+
+                    <p>
+                        Un encoder acústico produce embeddings
+                        que se proyectan sobre el espacio
+                        de entrada del modelo de lenguaje.
+                    </p>
+
+                </article>
+
+
+                <article class="paso-card">
+
+                    <span>03</span>
+
+                    <h3>
+                        Tokens discretos
+                    </h3>
+
+                    <p>
+                        El audio se convierte en unidades
+                        discretas que pueden combinarse
+                        directamente con tokens textuales.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPARACIÓN -->
+
+        <section class="detalle-contenedor">
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Estrategia</th>
+                            <th>Ventaja</th>
+                            <th>Problema</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Transcripción</td>
+                            <td>
+                                Aprovecha modelos textuales existentes
+                            </td>
+                            <td>
+                                Puede perder información no verbal
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Embeddings continuos</td>
+                            <td>
+                                Conservan más información acústica
+                            </td>
+                            <td>
+                                Necesitan conectores específicos
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Tokens discretos</td>
+                            <td>
+                                Compatibles con modelado autoregresivo
+                            </td>
+                            <td>
+                                Compromiso entre longitud y fidelidad
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FRONTERA -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    FRONTERA ACTUAL
+                </p>
+
+                <h2>
+                    Conversaciones de habla a habla
+                </h2>
+
+                <p>
+                    La evolución más reciente trata de superar
+                    el esquema rígido de escuchar, transcribir,
+                    generar una respuesta textual y sintetizarla.
+                </p>
+
+                <p>
+                    Los nuevos sistemas buscan mantener
+                    conversaciones donde usuario y modelo puedan
+                    hablar, interrumpirse y reaccionar con
+                    menor latencia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TESIS -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Por qué son relevantes?
+                </h2>
+
+                <p>
+                    Los modelos de lenguaje de audio permiten
+                    avanzar desde una predicción acústica
+                    específica hacia sistemas capaces de
+                    manipular representaciones más generales.
+                </p>
+
+                <p>
+                    Sin embargo, su elevado coste y la dificultad
+                    para comprobar si sus respuestas están realmente
+                    fundamentadas en la señal plantean problemas
+                    directamente relacionados con eficiencia,
+                    incertidumbre y explicabilidad.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Procesamiento de audio general | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- CABECERA -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 04
+                </p>
+
+                <h1>
+                    Procesamiento de audio general
+                </h1>
+
+                <p class="tema-introduccion">
+
+                    El procesamiento de audio general amplía
+                    el análisis más allá de la voz humana e
+                    incluye sonidos ambientales, máquinas,
+                    música, animales, eventos acústicos,
+                    anomalías y escenas sonoras complejas.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROBLEMA -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    AUDIO GENERAL
+                </p>
+
+                <h2>
+                    Un problema diferente al habla
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    En reconocimiento del habla existen unidades
+                    relativamente estructuradas como fonemas,
+                    palabras o subpalabras.
+                </p>
+
+                <p>
+                    En audio general no existe una unidad simbólica
+                    equivalente y los sonidos pueden presentar una
+                    enorme diversidad temporal y espectral.
+                </p>
+
+                <p>
+                    Además, varios eventos pueden producirse
+                    simultáneamente dentro de la misma grabación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TAREAS -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    TAREAS
+                </p>
+
+                <h2>
+                    ¿Qué se intenta reconocer?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Event Classification
+                    </strong>
+
+                    <span>
+                        Clasificación de eventos
+                    </span>
+
+                    <p>
+                        Determinar qué sonidos están
+                        presentes en una grabación.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Sound Event Detection
+                    </strong>
+
+                    <span>
+                        Detección temporal
+                    </span>
+
+                    <p>
+                        Determinar qué evento aparece
+                        y en qué intervalo temporal.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Acoustic Scenes
+                    </strong>
+
+                    <span>
+                        Escenas acústicas
+                    </span>
+
+                    <p>
+                        Identificar el tipo de entorno
+                        representado por la grabación.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Anomaly Detection
+                    </strong>
+
+                    <span>
+                        Detección de anomalías
+                    </span>
+
+                    <p>
+                        Identificar sonidos alejados del
+                        funcionamiento acústico habitual.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Source Separation
+                    </strong>
+
+                    <span>
+                        Separación
+                    </span>
+
+                    <p>
+                        Separar las diferentes fuentes que
+                        aparecen simultáneamente.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Localization
+                    </strong>
+
+                    <span>
+                        Localización acústica
+                    </span>
+
+                    <p>
+                        Estimar la posición o dirección
+                        de las fuentes sonoras.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODELOS -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MODELOS PRINCIPALES
+                </p>
+
+                <h2>
+                    Representaciones generales de audio
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <!-- AUDIOMAE -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Audio-MAE
+                        </h3>
+
+                        <p>
+                            Aplica masked autoencoders sobre
+                            espectrogramas y aprende representaciones
+                            reconstruyendo regiones ocultas de
+                            la señal.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Masked Autoencoder</span>
+                            <span>Spectrogram</span>
+                            <span>Reconstruction</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/audiomae.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BEATS -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            BEATs
+                        </h3>
+
+                        <p>
+                            Utiliza tokenizadores acústicos para
+                            generar unidades discretas con contenido
+                            semántico y entrena el modelo mediante
+                            predicción enmascarada de dichas unidades.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Acoustic Tokens</span>
+                            <span>Discrete Units</span>
+                            <span>Masked Prediction</span>
+                            <span>Iterative Training</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/beats.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CLAP -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            CLAP
+                        </h3>
+
+                        <p>
+                            Aprende un espacio compartido entre
+                            audio y lenguaje natural utilizando
+                            aprendizaje contrastivo.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Audio-Text</span>
+                            <span>Contrastive Learning</span>
+                            <span>Zero-shot</span>
+                            <span>Natural Language</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/clap.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- DIFERENCIAS -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Tres formas de aprender audio
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Entrada</th>
+                            <th>Objetivo</th>
+                            <th>Idea central</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Audio-MAE</td>
+                            <td>Espectrograma</td>
+                            <td>Reconstrucción</td>
+                            <td>Reconstruir regiones ocultas</td>
+                        </tr>
+
+                        <tr>
+                            <td>BEATs</td>
+                            <td>Audio</td>
+                            <td>Predicción discreta</td>
+                            <td>Predecir tokens acústicos</td>
+                        </tr>
+
+                        <tr>
+                            <td>CLAP</td>
+                            <td>Audio + texto</td>
+                            <td>Contrastivo</td>
+                            <td>Alinear audio y lenguaje</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATASETS -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DATASETS
+                </p>
+
+                <h2>
+                    Recursos habituales
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        AudioSet
+                    </strong>
+
+                    <span>
+                        Audio events
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        ESC-50
+                    </strong>
+
+                    <span>
+                        Environmental sounds
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        UrbanSound8K
+                    </strong>
+
+                    <span>
+                        Urban audio
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        FSD50K
+                    </strong>
+
+                    <span>
+                        Open audio dataset
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        DCASE
+                    </strong>
+
+                    <span>
+                        Challenges
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- LIMITACIÓN -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA ABIERTO
+                </p>
+
+                <h2>
+                    Semántica frente a detalle acústico
+                </h2>
+
+                <p>
+                    Una representación general debería conservar
+                    información semántica de alto nivel sin
+                    eliminar detalles acústicos locales que puedan
+                    resultar relevantes para determinadas tareas.
+                </p>
+
+                <p>
+                    Por ejemplo, una representación excesivamente
+                    invariante puede funcionar bien clasificando
+                    eventos, pero perder señales débiles necesarias
+                    para detectar una anomalía.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- HEAR -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EVALUACIÓN
+                </p>
+
+                <h2>
+                    HEAR
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    Holistic Evaluation of Audio Representations
+                </h3>
+
+                <p>
+                    HEAR evalúa representaciones de audio sobre
+                    tareas relacionadas con habla, música y
+                    sonido ambiental.
+                </p>
+
+                <p>
+                    Este tipo de evaluación permite comprobar
+                    que una representación excelente para una
+                    tarea concreta no tiene por qué ser igualmente
+                    adecuada para otras.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TESIS -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Por qué ampliar el estudio más allá del habla?
+                </h2>
+
+                <p>
+                    La línea de investigación pretende desarrollar
+                    mecanismos generales de adaptación,
+                    explicabilidad, incertidumbre y eficiencia
+                    para señales acústicas.
+                </p>
+
+                <p>
+                    Analizar audio general permite comprobar si
+                    dichos mecanismos son transferibles entre
+                    voz, sonidos ambientales, máquinas y otros
+                    fenómenos acústicos.
+                </p>
+
+                <p>
+                    También conecta directamente con el caso de
+                    uso de monitorización acústica inteligente
+                    planteado en la línea de investigación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

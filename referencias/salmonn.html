@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SALMONN | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/modelos-lenguaje-audio-habla.html"
+                    class="volver"
+                >
+                    ← Volver a Modelos de lenguaje de audio y habla
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    SALMONN
+                </h1>
+
+
+                <h2>
+                    Towards Generic Hearing Abilities
+                    for Large Language Models
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Tang, C. et al. · ICLR 2024
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Audio LLM</span>
+                    <span>Whisper</span>
+                    <span>BEATs</span>
+                    <span>Q-Former</span>
+                    <span>Vicuna</span>
+                    <span>LoRA</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Changli Tang
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        ICLR 2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Preprint
+                    </span>
+
+                    <strong>
+                        arXiv:2310.13289
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Tang, C., Yu, W., Sun, G., Chen, X.,
+                    Tan, T., Li, W., Lu, L., Ma, Z.,
+                    & Zhang, C. (2024).
+                    <em>
+                        SALMONN: Towards Generic Hearing
+                        Abilities for Large Language Models.
+                    </em>
+                    International Conference on
+                    Learning Representations (ICLR).
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Dar capacidad auditiva a un LLM
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Un gran modelo de lenguaje textual puede
+                    responder preguntas y seguir instrucciones,
+                    pero no puede interpretar directamente
+                    una señal acústica.
+                </p>
+
+                <p>
+                    Además, utilizar un único encoder especializado
+                    en habla puede limitar la capacidad del sistema
+                    para reconocer sonidos ambientales o música.
+                </p>
+
+                <p>
+                    SALMONN propone conectar simultáneamente
+                    codificadores especializados de habla
+                    y audio con un LLM, buscando desarrollar
+                    capacidades generales de audición.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Dos oídos especializados + un LLM
+                </h2>
+
+                <p>
+                    Whisper proporciona representaciones
+                    especialmente útiles para el contenido hablado.
+                </p>
+
+                <p>
+                    BEATs proporciona representaciones
+                    orientadas a eventos y semántica
+                    de audio no verbal.
+                </p>
+
+                <p>
+                    Un Q-Former fusiona ambas fuentes
+                    y las transforma en una secuencia
+                    que Vicuna puede interpretar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Dual auditory encoder
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>SPEECH</span>
+
+                    <h3>
+                        Whisper-Large-v2
+                    </h3>
+
+                    <p>
+                        Extrae características relacionadas
+                        especialmente con habla y
+                        contenido lingüístico.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    ↘
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIO</span>
+
+                    <h3>
+                        BEATs
+                    </h3>
+
+                    <p>
+                        Extrae información semántica
+                        de eventos acústicos
+                        y sonidos no verbales.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CONNECTOR</span>
+
+                    <h3>
+                        Q-Former
+                    </h3>
+
+                    <p>
+                        Fusiona ambas representaciones
+                        y reduce temporalmente
+                        la secuencia.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LLM</span>
+
+                    <h3>
+                        Vicuna-13B
+                    </h3>
+
+                    <p>
+                        Recibe los embeddings acústicos
+                        junto con la instrucción textual
+                        y genera la respuesta.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             Q-FORMER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · WINDOW-LEVEL Q-FORMER
+                </p>
+
+                <h2>
+                    Comprimir sin perder toda la estructura temporal
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Las representaciones producidas por los
+                    encoders acústicos pueden formar secuencias
+                    demasiado largas para introducirlas
+                    directamente en el LLM.
+                </p>
+
+                <p>
+                    SALMONN divide la secuencia en ventanas
+                    temporales y aplica Q-Former de manera
+                    independiente sobre cada una.
+                </p>
+
+                <p>
+                    Esto permite reducir considerablemente
+                    la longitud de la representación manteniendo
+                    una organización temporal aproximadamente
+                    monótona respecto al audio original.
+                </p>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>Queries / ventana</span>
+
+                    <strong>
+                        N = 1
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Frames / ventana</span>
+
+                    <strong>
+                        L = 17
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Duración ventana</span>
+
+                    <strong>
+                        ~0,33 s
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Audio 30 s</span>
+
+                    <strong>
+                        88 tokens
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ENTRENABLE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · ADAPTACIÓN EFICIENTE
+                </p>
+
+                <h2>
+                    Casi todo permanece congelado
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONGELADO
+                    </p>
+
+                    <h3>
+                        Whisper + BEATs
+                    </h3>
+
+                    <ul>
+                        <li>Speech encoder congelado</li>
+                        <li>Audio encoder congelado</li>
+                        <li>No se reentrenan completamente</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONGELADO
+                    </p>
+
+                    <h3>
+                        Vicuna-13B
+                    </h3>
+
+                    <ul>
+                        <li>Pesos originales congelados</li>
+                        <li>LLM de aproximadamente 13B</li>
+                        <li>Generación textual</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        ENTRENABLE
+                    </p>
+
+                    <h3>
+                        Q-Former + LoRA
+                    </h3>
+
+                    <ul>
+                        <li>~33 M parámetros</li>
+                        <li>~0,24 % del modelo total</li>
+                        <li>Adaptación multimodal</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LORA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · LORA
+                </p>
+
+                <h2>
+                    Adaptar Vicuna sin reentrenarlo
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>Rank</span>
+
+                    <strong>
+                        r = 8
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Scaling</span>
+
+                    <strong>
+                        4,0
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Matrices</span>
+
+                    <strong>
+                        Query + Value
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>LLM</span>
+
+                    <strong>
+                        Vicuna-13B
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAINING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Tres etapas
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pre-training
+                        </h3>
+
+                        <p>
+                            El Q-Former y LoRA aprenden
+                            inicialmente a conectar las
+                            representaciones acústicas
+                            con el espacio del LLM.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Instruction Tuning
+                        </h3>
+
+                        <p>
+                            El modelo se entrena sobre
+                            múltiples tareas de habla,
+                            audio y música utilizando
+                            instrucciones textuales.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Activation Tuning
+                        </h3>
+
+                        <p>
+                            Una tercera fase intenta recuperar
+                            capacidades emergentes que pueden
+                            desaparecer debido a la especialización
+                            excesiva en las tareas anteriores.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PRETRAINING DATA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · PRE-TRAINING
+                </p>
+
+                <h2>
+                    Alinear audio y lenguaje
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        ASR
+                    </span>
+
+                    <h3>
+                        LibriSpeech
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        960 h
+                    </strong>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        ASR
+                    </span>
+
+                    <h3>
+                        GigaSpeech-M
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        1.000 h
+                    </strong>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        AUDIO CAPTION
+                    </span>
+
+                    <h3>
+                        WavCaps
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        ~2.800 h
+                    </strong>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        AUDIO CAPTION
+                    </span>
+
+                    <h3>
+                        AudioCaps + Clotho
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        Captioning
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INSTRUCTION TUNING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · INSTRUCTION TUNING
+                </p>
+
+                <h2>
+                    12 tareas
+                </h2>
+
+                <p>
+                    Esta segunda etapa utiliza aproximadamente
+                    4.400 horas y 2,3 millones de ejemplos.
+                </p>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>ASR</strong>
+                    <span>Speech Recognition</span>
+                </article>
+
+                <article>
+                    <strong>AST</strong>
+                    <span>English → Chinese</span>
+                </article>
+
+                <article>
+                    <strong>AAC</strong>
+                    <span>Audio Captioning</span>
+                </article>
+
+                <article>
+                    <strong>PR</strong>
+                    <span>Phone Recognition</span>
+                </article>
+
+                <article>
+                    <strong>ER</strong>
+                    <span>Emotion Recognition</span>
+                </article>
+
+                <article>
+                    <strong>MC</strong>
+                    <span>Music Captioning</span>
+                </article>
+
+                <article>
+                    <strong>OSR</strong>
+                    <span>Overlapped Speech Recognition</span>
+                </article>
+
+                <article>
+                    <strong>SV</strong>
+                    <span>Speaker Verification</span>
+                </article>
+
+                <article>
+                    <strong>GR</strong>
+                    <span>Gender Recognition</span>
+                </article>
+
+                <article>
+                    <strong>SQA</strong>
+                    <span>Speech Question Answering</span>
+                </article>
+
+                <article>
+                    <strong>AQA</strong>
+                    <span>Audio Question Answering</span>
+                </article>
+
+                <article>
+                    <strong>MQA</strong>
+                    <span>Music Question Answering</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATA TABLE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Tarea</th>
+                            <th>Dataset principal</th>
+                            <th>Horas</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>ASR</td>
+                            <td>LibriSpeech + GigaSpeech</td>
+                            <td>960 + 220</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speech Translation</td>
+                            <td>CoVoST2 En→Zh</td>
+                            <td>430</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio Captioning</td>
+                            <td>AudioCaps + Clotho</td>
+                            <td>130 + 24</td>
+                        </tr>
+
+                        <tr>
+                            <td>Emotion Recognition</td>
+                            <td>IEMOCAP</td>
+                            <td>5</td>
+                        </tr>
+
+                        <tr>
+                            <td>Music Captioning</td>
+                            <td>MusicCaps</td>
+                            <td>14</td>
+                        </tr>
+
+                        <tr>
+                            <td>Overlapped ASR</td>
+                            <td>LibriMix</td>
+                            <td>260</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speaker Verification</td>
+                            <td>VoxCeleb1</td>
+                            <td>1.200</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio QA</td>
+                            <td>WavCaps + AudioCaps</td>
+                            <td>760 + 130</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TASK LEVELS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Tres niveles de dificultad
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        LEVEL 1
+                    </p>
+
+                    <h3>
+                        Tareas conocidas
+                    </h3>
+
+                    <ul>
+                        <li>ASR</li>
+                        <li>Speech Translation</li>
+                        <li>Audio Captioning</li>
+                        <li>Emotion</li>
+                        <li>Speaker</li>
+                        <li>Music</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        LEVEL 2
+                    </p>
+
+                    <h3>
+                        Tareas no entrenadas
+                    </h3>
+
+                    <ul>
+                        <li>English → German</li>
+                        <li>English → Japanese</li>
+                        <li>Keyword Extraction</li>
+                        <li>Spoken QA</li>
+                        <li>Slot Filling</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        LEVEL 3
+                    </p>
+
+                    <h3>
+                        Razonamiento
+                    </h3>
+
+                    <ul>
+                        <li>Audio Storytelling</li>
+                        <li>Speech-Audio Co-reasoning</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TASK OVERFITTING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA DESCUBIERTO
+                </p>
+
+                <h2>
+                    Task over-fitting
+                </h2>
+
+                <p>
+                    Después del instruction tuning,
+                    SALMONN puede obtener buenos resultados
+                    en las tareas utilizadas durante
+                    el entrenamiento.
+                </p>
+
+                <p>
+                    Sin embargo, el modelo tiende a responder
+                    como si cualquier entrada correspondiera
+                    a alguna de esas tareas conocidas.
+                </p>
+
+                <p>
+                    Esto reduce su capacidad para seguir
+                    instrucciones completamente nuevas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ACTIVATION TUNING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · ACTIVATION TUNING
+                </p>
+
+                <h2>
+                    Recuperar capacidades emergentes
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Reducir LoRA
+                        </h3>
+
+                        <p>
+                            Se reduce temporalmente el
+                            factor de escalado de LoRA.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Generar respuestas
+                        </h3>
+
+                        <p>
+                            Esta modificación permite
+                            generar respuestas más largas
+                            y diversas para tareas nuevas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            12 historias
+                        </h3>
+
+                        <p>
+                            Los autores conservan doce ejemplos
+                            de storytelling generados
+                            por el propio modelo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            12 pasos
+                        </h3>
+
+                        <p>
+                            SALMONN se ajusta durante únicamente
+                            doce pasos, utilizando un ejemplo
+                            por actualización.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ACTIVATION RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADO DESTACADO
+                </p>
+
+                <h2>
+                    Activation tuning modifica el comportamiento
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        STORYTELLING
+                    </span>
+
+                    <h3>
+                        Following Rate
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        0 → 1,00
+                    </strong>
+
+                    <p>
+                        Antes de activation tuning
+                        el modelo no seguía correctamente
+                        esta tarea; después lo hace
+                        en los ejemplos evaluados.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SPEECH-AUDIO CO-REASONING
+                    </span>
+
+                    <h3>
+                        Following Rate
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        0,04 → 0,73
+                    </strong>
+
+                    <p>
+                        Mejora notablemente la capacidad
+                        para seguir instrucciones que exigen
+                        utilizar conjuntamente habla
+                        y sonido ambiental.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADOS · ASR
+                </p>
+
+                <h2>
+                    Mantener tareas conocidas
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        LIBRISPEECH
+                    </span>
+
+                    <strong>
+                        2,1 / 4,9
+                    </strong>
+
+                    <p>
+                        WER · test-clean / test-other
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Después de activation tuning
+                    </h3>
+
+                    <p>
+                        La mejora de las capacidades emergentes
+                        no destruye el rendimiento ASR
+                        obtenido anteriormente sobre LibriSpeech.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    SpiRit-LM vs SALMONN
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>SpiRit-LM</th>
+                            <th>SALMONN</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Representación acústica</td>
+                            <td>Tokens discretos</td>
+                            <td>Embeddings continuos</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speech encoder</td>
+                            <td>HuBERT</td>
+                            <td>Whisper</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio encoder</td>
+                            <td>No separado</td>
+                            <td>BEATs</td>
+                        </tr>
+
+                        <tr>
+                            <td>Connector</td>
+                            <td>No es el mecanismo central</td>
+                            <td>Window-level Q-Former</td>
+                        </tr>
+
+                        <tr>
+                            <td>LLM</td>
+                            <td>Llama 2 7B</td>
+                            <td>Vicuna 13B</td>
+                        </tr>
+
+                        <tr>
+                            <td>LLM completo entrenable</td>
+                            <td>Continual training</td>
+                            <td>No · LoRA</td>
+                        </tr>
+
+                        <tr>
+                            <td>Salida</td>
+                            <td>Texto o habla</td>
+                            <td>Texto</td>
+                        </tr>
+
+                        <tr>
+                            <td>Énfasis</td>
+                            <td>Unificación speech-text</td>
+                            <td>Comprensión auditiva general</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Compresión temporal
+                    </h3>
+
+                    <p>
+                        Reducir una señal de 30 segundos
+                        a 88 embeddings facilita el uso
+                        del LLM, pero puede eliminar
+                        detalles acústicos locales.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Task over-fitting
+                    </h3>
+
+                    <p>
+                        El instruction tuning puede reducir
+                        capacidades generales si el modelo
+                        se especializa demasiado.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Dependencia de grandes modelos
+                    </h3>
+
+                    <p>
+                        Aunque solo se adapten 33 M parámetros,
+                        durante la inferencia sigue siendo
+                        necesario ejecutar Whisper, BEATs
+                        y Vicuna-13B.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Grounding acústico
+                    </h3>
+
+                    <p>
+                        Generar una respuesta correcta
+                        no garantiza que podamos identificar
+                        qué región concreta del audio
+                        fundamentó la decisión.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Por qué es especialmente interesante?
+                </h2>
+
+                <p>
+                    SALMONN se aproxima directamente
+                    a uno de los objetivos centrales
+                    de la línea de investigación:
+                    integrar representaciones acústicas
+                    con modelos de lenguaje para comprender
+                    conjuntamente información lingüística
+                    y no lingüística.
+                </p>
+
+                <p>
+                    Su uso de LoRA demuestra además que
+                    es posible modificar una arquitectura
+                    multimodal muy grande actualizando
+                    únicamente una pequeña fracción
+                    de sus parámetros.
+                </p>
+
+                <p>
+                    Sin embargo, existe una diferencia
+                    fundamental entre parámetros entrenables
+                    y coste real de inferencia:
+                    congelar Whisper, BEATs y Vicuna
+                    no elimina la necesidad de ejecutarlos.
+                </p>
+
+                <p>
+                    Este punto conecta directamente
+                    con la investigación sobre modelos
+                    sostenibles y compactos.
+                </p>
+
+                <p>
+                    Finalmente, la compresión realizada
+                    por Q-Former y las capacidades de
+                    speech-audio co-reasoning plantean
+                    una cuestión central para la tesis:
+                    determinar cuánto puede comprimirse
+                    una señal acústica antes de perder
+                    la evidencia temporal necesaria
+                    para justificar una respuesta.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    SALMONN original vs SALMONN-2
+                </h3>
+
+                <p>
+                    Esta ficha describe exclusivamente
+                    el SALMONN publicado en ICLR 2024.
+                </p>
+
+                <p>
+                    En 2026 se ha presentado posteriormente
+                    SALMONN-2, basado en representaciones
+                    auto-supervisadas y una arquitectura
+                    diferente.
+                </p>
+
+                <p>
+                    Conviene mantener ambos trabajos separados
+                    para no atribuir al modelo original
+                    características desarrolladas después.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

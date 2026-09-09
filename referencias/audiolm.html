@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        AudioLM | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="../index.html#inicio">Inicio</a></li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- CABECERA -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/modelos-lenguaje-audio-habla.html"
+                    class="volver"
+                >
+                    ← Volver a Modelos de lenguaje de audio y habla
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    AudioLM
+                </h1>
+
+
+                <h2>
+                    A Language Modeling Approach
+                    to Audio Generation
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Borsos, Z. et al. · 2023
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Audio Language Model</span>
+                    <span>Discrete Tokens</span>
+                    <span>SoundStream</span>
+                    <span>w2v-BERT</span>
+                    <span>Autoregressive</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFERENCIA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Zalán Borsos
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        IEEE/ACM TASLP
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        2523–2533
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Borsos, Z., Marinier, R., Vincent, D.,
+                    Kharitonov, E., Pietquin, O., Sharifi, M.,
+                    Roblek, D., Teboul, O., Grangier, D.,
+                    Tagliasacchi, M., & Zeghidour, N. (2023).
+                    <em>
+                        AudioLM: A Language Modeling Approach
+                        to Audio Generation.
+                    </em>
+                    IEEE/ACM Transactions on Audio, Speech,
+                    and Language Processing, 31, 2523–2533.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROBLEMA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Generar audio coherente y de alta calidad
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Una señal acústica contiene información
+                    estructurada en escalas temporales muy diferentes.
+                </p>
+
+                <p>
+                    En habla, por ejemplo, existen patrones locales
+                    relacionados con fonemas y sílabas, pero también
+                    dependencias más largas necesarias para construir
+                    palabras, frases y significado.
+                </p>
+
+                <p>
+                    Al mismo tiempo, una reconstrucción realista
+                    necesita conservar información fina como
+                    identidad del hablante, prosodia y condiciones
+                    de grabación.
+                </p>
+
+                <p>
+                    AudioLM intenta resolver conjuntamente ambos
+                    problemas utilizando dos niveles diferentes
+                    de tokens.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- IDEA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Semántica + acústica
+                </h2>
+
+                <p>
+                    AudioLM utiliza tokens semánticos para
+                    representar la estructura de largo alcance
+                    y tokens acústicos para conservar
+                    los detalles necesarios para reconstruir
+                    una señal de alta calidad.
+                </p>
+
+                <p>
+                    La generación se formula posteriormente
+                    como predicción autoregresiva de estas
+                    secuencias discretas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOKEN SEMÁNTICO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · SEMANTIC TOKENS
+                </p>
+
+                <h2>
+                    w2v-BERT
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Audio
+                    </h3>
+
+                    <p>
+                        Forma de onda.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        w2v-BERT
+                    </h3>
+
+                    <p>
+                        Produce representaciones
+                        auto-supervisadas del habla.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CLUSTERING</span>
+
+                    <h3>
+                        k-means
+                    </h3>
+
+                    <p>
+                        Las representaciones continuas
+                        se transforman en unidades discretas.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Semantic tokens
+                    </h3>
+
+                    <p>
+                        Representan estructura acústica
+                        y lingüística de alto nivel.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACOUSTIC TOKENS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · ACOUSTIC TOKENS
+                </p>
+
+                <h2>
+                    SoundStream
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Encoder
+                    </h3>
+
+                    <p>
+                        El códec neuronal transforma
+                        la señal en representaciones
+                        acústicas comprimidas.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        RVQ
+                    </h3>
+
+                    <p>
+                        Residual Vector Quantization
+                        convierte las representaciones
+                        en varios niveles discretos.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Acoustic tokens
+                    </h3>
+
+                    <p>
+                        Conservan identidad, prosodia,
+                        timbre y otros detalles acústicos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIFERENCIA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Semantic Tokens</th>
+                            <th>Acoustic Tokens</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Origen</td>
+                            <td>w2v-BERT</td>
+                            <td>SoundStream</td>
+                        </tr>
+
+                        <tr>
+                            <td>Objetivo</td>
+                            <td>Coherencia temporal</td>
+                            <td>Fidelidad acústica</td>
+                        </tr>
+
+                        <tr>
+                            <td>Información</td>
+                            <td>Contenido y estructura</td>
+                            <td>Speaker, prosodia y calidad</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tasa temporal</td>
+                            <td>Reducida</td>
+                            <td>Mayor</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRES ETAPAS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MODELO GENERATIVO
+                </p>
+
+                <h2>
+                    Generación jerárquica
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Semantic Modeling
+                        </h3>
+
+                        <p>
+                            Un Transformer autoregresivo
+                            predice la secuencia de tokens
+                            semánticos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Coarse Acoustic Modeling
+                        </h3>
+
+                        <p>
+                            Otro Transformer utiliza
+                            los tokens semánticos para
+                            predecir los primeros niveles
+                            acústicos del códec.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Fine Acoustic Modeling
+                        </h3>
+
+                        <p>
+                            Una tercera etapa añade
+                            los niveles acústicos restantes
+                            y aumenta la fidelidad.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            SoundStream Decoder
+                        </h3>
+
+                        <p>
+                            Los tokens acústicos finales
+                            se transforman nuevamente
+                            en una forma de onda.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FLUJO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    GENERACIÓN
+                </p>
+
+                <h2>
+                    Primero decide qué ocurre y después cómo suena
+                </h2>
+
+                <p>
+                    La separación jerárquica permite dedicar
+                    la primera etapa a mantener una estructura
+                    coherente de largo alcance.
+                </p>
+
+                <p>
+                    Las siguientes etapas incorporan
+                    progresivamente los detalles acústicos
+                    necesarios para producir una señal realista.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DATOS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · DATOS
+                </p>
+
+                <h2>
+                    Entrenamiento sin transcripciones
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SPEECH
+                    </span>
+
+                    <h3>
+                        Libri-Light
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        60.000 h
+                    </strong>
+
+                    <p>
+                        Habla inglesa sin utilizar
+                        sus transcripciones durante
+                        el entrenamiento de AudioLM.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MUSIC
+                    </span>
+
+                    <h3>
+                        Piano
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        40.000 h
+                    </strong>
+
+                    <p>
+                        Corpus interno de grabaciones
+                        de piano utilizado para estudiar
+                        la generalización del enfoque
+                        fuera del habla.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SPEECH -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · SPEECH CONTINUATION
+                </p>
+
+                <h2>
+                    Generar a partir de un pequeño prompt
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Prompt
+                        </h3>
+
+                        <p>
+                            Se proporciona al modelo
+                            unos segundos de habla.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Semantic continuation
+                        </h3>
+
+                        <p>
+                            Se generan nuevos tokens
+                            semánticos coherentes con
+                            el contexto anterior.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Acoustic continuation
+                        </h3>
+
+                        <p>
+                            Los modelos acústicos
+                            conservan características
+                            de la señal original.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Waveform
+                        </h3>
+
+                        <p>
+                            SoundStream reconstruye
+                            finalmente el audio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROPIEDADES -->
+
+        <section class="referencia-contenedor">
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Speaker
+                    </strong>
+
+                    <span>
+                        Identidad del hablante
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Prosody
+                    </strong>
+
+                    <span>
+                        Características prosódicas
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Recording conditions
+                    </strong>
+
+                    <span>
+                        Entorno acústico
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Linguistic structure
+                    </strong>
+
+                    <span>
+                        Coherencia sintáctica y semántica
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVALUACIÓN -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Continuación de habla y piano
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SPEECH
+                    </span>
+
+                    <h3>
+                        Speech Continuation
+                    </h3>
+
+                    <p>
+                        Se estudia si el audio generado
+                        mantiene estructura lingüística,
+                        identidad y prosodia.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MUSIC
+                    </span>
+
+                    <h3>
+                        Piano Continuation
+                    </h3>
+
+                    <p>
+                        El mismo procedimiento se utiliza
+                        para generar continuaciones con
+                        coherencia melódica y rítmica.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        HUMAN EVALUATION
+                    </span>
+
+                    <strong>
+                        51,2 %
+                    </strong>
+
+                    <p>
+                        identificación real / generado
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Próximo al azar
+                    </h3>
+
+                    <p>
+                        En una evaluación perceptual,
+                        los participantes alcanzaron
+                        aproximadamente un 51,2 % de acierto
+                        distinguiendo continuaciones reales
+                        de las generadas por AudioLM.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEGURIDAD -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    SEGURIDAD
+                </p>
+
+                <h3>
+                    Detección de audio sintético
+                </h3>
+
+                <p>
+                    Los investigadores también entrenaron
+                    un clasificador para distinguir
+                    habla generada mediante AudioLM.
+                </p>
+
+                <p>
+                    En sus experimentos, este detector
+                    alcanzó una precisión del 98,6 %.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPARACIÓN -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    ¿Por qué dos tokenizaciones?
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Representación</th>
+                            <th>Estructura</th>
+                            <th>Fidelidad</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Solo semantic tokens</td>
+                            <td>Alta</td>
+                            <td>Baja</td>
+                        </tr>
+
+                        <tr>
+                            <td>Solo acoustic tokens</td>
+                            <td>Limitada a largo plazo</td>
+                            <td>Alta</td>
+                        </tr>
+
+                        <tr>
+                            <td>AudioLM híbrido</td>
+                            <td>Alta</td>
+                            <td>Alta</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- TESIS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    AudioLM muestra que no es necesario
+                    transformar obligatoriamente una señal
+                    hablada en texto para aplicar técnicas
+                    propias del modelado del lenguaje.
+                </p>
+
+                <p>
+                    Las unidades discretas permiten mantener
+                    información acústica que desaparecería
+                    durante una transcripción convencional.
+                </p>
+
+                <p>
+                    Para la tesis resulta especialmente
+                    interesante el compromiso entre
+                    representaciones compactas, contenido
+                    semántico y fidelidad acústica.
+                </p>
+
+                <p>
+                    Este problema conecta directamente
+                    con eficiencia computacional,
+                    comprensión multimodal y razonamiento
+                    basado directamente en evidencias acústicas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Timestamp-Grounded Speech Reasoning | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>
+                    Doctorado
+                </h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/razonamiento-fundamentacion-acustica.html"
+                    class="volver"
+                >
+                    ← Volver a Razonamiento y fundamentación acústica
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Listen First, Then Answer
+                </h1>
+
+
+                <h2>
+                    Timestamp-Grounded Speech Reasoning
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Jeong, J. et al. · 2026
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Speech Reasoning</span>
+                    <span>Timestamp Grounding</span>
+                    <span>Reinforcement Learning</span>
+                    <span>GRPO</span>
+                    <span>Faithfulness</span>
+                    <span>Qwen2.5-Omni</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Jihoon Jeong
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2026
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Estado
+                    </span>
+
+                    <strong>
+                        Preprint
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Identificador
+                    </span>
+
+                    <strong>
+                        arXiv:2603.19468
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Jeong, J., Mousavi, P.,
+                    Ravanelli, M., & Subakan, C. (2026).
+                    <em>
+                        Listen First, Then Answer:
+                        Timestamp-Grounded Speech Reasoning.
+                    </em>
+                    arXiv:2603.19468.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA
+                </p>
+
+                <h2>
+                    ¿Está el razonamiento realmente basado en el audio?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los Large Audio-Language Models pueden
+                    producir explicaciones y cadenas
+                    de razonamiento antes de responder.
+                </p>
+
+                <p>
+                    Sin embargo, generar una explicación
+                    coherente no garantiza que el modelo
+                    esté utilizando realmente la señal
+                    acústica para construirla.
+                </p>
+
+                <p>
+                    El modelo puede aprovechar información
+                    lingüística del prompt, patrones aprendidos
+                    durante el entrenamiento o conocimiento
+                    previo para alcanzar una respuesta plausible.
+                </p>
+
+                <p>
+                    Los autores plantean por ello que
+                    el razonamiento debe estar explícitamente
+                    vinculado a segmentos temporales
+                    de la señal.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             HALLAZGO PREVIO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA OBSERVADO
+                </p>
+
+                <h2>
+                    El modelo puede responder correctamente sin "escuchar" suficiente
+                </h2>
+
+                <p>
+                    El análisis de atención realizado por
+                    los autores muestra que los modelos base
+                    asignan relativamente poca atención
+                    a los tokens acústicos durante
+                    el razonamiento.
+                </p>
+
+                <p>
+                    En cambio, determinados tokens del sistema
+                    pueden concentrar una parte muy superior
+                    de la atención.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Listen First, Then Answer
+                </h2>
+
+                <p>
+                    Antes de producir la respuesta,
+                    el modelo debe identificar qué
+                    intervalo temporal contiene
+                    la evidencia relevante.
+                </p>
+
+                <p>
+                    Posteriormente utiliza esa región
+                    dentro de su razonamiento antes
+                    de seleccionar la respuesta final.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PIPELINE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · METODOLOGÍA
+                </p>
+
+                <h2>
+                    Entrenamiento en dos etapas
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Supervised Timestamp Alignment
+                        </h3>
+
+                        <p>
+                            Primero se enseña al modelo
+                            la capacidad básica de relacionar
+                            fragmentos lingüísticos con
+                            sus posiciones temporales
+                            dentro del audio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Timestamp-Grounded Reasoning
+                        </h3>
+
+                        <p>
+                            Posteriormente se utiliza
+                            reinforcement learning para
+                            integrar la localización temporal
+                            dentro del proceso de razonamiento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             STAGE 1
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · STAGE 1
+                </p>
+
+                <h2>
+                    Supervised Timestamp Alignment · STA
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    El objetivo de esta primera fase
+                    es proporcionar al modelo una capacidad
+                    explícita de localización temporal.
+                </p>
+
+                <p>
+                    Para ello se construyen ejemplos
+                    donde una palabra o fragmento
+                    lingüístico está asociado con
+                    su instante de inicio y final.
+                </p>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Speech
+                    </h3>
+
+                    <p>
+                        Grabación hablada.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ALIGNMENT</span>
+
+                    <h3>
+                        Whisper Timestamped
+                    </h3>
+
+                    <p>
+                        Obtiene alineaciones
+                        temporales a nivel
+                        de palabra.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>TRAINING</span>
+
+                    <h3>
+                        Q&A
+                    </h3>
+
+                    <p>
+                        El modelo aprende
+                        a predecir timestamps
+                        de fragmentos.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        [start, end]
+                    </h3>
+
+                    <p>
+                        Intervalo temporal
+                        de la evidencia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TIMESTAMP DATA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DATOS · STAGE 1
+                </p>
+
+                <h2>
+                    Aproximadamente 268.000 ejemplos
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        LibriSpeech
+                    </strong>
+
+                    <span>
+                        Speech
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        CoVoST 2
+                    </strong>
+
+                    <span>
+                        Multilingual Speech
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        MELD
+                    </strong>
+
+                    <span>
+                        Conversational Speech
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Multi-Speaker
+                    </strong>
+
+                    <span>
+                        Dialogue
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        YouTube8M Speech
+                    </strong>
+
+                    <span>
+                        Diverse Speech
+                    </span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ALIGNMENT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    GENERACIÓN DE TIMESTAMPS
+                </p>
+
+                <h3>
+                    Whisper + Dynamic Time Warping
+                </h3>
+
+                <p>
+                    Las alineaciones utilizadas para
+                    construir el conjunto de entrenamiento
+                    se obtienen mediante
+                    whisper-timestamped.
+                </p>
+
+                <p>
+                    Este procedimiento utiliza información
+                    de cross-attention de Whisper junto
+                    con Dynamic Time Warping para estimar
+                    timestamps a nivel de palabra.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REPRESENTACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REPRESENTACIÓN
+                </p>
+
+                <h2>
+                    Word → Start → End
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    UNIDAD DE ALINEACIÓN
+                </p>
+
+                <h2>
+                    (palabra, inicio, fin)
+                </h2>
+
+                <p>
+                    Cada unidad acústico-lingüística
+                    puede representarse mediante
+                    una palabra o segmento junto
+                    con su tiempo inicial y final.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             STAGE 2
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · STAGE 2
+                </p>
+
+                <h2>
+                    Timestamp-Grounded Reasoning
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Saber localizar una palabra
+                    no garantiza que el modelo utilice
+                    correctamente esa capacidad
+                    durante una tarea de razonamiento.
+                </p>
+
+                <p>
+                    La segunda etapa introduce
+                    reinforcement learning para incorporar
+                    la evidencia temporal dentro
+                    de la propia respuesta razonada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             GRPO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REINFORCEMENT LEARNING
+                </p>
+
+                <h2>
+                    GRPO
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Generar razonamientos
+                        </h3>
+
+                        <p>
+                            El modelo genera varias
+                            respuestas posibles para
+                            una pregunta relacionada
+                            con el audio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Evaluar respuesta
+                        </h3>
+
+                        <p>
+                            Se comprueba si la opción
+                            final seleccionada es correcta.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Evaluar grounding
+                        </h3>
+
+                        <p>
+                            También se comprueba
+                            si el razonamiento incluye
+                            referencias temporales.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Optimizar
+                        </h3>
+
+                        <p>
+                            GRPO favorece las respuestas
+                            que combinan predicción correcta
+                            y evidencia temporal concisa.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REWARD
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    FUNCIÓN DE RECOMPENSA
+                </p>
+
+                <h2>
+                    R = R<sub>answer</sub> + R<sub>tg</sub>
+                </h2>
+
+                <p>
+                    La recompensa combina la corrección
+                    de la respuesta con un componente
+                    específico de timestamp grounding.
+                </p>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        R ANSWER
+                    </p>
+
+                    <h3>
+                        Correctness
+                    </h3>
+
+                    <ul>
+                        <li>Respuesta correcta: recompensa</li>
+                        <li>Respuesta incorrecta: sin recompensa</li>
+                        <li>Mantiene el objetivo de la tarea</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        R TG
+                    </p>
+
+                    <h3>
+                        Timestamp Grounding
+                    </h3>
+
+                    <ul>
+                        <li>Favorece utilizar timestamps</li>
+                        <li>Favorece evidencia concisa</li>
+                        <li>Penaliza referencias excesivas</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPACTNESS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    Más timestamps no significa mejor explicación
+                </h3>
+
+                <p>
+                    El sistema no recompensa simplemente
+                    llenar el razonamiento de referencias
+                    temporales.
+                </p>
+
+                <p>
+                    La recompensa está diseñada para
+                    favorecer un número reducido de
+                    regiones relevantes y evitar
+                    el timestamp spamming.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODEL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · MODELO
+                </p>
+
+                <h2>
+                    Qwen2.5-Omni · 7B
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        BASELINE
+                    </p>
+
+                    <h3>
+                        Qwen2.5-Omni
+                    </h3>
+
+                    <ul>
+                        <li>Modelo multimodal</li>
+                        <li>Configuración de 7B</li>
+                        <li>Entrada de audio</li>
+                        <li>Razonamiento lingüístico</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        PROPUESTA
+                    </p>
+
+                    <h3>
+                        + STA + GRPO
+                    </h3>
+
+                    <ul>
+                        <li>Temporal grounding</li>
+                        <li>Reward-based reasoning</li>
+                        <li>Explicit timestamps</li>
+                        <li>Evidence-aware reasoning</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RL DATA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DATOS · STAGE 2
+                </p>
+
+                <h2>
+                    Aproximadamente 47.000 ejemplos
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MELD
+                    </span>
+
+                    <h3>
+                        Emotion / Dialogue
+                    </h3>
+
+                    <p>
+                        Preguntas relacionadas
+                        con conversaciones
+                        y contenido emocional.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MULTI-SPEAKER
+                    </span>
+
+                    <h3>
+                        Dialogue QA
+                    </h3>
+
+                    <p>
+                        Preguntas que requieren
+                        comprender relaciones
+                        entre varios interlocutores.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        YOUTUBE8M
+                    </span>
+
+                    <h3>
+                        Speech QA
+                    </h3>
+
+                    <p>
+                        Preguntas sobre contenido
+                        hablado en grabaciones
+                        diversas.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EJEMPLO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · EJEMPLO CONCEPTUAL
+                </p>
+
+                <h2>
+                    Razonamiento fundamentado
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pregunta
+                        </h3>
+
+                        <p>
+                            ¿Cuál es la relación entre
+                            los dos hablantes?
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Localización
+                        </h3>
+
+                        <p>
+                            El modelo identifica
+                            un intervalo relevante
+                            dentro de la conversación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Evidencia
+                        </h3>
+
+                        <p>
+                            Analiza qué información
+                            lingüística o acústica
+                            aparece en ese segmento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Inferencia
+                        </h3>
+
+                        <p>
+                            Utiliza la evidencia
+                            localizada para construir
+                            la conclusión.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Respuesta
+                        </h3>
+
+                        <p>
+                            Finalmente selecciona
+                            la opción correspondiente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EVALUACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Cuatro benchmarks de habla
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        MMAU-mini-Speech
+                    </strong>
+
+                    <span>
+                        Speech Reasoning
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        MMAR-Speech
+                    </strong>
+
+                    <span>
+                        Audio Reasoning
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        AIR-Bench
+                    </strong>
+
+                    <span>SER</span>
+                    <span>SNV</span>
+                    <span>SIC</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        MELD
+                    </strong>
+
+                    <span>
+                        Emotion Understanding
+                    </span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS PRINCIPALES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · RESULTADOS
+                </p>
+
+                <h2>
+                    Baseline vs Grounded Reasoning
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>MMAU-mini</th>
+                            <th>MMAR</th>
+                            <th>AIR SER</th>
+                            <th>AIR SNV</th>
+                            <th>AIR SIC</th>
+                            <th>MELD</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Qwen2.5-Omni baseline
+                            </td>
+                            <td>70,60</td>
+                            <td>59,86</td>
+                            <td>60,2</td>
+                            <td>63,9</td>
+                            <td>83,5</td>
+                            <td>60,3</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                + Only STA
+                            </td>
+                            <td>71,37</td>
+                            <td>61,22</td>
+                            <td>59,5</td>
+                            <td>66,0</td>
+                            <td>84,3</td>
+                            <td>62,8</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                + Reasoning SFT
+                            </td>
+                            <td>74,47</td>
+                            <td>62,93</td>
+                            <td>58,5</td>
+                            <td>68,1</td>
+                            <td>85,0</td>
+                            <td>61,8</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Ours · STA + GRPO
+                            </td>
+                            <td>
+                                <strong>74,47</strong>
+                            </td>
+                            <td>
+                                <strong>64,63</strong>
+                            </td>
+                            <td>
+                                <strong>62,5</strong>
+                            </td>
+                            <td>
+                                <strong>70,4</strong>
+                            </td>
+                            <td>
+                                <strong>89,3</strong>
+                            </td>
+                            <td>
+                                <strong>64,6</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN SOTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Frente a otros modelos
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>MMAU-mini</th>
+                            <th>MMAR</th>
+                            <th>MELD</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Gemini-2.5-Flash</td>
+                            <td>75,08</td>
+                            <td>72,41</td>
+                            <td>61,5</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>GPT-4o Audio</td>
+                            <td>66,67</td>
+                            <td>20,41</td>
+                            <td>62,5</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Audio Flamingo 3</td>
+                            <td>66,37</td>
+                            <td>57,48</td>
+                            <td>58,5</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Audio-Thinker</td>
+                            <td>73,37</td>
+                            <td>64,29</td>
+                            <td>—</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Timestamp-Grounded
+                            </td>
+                            <td>
+                                <strong>74,47</strong>
+                            </td>
+                            <td>
+                                <strong>64,63</strong>
+                            </td>
+                            <td>
+                                <strong>64,6</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ALIGNMENT RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        TIMESTAMP IoU
+                    </span>
+
+                    <strong>
+                        0,7189
+                    </strong>
+
+                    <p>
+                        después de STA
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Baseline: 0,2324
+                    </h3>
+
+                    <p>
+                        La primera etapa mejora
+                        considerablemente la capacidad
+                        del modelo para localizar
+                        correctamente fragmentos
+                        dentro del audio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BEHAVIOUR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · ANÁLISIS DEL RAZONAMIENTO
+                </p>
+
+                <h2>
+                    No solo evalúan accuracy
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        Region Exploration
+                    </strong>
+
+                    <span>
+                        Exploración acústica
+                    </span>
+
+                    <p>
+                        Mide hasta qué punto
+                        el razonamiento consulta
+                        distintas regiones relevantes
+                        del audio.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Audiology Verify
+                    </strong>
+
+                    <span>
+                        Verificación acústica
+                    </span>
+
+                    <p>
+                        Comprueba la correspondencia
+                        entre la explicación generada
+                        y el contenido acústico
+                        de la región citada.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Consistency
+                    </strong>
+
+                    <span>
+                        Coherencia
+                    </span>
+
+                    <p>
+                        Evalúa si el razonamiento
+                        producido es consistente
+                        con la respuesta final.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO VERIFY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        AUDIOLOGY VERIFY
+                    </span>
+
+                    <h3>
+                        Baseline
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        0,27
+                    </strong>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        AUDIOLOGY VERIFY
+                    </span>
+
+                    <h3>
+                        Grounded
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        0,56
+                    </strong>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        CONSISTENCY
+                    </span>
+
+                    <h3>
+                        Grounded
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        0,83
+                    </strong>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ATTENTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    ATENCIÓN
+                </p>
+
+                <h2>
+                    Grounding hace que el modelo preste más atención al audio
+                </h2>
+
+                <p>
+                    Después del entrenamiento con timestamps,
+                    el modelo asigna una proporción superior
+                    de atención a los tokens acústicos,
+                    especialmente durante la generación
+                    del razonamiento.
+                </p>
+
+                <p>
+                    Los autores identifican además capas
+                    donde la atención hacia el audio aumenta
+                    especialmente cuando el modelo está
+                    produciendo referencias temporales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MMAU / POLYBENCH / TG
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Qué aporta respecto a los benchmarks anteriores
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>MMAU</th>
+                            <th>PolyBench</th>
+                            <th>Timestamp-Grounded</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Razonamiento
+                            </td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Audio complejo
+                            </td>
+                            <td>Sí</td>
+                            <td>Polifónico</td>
+                            <td>Habla</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Relaciones temporales
+                            </td>
+                            <td>Parcial</td>
+                            <td>Central</td>
+                            <td>Central</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Timestamp explícito
+                            </td>
+                            <td>No requerido</td>
+                            <td>No requerido</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Evidencia en la respuesta
+                            </td>
+                            <td>No requerida</td>
+                            <td>No requerida</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Grounding como objetivo
+                            </td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Qué sigue abierto
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Principalmente habla
+                    </h3>
+
+                    <p>
+                        Los experimentos del trabajo
+                        se centran en tareas basadas
+                        en señales habladas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Grounding temporal
+                    </h3>
+
+                    <p>
+                        Localizar correctamente
+                        un intervalo no proporciona
+                        automáticamente una explicación
+                        frecuencial o espectral.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Alineaciones automáticas
+                    </h3>
+
+                    <p>
+                        Parte de los timestamps
+                        utilizados para entrenamiento
+                        se generan automáticamente
+                        mediante Whisper.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Reward sparse
+                    </h3>
+
+                    <p>
+                        La recompensa se aplica
+                        sobre propiedades globales
+                        de la respuesta y no supervisa
+                        cada paso intermedio
+                        del razonamiento.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Una referencia especialmente cercana
+                    al núcleo de la propuesta
+                </h2>
+
+                <p>
+                    Este trabajo demuestra que exigir
+                    grounding explícito puede modificar
+                    no solo la explicación producida
+                    por el modelo, sino también
+                    la forma en que utiliza
+                    la representación acústica.
+                </p>
+
+                <p>
+                    Para la tesis, el timestamp puede
+                    considerarse un primer nivel
+                    de auditabilidad:
+                </p>
+
+                <p>
+                    respuesta → evidencia →
+                    intervalo temporal verificable.
+                </p>
+
+                <p>
+                    Sin embargo, la propuesta doctoral
+                    puede ir más allá combinando
+                    grounding temporal con evidencia
+                    espectral, fonética, prosódica
+                    o basada en eventos.
+                </p>
+
+                <p>
+                    Una arquitectura jerárquica podría
+                    localizar primero una región,
+                    identificar después qué características
+                    acústicas son relevantes y finalmente
+                    convertir esas evidencias en reglas
+                    lingüísticas o neurodifusas.
+                </p>
+
+                <p>
+                    Además, la confianza podría depender
+                    de la calidad del propio grounding:
+                    si el modelo no es capaz de localizar
+                    una evidencia suficientemente clara,
+                    debería reducir su confianza
+                    o abstenerse de responder.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PARA LA TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Respuesta + Evidencia + Confianza
+                </h2>
+
+                <p>
+                    Una extensión natural consiste
+                    en no exigir únicamente una respuesta
+                    correcta y un timestamp.
+                </p>
+
+                <p>
+                    El sistema podría producir:
+                </p>
+
+                <p>
+                    predicción + intervalo temporal +
+                    evidencia acústica + explicación +
+                    nivel de confianza.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

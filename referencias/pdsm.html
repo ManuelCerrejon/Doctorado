@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        PDSM | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/explicabilidad-habla-audio.html"
+                    class="volver"
+                >
+                    ← Volver a Explicabilidad
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    PDSM
+                </h1>
+
+
+                <h2>
+                    Phoneme Discretized Saliency Maps
+                    for Explainable Detection
+                    of AI-Generated Voice
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Gupta, Ravanelli, Germain & Subakan
+                    · Interspeech 2024
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Explainable AI</span>
+                    <span>Phonemes</span>
+                    <span>Saliency Maps</span>
+                    <span>Deepfake Detection</span>
+                    <span>Faithfulness</span>
+                    <span>Speech</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Shubham Gupta
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        Interspeech 2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.21437/Interspeech.2024-632
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Gupta, S., Ravanelli, M.,
+                    Germain, P., & Subakan, C. (2024).
+                    <em>
+                        Phoneme Discretized Saliency Maps
+                        for Explainable Detection
+                        of AI-Generated Voice.
+                    </em>
+                    Interspeech 2024,
+                    3295–3299.
+                    DOI: 10.21437/Interspeech.2024-632.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Una saliency map puede ser correcta
+                    y seguir siendo difícil de entender
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los clasificadores capaces de detectar
+                    voz generada artificialmente pueden
+                    alcanzar un rendimiento elevado,
+                    pero continúan siendo modelos opacos.
+                </p>
+
+                <p>
+                    Métodos como Integrated Gradients,
+                    GradSHAP o DeepLIFT permiten obtener
+                    mapas de saliencia sobre
+                    un espectrograma.
+                </p>
+
+                <p>
+                    Sin embargo, una nube continua
+                    de regiones tiempo-frecuencia
+                    no indica directamente qué
+                    unidad lingüística o acústica
+                    resulta problemática.
+                </p>
+
+                <p>
+                    PDSM propone discretizar estas
+                    atribuciones utilizando
+                    las fronteras de los fonemas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EJEMPLO INICIAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · MOTIVACIÓN
+                </p>
+
+                <h2>
+                    Cuando el objeto acústico
+                    está claramente localizado
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores realizan primero
+                    un experimento sencillo añadiendo
+                    ruido gaussiano limitado temporalmente
+                    a grabaciones de LJSpeech.
+                </p>
+
+                <p>
+                    Entrenan un CNN14 para detectar
+                    la presencia de dicho ruido
+                    y aplican GradSHAP.
+                </p>
+
+                <p>
+                    En este escenario, la saliencia
+                    localiza correctamente la región
+                    donde aparece la perturbación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA DEEPFAKE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    CASO COMPLEJO
+                </p>
+
+                <h2>
+                    ¿Dónde está exactamente
+                    el "objeto" de una voz artificial?
+                </h2>
+
+                <p>
+                    En detección de voz sintética
+                    no existe necesariamente una única
+                    región claramente delimitada
+                    que represente la causa.
+                </p>
+
+                <p>
+                    Los artefactos pueden distribuirse
+                    a lo largo de diferentes fonemas
+                    y regiones espectrales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASET
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · DATASET
+                </p>
+
+                <h2>
+                    LJSpeech + dos sistemas TTS
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        BONAFIDE
+                    </span>
+
+                    <h3>
+                        LJSpeech
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        13.000
+                    </strong>
+
+                    <p>
+                        10.000 utilizadas para
+                        entrenamiento y 3.000
+                        para test.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SYNTHETIC
+                    </span>
+
+                    <h3>
+                        Tacotron2
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        13.000
+                    </strong>
+
+                    <p>
+                        Grabaciones sintéticas
+                        generadas a partir
+                        del contenido de LJSpeech.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SYNTHETIC
+                    </span>
+
+                    <h3>
+                        FastSpeech2
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        13.000
+                    </strong>
+
+                    <p>
+                        Segundo sistema TTS
+                        utilizado para estudiar
+                        artefactos diferentes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    GENERACIÓN
+                </p>
+
+                <h2>
+                    Dos generadores distintos
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        TTS 1
+                    </p>
+
+                    <h3>
+                        Tacotron2
+                    </h3>
+
+                    <ul>
+                        <li>13.000 audios sintéticos</li>
+                        <li>HiFi-GAN como vocoder</li>
+                        <li>SpeechBrain</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        TTS 2
+                    </p>
+
+                    <h3>
+                        FastSpeech2
+                    </h3>
+
+                    <ul>
+                        <li>13.000 audios sintéticos</li>
+                        <li>HiFi-GAN como vocoder</li>
+                        <li>SpeechBrain</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CLASSIFIERS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · CLASIFICADORES
+                </p>
+
+                <h2>
+                    Dos CNN14 independientes
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>REAL</span>
+
+                    <h3>
+                        LJSpeech
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    +
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>FAKE</span>
+
+                    <h3>
+                        Tacotron2
+                        o FastSpeech2
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CLASSIFIER</span>
+
+                    <h3>
+                        CNN14
+                    </h3>
+
+                    <p>
+                        Real vs Fake
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Rendimiento del detector
+                </h3>
+
+                <p>
+                    Los autores indican que ambos
+                    clasificadores obtienen una accuracy
+                    muy próxima al 100 % en test.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             STANDARD SALIENCY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · SALIENCY MAP
+                </p>
+
+                <h2>
+                    Explicación continua
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    El clasificador recibe una
+                    representación espectral
+                    de la grabación.
+                </p>
+
+                <p>
+                    Los métodos post hoc generan
+                    una matriz de importancia M
+                    con dimensiones frecuencia × tiempo.
+                </p>
+
+                <p>
+                    Cada región del mapa indica
+                    cuánto influye esa zona
+                    en la decisión del clasificador.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PPG
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · PHONEME POSTERIORGRAM
+                </p>
+
+                <h2>
+                    Encontrar las fronteras fonéticas
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    PDSM utiliza un Phoneme
+                    Posteriorgram para asociar
+                    cada frame temporal con
+                    una distribución sobre fonemas.
+                </p>
+
+                <p>
+                    A partir del fonema más probable
+                    en cada instante se construyen
+                    segmentos con identidad,
+                    comienzo y final.
+                </p>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        PPG model
+                    </span>
+
+                    <strong>
+                        ASR fonético
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Training
+                    </span>
+
+                    <strong>
+                        TIMIT
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        PER reportado
+                    </span>
+
+                    <strong>
+                        24,6 %
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Evaluación PER
+                    </span>
+
+                    <strong>
+                        TIMIT + Arctic + CommonVoice
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PDSM PIPELINE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · PDSM
+                </p>
+
+                <h2>
+                    Pipeline de discretización
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Saliency Map
+                        </h3>
+
+                        <p>
+                            Obtener M mediante
+                            un método de atribución
+                            post hoc.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Preprocess
+                        </h3>
+
+                        <p>
+                            Filtrar valores pequeños
+                            y, dependiendo del experimento,
+                            utilizar valor absoluto.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            PPG Alignment
+                        </h3>
+
+                        <p>
+                            Obtener el fonema
+                            correspondiente a cada
+                            frame temporal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Phoneme Boundaries
+                        </h3>
+
+                        <p>
+                            Construir cada segmento
+                            (fonema, inicio, fin).
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pooling
+                        </h3>
+
+                        <p>
+                            Agregar toda la saliencia
+                            contenida dentro de
+                            cada fonema.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Rank
+                        </h3>
+
+                        <p>
+                            Ordenar los fonemas
+                            según la energía
+                            de saliencia asignada.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        07
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Top-k
+                        </h3>
+
+                        <p>
+                            Conservar únicamente
+                            los k fonemas
+                            más importantes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        08
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Binary Mask
+                        </h3>
+
+                        <p>
+                            Crear una máscara que
+                            cubra por completo
+                            las fronteras temporales
+                            de esos fonemas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONCEPT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    TRANSFORMACIÓN
+                </p>
+
+                <h2>
+                    Saliency → Phonemes
+                </h2>
+
+                <p>
+                    En lugar de mostrar miles
+                    de puntuaciones independientes:
+                </p>
+
+                <p>
+                    M(f, t)
+                </p>
+
+                <p>
+                    la explicación puede expresarse
+                    como una lista ordenada:
+                </p>
+
+                <p>
+                    /s/ → alta importancia<br>
+                    /iy/ → alta importancia<br>
+                    /f/ → importancia moderada
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PREPROCESS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · HIPERPARÁMETROS
+                </p>
+
+                <h2>
+                    No existe una única configuración
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Tacotron2</th>
+                            <th>FastSpeech2</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Threshold
+                            </td>
+
+                            <td>
+                                Sí
+                            </td>
+
+                            <td>
+                                Sí
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Absolute value
+                            </td>
+
+                            <td>
+                                No
+                            </td>
+
+                            <td>
+                                Sí
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Pooling
+                            </td>
+
+                            <td>
+                                Mean
+                            </td>
+
+                            <td>
+                                Sum
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Importante
+                </h3>
+
+                <p>
+                    Los propios autores remarcan
+                    que las decisiones de preprocessing
+                    y pooling afectan a la fidelidad
+                    de los mapas discretizados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METHODS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · MÉTODOS DE SALIENCIA
+                </p>
+
+                <h2>
+                    PDSM no sustituye el método de atribución
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>Integrated Gradients</strong>
+                    <span>IG</span>
+                </article>
+
+                <article>
+                    <strong>GradientSHAP</strong>
+                    <span>GradSHAP</span>
+                </article>
+
+                <article>
+                    <strong>Gradient × Input</strong>
+                    <span>GradInput</span>
+                </article>
+
+                <article>
+                    <strong>Guided Backpropagation</strong>
+                    <span>GuidedBP</span>
+                </article>
+
+                <article>
+                    <strong>Gradient Saliency</strong>
+                    <span>Gradient</span>
+                </article>
+
+                <article>
+                    <strong>DeepLIFT</strong>
+                    <span>DeepLift</span>
+                </article>
+
+            </div>
+
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    CONCEPTO
+                </p>
+
+                <h3>
+                    PDSM es una capa de discretización
+                </h3>
+
+                <p>
+                    Primero se genera la explicación
+                    mediante uno de estos métodos.
+                </p>
+
+                <p>
+                    Después PDSM transforma esa
+                    explicación continua utilizando
+                    las fronteras fonéticas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FAITHFULNESS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · FAITHFULNESS
+                </p>
+
+                <h2>
+                    ¿Las regiones seleccionadas
+                    afectan realmente al clasificador?
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    MÉTRICA
+                </p>
+
+                <h2>
+                    FF =
+                    f(X)c − f(X ⊙ (1 − M))c
+                </h2>
+
+                <p>
+                    Se elimina del input la región
+                    señalada por la explicación
+                    y se mide cuánto disminuye
+                    la probabilidad de la clase.
+                </p>
+
+                <p>
+                    Una caída elevada indica
+                    que la región identificada
+                    tenía una influencia importante
+                    sobre la decisión.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FAITHFULNESS RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · RESULTADOS
+                </p>
+
+                <h2>
+                    Faithfulness media
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>Tacotron2 · PDSM</th>
+                            <th>Tacotron2 · Original</th>
+                            <th>FastSpeech2 · PDSM</th>
+                            <th>FastSpeech2 · Original</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Integrated Gradients</td>
+                            <td><strong>0,100</strong></td>
+                            <td>1 × 10⁻⁵</td>
+                            <td><strong>0,350</strong></td>
+                            <td>1 × 10⁻³</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>GradSHAP</td>
+                            <td><strong>0,052</strong></td>
+                            <td>2 × 10⁻³</td>
+                            <td><strong>0,396</strong></td>
+                            <td>5 × 10⁻⁴</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Gradient × Input</td>
+                            <td><strong>0,066</strong></td>
+                            <td>−1,9 × 10⁻⁵</td>
+                            <td><strong>0,337</strong></td>
+                            <td>6 × 10⁻⁴</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>GuidedBP</td>
+                            <td><strong>0,056</strong></td>
+                            <td>−2,4 × 10⁻⁵</td>
+                            <td><strong>0,352</strong></td>
+                            <td>2 × 10⁻⁴</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>Gradient</td>
+                            <td><strong>0,015</strong></td>
+                            <td>−2,4 × 10⁻⁵</td>
+                            <td><strong>0,352</strong></td>
+                            <td>2 × 10⁻⁴</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>DeepLIFT</td>
+                            <td><strong>0,059</strong></td>
+                            <td>−2,4 × 10⁻⁵</td>
+                            <td><strong>0,346</strong></td>
+                            <td>2,8 × 10⁻⁵</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RANDOM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        RANDOM PHONEMES
+                    </span>
+
+                    <strong>
+                        0,037 / 0,270
+                    </strong>
+
+                    <p>
+                        Tacotron2 / FastSpeech2
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        No basta con seleccionar fonemas
+                    </h3>
+
+                    <p>
+                        PDSM se compara también
+                        con una selección aleatoria
+                        de fonemas para comprobar
+                        que la mejora no procede
+                        únicamente de discretizar
+                        el mapa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             UNDERSTANDABILITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · UNDERSTANDABILITY
+                </p>
+
+                <h2>
+                    Importancia global por fonema
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores acumulan la energía
+                    de Integrated Gradients asignada
+                    a cada fonema sobre todo
+                    el conjunto de test.
+                </p>
+
+                <p>
+                    Posteriormente normalizan
+                    esa energía por la duración
+                    total de cada fonema.
+                </p>
+
+                <p>
+                    De esta manera obtienen
+                    una medida global de qué
+                    unidades fonéticas utiliza
+                    más el detector.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PHONEME RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    HALLAZGO
+                </p>
+
+                <h3>
+                    Las fricativas reciben
+                    alta importancia
+                </h3>
+
+                <p>
+                    Los autores observan que
+                    diferentes fricativas aparecen
+                    entre los fonemas con mayor
+                    importancia relativa.
+                </p>
+
+                <p>
+                    En el análisis individual
+                    muestran, por ejemplo,
+                    que PDSM localiza regiones
+                    asociadas a /s/ que parecen
+                    poco naturales en el audio generado.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONTINUOUS VS PDSM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Saliency Map vs PDSM
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Saliency convencional</th>
+                            <th>PDSM</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Unidad</td>
+                            <td>Bins tiempo-frecuencia</td>
+                            <td>Fonemas</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Salida</td>
+                            <td>Mapa continuo</td>
+                            <td>Mapa discretizado</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Interpretación</td>
+                            <td>Difícil</td>
+                            <td>Más comprensible</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Fronteras</td>
+                            <td>No lingüísticas</td>
+                            <td>Fonéticas</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Ranking</td>
+                            <td>Regiones</td>
+                            <td>Fonemas</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Faithfulness</td>
+                            <td>Menor en los experimentos</td>
+                            <td>
+                                <strong>Mayor</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             XASR VS PDSM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    X-ASR vs PDSM
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>X-ASR</th>
+                            <th>PDSM</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Tarea</td>
+                            <td>ASR</td>
+                            <td>Deepfake detection</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Unidad principal</td>
+                            <td>Frames</td>
+                            <td>Fonemas</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Objetivo</td>
+                            <td>Causa mínima suficiente</td>
+                            <td>Discretizar saliencia</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Semántica de unidad</td>
+                            <td>Baja</td>
+                            <td>
+                                <strong>Fonética</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Explicación humana</td>
+                            <td>Intervalos temporales</td>
+                            <td>Fonemas concretos</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Faithfulness</td>
+                            <td>Indirectamente</td>
+                            <td>
+                                <strong>Métrica explícita</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        PPG imperfecto
+                    </h3>
+
+                    <p>
+                        Las fronteras utilizadas
+                        dependen de las predicciones
+                        de un modelo fonético externo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Preprocessing
+                    </h3>
+
+                    <p>
+                        Thresholding, valor absoluto
+                        y pooling modifican
+                        la fidelidad final.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Tarea concreta
+                    </h3>
+
+                    <p>
+                        Los experimentos principales
+                        se centran en detección
+                        de voz generada por IA.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Dos TTS
+                    </h3>
+
+                    <p>
+                        La evaluación utiliza
+                        Tacotron2 y FastSpeech2.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Post hoc
+                    </h3>
+
+                    <p>
+                        PDSM explica una decisión
+                        después de que el clasificador
+                        la haya realizado.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Fonema ≠ causa
+                    </h3>
+
+                    <p>
+                        Una alta importancia fonética
+                        no implica por sí sola
+                        una relación causal completa.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    De evidencia continua
+                    a conceptos comprensibles
+                </h2>
+
+                <p>
+                    PDSM introduce una idea especialmente
+                    relevante para la tesis:
+                    una explicación acústica no debería
+                    terminar necesariamente en
+                    un mapa de saliencia.
+                </p>
+
+                <p>
+                    La evidencia puede agregarse
+                    utilizando unidades que tengan
+                    significado para una persona.
+                </p>
+
+                <p>
+                    En habla, esas unidades pueden
+                    ser fonemas, palabras,
+                    pausas o segmentos prosódicos.
+                </p>
+
+                <p>
+                    En audio general podrían utilizarse
+                    eventos, fuentes o regiones
+                    acústicas estructuradas.
+                </p>
+
+                <p>
+                    Una siguiente capa neurodifusa
+                    podría convertir las importancias
+                    obtenidas en conceptos lingüísticos
+                    y reglas auditables.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA DERIVADA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Multi-Level Acoustic Explanation
+                </h2>
+
+                <p>
+                    Saliencia neuronal
+                    ↓
+                    regiones temporales
+                    ↓
+                    fonemas / palabras / eventos
+                    ↓
+                    características prosódicas
+                    ↓
+                    conceptos difusos
+                    ↓
+                    explicación lingüística.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

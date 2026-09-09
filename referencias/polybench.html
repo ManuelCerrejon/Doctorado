@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        PolyBench | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/razonamiento-fundamentacion-acustica.html"
+                    class="volver"
+                >
+                    ← Volver a Razonamiento y fundamentación acústica
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    PolyBench
+                </h1>
+
+
+                <h2>
+                    A Benchmark for Compositional
+                    Reasoning in Polyphonic Audio
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Chen, Y. et al. · INTERSPEECH 2026
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Audio Reasoning</span>
+                    <span>Polyphonic Audio</span>
+                    <span>Temporal Reasoning</span>
+                    <span>Concurrency</span>
+                    <span>Benchmark</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Autores
+                    </span>
+
+                    <strong>
+                        Chen, Xiao, Yin,
+                        Liu, Huang y Dang
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2026
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        INTERSPEECH 2026
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Preprint
+                    </span>
+
+                    <strong>
+                        arXiv:2603.05128
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Chen, Y., Xiao, Y., Yin, H.,
+                    Liu, X., Huang, J., & Dang, T.
+                    (2026).
+                    <em>
+                        PolyBench: A Benchmark for
+                        Compositional Reasoning in
+                        Polyphonic Audio.
+                    </em>
+                    Accepted at INTERSPEECH 2026.
+                    arXiv:2603.05128.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    ¿Qué ocurre cuando varios sonidos coinciden?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los modelos audio-lenguaje actuales
+                    pueden identificar eventos y realizar
+                    determinadas inferencias cuando los sonidos
+                    aparecen de forma aislada o secuencial.
+                </p>
+
+                <p>
+                    Sin embargo, las grabaciones reales contienen
+                    frecuentemente varias fuentes acústicas
+                    activas simultáneamente.
+                </p>
+
+                <p>
+                    Esta polifonía dificulta separar las fuentes,
+                    identificar correctamente cada evento
+                    y razonar sobre las relaciones temporales
+                    existentes entre ellos.
+                </p>
+
+                <p>
+                    PolyBench se diseña específicamente
+                    para medir estas capacidades.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Reconocer un sonido no implica comprender una escena
+                </h2>
+
+                <p>
+                    Identificar individualmente los sonidos
+                    de una grabación constituye únicamente
+                    el primer nivel del problema.
+                </p>
+
+                <p>
+                    El modelo también debe determinar
+                    cuántos eventos aparecen, cuáles coinciden,
+                    cuánto duran y qué fuente está activa
+                    durante un determinado intervalo temporal.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MONOPHONIC VS POLYPHONIC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · POLIFONÍA
+                </p>
+
+                <h2>
+                    Monophonic vs Polyphonic
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        MONOPHONIC
+                    </p>
+
+                    <h3>
+                        Eventos separados
+                    </h3>
+
+                    <ul>
+                        <li>Fuentes más fáciles de distinguir</li>
+                        <li>Menor interferencia acústica</li>
+                        <li>Relaciones temporales sencillas</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        POLYPHONIC
+                    </p>
+
+                    <h3>
+                        Eventos simultáneos
+                    </h3>
+
+                    <ul>
+                        <li>Enmascaramiento entre fuentes</li>
+                        <li>Solapamiento temporal</li>
+                        <li>Relaciones composicionales</li>
+                        <li>Mayor riesgo de alucinación</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METODOLOGÍA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · METODOLOGÍA
+                </p>
+
+                <h2>
+                    Construcción en tres etapas
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Problem Observation
+                        </h3>
+
+                        <p>
+                            Los autores comparan inicialmente
+                            el comportamiento de los modelos
+                            sobre audio monofónico y polifónico.
+                        </p>
+
+                        <p>
+                            Detectan confusión y alucinaciones
+                            cuando aparecen varias fuentes
+                            simultáneamente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Data & Questions
+                        </h3>
+
+                        <p>
+                            Se seleccionan grabaciones reales
+                            con eventos superpuestos y se generan
+                            preguntas de elección múltiple
+                            para cinco tipos de razonamiento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Evaluation
+                        </h3>
+
+                        <p>
+                            Los modelos reciben conjuntamente
+                            el audio y una pregunta textual
+                            y deben seleccionar la respuesta
+                            correcta.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO SOURCES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · AUDIO
+                </p>
+
+                <h2>
+                    Grabaciones polifónicas reales
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        DATASED
+                    </span>
+
+                    <h3>
+                        Real-world audio
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        169 clips
+                    </strong>
+
+                    <p>
+                        Segmentos seleccionados entre
+                        grabaciones que contienen
+                        eventos acústicos solapados.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        DESED
+                    </span>
+
+                    <h3>
+                        Domestic environments
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        259 clips
+                    </strong>
+
+                    <p>
+                        Grabaciones polifónicas procedentes
+                        del conjunto oficial de evaluación.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MAESTRO-REAL
+                    </span>
+
+                    <h3>
+                        Indoor / Outdoor
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        300 clips
+                    </strong>
+
+                    <p>
+                        Eventos solapados de distintos
+                        entornos acústicos.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Ground truth temporal
+                </h3>
+
+                <p>
+                    Las muestras seleccionadas disponen
+                    de categorías de eventos y timestamps
+                    de referencia, lo que permite construir
+                    preguntas basadas en relaciones
+                    temporales reales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CINCO TAREAS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · TAREAS
+                </p>
+
+                <h2>
+                    Cinco niveles de razonamiento
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        Counting
+                    </strong>
+
+                    <span>
+                        ¿Cuántas fuentes?
+                    </span>
+
+                    <p>
+                        Determinar el número de categorías
+                        acústicas distintas presentes
+                        en la grabación.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Duration
+                    </strong>
+
+                    <span>
+                        ¿Cuál dura más?
+                    </span>
+
+                    <p>
+                        Identificar qué categoría
+                        permanece activa durante
+                        más tiempo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Concurrency
+                    </strong>
+
+                    <span>
+                        ¿Existe solapamiento?
+                    </span>
+
+                    <p>
+                        Determinar si durante un determinado
+                        evento existe simultáneamente
+                        otra fuente acústica.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Classification
+                    </strong>
+
+                    <span>
+                        ¿Qué se solapa?
+                    </span>
+
+                    <p>
+                        Identificar qué categoría acústica
+                        coincide temporalmente con
+                        un evento de referencia.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Detection
+                    </strong>
+
+                    <span>
+                        ¿Cuándo coinciden?
+                    </span>
+
+                    <p>
+                        Determinar en qué momento
+                        comienza una situación
+                        de solapamiento.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             JERARQUÍA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RAZONAMIENTO
+                </p>
+
+                <h2>
+                    De percepción a composición
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Detectar eventos
+                        </h3>
+
+                        <p>
+                            Primero es necesario percibir
+                            correctamente cada fuente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Localizar temporalmente
+                        </h3>
+
+                        <p>
+                            El sistema debe estimar
+                            cuándo comienza y termina
+                            cada evento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Construir relaciones
+                        </h3>
+
+                        <p>
+                            Las regiones temporales
+                            permiten comprobar qué eventos
+                            coinciden.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Razonar
+                        </h3>
+
+                        <p>
+                            Finalmente se responde a
+                            preguntas de conteo, duración,
+                            concurrencia o clasificación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MCQA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · FORMATO
+                </p>
+
+                <h2>
+                    Multiple-Choice Question Answering
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Cada tarea utiliza una pregunta base.
+                    A partir de ella, los autores generan
+                    veinte formulaciones semánticamente
+                    equivalentes mediante Qwen3-Max.
+                </p>
+
+                <p>
+                    Posteriormente las preguntas, opciones
+                    y respuestas son revisadas manualmente
+                    para garantizar la coherencia lógica.
+                </p>
+
+                <p>
+                    En Classification, los distractores
+                    se eligen entre categorías semánticamente
+                    no relacionadas y ausentes del audio,
+                    intentando evitar atajos basados
+                    únicamente en similitud semántica.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONCURRENCY CONTROL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    CONTROL DE SESGO
+                </p>
+
+                <h3>
+                    No todas las respuestas pueden ser "Sí"
+                </h3>
+
+                <p>
+                    Si la tarea Concurrency utilizara
+                    exclusivamente grabaciones polifónicas,
+                    la respuesta correcta tendería
+                    sistemáticamente a ser afirmativa.
+                </p>
+
+                <p>
+                    Para evitar este atajo, los autores
+                    incorporan también audio monofónico
+                    procedente de AudioTime y construyen
+                    una evaluación equilibrada entre
+                    ejemplos con y sin solapamiento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODELOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · MODELOS EVALUADOS
+                </p>
+
+                <h2>
+                    Diferentes estrategias
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        Qwen3-Omni-30B-A3B
+                    </strong>
+
+                    <span>
+                        Omni model
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        R1-AQA
+                    </strong>
+
+                    <span>
+                        Audio reasoning
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Audio Flamingo 3
+                    </strong>
+
+                    <span>
+                        Large Audio Language Model
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        TimeAudio + Qwen3-8B
+                    </strong>
+
+                    <span>
+                        Cascaded approach
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        AUDSEMTHINKER-QA
+                    </strong>
+
+                    <span>
+                        GRPO reasoning
+                    </span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · RESULTADOS
+                </p>
+
+                <h2>
+                    Accuracy por tarea
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Counting</th>
+                            <th>Duration</th>
+                            <th>Concurrency</th>
+                            <th>Classification</th>
+                            <th>Detection</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Qwen3-Omni-30B-A3B
+                            </td>
+                            <td>57,5</td>
+                            <td>68,5</td>
+                            <td>76,0</td>
+                            <td>77,9</td>
+                            <td>63,4</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                R1-AQA
+                            </td>
+                            <td>30,1</td>
+                            <td>43,2</td>
+                            <td>90,4</td>
+                            <td>33,1</td>
+                            <td>26,2</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Audio Flamingo 3
+                            </td>
+                            <td>53,4</td>
+                            <td>65,8</td>
+                            <td>37,7</td>
+                            <td>50,3</td>
+                            <td>37,2</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                TimeAudio + Qwen3-8B
+                            </td>
+                            <td>43,8</td>
+                            <td>63,7</td>
+                            <td>78,1</td>
+                            <td>50,3</td>
+                            <td>51,7</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                AUDSEMTHINKER-QA
+                            </td>
+                            <td>51,4</td>
+                            <td>64,4</td>
+                            <td>43,2</td>
+                            <td>70,3</td>
+                            <td>37,2</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p class="tabla-nota">
+                Valores de accuracy (%) reportados
+                en la tabla principal del trabajo.
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             BOTTLENECK
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        COUNTING
+                    </span>
+
+                    <strong>
+                        57,5 %
+                    </strong>
+
+                    <p>
+                        mejor accuracy de la tabla
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Una tarea aparentemente sencilla
+                    </h3>
+
+                    <p>
+                        Incluso determinar cuántas categorías
+                        distintas aparecen simultáneamente
+                        continúa siendo difícil para
+                        los modelos evaluados.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DETECTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        DETECTION
+                    </span>
+
+                    <strong>
+                        63,4 %
+                    </strong>
+
+                    <p>
+                        mejor accuracy de la tabla
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Localización del solapamiento
+                    </h3>
+
+                    <p>
+                        Determinar cuándo aparece
+                        la primera coincidencia temporal
+                        entre fuentes requiere conservar
+                        información temporal mucho más
+                        precisa que una clasificación global.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CASCADE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    RESULTADO INTERESANTE
+                </p>
+
+                <h3>
+                    Percepción estructurada antes del razonamiento
+                </h3>
+
+                <p>
+                    En Detection, el sistema en cascada
+                    TimeAudio + Qwen3-8B obtiene 51,7 %
+                    de accuracy, el segundo mejor resultado
+                    de la tabla.
+                </p>
+
+                <p>
+                    TimeAudio se encarga primero
+                    de proporcionar localización temporal
+                    y descripciones estructuradas.
+                </p>
+
+                <p>
+                    Posteriormente Qwen3-8B realiza
+                    el razonamiento sobre esa representación.
+                </p>
+
+                <p>
+                    Esto sugiere que proporcionar evidencias
+                    acústicas estructuradas antes del LLM
+                    puede resultar útil para tareas
+                    temporalmente exigentes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SHORTCUT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · SHORTCUT LEARNING
+                </p>
+
+                <h2>
+                    Una buena puntuación puede engañar
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Uno de los análisis más interesantes
+                    del trabajo aparece en la tarea
+                    de concurrencia.
+                </p>
+
+                <p>
+                    Cuando el conjunto contiene únicamente
+                    audio polifónico, algunos modelos alcanzan
+                    puntuaciones aparentemente muy elevadas.
+                </p>
+
+                <p>
+                    Sin embargo, al introducir ejemplos
+                    monofónicos y polifónicos de forma
+                    equilibrada, aparecen fuertes sesgos
+                    hacia responder sistemáticamente
+                    "Sí" o "No".
+                </p>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        R1-AQA
+                    </span>
+
+                    <h3>
+                        "Yes" bias
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        FP 54,7 %
+                    </strong>
+
+                    <p>
+                        El porcentaje de verdaderos
+                        negativos cae hasta 2,7 %.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        QWEN3-OMNI
+                    </span>
+
+                    <h3>
+                        "No" conservador
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        FN 64,9 %
+                    </strong>
+
+                    <p>
+                        El modelo parece exigir
+                        evidencia de solapamiento
+                        especialmente fuerte antes
+                        de responder afirmativamente.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA CLAVE TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    CONCLUSIÓN CIENTÍFICA
+                </p>
+
+                <h2>
+                    Razonamiento lingüístico no compensa una mala percepción
+                </h2>
+
+                <p>
+                    Si el modelo no detecta correctamente
+                    los eventos o sus intervalos temporales,
+                    un LLM potente no puede reconstruir
+                    de forma fiable la evidencia perdida.
+                </p>
+
+                <p>
+                    Los resultados de PolyBench sugieren
+                    que la percepción acústica y el
+                    razonamiento deben considerarse
+                    conjuntamente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MMAU VS POLYBENCH
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    MMAU vs PolyBench
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>MMAU</th>
+                            <th>PolyBench</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Objetivo</td>
+                            <td>Razonamiento general</td>
+                            <td>Razonamiento polifónico</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Habla</td>
+                            <td>Sí</td>
+                            <td>No es el foco principal</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Sonido</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Música</td>
+                            <td>Sí</td>
+                            <td>No es el foco principal</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Overlap explícito</td>
+                            <td>Puede aparecer</td>
+                            <td>Es el núcleo</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Counting</td>
+                            <td>Dentro de varias habilidades</td>
+                            <td>Tarea específica</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Concurrency</td>
+                            <td>No es el foco exclusivo</td>
+                            <td>Tarea específica</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Temporal localization</td>
+                            <td>Parcial</td>
+                            <td>Central</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Qué no evalúa todavía
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Multiple choice
+                    </h3>
+
+                    <p>
+                        Las respuestas están restringidas
+                        a un conjunto de opciones
+                        predeterminadas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Grounding explícito
+                    </h3>
+
+                    <p>
+                        Detection exige razonamiento temporal,
+                        pero el modelo no tiene que devolver
+                        necesariamente timestamps precisos.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Fuentes seleccionadas
+                    </h3>
+
+                    <p>
+                        El benchmark se construye a partir
+                        de conjuntos concretos de detección
+                        de eventos sonoros.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Respuesta ≠ explicación
+                    </h3>
+
+                    <p>
+                        Seleccionar correctamente una opción
+                        no demuestra por sí solo qué evidencia
+                        acústica fue utilizada.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    PolyBench resulta especialmente relevante
+                    porque muestra que la dificultad
+                    del razonamiento acústico no se encuentra
+                    únicamente en el componente lingüístico.
+                </p>
+
+                <p>
+                    Antes de razonar, el modelo debe conservar
+                    información fiable sobre eventos,
+                    intervalos y solapamientos.
+                </p>
+
+                <p>
+                    Esta observación encaja directamente
+                    con la arquitectura jerárquica planteada
+                    en la línea de investigación:
+                </p>
+
+                <p>
+                    percepción → eventos → relaciones →
+                    razonamiento → explicación.
+                </p>
+
+                <p>
+                    Además, el análisis de shortcut learning
+                    demuestra que una métrica global elevada
+                    puede ocultar que el modelo responde
+                    utilizando sesgos de distribución
+                    en lugar de evidencia acústica real.
+                </p>
+
+                <p>
+                    Para una arquitectura auditable,
+                    el siguiente paso debería consistir
+                    en exigir no solo una respuesta,
+                    sino también la localización
+                    de los fragmentos que la justifican
+                    y una estimación de confianza
+                    asociada a dicha evidencia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

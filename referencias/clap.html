@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CLAP | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/procesamiento-audio-general.html"
+                    class="volver"
+                >
+                    ← Volver a Procesamiento de audio general
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    CLAP
+                </h1>
+
+
+                <h2>
+                    Learning Audio Concepts
+                    From Natural Language Supervision
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Elizalde, B. et al. · 2023
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Audio-Language</span>
+                    <span>Contrastive Learning</span>
+                    <span>Zero-shot</span>
+                    <span>Natural Language</span>
+                    <span>Multimodal</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Autores
+                    </span>
+
+                    <strong>
+                        Elizalde, Deshmukh,
+                        Al Ismail y Wang
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        ICASSP 2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Modelo
+                    </span>
+
+                    <strong>
+                        Contrastive Language-Audio Pretraining
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Elizalde, B., Deshmukh, S.,
+                    Al Ismail, M., & Wang, H. (2023).
+                    <em>
+                        CLAP: Learning Audio Concepts
+                        From Natural Language Supervision.
+                    </em>
+                    IEEE International Conference on
+                    Acoustics, Speech and Signal Processing
+                    (ICASSP).
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Superar las categorías cerradas
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los modelos tradicionales de clasificación
+                    de audio se entrenan para reconocer un
+                    conjunto cerrado de categorías.
+                </p>
+
+                <p>
+                    Como consecuencia, el sistema solo puede
+                    predecir las clases incluidas explícitamente
+                    durante el entrenamiento.
+                </p>
+
+                <p>
+                    CLAP plantea aprender los conceptos acústicos
+                    directamente a partir de lenguaje natural,
+                    permitiendo relacionar nuevos sonidos con
+                    descripciones que no necesitan formar parte
+                    de un clasificador previamente entrenado.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Audio y texto en el mismo espacio
+                </h2>
+
+                <p>
+                    CLAP utiliza un encoder de audio y otro
+                    de texto y aprende a colocar ambos tipos
+                    de representación dentro de un espacio
+                    multimodal compartido.
+                </p>
+
+                <p>
+                    Los pares audio-texto correctos deben quedar
+                    próximos entre sí, mientras que los pares
+                    incorrectos deben separarse.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · DATOS DE ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    128.010 pares audio-texto
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        FSD50K
+                    </span>
+
+                    <h3>
+                        Audio + metadata
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        36.796
+                    </strong>
+
+                    <p>
+                        Los autores construyen la descripción
+                        textual combinando el título y la
+                        descripción asociados a cada audio.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        CLOTHOV2
+                    </span>
+
+                    <h3>
+                        Audio captioning
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        29.646
+                    </strong>
+
+                    <p>
+                        Cada audio contiene varias descripciones
+                        realizadas por diferentes anotadores.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        AUDIOCAPS
+                    </span>
+
+                    <h3>
+                        Audio captioning
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        44.292
+                    </strong>
+
+                    <p>
+                        Clips procedentes de AudioSet
+                        acompañados de descripciones
+                        generadas mediante crowdsourcing.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MACS
+                    </span>
+
+                    <h3>
+                        Multiple captions
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        17.276
+                    </strong>
+
+                    <p>
+                        Un mismo audio puede utilizarse
+                        con diferentes captions.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Total
+                </h3>
+
+                <p>
+                    El conjunto final contiene 128.010 pares
+                    correspondientes a 90.947 grabaciones
+                    únicas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PREPROCESADO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · PREPROCESADO
+                </p>
+
+                <h2>
+                    Preparación de audio y texto
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio
+                        </h3>
+
+                        <p>
+                            Las grabaciones se procesan
+                            a 44,1 kHz.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Log-Mel
+                        </h3>
+
+                        <p>
+                            Se generan espectrogramas
+                            log-Mel de 64 bandas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ventana
+                        </h3>
+
+                        <p>
+                            El análisis utiliza ventanas
+                            de 1024 muestras y un desplazamiento
+                            de 320 muestras.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Frecuencias
+                        </h3>
+
+                        <p>
+                            Las bandas Mel cubren aproximadamente
+                            desde 50 Hz hasta 8 kHz.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Segmentos
+                        </h3>
+
+                        <p>
+                            Durante el entrenamiento se seleccionan
+                            aleatoriamente segmentos continuos
+                            de 5 segundos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Dos encoders
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIO</span>
+
+                    <h3>
+                        CNN14
+                    </h3>
+
+                    <p>
+                        Extrae la representación
+                        del contenido acústico.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>PROJECTION</span>
+
+                    <h3>
+                        Linear
+                    </h3>
+
+                    <p>
+                        Proyecta la representación
+                        al espacio multimodal.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    ↔
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>PROJECTION</span>
+
+                    <h3>
+                        Linear
+                    </h3>
+
+                    <p>
+                        Proyecta la representación
+                        textual al mismo espacio.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    ←
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>TEXT</span>
+
+                    <h3>
+                        BERT
+                    </h3>
+
+                    <p>
+                        Obtiene una representación
+                        semántica de la descripción.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONFIGURACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUDIO ENCODER
+                    </p>
+
+                    <h3>
+                        CNN14 · 80,8 M
+                    </h3>
+
+                    <ul>
+                        <li>Preentrenado con AudioSet</li>
+                        <li>~2 millones de clips</li>
+                        <li>Embedding: 2.048</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        TEXT ENCODER
+                    </p>
+
+                    <h3>
+                        BERT Base · 110 M
+                    </h3>
+
+                    <ul>
+                        <li>BERT-base-uncased</li>
+                        <li>[CLS] como representación</li>
+                        <li>Embedding: 768</li>
+                        <li>Máximo: 100 caracteres</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        MULTIMODAL SPACE
+                    </p>
+
+                    <h3>
+                        1.024 dimensiones
+                    </h3>
+
+                    <ul>
+                        <li>Proyección aprendible de audio</li>
+                        <li>Proyección aprendible de texto</li>
+                        <li>Temperatura aprendible</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONTRASTIVE LEARNING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Contrastive Language-Audio Pretraining
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Batch de pares
+                        </h3>
+
+                        <p>
+                            Se construye un batch con
+                            N pares audio-descripción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio embeddings
+                        </h3>
+
+                        <p>
+                            CNN14 genera la representación
+                            de cada grabación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Text embeddings
+                        </h3>
+
+                        <p>
+                            BERT genera la representación
+                            de cada descripción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Espacio común
+                        </h3>
+
+                        <p>
+                            Ambas representaciones se proyectan
+                            a 1.024 dimensiones.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Matriz de similitud
+                        </h3>
+
+                        <p>
+                            Se calcula la similitud entre todos
+                            los audios y todos los textos
+                            del batch.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Contrastive Loss
+                        </h3>
+
+                        <p>
+                            Los pares correctos deben aumentar
+                            su similitud y los incorrectos
+                            deben separarse.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LOSS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    FUNCIÓN DE PÉRDIDA
+                </p>
+
+                <h3>
+                    Cross-entropy simétrica
+                </h3>
+
+                <p>
+                    La matriz de similitud contiene los
+                    pares correctos en la diagonal y todas
+                    las combinaciones incorrectas fuera
+                    de ella.
+                </p>
+
+                <p>
+                    La pérdida se calcula tanto desde
+                    texto hacia audio como desde audio
+                    hacia texto y ambas componentes se
+                    combinan durante el entrenamiento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAINING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · CONFIGURACIÓN
+                </p>
+
+                <h2>
+                    Entrenamiento
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>Épocas</span>
+                    <strong>40</strong>
+                </article>
+
+                <article>
+                    <span>Optimizador</span>
+                    <strong>Adam</strong>
+                </article>
+
+                <article>
+                    <span>Learning rate</span>
+                    <strong>1e-3</strong>
+                </article>
+
+                <article>
+                    <span>LR scheduler</span>
+                    <strong>Plateau</strong>
+                </article>
+
+                <article>
+                    <span>Factor</span>
+                    <strong>0,1</strong>
+                </article>
+
+                <article>
+                    <span>Patience</span>
+                    <strong>10</strong>
+                </article>
+
+                <article>
+                    <span>GPUs</span>
+                    <strong>8–24 V100</strong>
+                </article>
+
+                <article>
+                    <span>Framework</span>
+                    <strong>PyTorch DDP</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ZERO SHOT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    07 · ZERO-SHOT
+                </p>
+
+                <h2>
+                    Clasificar sin entrenar un nuevo clasificador
+                </h2>
+
+                <p>
+                    Una vez entrenado CLAP, no es necesario
+                    crear una capa de clasificación específica
+                    para cada nuevo dataset.
+                </p>
+
+                <p>
+                    Las clases se expresan mediante lenguaje
+                    natural y se comparan directamente con
+                    el embedding del audio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ZERO SHOT STEPS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Definir clases
+                        </h3>
+
+                        <p>
+                            Por ejemplo:
+                            dog, rain, helicopter,
+                            piano o footsteps.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Crear prompts
+                        </h3>
+
+                        <p>
+                            Cada clase se transforma en una
+                            descripción como:
+                            “This is a sound of dog”.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Text Encoder
+                        </h3>
+
+                        <p>
+                            Se genera un embedding
+                            para cada posible clase.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio Encoder
+                        </h3>
+
+                        <p>
+                            La grabación que queremos
+                            clasificar se transforma
+                            en otro embedding.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Cosine Similarity
+                        </h3>
+
+                        <p>
+                            Se compara el audio con
+                            todas las descripciones.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Predicción
+                        </h3>
+
+                        <p>
+                            La descripción más compatible
+                            determina la clase predicha.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EVALUACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    16 tareas · 8 dominios
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Sound Events
+                    </strong>
+
+                    <span>ESC-50</span>
+                    <span>FSD50K</span>
+                    <span>UrbanSound8K</span>
+                    <span>DCASE17</span>
+                    <span>AudioSet</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Music
+                    </strong>
+
+                    <span>Music vs Speech</span>
+                    <span>Music Genres</span>
+                    <span>Stroke</span>
+                    <span>Tonic</span>
+                    <span>Instrument</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Acoustic Scenes
+                    </strong>
+
+                    <span>TUT 2017</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Emotion
+                    </strong>
+
+                    <span>CREMA-D</span>
+                    <span>RAVDESS</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Speech
+                    </strong>
+
+                    <span>Speech Commands</span>
+                    <span>Vocal Sound</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Speaker
+                    </strong>
+
+                    <span>LibriCount</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · RESULTADOS ZERO-SHOT
+                </p>
+
+                <h2>
+                    Clasificación sin fine-tuning
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        ESC-50
+                    </span>
+
+                    <strong>
+                        82,6 %
+                    </strong>
+
+                    <p>
+                        zero-shot accuracy
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Sin entrenamiento específico
+                    </h3>
+
+                    <p>
+                        CLAP clasifica las 50 categorías
+                        de ESC-50 utilizando únicamente
+                        sus descripciones textuales.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Dataset</th>
+                            <th>Métrica</th>
+                            <th>CLAP Zero-shot</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>ESC-50</td>
+                            <td>Accuracy</td>
+                            <td>82,6 %</td>
+                        </tr>
+
+                        <tr>
+                            <td>UrbanSound8K</td>
+                            <td>Accuracy</td>
+                            <td>73,24 %</td>
+                        </tr>
+
+                        <tr>
+                            <td>FSD50K</td>
+                            <td>mAP</td>
+                            <td>30,24 %</td>
+                        </tr>
+
+                        <tr>
+                            <td>Vocal Sound</td>
+                            <td>Accuracy</td>
+                            <td>49,45 %</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROMPTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · PROMPTING
+                </p>
+
+                <h2>
+                    La descripción utilizada importa
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Prompt</th>
+                            <th>ESC-50 Accuracy</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                i can hear [class]
+                            </td>
+                            <td>
+                                78,6 %
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                this is an audio of [class]
+                            </td>
+                            <td>
+                                80,05 %
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                [class]
+                            </td>
+                            <td>
+                                81,2 %
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                this is [class]
+                            </td>
+                            <td>
+                                81,35 %
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                this is a sound of [class]
+                            </td>
+                            <td>
+                                82,6 %
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Audio-MAE vs BEATs vs CLAP
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Audio-MAE</th>
+                            <th>BEATs</th>
+                            <th>CLAP</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Supervisión</td>
+                            <td>Audio</td>
+                            <td>Audio</td>
+                            <td>Audio + lenguaje</td>
+                        </tr>
+
+                        <tr>
+                            <td>Objetivo</td>
+                            <td>Reconstrucción</td>
+                            <td>Predicción de tokens</td>
+                            <td>Contrastivo</td>
+                        </tr>
+
+                        <tr>
+                            <td>Representación</td>
+                            <td>Acústica</td>
+                            <td>Acústico-semántica</td>
+                            <td>Audio-texto</td>
+                        </tr>
+
+                        <tr>
+                            <td>Texto</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Zero-shot abierto</td>
+                            <td>No directamente</td>
+                            <td>No directamente</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Nuevas clases</td>
+                            <td>Requiere adaptación</td>
+                            <td>Requiere adaptación</td>
+                            <td>Descripción textual</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Problemas identificados
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Dependencia del texto
+                    </h3>
+
+                    <p>
+                        La calidad de la representación depende
+                        de que las descripciones reflejen realmente
+                        el contenido acústico.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Prompt sensitivity
+                    </h3>
+
+                    <p>
+                        Cambiar la forma lingüística utilizada
+                        para expresar una clase puede modificar
+                        notablemente el resultado zero-shot.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Habla poco representada
+                    </h3>
+
+                    <p>
+                        Los datos de entrenamiento describen
+                        principalmente eventos y escenas,
+                        por lo que el rendimiento es menor
+                        en algunas tareas específicas de habla.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    CLAP proporciona una interfaz natural entre
+                    percepción acústica y lenguaje.
+                </p>
+
+                <p>
+                    En lugar de limitar un sistema a categorías
+                    definidas durante el entrenamiento, una
+                    descripción textual permite especificar
+                    dinámicamente qué concepto acústico se
+                    desea identificar.
+                </p>
+
+                <p>
+                    Esto resulta especialmente relevante para
+                    sistemas adaptativos, ya que podría permitir
+                    incorporar nuevas clases o conceptos sin
+                    necesidad de reentrenar completamente
+                    el modelo.
+                </p>
+
+                <p>
+                    También plantea cuestiones importantes para
+                    la explicabilidad y el razonamiento:
+                    una elevada similitud entre audio y texto
+                    no garantiza que el sistema haya utilizado
+                    correctamente las evidencias temporales
+                    presentes en la grabación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    Importante: CLAP y trabajos posteriores
+                </h3>
+
+                <p>
+                    Esta ficha corresponde al trabajo original
+                    de Elizalde et al., entrenado con aproximadamente
+                    128.000 pares audio-texto.
+                </p>
+
+                <p>
+                    Existen posteriormente variantes de CLAP
+                    entrenadas con colecciones mucho mayores,
+                    como los trabajos de Large-scale CLAP.
+                    Conviene tratarlas como referencias distintas
+                    y no atribuir sus datos o resultados al
+                    artículo original.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

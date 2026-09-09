@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Whisper | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/reconocimiento-comprension-habla.html"
+                    class="volver"
+                >
+                    ← Volver a Reconocimiento y comprensión del habla
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Whisper
+                </h1>
+
+
+                <h2>
+                    Robust Speech Recognition
+                    via Large-Scale Weak Supervision
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Radford, A. et al. · 2023
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>ASR</span>
+                    <span>Weak Supervision</span>
+                    <span>Multilingual</span>
+                    <span>Multitask</span>
+                    <span>Zero-shot</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Autores
+                    </span>
+
+                    <strong>
+                        Radford, Kim, Xu, Brockman,
+                        McLeavey y Sutskever
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        ICML 2023 · PMLR 202
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        28492–28518
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+
+                    Radford, A., Kim, J. W., Xu, T.,
+                    Brockman, G., McLeavey, C., & Sutskever, I.
+                    (2023).
+
+                    <em>
+                        Robust Speech Recognition via
+                        Large-Scale Weak Supervision.
+                    </em>
+
+                    Proceedings of the 40th International
+                    Conference on Machine Learning,
+                    PMLR 202, 28492–28518.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Reconocimiento robusto sin adaptación específica
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los modelos de habla auto-supervisados pueden
+                    aprender buenas representaciones acústicas,
+                    pero normalmente necesitan una fase posterior
+                    de fine-tuning para realizar una tarea concreta.
+                </p>
+
+                <p>
+                    Esto puede provocar que el modelo se adapte
+                    excesivamente a las características específicas
+                    del dataset utilizado durante el ajuste.
+                </p>
+
+                <p>
+                    Whisper estudia una estrategia diferente:
+                    entrenar directamente un sistema supervisado
+                    con una colección extremadamente grande y
+                    diversa de pares audio-transcripción.
+                </p>
+
+                <p>
+                    El objetivo es conseguir un modelo capaz
+                    de utilizarse directamente sobre nuevos
+                    datasets y dominios sin realizar fine-tuning
+                    específico para cada uno.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Escala + diversidad + multitarea
+                </h2>
+
+                <p>
+                    Whisper no basa su aportación principal
+                    en una nueva arquitectura.
+                </p>
+
+                <p>
+                    La hipótesis del trabajo es que entrenar
+                    una arquitectura relativamente convencional
+                    sobre una colección mucho mayor y más diversa
+                    de audio supervisado débilmente puede producir
+                    una elevada capacidad de generalización
+                    zero-shot.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · DATOS
+                </p>
+
+                <h2>
+                    680.000 horas
+                </h2>
+
+                <p>
+                    El conjunto se construye a partir de audio
+                    disponible en Internet acompañado de
+                    transcripciones.
+                </p>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        ENGLISH ASR
+                    </span>
+
+                    <h3>
+                        Reconocimiento en inglés
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        438.218 h
+                    </strong>
+
+                    <p>
+                        Aproximadamente el 65 % del conjunto
+                        total de entrenamiento.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SPEECH TRANSLATION
+                    </span>
+
+                    <h3>
+                        X → English
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        125.739 h
+                    </strong>
+
+                    <p>
+                        Audio en diferentes lenguas asociado
+                        con una transcripción o traducción
+                        en inglés.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MULTILINGUAL ASR
+                    </span>
+
+                    <h3>
+                        Habla no inglesa
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        117.113 h
+                    </strong>
+
+                    <p>
+                        Aproximadamente el 17 % del conjunto
+                        se dedica a reconocimiento multilingüe.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        TOTAL
+                    </span>
+
+                    <h3>
+                        Multitask dataset
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        ~680.000 h
+                    </strong>
+
+                    <p>
+                        Audio procedente de una gran diversidad
+                        de hablantes, dispositivos, entornos,
+                        idiomas y condiciones de grabación.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PREPROCESADO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · PREPROCESADO
+                </p>
+
+                <h2>
+                    De la señal al espectrograma
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Segmentación
+                        </h3>
+
+                        <p>
+                            Los archivos de audio se dividen
+                            en segmentos de hasta 30 segundos
+                            asociados al fragmento correspondiente
+                            de la transcripción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Resampling
+                        </h3>
+
+                        <p>
+                            Todo el audio se remuestrea
+                            a 16.000 Hz.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Log-Mel Spectrogram
+                        </h3>
+
+                        <p>
+                            Se calcula un espectrograma Mel
+                            logarítmico de 80 canales.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ventanas
+                        </h3>
+
+                        <p>
+                            El espectrograma utiliza ventanas
+                            de 25 ms y un desplazamiento
+                            de 10 ms.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Normalización
+                        </h3>
+
+                        <p>
+                            La entrada se escala globalmente
+                            aproximadamente entre -1 y 1,
+                            con media cercana a cero.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FILTRADO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · CONSTRUCCIÓN DEL DATASET
+                </p>
+
+                <h2>
+                    Supervisión débil, pero filtrada
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Transcripciones automáticas
+                    </h3>
+
+                    <p>
+                        Se utilizan heurísticas para detectar
+                        y eliminar transcripciones generadas
+                        automáticamente por otros sistemas ASR.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Idioma
+                    </h3>
+
+                    <p>
+                        Se comprueba que el idioma detectado
+                        en el audio sea compatible con el idioma
+                        de la transcripción.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Duplicados
+                    </h3>
+
+                    <p>
+                        Se aplica deduplicación aproximada
+                        sobre los textos para reducir contenido
+                        repetido o generado automáticamente.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Calidad
+                    </h3>
+
+                    <p>
+                        Los autores realizan filtrado automático
+                        e inspección manual para eliminar fuentes
+                        con transcripciones deficientes o mal
+                        alineadas.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · MODELO
+                </p>
+
+                <h2>
+                    Transformer Encoder-Decoder
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENTRADA</span>
+
+                    <h3>
+                        Log-Mel
+                    </h3>
+
+                    <p>
+                        Espectrograma Mel de 80 canales.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>STEM</span>
+
+                    <h3>
+                        2 × Conv1D
+                    </h3>
+
+                    <p>
+                        Dos convoluciones con activación GELU
+                        procesan inicialmente la representación.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENCODER</span>
+
+                    <h3>
+                        Transformer
+                    </h3>
+
+                    <p>
+                        Construye una representación contextual
+                        del contenido acústico.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DECODER</span>
+
+                    <h3>
+                        Transformer
+                    </h3>
+
+                    <p>
+                        Genera autoregresivamente tokens de texto
+                        condicionándose mediante cross-attention
+                        sobre la salida acústica.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TAMAÑOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    FAMILIA DE MODELOS
+                </p>
+
+                <h2>
+                    Escalado de Whisper
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Capas</th>
+                            <th>Dimensión</th>
+                            <th>Cabezas</th>
+                            <th>Parámetros</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Tiny</td>
+                            <td>4</td>
+                            <td>384</td>
+                            <td>6</td>
+                            <td>39 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Base</td>
+                            <td>6</td>
+                            <td>512</td>
+                            <td>8</td>
+                            <td>74 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Small</td>
+                            <td>12</td>
+                            <td>768</td>
+                            <td>12</td>
+                            <td>244 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Medium</td>
+                            <td>24</td>
+                            <td>1.024</td>
+                            <td>16</td>
+                            <td>769 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Large</td>
+                            <td>32</td>
+                            <td>1.280</td>
+                            <td>20</td>
+                            <td>1.550 M</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p class="tabla-nota">
+                Encoder y decoder utilizan el mismo número
+                de bloques Transformer y la misma dimensión.
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             MULTITASK
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · ENTRENAMIENTO MULTITAREA
+                </p>
+
+                <h2>
+                    Una secuencia de tokens especifica la tarea
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Start of Transcript
+                        </h3>
+
+                        <p>
+                            La secuencia comienza con un token
+                            especial que indica el inicio
+                            de la predicción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Idioma
+                        </h3>
+
+                        <p>
+                            Un token identifica el idioma
+                            detectado en la grabación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Tarea
+                        </h3>
+
+                        <p>
+                            Los tokens especiales permiten indicar
+                            si el modelo debe transcribir
+                            o traducir.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Timestamps
+                        </h3>
+
+                        <p>
+                            El modelo puede generar marcas
+                            temporales cuantizadas con una
+                            resolución de 20 ms.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Texto
+                        </h3>
+
+                        <p>
+                            Finalmente genera de manera
+                            autoregresiva los tokens correspondientes
+                            a la transcripción o traducción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TAREAS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    TAREAS
+                </p>
+
+                <h2>
+                    Un único modelo
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        Transcripción
+                    </strong>
+
+                    <span>English ASR</span>
+                    <span>Multilingual ASR</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Traducción
+                    </strong>
+
+                    <span>Speech → English</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Language ID
+                    </strong>
+
+                    <span>Identificación del idioma</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Voice Activity
+                    </strong>
+
+                    <span>No-speech detection</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Alineación temporal
+                    </strong>
+
+                    <span>Timestamp tokens</span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ENTRENAMIENTO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Configuración
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+
+                <article>
+
+                    <span>Optimizador</span>
+
+                    <strong>
+                        AdamW
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Actualizaciones</span>
+
+                    <strong>
+                        1.048.576
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Batch size</span>
+
+                    <strong>
+                        256
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Warm-up</span>
+
+                    <strong>
+                        2.048
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Max grad norm</span>
+
+                    <strong>
+                        1,0
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Weight decay</span>
+
+                    <strong>
+                        0,1
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Precisión</span>
+
+                    <strong>
+                        FP16
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Contexto de audio</span>
+
+                    <strong>
+                        30 s
+                    </strong>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Sin data augmentation en el entrenamiento original
+                </h3>
+
+                <p>
+                    Los modelos originales se entrenan aproximadamente
+                    entre dos y tres pasadas sobre el dataset.
+                </p>
+
+                <p>
+                    Los autores no utilizan inicialmente aumento de
+                    datos ni regularización adicional, apoyándose
+                    principalmente en la enorme diversidad del
+                    conjunto de entrenamiento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ZERO SHOT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    08 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Zero-shot
+                </h2>
+
+                <p>
+                    Una característica central del protocolo
+                    experimental es que Whisper no se ajusta
+                    utilizando los datos de entrenamiento
+                    correspondientes a cada benchmark evaluado.
+                </p>
+
+                <p>
+                    De esta forma, la evaluación intenta medir
+                    la capacidad del sistema para generalizar
+                    a nuevos dominios y distribuciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS ASR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADOS · ASR
+                </p>
+
+                <h2>
+                    Robustez fuera de dominio
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        ERROR RELATIVO
+                    </span>
+
+                    <strong>
+                        −55,2 %
+                    </strong>
+
+                    <p>
+                        promedio frente a wav2vec 2.0
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Generalización
+                    </h3>
+
+                    <p>
+                        Al comparar modelos con un rendimiento
+                        prácticamente equivalente en LibriSpeech,
+                        Whisper obtiene muchos menos errores
+                        de media al evaluarse sobre otros
+                        conjuntos de habla.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Dataset</th>
+                            <th>wav2vec 2.0 Large</th>
+                            <th>Whisper Large V2</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>LibriSpeech Clean</td>
+                            <td>2,7</td>
+                            <td>2,7</td>
+                        </tr>
+
+                        <tr>
+                            <td>Common Voice</td>
+                            <td>29,9</td>
+                            <td>9,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>TED-LIUM</td>
+                            <td>10,5</td>
+                            <td>4,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>CHiME-6</td>
+                            <td>65,8</td>
+                            <td>25,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>VoxPopuli English</td>
+                            <td>17,9</td>
+                            <td>7,3</td>
+                        </tr>
+
+                        <tr>
+                            <td>Promedio</td>
+                            <td>29,3</td>
+                            <td>12,8</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRADUCCIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    SPEECH TRANSLATION
+                </p>
+
+                <h2>
+                    CoVoST-2
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        ZERO-SHOT
+                    </span>
+
+                    <strong>
+                        29,1
+                    </strong>
+
+                    <p>
+                        BLEU medio
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Traducción a inglés
+                    </h3>
+
+                    <p>
+                        Whisper alcanza 29,1 BLEU en las
+                        direcciones X → inglés de CoVoST-2
+                        sin utilizar los datos de entrenamiento
+                        del benchmark.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · LIMITACIONES
+                </p>
+
+                <h2>
+                    Problemas identificados
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Rendimiento desigual por idioma
+                    </h3>
+
+                    <p>
+                        El rendimiento multilingüe está
+                        relacionado con la cantidad y calidad
+                        de datos disponibles para cada lengua.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Ventana de 30 segundos
+                    </h3>
+
+                    <p>
+                        El modelo no procesa directamente
+                        grabaciones arbitrariamente largas,
+                        por lo que necesita una estrategia
+                        de ventanas para audio long-form.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Alucinaciones
+                    </h3>
+
+                    <p>
+                        Durante el desarrollo los autores
+                        observaron que el modelo podía generar
+                        nombres de hablantes plausibles pero
+                        incorrectos.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Coste
+                    </h3>
+
+                    <p>
+                        Los modelos grandes contienen hasta
+                        aproximadamente 1.550 millones
+                        de parámetros.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN SSL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Whisper frente al paradigma auto-supervisado
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>wav2vec 2.0 / HuBERT</th>
+                            <th>Whisper</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Preentrenamiento</td>
+                            <td>Auto-supervisado</td>
+                            <td>Supervisión débil</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transcripciones necesarias</td>
+                            <td>No durante pretraining</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Decoder textual</td>
+                            <td>Se adapta posteriormente</td>
+                            <td>Entrenado conjuntamente</td>
+                        </tr>
+
+                        <tr>
+                            <td>Fine-tuning downstream</td>
+                            <td>Habitual</td>
+                            <td>No necesario para zero-shot</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tareas</td>
+                            <td>Representación acústica</td>
+                            <td>ASR + traducción + LID + timestamps</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Por qué es especialmente relevante?
+                </h2>
+
+                <p>
+                    Whisper demuestra que la diversidad de datos
+                    puede proporcionar una elevada robustez
+                    frente a cambios de dominio sin necesidad
+                    de adaptar específicamente el modelo a cada
+                    conjunto de evaluación.
+                </p>
+
+                <p>
+                    Sin embargo, incluso un modelo entrenado con
+                    cientos de miles de horas continúa mostrando
+                    diferencias de rendimiento entre idiomas,
+                    dominios y condiciones acústicas.
+                </p>
+
+                <p>
+                    Esto convierte Whisper en una base especialmente
+                    interesante para investigar adaptación eficiente,
+                    personalización, robustez, estimación de confianza
+                    y detección de errores fuera de distribución.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    Importante: Whisper Large-v3
+                </h3>
+
+                <p>
+                    Esta ficha describe el trabajo científico
+                    publicado por Radford et al. y la familia
+                    de modelos analizada en dicho artículo.
+                </p>
+
+                <p>
+                    Whisper Large-v3 es una versión posterior
+                    y no debe atribuirse directamente a esta
+                    publicación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

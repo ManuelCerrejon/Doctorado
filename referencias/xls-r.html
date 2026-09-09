@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        XLS-R | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/aprendizaje-auto-supervisado.html"
+                    class="volver"
+                >
+                    ← Volver a Aprendizaje auto-supervisado
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    XLS-R
+                </h1>
+
+
+                <h2>
+                    Self-supervised Cross-lingual Speech
+                    Representation Learning at Scale
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Babu, A. et al. · 2022
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Cross-lingual</span>
+                    <span>Multilingual</span>
+                    <span>Self-Supervised Learning</span>
+                    <span>Low-resource</span>
+                    <span>wav2vec 2.0</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INFORMACIÓN BIBLIOGRÁFICA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Arun Babu et al.
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2022
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        Interspeech 2022
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        2278–2282
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Babu, A., Wang, C., Tjandra, A., Lakhotia, K.,
+                    Xu, Q., Goyal, N., Singh, K., von Platen, P.,
+                    Saraf, Y., Pino, J., Baevski, A., Conneau, A.,
+                    & Auli, M. (2022).
+                    <em>
+                        XLS-R: Self-supervised Cross-lingual Speech
+                        Representation Learning at Scale.
+                    </em>
+                    Interspeech 2022, 2278–2282.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Escalar el aprendizaje multilingüe
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Muchas lenguas disponen de cantidades muy
+                    reducidas de habla etiquetada y también de
+                    cantidades limitadas de audio sin transcribir.
+                </p>
+
+                <p>
+                    XLS-R estudia si es posible entrenar un único
+                    modelo auto-supervisado sobre numerosas lenguas
+                    y aprovechar la información de las lenguas con
+                    más recursos para mejorar la representación de
+                    aquellas con menos datos.
+                </p>
+
+                <p>
+                    El trabajo amplía considerablemente tanto el
+                    número de lenguas como la cantidad de audio y
+                    la capacidad del modelo respecto a trabajos
+                    multilingües anteriores.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA CENTRAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Un único modelo para 128 lenguas
+                </h2>
+
+                <p>
+                    XLS-R utiliza el objetivo auto-supervisado de
+                    wav2vec 2.0, pero el preentrenamiento se realiza
+                    conjuntamente sobre audio perteneciente a
+                    128 lenguas.
+                </p>
+
+                <p>
+                    El objetivo es aprender representaciones
+                    compartidas que permitan transferencia
+                    entre lenguas y reduzcan la dependencia
+                    de datos específicos para cada idioma.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · DATOS DE PREENTRENAMIENTO
+                </p>
+
+                <h2>
+                    436.000 horas de audio
+                </h2>
+
+                <p>
+                    El corpus combina diferentes fuentes,
+                    dominios y lenguas.
+                </p>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        VOXPOPULI
+                    </span>
+
+                    <h3>
+                        VP-400K
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        372.000 h
+                    </strong>
+
+                    <p>
+                        Habla parlamentaria procedente del
+                        Parlamento Europeo en 23 lenguas.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MULTILINGUAL LIBRISPEECH
+                    </span>
+
+                    <h3>
+                        MLS
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        ~50.000 h
+                    </strong>
+
+                    <p>
+                        Audiolibros en ocho lenguas europeas.
+                        Aproximadamente 44.000 horas corresponden
+                        al inglés.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        COMMON VOICE
+                    </span>
+
+                    <h3>
+                        CV
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        &gt; 7.000 h
+                    </strong>
+
+                    <p>
+                        Habla leída perteneciente a 60 lenguas,
+                        con grandes diferencias en la cantidad
+                        disponible para cada una.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        VOXLINGUA107
+                    </span>
+
+                    <h3>
+                        VL
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        6.600 h
+                    </strong>
+
+                    <p>
+                        Audio procedente de YouTube en
+                        107 lenguas.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        BABEL
+                    </span>
+
+                    <h3>
+                        BBL
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        ~1.000 h
+                    </strong>
+
+                    <p>
+                        Habla telefónica conversacional en
+                        17 lenguas africanas y asiáticas.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        TOTAL
+                    </span>
+
+                    <h3>
+                        XLS-R
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        436.000 h
+                    </strong>
+
+                    <p>
+                        El conjunto final cubre un total de
+                        128 lenguas.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DISTRIBUCIÓN DE LENGUAS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · DISTRIBUCIÓN
+                </p>
+
+                <h2>
+                    Lenguas con recursos muy diferentes
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-denoising-grid">
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        24
+                    </span>
+
+                    <h3>
+                        High-resource
+                    </h3>
+
+                    <p>
+                        Lenguas con más de 1.000 horas
+                        de datos de preentrenamiento.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        17
+                    </span>
+
+                    <h3>
+                        Mid-resource
+                    </h3>
+
+                    <p>
+                        Lenguas con más de 100 horas
+                        pero menos de 1.000.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        88
+                    </span>
+
+                    <h3>
+                        Low-resource
+                    </h3>
+
+                    <p>
+                        Lenguas con menos de 100 horas
+                        de audio disponible.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        128
+                    </span>
+
+                    <h3>
+                        Lenguas
+                    </h3>
+
+                    <p>
+                        Todas se utilizan conjuntamente durante
+                        el aprendizaje auto-supervisado.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Escalado de wav2vec 2.0
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENTRADA</span>
+
+                    <h3>
+                        Audio multilingüe
+                    </h3>
+
+                    <p>
+                        Forma de onda procedente de cualquiera
+                        de las lenguas de entrenamiento.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>FEATURE ENCODER</span>
+
+                    <h3>
+                        CNN
+                    </h3>
+
+                    <p>
+                        Convierte el audio crudo en
+                        representaciones latentes.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CONTEXT NETWORK</span>
+
+                    <h3>
+                        Transformer
+                    </h3>
+
+                    <p>
+                        Produce representaciones contextualizadas
+                        compartidas entre lenguas.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OBJETIVO</span>
+
+                    <h3>
+                        Contrastive Learning
+                    </h3>
+
+                    <p>
+                        Mantiene el objetivo auto-supervisado
+                        de wav2vec 2.0.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        XLS-R 0.3B
+                    </p>
+
+                    <h3>
+                        317 M
+                    </h3>
+
+                    <ul>
+                        <li>24 bloques Transformer</li>
+                        <li>Hidden size: 1.024</li>
+                        <li>FFN: 4.096</li>
+                        <li>16 cabezas</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        XLS-R 1B
+                    </p>
+
+                    <h3>
+                        965 M
+                    </h3>
+
+                    <ul>
+                        <li>48 bloques Transformer</li>
+                        <li>Hidden size: 1.024</li>
+                        <li>FFN: 4.096</li>
+                        <li>16 cabezas</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        XLS-R 2B
+                    </p>
+
+                    <h3>
+                        2.162 M
+                    </h3>
+
+                    <ul>
+                        <li>48 bloques Transformer</li>
+                        <li>Hidden size: 1.920</li>
+                        <li>FFN: 7.680</li>
+                        <li>16 cabezas</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PREENTRENAMIENTO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · PREENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Objetivo auto-supervisado multilingüe
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Muestreo multilingüe
+                        </h3>
+
+                        <p>
+                            Cada batch puede contener muestras
+                            pertenecientes a diferentes lenguas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Representaciones latentes
+                        </h3>
+
+                        <p>
+                            La CNN procesa la forma de onda
+                            de manera equivalente a wav2vec 2.0.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Enmascaramiento
+                        </h3>
+
+                        <p>
+                            Se ocultan spans de diez pasos
+                            temporales durante el entrenamiento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Cuantización
+                        </h3>
+
+                        <p>
+                            Las representaciones latentes
+                            cuantizadas actúan como objetivos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Tarea contrastiva
+                        </h3>
+
+                        <p>
+                            Se identifica el objetivo correcto
+                            frente a 100 distractores procedentes
+                            de otras posiciones enmascaradas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BALANCEO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · BALANCEO MULTILINGÜE
+                </p>
+
+                <h2>
+                    Evitar que dominen las lenguas con más datos
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    Upsampling
+                </h3>
+
+                <p>
+                    Si las muestras se seleccionasen únicamente
+                    de forma proporcional al tamaño de cada corpus,
+                    las lenguas con grandes cantidades de audio
+                    dominarían el entrenamiento.
+                </p>
+
+                <p>
+                    Los autores utilizan un procedimiento de
+                    muestreo que aumenta relativamente la presencia
+                    de lenguas con menos recursos.
+                </p>
+
+                <p>
+                    En los experimentos se utiliza α = 0,5
+                    tanto para equilibrar lenguas dentro de cada
+                    corpus como para equilibrar los distintos corpus.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ENTRENAMIENTO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Configuración general
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+
+                <article>
+
+                    <span>Optimizador</span>
+
+                    <strong>
+                        Adam
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Actualizaciones</span>
+
+                    <strong>
+                        1.000.000
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Warm-up</span>
+
+                    <strong>
+                        32.000 pasos
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Audio máximo</span>
+
+                    <strong>
+                        20 s
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>XLS-R 0.3B</span>
+
+                    <strong>
+                        128 GPU
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Modelos grandes</span>
+
+                    <strong>
+                        200 GPU
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Sampling α</span>
+
+                    <strong>
+                        0,5
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Lenguas</span>
+
+                    <strong>
+                        128
+                    </strong>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EVALUACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Evaluación multilingüe
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        Speech Translation
+                    </strong>
+
+                    <span>CoVoST-2</span>
+                    <span>21 idiomas → inglés</span>
+                    <span>Inglés → 15 idiomas</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Speech Recognition
+                    </strong>
+
+                    <span>BABEL</span>
+                    <span>Common Voice</span>
+                    <span>Multilingual LibriSpeech</span>
+                    <span>VoxPopuli</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Language Identification
+                    </strong>
+
+                    <span>VoxLingua107</span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS TRADUCCIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · RESULTADOS
+                </p>
+
+                <h2>
+                    Speech Translation
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        XLS-R 2B · X → EN
+                    </span>
+
+                    <strong>
+                        22,1
+                    </strong>
+
+                    <p>
+                        BLEU medio · 21 direcciones
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        +7,4 BLEU
+                    </h3>
+
+                    <p>
+                        XLS-R 2B mejora el anterior mejor resultado
+                        medio, que era 14,7 BLEU, hasta 22,1.
+                    </p>
+
+                    <p>
+                        Las mejoras son especialmente importantes
+                        en las direcciones con cantidades medias
+                        y reducidas de datos etiquetados.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>High-resource</th>
+                            <th>Mid-resource</th>
+                            <th>Low-resource</th>
+                            <th>BLEU medio</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>XLS-R 0.3B</td>
+                            <td>30,6</td>
+                            <td>18,9</td>
+                            <td>5,1</td>
+                            <td>13,2</td>
+                        </tr>
+
+                        <tr>
+                            <td>XLS-R 1B</td>
+                            <td>34,3</td>
+                            <td>25,5</td>
+                            <td>11,7</td>
+                            <td>19,3</td>
+                        </tr>
+
+                        <tr>
+                            <td>XLS-R 2B</td>
+                            <td>36,1</td>
+                            <td>27,7</td>
+                            <td>15,1</td>
+                            <td>22,1</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LOW RESOURCE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LOW-RESOURCE
+                </p>
+
+                <h2>
+                    El efecto de aumentar la capacidad
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SUECO → INGLÉS
+                    </span>
+
+                    <h3>
+                        2 h etiquetadas
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        10,3 → 29,6
+                    </strong>
+
+                    <p>
+                        BLEU al pasar de XLS-R 0.3B
+                        a XLS-R 2B.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        INDONESIO → INGLÉS
+                    </span>
+
+                    <h3>
+                        2 h etiquetadas
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        1,4 → 16,5
+                    </strong>
+
+                    <p>
+                        Mejora obtenida aumentando
+                        la capacidad del modelo.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        ÁRABE → INGLÉS
+                    </span>
+
+                    <h3>
+                        2 h etiquetadas
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        3,0 → 17,1
+                    </strong>
+
+                    <p>
+                        El aumento de escala resulta especialmente
+                        útil cuando existen pocos datos etiquetados.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Los cuatro modelos
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Idea principal</th>
+                            <th>Objetivo</th>
+                            <th>Énfasis</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                wav2vec 2.0
+                            </td>
+
+                            <td>
+                                Aprender desde audio sin etiquetar
+                            </td>
+
+                            <td>
+                                Contrastive Learning
+                            </td>
+
+                            <td>
+                                Representación del habla
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                HuBERT
+                            </td>
+
+                            <td>
+                                Descubrir unidades ocultas
+                            </td>
+
+                            <td>
+                                Masked Prediction
+                            </td>
+
+                            <td>
+                                Unidades acústicas
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                WavLM
+                            </td>
+
+                            <td>
+                                Introducir ruido y solapamiento
+                            </td>
+
+                            <td>
+                                Prediction + Denoising
+                            </td>
+
+                            <td>
+                                Contenido + hablante + entorno
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                XLS-R
+                            </td>
+
+                            <td>
+                                Escalar entre lenguas
+                            </td>
+
+                            <td>
+                                Contrastive Learning
+                            </td>
+
+                            <td>
+                                Transferencia multilingüe
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Escala no significa equilibrio
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Datos desiguales
+                    </h3>
+
+                    <p>
+                        La cantidad de audio disponible varía
+                        enormemente entre lenguas y la mayoría
+                        de las lenguas con más datos son europeas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Capacidad compartida
+                    </h3>
+
+                    <p>
+                        Un mismo modelo debe representar muchas
+                        lenguas, por lo que puede existir
+                        interferencia entre ellas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Coste computacional
+                    </h3>
+
+                    <p>
+                        Los modelos de 1B y 2B parámetros requieren
+                        recursos de entrenamiento muy elevados.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RELACIÓN CON TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    XLS-R demuestra que una representación
+                    acústica puede beneficiarse del aprendizaje
+                    conjunto entre múltiples lenguas y que esta
+                    transferencia resulta especialmente relevante
+                    cuando una lengua o dominio dispone de pocos datos.
+                </p>
+
+                <p>
+                    Esto conecta con la investigación sobre
+                    adaptación, personalización y escenarios
+                    low-resource, en los que no resulta viable
+                    recopilar grandes cantidades de audio
+                    correctamente anotado.
+                </p>
+
+                <p>
+                    Al mismo tiempo, el enorme tamaño de XLS-R
+                    plantea directamente el problema de eficiencia
+                    que se aborda en la tesis: mantener las ventajas
+                    de modelos fundacionales multilingües reduciendo
+                    su coste de adaptación e inferencia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        wav2vec 2.0 | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+
+                <a
+                    href="../estado-arte/aprendizaje-auto-supervisado.html"
+                    class="volver"
+                >
+                    ← Volver a Aprendizaje auto-supervisado
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA · 08
+                </p>
+
+
+                <h1>
+                    wav2vec 2.0
+                </h1>
+
+
+                <h2>
+                    A Framework for Self-Supervised Learning
+                    of Speech Representations
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Baevski, A., Zhou, Y., Mohamed, A. & Auli, M. · 2020
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Self-Supervised Learning</span>
+                    <span>Speech</span>
+                    <span>ASR</span>
+                    <span>NeurIPS</span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             DATOS DE LA REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Autores
+                    </span>
+
+                    <strong>
+                        Alexei Baevski, Yuhao Zhou,
+                        Abdelrahman Mohamed y Michael Auli
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2020
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        NeurIPS 33
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        12449–12460
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+
+                    Baevski, A., Zhou, Y., Mohamed, A., & Auli, M. (2020).
+                    <em>
+                        wav2vec 2.0: A Framework for Self-Supervised
+                        Learning of Speech Representations.
+                    </em>
+                    NeurIPS 33, 12449–12460.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             PROBLEMA Y OBJETIVO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    ¿Qué intenta resolver?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+
+                    El trabajo se sitúa dentro del problema de la
+                    dependencia de grandes cantidades de habla
+                    correctamente transcrita para entrenar sistemas
+                    de reconocimiento.
+
+                </p>
+
+
+                <p>
+
+                    wav2vec 2.0 plantea utilizar grandes cantidades
+                    de audio sin transcribir para aprender
+                    representaciones útiles del habla mediante
+                    aprendizaje auto-supervisado.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             METODOLOGÍA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · METODOLOGÍA
+                </p>
+
+                <h2>
+                    Funcionamiento general
+                </h2>
+
+            </div>
+
+
+            <div class="metodologia-flujo">
+
+
+                <article>
+
+                    <span class="flujo-numero">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Forma de onda
+                        </h3>
+
+                        <p>
+                            El modelo procesa directamente
+                            la señal de audio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <div class="flujo-flecha">
+                    ↓
+                </div>
+
+
+
+                <article>
+
+                    <span class="flujo-numero">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Representación latente
+                        </h3>
+
+                        <p>
+                            La señal se transforma en una
+                            representación interna aprendida
+                            por el modelo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <div class="flujo-flecha">
+                    ↓
+                </div>
+
+
+
+                <article>
+
+                    <span class="flujo-numero">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Enmascaramiento
+                        </h3>
+
+                        <p>
+                            Determinados intervalos temporales
+                            de la representación son ocultados
+                            durante el entrenamiento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <div class="flujo-flecha">
+                    ↓
+                </div>
+
+
+
+                <article>
+
+                    <span class="flujo-numero">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Cuantización
+                        </h3>
+
+                        <p>
+                            Se utilizan representaciones
+                            cuantizadas como candidatos
+                            durante el aprendizaje.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <div class="flujo-flecha">
+                    ↓
+                </div>
+
+
+
+                <article>
+
+                    <span class="flujo-numero">
+                        05
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Aprendizaje contrastivo
+                        </h3>
+
+                        <p>
+                            El modelo aprende a distinguir
+                            la representación correcta frente
+                            a un conjunto de candidatos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+             IDEA CLAVE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA CLAVE
+                </p>
+
+
+                <h2>
+                    Menor dependencia de audio transcrito
+                </h2>
+
+
+                <p>
+
+                    El resultado relevante para el estado del arte
+                    es que el preentrenamiento mediante grandes
+                    cantidades de audio sin transcribir permite
+                    reducir considerablemente la cantidad de
+                    datos etiquetados necesarios para construir
+                    sistemas competitivos de reconocimiento
+                    automático del habla.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==========================================
+            DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · DATASETS
+                </p>
+
+                <h2>
+                    Datos utilizados
+                </h2>
+
+                <p>
+                    El trabajo diferencia entre los datos sin transcribir
+                    utilizados durante el preentrenamiento y los datos
+                    etiquetados utilizados posteriormente para adaptar
+                    el modelo al reconocimiento automático del habla.
+                </p>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        PREENTRENAMIENTO
+                    </span>
+
+                    <h3>
+                        LibriSpeech · LS-960
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        960 horas
+                    </strong>
+
+                    <p>
+                        Audio de LibriSpeech utilizado sin las
+                        transcripciones para realizar aprendizaje
+                        auto-supervisado.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        PREENTRENAMIENTO
+                    </span>
+
+                    <h3>
+                        LibriVox · LV-60k
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        53.200 horas
+                    </strong>
+
+                    <p>
+                        Colección de mayor escala utilizada como
+                        audio no etiquetado para estudiar el efecto
+                        del aumento de datos de preentrenamiento.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        FINE-TUNING
+                    </span>
+
+                    <h3>
+                        Libri-light / LibriSpeech
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        10 min → 960 h
+                    </strong>
+
+                    <p>
+                        El modelo se adapta utilizando diferentes
+                        cantidades de audio transcrito: 10 minutos,
+                        1 hora, 10 horas, 100 horas y las 960 horas
+                        completas de LibriSpeech.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        FINE-TUNING
+                    </span>
+
+                    <h3>
+                        TIMIT
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        5 horas
+                    </strong>
+
+                    <p>
+                        Dataset utilizado para evaluar reconocimiento
+                        de fonemas utilizando el protocolo estándar
+                        de 39 clases fonéticas.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+            ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MODELO
+                </p>
+
+                <h2>
+                    Arquitectura de wav2vec 2.0
+                </h2>
+
+                <p>
+                    La arquitectura combina un codificador convolucional,
+                    un módulo de cuantización y una red Transformer
+                    encargada de obtener representaciones contextualizadas.
+                </p>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENTRADA</span>
+
+                    <h3>
+                        Forma de onda
+                    </h3>
+
+                    <p>
+                        Audio crudo normalizado antes de entrar
+                        en el codificador.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENCODER</span>
+
+                    <h3>
+                        CNN
+                    </h3>
+
+                    <p>
+                        Siete bloques convolucionales transforman
+                        la señal en representaciones latentes.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CONTEXTO</span>
+
+                    <h3>
+                        Transformer
+                    </h3>
+
+                    <p>
+                        Construye representaciones contextualizadas
+                        utilizando información de toda la secuencia.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    ↕
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OBJETIVOS</span>
+
+                    <h3>
+                        Cuantización
+                    </h3>
+
+                    <p>
+                        Las representaciones latentes se discretizan
+                        para generar los objetivos de la tarea
+                        contrastiva.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        WAV2VEC 2.0 BASE
+                    </p>
+
+                    <h3>
+                        95 M parámetros
+                    </h3>
+
+                    <ul>
+                        <li>12 bloques Transformer</li>
+                        <li>Dimensión del modelo: 768</li>
+                        <li>Dimensión FFN: 3.072</li>
+                        <li>8 cabezas de atención</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        WAV2VEC 2.0 LARGE
+                    </p>
+
+                    <h3>
+                        317 M parámetros
+                    </h3>
+
+                    <ul>
+                        <li>24 bloques Transformer</li>
+                        <li>Dimensión del modelo: 1.024</li>
+                        <li>Dimensión FFN: 4.096</li>
+                        <li>16 cabezas de atención</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+            PREENTRENAMIENTO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · PREENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Aprendizaje auto-supervisado
+                </h2>
+
+                <p>
+                    Durante esta fase no se utilizan las transcripciones.
+                    El objetivo consiste en aprender representaciones
+                    generales directamente a partir del audio.
+                </p>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Extracción de características
+                        </h3>
+
+                        <p>
+                            El codificador convolucional transforma
+                            la forma de onda en una secuencia de
+                            representaciones acústicas latentes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Enmascaramiento
+                        </h3>
+
+                        <p>
+                            Se selecciona aleatoriamente una proporción
+                            de posiciones de la representación latente
+                            y se enmascaran intervalos consecutivos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Contextualización
+                        </h3>
+
+                        <p>
+                            El Transformer procesa las representaciones
+                            parcialmente ocultas y genera una representación
+                            contextual para cada instante temporal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Cuantización
+                        </h3>
+
+                        <p>
+                            Las representaciones producidas por el
+                            codificador se transforman en unidades
+                            discretas mediante product quantization
+                            y Gumbel Softmax.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pérdida contrastiva
+                        </h3>
+
+                        <p>
+                            Para cada posición enmascarada, el modelo
+                            debe identificar la representación cuantizada
+                            correcta entre ella y diferentes distractores.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Diversidad del codebook
+                        </h3>
+
+                        <p>
+                            Se añade una segunda pérdida para favorecer
+                            que el modelo utilice de forma diversa las
+                            entradas disponibles en los codebooks.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+
+                <article>
+
+                    <span>Inicio de máscara</span>
+
+                    <strong>
+                        p = 0,065
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Longitud de máscara</span>
+
+                    <strong>
+                        M = 10
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Frames enmascarados</span>
+
+                    <strong>
+                        ≈ 49 %
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Duración media</span>
+
+                    <strong>
+                        ≈ 299 ms
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Distractores</span>
+
+                    <strong>
+                        K = 100
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Codebooks</span>
+
+                    <strong>
+                        G = 2
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Entradas / codebook</span>
+
+                    <strong>
+                        V = 320
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Optimizador</span>
+
+                    <strong>
+                        Adam
+                    </strong>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+            FINE-TUNING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · FINE-TUNING
+                </p>
+
+                <h2>
+                    Adaptación a reconocimiento del habla
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Modelo preentrenado
+                    </h3>
+
+                    <p>
+                        Una vez terminado el aprendizaje auto-supervisado,
+                        se incorpora una capa lineal de salida sobre
+                        las representaciones producidas por el Transformer.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        CTC
+                    </h3>
+
+                    <p>
+                        El modelo se adapta utilizando audio transcrito
+                        y una función de pérdida Connectionist Temporal
+                        Classification.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        ASR
+                    </h3>
+
+                    <p>
+                        Finalmente se obtienen predicciones de caracteres
+                        para LibriSpeech o fonemas para TIMIT.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Detalle importante
+                </h3>
+
+                <p>
+                    Durante las primeras 10.000 actualizaciones del
+                    fine-tuning únicamente se entrena el clasificador
+                    de salida. Posteriormente también se actualiza
+                    el Transformer.
+                </p>
+
+                <p>
+                    El codificador convolucional de características
+                    permanece congelado durante el fine-tuning.
+                </p>
+
+                <p>
+                    Además, los autores aplican una variante de
+                    SpecAugment sobre las representaciones internas
+                    para reducir el sobreajuste.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+            EVALUACIÓN Y RESULTADOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Resultados principales
+                </h2>
+
+                <p>
+                    El rendimiento se evalúa principalmente mediante
+                    Word Error Rate (WER) sobre los conjuntos
+                    test-clean y test-other de LibriSpeech.
+                </p>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        SOLO 10 MINUTOS DE AUDIO ETIQUETADO
+                    </span>
+
+                    <strong>
+                        4,8 / 8,2
+                    </strong>
+
+                    <p>
+                        WER · test-clean / test-other
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        ¿Por qué es relevante?
+                    </h3>
+
+                    <p>
+                        El modelo LARGE preentrenado con aproximadamente
+                        53.000 horas de audio sin etiquetar alcanza estos
+                        resultados utilizando posteriormente únicamente
+                        10 minutos de habla transcrita.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Datos etiquetados</th>
+                            <th>Preentrenamiento</th>
+                            <th>test-clean WER</th>
+                            <th>test-other WER</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>10 minutos</td>
+                            <td>LV-60k</td>
+                            <td>4,8</td>
+                            <td>8,2</td>
+                        </tr>
+
+                        <tr>
+                            <td>1 hora</td>
+                            <td>LV-60k</td>
+                            <td>2,9</td>
+                            <td>5,8</td>
+                        </tr>
+
+                        <tr>
+                            <td>10 horas</td>
+                            <td>LV-60k</td>
+                            <td>2,6</td>
+                            <td>4,9</td>
+                        </tr>
+
+                        <tr>
+                            <td>100 horas</td>
+                            <td>LV-60k</td>
+                            <td>2,0</td>
+                            <td>4,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>960 horas</td>
+                            <td>Datos sin etiquetar + fine-tuning completo</td>
+                            <td>1,8</td>
+                            <td>3,3</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p class="tabla-nota">
+
+                Los resultados de los escenarios de pocos datos mostrados
+                corresponden a la configuración LARGE preentrenada con
+                LV-60k y decodificación con modelo de lenguaje Transformer.
+
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             RELACIÓN CON LA TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+
+                <h2>
+                    ¿Qué aporta a mi línea de investigación?
+                </h2>
+
+
+                <p>
+
+                    wav2vec 2.0 constituye un ejemplo fundamental
+                    del uso de representaciones auto-supervisadas
+                    como base para sistemas de procesamiento
+                    del habla que requieren menos información
+                    etiquetada.
+
+                </p>
+
+
+                <p>
+
+                    Este paradigma resulta especialmente relevante
+                    para estudiar posteriormente adaptación de
+                    dominio, personalización, aprendizaje continuo
+                    y robustez frente a nuevas condiciones acústicas.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

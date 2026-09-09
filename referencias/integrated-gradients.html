@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Integrated Gradients | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/explicabilidad-habla-audio.html"
+                    class="volver"
+                >
+                    ← Volver a Explicabilidad
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Integrated Gradients
+                </h1>
+
+
+                <h2>
+                    Axiomatic Attribution
+                    for Deep Networks
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Sundararajan, Taly & Yan · ICML 2017
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>XAI</span>
+                    <span>Feature Attribution</span>
+                    <span>Gradients</span>
+                    <span>Baseline</span>
+                    <span>Post hoc</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFERENCIA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Mukund Sundararajan
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2017
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        ICML 2017 · PMLR 70
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        3319–3328
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Sundararajan, M., Taly, A.,
+                    & Yan, Q. (2017).
+                    <em>
+                        Axiomatic Attribution
+                        for Deep Networks.
+                    </em>
+                    Proceedings of the 34th
+                    International Conference
+                    on Machine Learning,
+                    PMLR 70, 3319–3328.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROBLEMA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA
+                </p>
+
+                <h2>
+                    Atribuir una predicción
+                    a las características de entrada
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Dado un modelo F y una entrada x,
+                    el objetivo consiste en asignar
+                    a cada característica de x
+                    una contribución a la predicción
+                    producida por F.
+                </p>
+
+                <p>
+                    Los autores observan que varios
+                    métodos de atribución existentes
+                    incumplen propiedades que consideran
+                    fundamentales para una explicación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- AXIOMAS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · AXIOMAS
+                </p>
+
+                <h2>
+                    Dos requisitos fundamentales
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        SENSITIVITY
+                    </p>
+
+                    <h3>
+                        Sensibilidad
+                    </h3>
+
+                    <p>
+                        Si una característica cambia
+                        respecto al baseline y ese cambio
+                        altera la predicción,
+                        debe recibir una atribución
+                        distinta de cero.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        IMPLEMENTATION INVARIANCE
+                    </p>
+
+                    <h3>
+                        Invarianza
+                    </h3>
+
+                    <p>
+                        Dos redes funcionalmente equivalentes
+                        deberían producir las mismas
+                        atribuciones aunque estén
+                        implementadas de forma diferente.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- BASELINE -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · BASELINE
+                </p>
+
+                <h2>
+                    Explicar respecto a una referencia
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    x' → x
+                </h2>
+
+                <p>
+                    Integrated Gradients no explica
+                    la entrada de forma absoluta.
+                </p>
+
+                <p>
+                    Calcula la atribución respecto
+                    a una entrada de referencia x'
+                    que representa conceptualmente
+                    la ausencia de la característica.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MÉTODO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MÉTODO
+                </p>
+
+                <h2>
+                    Integrar gradientes a lo largo del camino
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Seleccionar baseline
+                        </h3>
+
+                        <p>
+                            Se define una entrada
+                            de referencia x'.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Interpolar
+                        </h3>
+
+                        <p>
+                            Se construyen puntos
+                            a lo largo de la línea
+                            recta entre x' y x.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Calcular gradientes
+                        </h3>
+
+                        <p>
+                            Se obtiene el gradiente
+                            de la salida respecto
+                            a cada característica.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Integrar
+                        </h3>
+
+                        <p>
+                            Los gradientes se acumulan
+                            a lo largo de todo
+                            el recorrido.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Attribution Map
+                        </h3>
+
+                        <p>
+                            Cada característica recibe
+                            finalmente una puntuación
+                            de contribución.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    FORMULACIÓN
+                </p>
+
+                <h2>
+                    Integrated Gradients
+                </h2>
+
+                <p>
+                    IGᵢ(x) =
+                    (xᵢ − x'ᵢ)
+                    ∫₀¹
+                    ∂F(x' + α(x − x'))
+                    / ∂xᵢ
+                    dα
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPLETENESS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · COMPLETENESS
+                </p>
+
+                <h2>
+                    Las contribuciones deben sumar
+                    el cambio de salida
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROPIEDAD
+                </p>
+
+                <h2>
+                    Σ IGᵢ(x) = F(x) − F(x')
+                </h2>
+
+                <p>
+                    La suma de todas las atribuciones
+                    corresponde a la diferencia
+                    entre la predicción obtenida
+                    para la entrada y la obtenida
+                    para el baseline.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- VENTAJAS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · PROPIEDADES
+                </p>
+
+                <h2>
+                    Características del método
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Sin modificar la red
+                    </strong>
+
+                    <span>
+                        Post hoc
+                    </span>
+
+                    <p>
+                        No requiere cambiar
+                        la arquitectura original.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Gradientes estándar
+                    </strong>
+
+                    <span>
+                        Backpropagation
+                    </span>
+
+                    <p>
+                        Utiliza operaciones
+                        de gradiente disponibles
+                        en redes neuronales.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Sensitivity
+                    </strong>
+
+                    <span>
+                        Axiom
+                    </span>
+
+                    <p>
+                        Diseñado para cumplir
+                        el requisito de sensibilidad.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Implementation Invariance
+                    </strong>
+
+                    <span>
+                        Axiom
+                    </span>
+
+                    <p>
+                        La explicación depende
+                        de la función representada
+                        y no de detalles equivalentes
+                        de implementación.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIMENTOS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    El artículo original no estudia audio
+                </h3>
+
+                <p>
+                    Los autores demuestran Integrated Gradients
+                    sobre modelos de imagen, modelos de texto
+                    y un modelo relacionado con química.
+                </p>
+
+                <p>
+                    Su inclusión en este Estado del arte
+                    se debe a que constituye un método
+                    general de atribución que posteriormente
+                    puede aplicarse a modelos acústicos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADAPTACIÓN AUDIO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    APLICACIÓN A AUDIO
+                </p>
+
+                <h2>
+                    ¿Qué podría ser una característica?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Waveform
+                    </strong>
+
+                    <span>
+                        Samples
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Spectrogram
+                    </strong>
+
+                    <span>
+                        Time-frequency bins
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Frames
+                    </strong>
+
+                    <span>
+                        Temporal regions
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Embeddings
+                    </strong>
+
+                    <span>
+                        Internal representation
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- LIMITACIONES -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES PARA AUDIO
+                </p>
+
+                <h2>
+                    El baseline es una decisión crítica
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Baseline
+                    </h3>
+
+                    <p>
+                        Definir qué significa
+                        "ausencia de sonido"
+                        o ausencia de una característica
+                        no siempre es trivial.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Camino
+                    </h3>
+
+                    <p>
+                        Las entradas intermedias entre
+                        baseline y señal pueden no
+                        corresponder a audio natural.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Resolución
+                    </h3>
+
+                    <p>
+                        Un mapa de miles de bins
+                        tiempo-frecuencia puede resultar
+                        difícil de interpretar.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Fidelidad semántica
+                    </h3>
+
+                    <p>
+                        Una atribución numérica no se
+                        transforma automáticamente
+                        en una explicación lingüística
+                        comprensible.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- TESIS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Herramienta de atribución,
+                    no explicación final
+                </h2>
+
+                <p>
+                    Integrated Gradients puede utilizarse
+                    para localizar qué partes de una
+                    representación acústica influyen
+                    en una decisión.
+                </p>
+
+                <p>
+                    Para la tesis podría funcionar
+                    como un primer nivel de evidencia:
+                </p>
+
+                <p>
+                    modelo → atribución →
+                    regiones acústicas relevantes.
+                </p>
+
+                <p>
+                    Posteriormente estas regiones
+                    podrían agruparse mediante
+                    unidades temporales, fonéticas
+                    o espectrales y transformarse
+                    en conceptos comprensibles.
+                </p>
+
+                <p>
+                    Finalmente, un sistema neurodifuso
+                    podría utilizar dichas evidencias
+                    para construir reglas lingüísticas
+                    auditables.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

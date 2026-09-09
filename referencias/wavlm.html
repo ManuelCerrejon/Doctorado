@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        WavLM | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/aprendizaje-auto-supervisado.html"
+                    class="volver"
+                >
+                    ← Volver a Aprendizaje auto-supervisado
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    WavLM
+                </h1>
+
+
+                <h2>
+                    Large-Scale Self-Supervised Pre-Training
+                    for Full Stack Speech Processing
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Chen, S. et al. · 2022
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Self-Supervised Learning</span>
+                    <span>Denoising</span>
+                    <span>Speaker</span>
+                    <span>SUPERB</span>
+                    <span>Full-stack Speech</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INFORMACIÓN BIBLIOGRÁFICA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Sanyuan Chen et al.
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2022
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        IEEE JSTSP · Vol. 16(6)
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        1505–1518
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Chen, S. et al. (2022).
+                    <em>
+                        WavLM: Large-Scale Self-Supervised
+                        Pre-Training for Full Stack Speech Processing.
+                    </em>
+                    IEEE Journal of Selected Topics in Signal Processing,
+                    16(6), 1505–1518.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Más allá del reconocimiento del habla
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los modelos auto-supervisados anteriores habían
+                    demostrado un rendimiento especialmente elevado
+                    en tareas relacionadas con el contenido hablado,
+                    como reconocimiento automático del habla.
+                </p>
+
+                <p>
+                    Sin embargo, una señal de voz contiene más
+                    información que su contenido lingüístico:
+                    identidad del hablante, información paralingüística,
+                    características acústicas y posibles interacciones
+                    entre varios hablantes.
+                </p>
+
+                <p>
+                    WavLM busca aprender una representación general
+                    que pueda reutilizarse en un conjunto mucho más
+                    amplio de tareas de procesamiento del habla.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Masked Prediction + Denoising
+                </h2>
+
+                <p>
+                    WavLM conserva la predicción enmascarada
+                    utilizada por HuBERT, pero durante el
+                    preentrenamiento introduce artificialmente
+                    ruido y habla solapada.
+                </p>
+
+                <p>
+                    El modelo debe predecir las pseudoetiquetas
+                    correspondientes a la señal original aunque
+                    la entrada se encuentre parcialmente degradada
+                    o mezclada con otro hablante.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · DATASETS
+                </p>
+
+                <h2>
+                    Preentrenamiento a gran escala
+                </h2>
+
+                <p>
+                    Los autores amplían considerablemente la
+                    diversidad de los datos utilizados para
+                    evitar depender únicamente de audiolibros.
+                </p>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MIX 94K
+                    </span>
+
+                    <h3>
+                        Libri-Light
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        60.000 h
+                    </strong>
+
+                    <p>
+                        Corpus de gran escala basado principalmente
+                        en audiolibros.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MIX 94K
+                    </span>
+
+                    <h3>
+                        GigaSpeech
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        10.000 h
+                    </strong>
+
+                    <p>
+                        Incluye audio procedente de audiolibros,
+                        podcasts y YouTube, con habla leída
+                        y espontánea.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MIX 94K
+                    </span>
+
+                    <h3>
+                        VoxPopuli
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        24.000 h
+                    </strong>
+
+                    <p>
+                        Se utiliza la parte inglesa procedente
+                        de grabaciones de eventos del Parlamento
+                        Europeo.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        TOTAL
+                    </span>
+
+                    <h3>
+                        Mix 94k
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        94.000 h
+                    </strong>
+
+                    <p>
+                        Combinación utilizada para WavLM Base+
+                        y WavLM Large.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Estructura del modelo
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENTRADA</span>
+
+                    <h3>
+                        Waveform
+                    </h3>
+
+                    <p>
+                        La señal de audio se procesa directamente.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>FEATURE ENCODER</span>
+
+                    <h3>
+                        CNN
+                    </h3>
+
+                    <p>
+                        Siete bloques de convolución temporal
+                        generan representaciones acústicas.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>TRANSFORMER</span>
+
+                    <h3>
+                        Gated Relative Position
+                    </h3>
+
+                    <p>
+                        El Transformer incorpora un sesgo de
+                        posición relativa controlado mediante
+                        puertas dependientes del contenido.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        WAVLM BASE
+                    </p>
+
+                    <h3>
+                        94,70 M
+                    </h3>
+
+                    <ul>
+                        <li>12 capas Transformer</li>
+                        <li>Hidden size: 768</li>
+                        <li>8 cabezas de atención</li>
+                        <li>LibriSpeech 960 h</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        WAVLM BASE+
+                    </p>
+
+                    <h3>
+                        94,70 M
+                    </h3>
+
+                    <ul>
+                        <li>12 capas Transformer</li>
+                        <li>Hidden size: 768</li>
+                        <li>8 cabezas de atención</li>
+                        <li>Mix 94k</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        WAVLM LARGE
+                    </p>
+
+                    <h3>
+                        316,62 M
+                    </h3>
+
+                    <ul>
+                        <li>24 capas Transformer</li>
+                        <li>Hidden size: 1.024</li>
+                        <li>12 cabezas de atención</li>
+                        <li>Mix 94k</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DENOISING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · DENOISING
+                </p>
+
+                <h2>
+                    Simulación de condiciones reales
+                </h2>
+
+                <p>
+                    Durante el preentrenamiento algunas grabaciones
+                    se modifican artificialmente antes de introducirlas
+                    en el modelo.
+                </p>
+
+            </div>
+
+
+            <div class="wavlm-denoising-grid">
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        01
+                    </span>
+
+                    <h3>
+                        Habla original
+                    </h3>
+
+                    <p>
+                        Se selecciona una grabación que actúa
+                        como señal principal.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        02
+                    </span>
+
+                    <h3>
+                        Segundo hablante
+                    </h3>
+
+                    <p>
+                        Parte de la grabación puede mezclarse
+                        con otra utterance del mismo batch.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        03
+                    </span>
+
+                    <h3>
+                        Ruido
+                    </h3>
+
+                    <p>
+                        Alternativamente puede mezclarse
+                        con sonidos procedentes del conjunto
+                        DNS de ruido.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        04
+                    </span>
+
+                    <h3>
+                        Predicción
+                    </h3>
+
+                    <p>
+                        El modelo debe recuperar las pseudoetiquetas
+                        correspondientes a la señal original.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Habla solapada
+                </h3>
+
+                <p>
+                    La región mezclada se limita a menos del
+                    50 % de la utterance, de modo que la señal
+                    principal continúe siendo identificable.
+                </p>
+
+                <p>
+                    Esta estrategia obliga al modelo a aprender
+                    información útil tanto para identificar al
+                    hablante principal como para separar contenido
+                    relevante de interferencias acústicas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OBJETIVOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · OBJETIVO DE ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Pseudoetiquetas de HuBERT
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Señal limpia
+                        </h3>
+
+                        <p>
+                            La señal original se utiliza para
+                            obtener las pseudoetiquetas objetivo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Clustering HuBERT
+                        </h3>
+
+                        <p>
+                            Las etiquetas proceden del clustering
+                            de representaciones aprendidas previamente
+                            por HuBERT.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Señal degradada
+                        </h3>
+
+                        <p>
+                            El modelo WavLM recibe la versión
+                            enmascarada, ruidosa o solapada.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mask Prediction
+                        </h3>
+
+                        <p>
+                            WavLM debe predecir en las regiones
+                            ocultas la pseudoetiqueta correspondiente
+                            a la señal original.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ENTRENAMIENTO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · PREENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Configuraciones utilizadas
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        WAVLM BASE
+                    </span>
+
+                    <h3>
+                        400.000 pasos
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        960 h
+                    </strong>
+
+                    <p>
+                        Preentrenado sobre LibriSpeech utilizando
+                        pseudoetiquetas obtenidas de la sexta capa
+                        del HuBERT Base de primera iteración.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        WAVLM BASE+
+                    </span>
+
+                    <h3>
+                        1.000.000 pasos
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        94k h
+                    </strong>
+
+                    <p>
+                        Utiliza pseudoetiquetas obtenidas mediante
+                        clustering de la novena capa del HuBERT Base
+                        de segunda iteración.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        WAVLM LARGE
+                    </span>
+
+                    <h3>
+                        700.000 pasos
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        94k h
+                    </strong>
+
+                    <p>
+                        Sigue el mismo esquema de pseudoetiquetas
+                        que Base+, aumentando considerablemente
+                        el tamaño del Transformer.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        DENOISING
+                    </span>
+
+                    <h3>
+                        20 %
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        utterances
+                    </strong>
+
+                    <p>
+                        El modelado mediante habla ruidosa o
+                        solapada se aplica al 20 % de las
+                        utterances durante el preentrenamiento.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EVALUACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Full-stack speech processing
+                </h2>
+
+                <p>
+                    A diferencia de trabajos centrados principalmente
+                    en ASR, WavLM se evalúa sobre una colección
+                    amplia de tareas.
+                </p>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>Speaker</strong>
+                    <span>Identification</span>
+                    <span>Verification</span>
+                    <span>Diarization</span>
+                </article>
+
+                <article>
+                    <strong>Content</strong>
+                    <span>Phoneme Recognition</span>
+                    <span>ASR</span>
+                    <span>OOD-ASR</span>
+                </article>
+
+                <article>
+                    <strong>Semantics</strong>
+                    <span>Intent Classification</span>
+                    <span>Slot Filling</span>
+                    <span>Speech Translation</span>
+                </article>
+
+                <article>
+                    <strong>Paralinguistics</strong>
+                    <span>Emotion Recognition</span>
+                </article>
+
+                <article>
+                    <strong>Generation</strong>
+                    <span>Speech Enhancement</span>
+                    <span>Speech Separation</span>
+                    <span>Voice Conversion</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · RESULTADOS
+                </p>
+
+                <h2>
+                    Resultados destacados
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        SUPERB · OVERALL SCORE
+                    </span>
+
+                    <strong>
+                        74,6
+                    </strong>
+
+                    <p>
+                        WavLM Large
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Representación general
+                    </h3>
+
+                    <p>
+                        WavLM Large obtiene el mejor resultado
+                        global de los modelos comparados en el
+                        benchmark SUPERB del artículo.
+                    </p>
+
+                    <p>
+                        Supera a HuBERT Large en 14 de las tareas
+                        evaluadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Parámetros</th>
+                            <th>Preentrenamiento</th>
+                            <th>SUPERB Overall</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>HuBERT Base</td>
+                            <td>94,68 M</td>
+                            <td>960 h</td>
+                            <td>70,9</td>
+                        </tr>
+
+                        <tr>
+                            <td>WavLM Base</td>
+                            <td>94,70 M</td>
+                            <td>960 h</td>
+                            <td>72,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>HuBERT Large</td>
+                            <td>316,61 M</td>
+                            <td>60k h</td>
+                            <td>72,2</td>
+                        </tr>
+
+                        <tr>
+                            <td>WavLM Base+</td>
+                            <td>94,70 M</td>
+                            <td>94k h</td>
+                            <td>73,4</td>
+                        </tr>
+
+                        <tr>
+                            <td>WavLM Large</td>
+                            <td>316,62 M</td>
+                            <td>94k h</td>
+                            <td>74,6</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    ASR
+                </p>
+
+                <h3>
+                    LibriSpeech
+                </h3>
+
+                <p>
+                    En reconocimiento automático del habla,
+                    WavLM obtiene un WER de 1,8 % en
+                    test-clean y 3,2 % en test-other.
+                </p>
+
+                <p>
+                    El objetivo del trabajo, sin embargo, no
+                    consiste únicamente en mejorar ASR, sino
+                    en conservar un rendimiento competitivo
+                    mientras se mejora la representación para
+                    tareas no relacionadas exclusivamente con
+                    el contenido lingüístico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Evolución de los modelos
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>wav2vec 2.0</th>
+                            <th>HuBERT</th>
+                            <th>WavLM</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Objetivo</td>
+                            <td>Contrastivo</td>
+                            <td>Masked prediction</td>
+                            <td>Masked prediction + denoising</td>
+                        </tr>
+
+                        <tr>
+                            <td>Objetivos discretos</td>
+                            <td>Cuantización</td>
+                            <td>Clustering</td>
+                            <td>Clustering HuBERT</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ruido durante pretraining</td>
+                            <td>No es el objetivo central</td>
+                            <td>No es el objetivo central</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Habla solapada</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Énfasis</td>
+                            <td>Contenido</td>
+                            <td>Contenido acústico</td>
+                            <td>Contenido + hablante + entorno</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RELACIÓN CON LA TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Por qué es especialmente relevante?
+                </h2>
+
+                <p>
+                    WavLM resulta muy próximo a los objetivos de la
+                    tesis porque plantea explícitamente que una
+                    representación de habla debe ser robusta frente
+                    a diferentes condiciones acústicas y conservar
+                    información útil más allá de la transcripción.
+                </p>
+
+                <p>
+                    El uso de ruido y habla solapada durante el
+                    preentrenamiento conecta directamente con el
+                    estudio de robustez y adaptación a nuevos
+                    entornos acústicos.
+                </p>
+
+                <p>
+                    Además, los resultados muestran que distintas
+                    capas del modelo contienen diferentes tipos de
+                    información: las capas inferiores e intermedias
+                    resultan importantes para información del
+                    hablante, mientras que las superiores tienen
+                    mayor peso en contenido y semántica.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

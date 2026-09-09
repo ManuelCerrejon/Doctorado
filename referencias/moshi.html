@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Moshi | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/modelos-lenguaje-audio-habla.html"
+                    class="volver"
+                >
+                    ← Volver a Modelos de lenguaje de audio y habla
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Moshi
+                </h1>
+
+
+                <h2>
+                    A Speech-Text Foundation Model
+                    for Real-Time Dialogue
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Défossez, A. et al. · 2024
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Speech-to-Speech</span>
+                    <span>Full-Duplex</span>
+                    <span>Helium</span>
+                    <span>Mimi</span>
+                    <span>Inner Monologue</span>
+                    <span>Streaming</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Alexandre Défossez
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Institución
+                    </span>
+
+                    <strong>
+                        Kyutai
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Identificador
+                    </span>
+
+                    <strong>
+                        arXiv:2410.00037
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Défossez, A., Mazaré, L., Orsini, M.,
+                    Royer, A., Pérez, P., Jégou, H.,
+                    Grave, E., & Zeghidour, N. (2024).
+                    <em>
+                        Moshi: a Speech-Text Foundation
+                        Model for Real-Time Dialogue.
+                    </em>
+                    arXiv:2410.00037.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Superar la conversación por turnos
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Muchos asistentes de voz utilizan una
+                    cadena formada por detección de actividad,
+                    reconocimiento del habla, un modelo textual
+                    y síntesis de voz.
+                </p>
+
+                <p>
+                    Esta arquitectura introduce latencia y obliga
+                    a separar explícitamente la conversación
+                    en turnos.
+                </p>
+
+                <p>
+                    Además, utilizar texto como representación
+                    intermedia puede eliminar información
+                    paralingüística y acústica presente
+                    en la señal original.
+                </p>
+
+                <p>
+                    Moshi reformula el diálogo como un problema
+                    speech-to-speech continuo, en el que usuario
+                    y sistema pueden estar activos simultáneamente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FULL DUPLEX
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Full-Duplex
+                </h2>
+
+                <p>
+                    Moshi escucha permanentemente el flujo
+                    acústico del usuario mientras genera
+                    simultáneamente su propio flujo.
+                </p>
+
+                <p>
+                    No necesita detectar explícitamente
+                    cuándo comienza o termina cada turno.
+                </p>
+
+                <p>
+                    Esto permite representar interrupciones,
+                    solapamientos, silencios e interjecciones
+                    dentro del propio modelo generativo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA GENERAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Tres componentes principales
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>TEXT LM</span>
+
+                    <h3>
+                        Helium
+                    </h3>
+
+                    <p>
+                        Modelo de lenguaje de 7B parámetros
+                        que proporciona conocimiento
+                        lingüístico y factual.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    +
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIO CODEC</span>
+
+                    <h3>
+                        Mimi
+                    </h3>
+
+                    <p>
+                        Convierte audio continuo
+                        en tokens semánticos
+                        y acústicos.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIO LM</span>
+
+                    <h3>
+                        Moshi
+                    </h3>
+
+                    <p>
+                        Modela conjuntamente texto
+                        y múltiples streams acústicos.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             HELIUM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · HELIUM
+                </p>
+
+                <h2>
+                    Backbone textual
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        LANGUAGE MODEL
+                    </p>
+
+                    <h3>
+                        7B parámetros
+                    </h3>
+
+                    <ul>
+                        <li>Transformer autoregresivo</li>
+                        <li>32 capas</li>
+                        <li>Dimensión: 4096</li>
+                        <li>32 cabezas</li>
+                        <li>MLP: 11264</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        TEXTO
+                    </p>
+
+                    <h3>
+                        2,1 T tokens
+                    </h3>
+
+                    <ul>
+                        <li>Datos públicos en inglés</li>
+                        <li>CommonCrawl</li>
+                        <li>Wikipedia</li>
+                        <li>StackExchange</li>
+                        <li>Artículos científicos</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MIMI
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MIMI
+                </p>
+
+                <h2>
+                    Neural Audio Codec
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        24 kHz Audio
+                    </h3>
+
+                    <p>
+                        Señal continua.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENCODER</span>
+
+                    <h3>
+                        Mimi
+                    </h3>
+
+                    <p>
+                        Reduce la señal a
+                        12,5 frames por segundo.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>RVQ</span>
+
+                    <h3>
+                        8 codebooks
+                    </h3>
+
+                    <p>
+                        Residual Vector Quantization.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Audio Tokens
+                    </h3>
+
+                    <p>
+                        Un nivel semántico
+                        y niveles acústicos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>Sample rate</span>
+
+                    <strong>
+                        24 kHz
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Frame rate</span>
+
+                    <strong>
+                        12,5 Hz
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Frame</span>
+
+                    <strong>
+                        80 ms
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>RVQ</span>
+
+                    <strong>
+                        8 niveles
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Codebook</span>
+
+                    <strong>
+                        2048
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Bitrate</span>
+
+                    <strong>
+                        ~1,1 kbps
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SEMANTIC TOKEN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    PRIMER NIVEL DE MIMI
+                </p>
+
+                <h3>
+                    Semantic token
+                </h3>
+
+                <p>
+                    El primer nivel de cuantización se entrena
+                    para incorporar información semántica
+                    procedente de representaciones WavLM.
+                </p>
+
+                <p>
+                    Los niveles posteriores se centran
+                    principalmente en información acústica
+                    necesaria para reconstruir el audio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRANSFORMERS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · MODELO GENERATIVO
+                </p>
+
+                <h2>
+                    Temporal + Depth Transformer
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        TEMPORAL TRANSFORMER
+                    </p>
+
+                    <h3>
+                        Backbone principal
+                    </h3>
+
+                    <ul>
+                        <li>32 capas</li>
+                        <li>Dimensión 4096</li>
+                        <li>32 cabezas</li>
+                        <li>Inicializado desde Helium</li>
+                        <li>Modela contexto temporal</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        DEPTH TRANSFORMER
+                    </p>
+
+                    <h3>
+                        Tokens por frame
+                    </h3>
+
+                    <ul>
+                        <li>6 capas</li>
+                        <li>Dimensión 1024</li>
+                        <li>16 cabezas</li>
+                        <li>MLP 4096</li>
+                        <li>Predicción jerárquica</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MULTISTREAM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · MULTI-STREAM
+                </p>
+
+                <h2>
+                    Usuario y Moshi por separado
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        User Stream
+                    </h3>
+
+                    <p>
+                        8 streams de tokens Mimi
+                        representan el audio que
+                        está produciendo el usuario.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    ↔
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Moshi Stream
+                    </h3>
+
+                    <p>
+                        Otros 8 streams representan
+                        simultáneamente el audio
+                        generado por el modelo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    No existe un token "tu turno / mi turno"
+                </h3>
+
+                <p>
+                    Ambos flujos existen continuamente.
+                    Si Moshi no habla, sus tokens representan
+                    silencio natural.
+                </p>
+
+                <p>
+                    Esto permite que usuario y sistema
+                    puedan hablar simultáneamente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             17 STREAMS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    SECUENCIA CONJUNTA
+                </p>
+
+                <h2>
+                    17 streams simultáneos
+                </h2>
+
+                <p>
+                    Con ocho niveles Mimi para Moshi
+                    y ocho para el usuario, el modelo
+                    trabaja con dieciséis streams acústicos.
+                </p>
+
+                <p>
+                    A ellos se añade el stream textual
+                    de Inner Monologue:
+                </p>
+
+                <p>
+                    8 + 8 + 1 = 17 streams.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INNER MONOLOGUE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · INNER MONOLOGUE
+                </p>
+
+                <h2>
+                    Texto antes del audio
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Text token
+                        </h3>
+
+                        <p>
+                            Moshi predice una representación
+                            textual alineada temporalmente
+                            con su propio habla.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Semantic token
+                        </h3>
+
+                        <p>
+                            Posteriormente se predice
+                            el nivel semántico de Mimi.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Acoustic tokens
+                        </h3>
+
+                        <p>
+                            Los niveles restantes completan
+                            progresivamente la información
+                            acústica de la señal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INNER EFFECT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PAPEL DEL TEXTO
+                </p>
+
+                <h2>
+                    El "monólogo interno" guía el habla
+                </h2>
+
+                <p>
+                    Aunque la entrada y la salida final
+                    sean audio, Moshi utiliza internamente
+                    texto alineado con su propia voz.
+                </p>
+
+                <p>
+                    Los autores muestran que este mecanismo
+                    mejora considerablemente la coherencia
+                    lingüística y el conocimiento expresado
+                    durante la generación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAINING DATA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · DATOS
+                </p>
+
+                <h2>
+                    Entrenamiento a gran escala
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        AUDIO PRETRAINING
+                    </span>
+
+                    <h3>
+                        Audio no supervisado
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        7 M h
+                    </strong>
+
+                    <p>
+                        Colección de audio disponible
+                        públicamente, mayoritariamente
+                        habla inglesa.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        FULL-DUPLEX
+                    </span>
+
+                    <h3>
+                        Fisher
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        2.000 h
+                    </strong>
+
+                    <p>
+                        Conversaciones telefónicas
+                        con cada participante almacenado
+                        en un canal separado.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        CONVERSATIONS
+                    </span>
+
+                    <h3>
+                        Multi-stream
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        170 h
+                    </strong>
+
+                    <p>
+                        Conversaciones naturales
+                        y guionizadas utilizadas como
+                        apoyo para construir el sistema
+                        de generación de datos.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        INSTRUCTION
+                    </span>
+
+                    <h3>
+                        Synthetic Dialogues
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        &gt; 20.000 h
+                    </strong>
+
+                    <p>
+                        Conversaciones sintéticas
+                        generadas para instruction tuning.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAINING PHASES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Cuatro fases para Moshi
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio Pretraining
+                        </h3>
+
+                        <p>
+                            Entrenamiento inicial sobre el
+                            corpus de siete millones de horas
+                            utilizando un único stream.
+                        </p>
+
+                        <strong>
+                            1.000.000 pasos
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Multi-stream Post-training
+                        </h3>
+
+                        <p>
+                            El audio se separa mediante
+                            diarización para simular
+                            dos streams independientes.
+                        </p>
+
+                        <strong>
+                            100.000 pasos
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Fisher Fine-tuning
+                        </h3>
+
+                        <p>
+                            Se utilizan conversaciones reales
+                            con canales separados para aprender
+                            solapamientos e interacción duplex.
+                        </p>
+
+                        <strong>
+                            10.000 pasos
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Instruction Fine-tuning
+                        </h3>
+
+                        <p>
+                            El sistema adquiere finalmente
+                            el comportamiento de asistente
+                            conversacional.
+                        </p>
+
+                        <strong>
+                            30.000 pasos
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEXT MEMORY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    EVITAR OLVIDO
+                </p>
+
+                <h3>
+                    Mantener entrenamiento textual
+                </h3>
+
+                <p>
+                    Durante el pretraining acústico,
+                    aproximadamente la mitad de los batches
+                    continúan siendo exclusivamente textuales.
+                </p>
+
+                <p>
+                    El objetivo es reducir el olvido
+                    del conocimiento lingüístico adquirido
+                    previamente por Helium.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LATENCY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        LATENCIA TEÓRICA
+                    </span>
+
+                    <strong>
+                        160 ms
+                    </strong>
+
+                    <p>
+                        speech-to-speech
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        En la práctica
+                    </h3>
+
+                    <p>
+                        Los autores reportan alrededor
+                        de 200 ms de latencia práctica
+                        en su sistema de diálogo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SPOKEN QA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Spoken Question Answering
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Web Questions</th>
+                            <th>LLaMA Questions</th>
+                            <th>Audio TriviaQA</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Moshi sin Inner Monologue
+                            </td>
+                            <td>9,2</td>
+                            <td>21,0</td>
+                            <td>7,3</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Moshi
+                            </td>
+                            <td>26,6</td>
+                            <td>62,3</td>
+                            <td>22,8</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Efecto de Inner Monologue
+                </h3>
+
+                <p>
+                    En estas pruebas, incorporar el flujo
+                    textual interno multiplica aproximadamente
+                    por tres el rendimiento respecto al mismo
+                    enfoque sin Inner Monologue.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DIALOGUE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · DINÁMICA CONVERSACIONAL
+                </p>
+
+                <h2>
+                    No solo importa qué responde
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Pauses
+                    </strong>
+
+                    <span>
+                        Silencios dentro del discurso
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Gaps
+                    </strong>
+
+                    <span>
+                        Intervalos entre interlocutores
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Overlap
+                    </strong>
+
+                    <span>
+                        Habla simultánea
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Interjections
+                    </strong>
+
+                    <span>
+                        Backchanneling
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Interruptions
+                    </strong>
+
+                    <span>
+                        Cambio dinámico del turno
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARISON
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Qwen2-Audio vs Moshi
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Qwen2-Audio</th>
+                            <th>Moshi</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Entrada de audio</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Salida textual</td>
+                            <td>Sí</td>
+                            <td>Interna</td>
+                        </tr>
+
+                        <tr>
+                            <td>Salida hablada</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speech-to-Speech</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Streaming</td>
+                            <td>No es su aportación principal</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Full-duplex</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Overlap</td>
+                            <td>No es el objetivo</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio tokenizer</td>
+                            <td>Encoder continuo</td>
+                            <td>Mimi discreto</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos todavía abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Dependencia del texto interno
+                    </h3>
+
+                    <p>
+                        Inner Monologue mejora enormemente
+                        el rendimiento, lo que muestra que
+                        una parte importante del razonamiento
+                        continúa apoyándose en texto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Coste computacional
+                    </h3>
+
+                    <p>
+                        Mantener generación continua de audio
+                        a baja latencia exige ejecutar
+                        permanentemente un modelo de gran escala.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Información comprimida
+                    </h3>
+
+                    <p>
+                        Mimi reduce de forma muy intensa
+                        la señal antes de proporcionar
+                        los tokens al modelo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Auditabilidad
+                    </h3>
+
+                    <p>
+                        El modelo produce simultáneamente
+                        múltiples streams, haciendo difícil
+                        atribuir una respuesta a una región
+                        acústica concreta.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    Moshi demuestra que una arquitectura
+                    de audio puede abandonar explícitamente
+                    el paradigma rígido de turnos y procesar
+                    señales acústicas de forma continua.
+                </p>
+
+                <p>
+                    Esto resulta especialmente interesante
+                    para estudiar adaptación en tiempo real,
+                    ya que el modelo recibe un flujo acústico
+                    continuo donde el hablante, el ruido
+                    y las condiciones pueden cambiar
+                    durante una misma conversación.
+                </p>
+
+                <p>
+                    Mimi también constituye un ejemplo
+                    de representación acústica extremadamente
+                    compacta: reduce el audio a 12,5 frames
+                    por segundo conservando información
+                    semántica y acústica.
+                </p>
+
+                <p>
+                    El problema consiste en determinar
+                    qué información desaparece durante
+                    esta compresión y si los tokens
+                    conservan las evidencias necesarias
+                    para explicar una decisión.
+                </p>
+
+                <p>
+                    Además, los requisitos de baja latencia
+                    conectan directamente con los objetivos
+                    de eficiencia y Edge AI de la tesis.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

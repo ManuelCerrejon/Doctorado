@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Qwen2-Audio | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/modelos-lenguaje-audio-habla.html"
+                    class="volver"
+                >
+                    ← Volver a Modelos de lenguaje de audio y habla
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Qwen2-Audio
+                </h1>
+
+
+                <h2>
+                    Qwen2-Audio Technical Report
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Chu, Y. et al. · 2024
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Audio LLM</span>
+                    <span>Whisper-large-v3</span>
+                    <span>Qwen</span>
+                    <span>Instruction Following</span>
+                    <span>Voice Chat</span>
+                    <span>Audio Analysis</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Yunfei Chu
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Tipo
+                    </span>
+
+                    <strong>
+                        Technical Report
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Identificador
+                    </span>
+
+                    <strong>
+                        arXiv:2407.10759
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Chu, Y., Xu, J., Yang, Q., Wei, H.,
+                    Wei, X., Guo, Z., Leng, Y., Lv, Y.,
+                    He, J., Lin, J., Zhou, C., & Zhou, J.
+                    (2024).
+                    <em>
+                        Qwen2-Audio Technical Report.
+                    </em>
+                    arXiv:2407.10759.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Comprensión auditiva mediante instrucciones
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los grandes modelos de lenguaje pueden
+                    seguir instrucciones complejas en texto,
+                    pero necesitan mecanismos adicionales
+                    para interpretar directamente una
+                    señal acústica.
+                </p>
+
+                <p>
+                    Qwen2-Audio busca proporcionar capacidades
+                    generales de comprensión sobre habla,
+                    sonidos ambientales, música y grabaciones
+                    que contienen varias fuentes simultáneamente.
+                </p>
+
+                <p>
+                    Una de sus principales aportaciones
+                    consiste en mejorar la capacidad para
+                    seguir instrucciones directamente
+                    a partir del propio audio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA PRINCIPAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    El audio puede contener también la instrucción
+                </h2>
+
+                <p>
+                    El usuario no necesita proporcionar
+                    obligatoriamente una instrucción textual.
+                </p>
+
+                <p>
+                    Una grabación puede contener sonidos,
+                    una conversación y una orden pronunciada,
+                    y Qwen2-Audio intenta identificar
+                    automáticamente qué parte corresponde
+                    a la instrucción y responder a ella.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Audio Encoder + LLM
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Audio
+                    </h3>
+
+                    <p>
+                        Habla, sonido, música
+                        o una combinación de ellos.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIO ENCODER</span>
+
+                    <h3>
+                        Whisper-large-v3
+                    </h3>
+
+                    <p>
+                        Proporciona la inicialización
+                        del encoder acústico.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>COMPRESSION</span>
+
+                    <h3>
+                        Pooling
+                    </h3>
+
+                    <p>
+                        Reduce la longitud temporal
+                        de las representaciones.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LLM</span>
+
+                    <h3>
+                        Qwen-7B
+                    </h3>
+
+                    <p>
+                        Recibe la representación acústica
+                        junto con el contexto textual
+                        y genera la respuesta.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Texto
+                    </h3>
+
+                    <p>
+                        La respuesta final
+                        se genera textualmente.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUDIO ENCODER
+                    </p>
+
+                    <h3>
+                        Whisper-large-v3
+                    </h3>
+
+                    <ul>
+                        <li>Entrada acústica</li>
+                        <li>Representaciones continuas</li>
+                        <li>Inicialización desde Whisper</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        LANGUAGE MODEL
+                    </p>
+
+                    <h3>
+                        Qwen-7B
+                    </h3>
+
+                    <ul>
+                        <li>Decoder autoregresivo</li>
+                        <li>Comprensión lingüística</li>
+                        <li>Generación textual</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        MODELO TOTAL
+                    </p>
+
+                    <h3>
+                        8,2 B
+                    </h3>
+
+                    <ul>
+                        <li>Audio + lenguaje</li>
+                        <li>Entrada audio/texto</li>
+                        <li>Salida textual</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PREPROCESADO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · PREPROCESADO
+                </p>
+
+                <h2>
+                    Del audio al LLM
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Resampling
+                        </h3>
+
+                        <p>
+                            Todo el audio se convierte
+                            a una frecuencia de muestreo
+                            de 16 kHz.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mel-Spectrogram
+                        </h3>
+
+                        <p>
+                            La forma de onda se transforma
+                            en un espectrograma Mel
+                            de 128 canales.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ventana
+                        </h3>
+
+                        <p>
+                            Se utilizan ventanas de
+                            25 ms y desplazamientos
+                            de 10 ms.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio Encoder
+                        </h3>
+
+                        <p>
+                            Whisper transforma el
+                            espectrograma en representaciones
+                            acústicas contextualizadas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pooling ×2
+                        </h3>
+
+                        <p>
+                            Una capa de pooling reduce
+                            nuevamente la longitud temporal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Resolución final
+                </h3>
+
+                <p>
+                    Después del encoder y del pooling,
+                    cada representación temporal corresponde
+                    aproximadamente a 40 ms de la señal original.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OBJETIVO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · OBJETIVO
+                </p>
+
+                <h2>
+                    Predicción del siguiente token textual
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    AUDIO COMO CONDICIONAMIENTO
+                </p>
+
+                <h2>
+                    Audio → representación → texto
+                </h2>
+
+                <p>
+                    El modelo maximiza la probabilidad
+                    del siguiente token textual condicionándose
+                    simultáneamente en las representaciones
+                    acústicas y en los tokens textuales
+                    generados anteriormente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAINING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Tres etapas
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Multi-task Pretraining
+                        </h3>
+
+                        <p>
+                            El modelo aprende inicialmente
+                            a relacionar diferentes tipos
+                            de audio con respuestas textuales.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Supervised Fine-Tuning
+                        </h3>
+
+                        <p>
+                            Se utilizan ejemplos cuidadosamente
+                            seleccionados para mejorar
+                            instruction following y diálogo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            DPO
+                        </h3>
+
+                        <p>
+                            Direct Preference Optimization
+                            utiliza respuestas preferidas
+                            y rechazadas para mejorar
+                            factualidad y comportamiento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PRETRAINING CHANGE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    DIFERENCIA CON QWEN-AUDIO
+                </p>
+
+                <h3>
+                    Natural-language prompts
+                </h3>
+
+                <p>
+                    Qwen-Audio utilizaba etiquetas jerárquicas
+                    específicas para distinguir tareas
+                    y datasets.
+                </p>
+
+                <p>
+                    Qwen2-Audio sustituye este mecanismo
+                    por instrucciones formuladas directamente
+                    mediante lenguaje natural.
+                </p>
+
+                <p>
+                    Los autores indican que esta estrategia
+                    mejora la generalización y la capacidad
+                    de seguir instrucciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · INTERACCIÓN
+                </p>
+
+                <h2>
+                    Dos modos, un mismo modelo
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUDIO ANALYSIS
+                    </p>
+
+                    <h3>
+                        Audio + instrucciones
+                    </h3>
+
+                    <ul>
+                        <li>Habla</li>
+                        <li>Sonidos ambientales</li>
+                        <li>Música</li>
+                        <li>Audio mixto</li>
+                        <li>Instrucciones textuales o habladas</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        VOICE CHAT
+                    </p>
+
+                    <h3>
+                        Voz → respuesta
+                    </h3>
+
+                    <ul>
+                        <li>No necesita instrucción textual</li>
+                        <li>Comandos incluidos en el audio</li>
+                        <li>Interacción conversacional</li>
+                        <li>Salida textual</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Sin selector manual
+                </h3>
+
+                <p>
+                    Ambos comportamientos se entrenan conjuntamente
+                    y el usuario no necesita activar manualmente
+                    un modo mediante un system prompt específico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TIPOS AUDIO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · COMPRENSIÓN
+                </p>
+
+                <h2>
+                    Diferentes tipos de señal
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Speech
+                    </strong>
+
+                    <span>ASR</span>
+                    <span>Translation</span>
+                    <span>Speaker information</span>
+                    <span>Emotion</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Sound
+                    </strong>
+
+                    <span>Sound recognition</span>
+                    <span>Environmental analysis</span>
+                    <span>Audio captioning</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Music
+                    </strong>
+
+                    <span>Genre</span>
+                    <span>Instruments</span>
+                    <span>Musical characteristics</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Mixed Audio
+                    </strong>
+
+                    <span>Speech + sounds</span>
+                    <span>Multiple sources</span>
+                    <span>Spoken instructions</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BENCHMARKS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Tareas utilizadas
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        ASR
+                    </strong>
+
+                    <span>LibriSpeech</span>
+                    <span>Common Voice 15</span>
+                    <span>FLEURS</span>
+                    <span>AISHELL-2</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Speech Translation
+                    </strong>
+
+                    <span>CoVoST2</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Emotion
+                    </strong>
+
+                    <span>MELD</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Vocal Sounds
+                    </strong>
+
+                    <span>VocalSound</span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Audio Chat
+                    </strong>
+
+                    <span>AIR-Bench Speech</span>
+                    <span>AIR-Bench Sound</span>
+                    <span>AIR-Bench Music</span>
+                    <span>AIR-Bench Mixed</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASR RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · RESULTADOS · ASR
+                </p>
+
+                <h2>
+                    LibriSpeech
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        TEST-CLEAN / TEST-OTHER
+                    </span>
+
+                    <strong>
+                        1,6 / 3,6
+                    </strong>
+
+                    <p>
+                        WER
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Sin fine-tuning específico
+                    </h3>
+
+                    <p>
+                        Qwen2-Audio obtiene estos resultados
+                        dentro de un modelo generalista
+                        que también realiza traducción,
+                        análisis de audio y diálogo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>dev-clean</th>
+                            <th>dev-other</th>
+                            <th>test-clean</th>
+                            <th>test-other</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>SALMONN</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>2,1</td>
+                            <td>4,9</td>
+                        </tr>
+
+                        <tr>
+                            <td>Qwen-Audio</td>
+                            <td>1,8</td>
+                            <td>4,0</td>
+                            <td>2,0</td>
+                            <td>4,2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Qwen2-Audio</td>
+                            <td>1,3</td>
+                            <td>3,4</td>
+                            <td>1,6</td>
+                            <td>3,6</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRANSLATION RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · SPEECH TRANSLATION
+                </p>
+
+                <h2>
+                    CoVoST2
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Dirección</th>
+                            <th>Qwen-Audio</th>
+                            <th>Qwen2-Audio</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>English → German</td>
+                            <td>25,1</td>
+                            <td>29,9</td>
+                        </tr>
+
+                        <tr>
+                            <td>German → English</td>
+                            <td>33,9</td>
+                            <td>35,2</td>
+                        </tr>
+
+                        <tr>
+                            <td>English → Chinese</td>
+                            <td>41,5</td>
+                            <td>45,2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Chinese → English</td>
+                            <td>15,7</td>
+                            <td>24,4</td>
+                        </tr>
+
+                        <tr>
+                            <td>Spanish → English</td>
+                            <td>39,7</td>
+                            <td>40,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>French → English</td>
+                            <td>38,5</td>
+                            <td>38,5</td>
+                        </tr>
+
+                        <tr>
+                            <td>Italian → English</td>
+                            <td>36,0</td>
+                            <td>36,3</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p class="tabla-nota">
+                Métrica: BLEU. Los resultados se reportan
+                sin fine-tuning específico para cada tarea.
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             SOUND RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        VOCALSOUND
+                    </span>
+
+                    <h3>
+                        Vocal Sound Classification
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        93,92 %
+                    </strong>
+
+                    <p>
+                        Accuracy reportada para
+                        Qwen2-Audio.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        FLEURS · ZH
+                    </span>
+
+                    <h3>
+                        Zero-shot ASR
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        7,5 WER
+                    </strong>
+
+                    <p>
+                        Tanto Qwen2-Audio como Whisper
+                        son evaluados zero-shot
+                        en este escenario.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AIR BENCH
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · AIR-BENCH
+                </p>
+
+                <h2>
+                    Comprensión generativa de audio
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>Speech</span>
+
+                    <strong>
+                        7,18
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Sound</span>
+
+                    <strong>
+                        6,99
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Music</span>
+
+                    <strong>
+                        6,79
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Mixed Audio</span>
+
+                    <strong>
+                        6,77
+                    </strong>
+
+                </article>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Evaluación generativa
+                </h3>
+
+                <p>
+                    AIR-Bench no evalúa únicamente si una
+                    clase concreta ha sido reconocida.
+                </p>
+
+                <p>
+                    Las respuestas generadas son evaluadas
+                    sobre tareas de diálogo relacionadas
+                    con habla, sonidos, música y
+                    grabaciones mixtas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SALMONN COMPARISON
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    SALMONN vs Qwen2-Audio
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>SALMONN</th>
+                            <th>Qwen2-Audio</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Speech encoder</td>
+                            <td>Whisper-Large-v2</td>
+                            <td>Whisper-large-v3</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio encoder adicional</td>
+                            <td>BEATs</td>
+                            <td>No separado</td>
+                        </tr>
+
+                        <tr>
+                            <td>Connector</td>
+                            <td>Window-level Q-Former</td>
+                            <td>Integración con pooling</td>
+                        </tr>
+
+                        <tr>
+                            <td>LLM</td>
+                            <td>Vicuna-13B</td>
+                            <td>Qwen-7B</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tamaño</td>
+                            <td>~13B + encoders</td>
+                            <td>8,2B total</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speech</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sound</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Music</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Voice instruction</td>
+                            <td>No es la aportación central</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>DPO</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Salida hablada</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Qué todavía no resuelve
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Salida únicamente textual
+                    </h3>
+
+                    <p>
+                        El modelo puede escuchar directamente,
+                        pero la respuesta se genera
+                        mediante texto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Tamaño
+                    </h3>
+
+                    <p>
+                        La arquitectura completa contiene
+                        aproximadamente 8,2 mil millones
+                        de parámetros.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Compresión temporal
+                    </h3>
+
+                    <p>
+                        Reducir la secuencia acústica
+                        facilita su integración con el LLM,
+                        pero puede eliminar detalles
+                        temporales importantes.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Grounding
+                    </h3>
+
+                    <p>
+                        Una respuesta lingüísticamente correcta
+                        no demuestra qué fragmento del audio
+                        proporcionó la evidencia utilizada.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Por qué es relevante?
+                </h2>
+
+                <p>
+                    Qwen2-Audio constituye un ejemplo claro
+                    de integración entre una representación
+                    acústica continua y un gran modelo
+                    de lenguaje.
+                </p>
+
+                <p>
+                    Su capacidad para trabajar conjuntamente
+                    con habla, sonido, música y grabaciones
+                    mixtas se aproxima a la idea de
+                    comprensión acústica general planteada
+                    en la línea de investigación.
+                </p>
+
+                <p>
+                    La resolución temporal de aproximadamente
+                    40 ms resulta además interesante para
+                    estudiar cuánto detalle acústico debe
+                    mantenerse antes de proporcionar
+                    las representaciones al LLM.
+                </p>
+
+                <p>
+                    Sin embargo, sigue existiendo un problema
+                    especialmente relevante para la tesis:
+                    saber que el modelo ha producido
+                    la respuesta correcta no permite saber
+                    automáticamente qué región temporal
+                    de la señal fundamentó esa respuesta.
+                </p>
+
+                <p>
+                    Esto conecta directamente con
+                    explicabilidad, grounding temporal,
+                    incertidumbre y razonamiento acústico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    Importante: Qwen2-Audio ≠ Qwen2.5-Omni
+                </h3>
+
+                <p>
+                    Esta ficha corresponde exclusivamente
+                    a Qwen2-Audio, publicado en 2024.
+                </p>
+
+                <p>
+                    Qwen2.5-Omni es un trabajo posterior
+                    que incorpora conjuntamente texto,
+                    imágenes, vídeo y audio y añade
+                    generación de habla.
+                </p>
+
+                <p>
+                    Ambas referencias deben mantenerse
+                    separadas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

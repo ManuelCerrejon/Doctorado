@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Audio-MAE | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="../index.html#inicio">Inicio</a></li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- CABECERA -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/procesamiento-audio-general.html"
+                    class="volver"
+                >
+                    ← Volver a Procesamiento de audio general
+                </a>
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+                <h1>
+                    Audio-MAE
+                </h1>
+
+                <h2>
+                    Masked Autoencoders that Listen
+                </h2>
+
+                <p class="autores-referencia">
+                    Huang, P.-Y. et al. · 2022
+                </p>
+
+                <div class="referencia-tags">
+
+                    <span>Self-Supervised Learning</span>
+                    <span>Masked Autoencoder</span>
+                    <span>AudioSet</span>
+                    <span>Spectrogram</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFERENCIA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Po-Yao Huang
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2022
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        NeurIPS 2022
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span class="ficha-label">
+                        Área
+                    </span>
+
+                    <strong>
+                        Audio SSL
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Huang, P.-Y., Xu, H., Li, J., Baevski, A.,
+                    Auli, M., Galuba, W., Metze, F.,
+                    & Feichtenhofer, C. (2022).
+                    <em>
+                        Masked Autoencoders that Listen.
+                    </em>
+                    NeurIPS 2022.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- OBJETIVO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Aprender directamente del audio
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Muchos modelos de clasificación de audio
+                    utilizaban pesos previamente entrenados
+                    sobre imágenes.
+                </p>
+
+                <p>
+                    Audio-MAE plantea aprender las representaciones
+                    directamente desde grandes cantidades de
+                    audio utilizando únicamente información
+                    procedente del propio dominio acústico.
+                </p>
+
+                <p>
+                    Para ello adapta el paradigma Masked Autoencoder
+                    al espectrograma de una grabación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- IDEA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Ocultar el 80 % del espectrograma
+                </h2>
+
+                <p>
+                    El modelo recibe únicamente el 20 % de los
+                    patches visibles del espectrograma y debe
+                    utilizar ese contexto para reconstruir las
+                    regiones ocultas.
+                </p>
+
+                <p>
+                    Esto reduce considerablemente la longitud
+                    procesada por el encoder y obliga al modelo
+                    a aprender estructura acústica global.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREPROCESADO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · PREPROCESADO
+                </p>
+
+                <h2>
+                    Del audio a patches
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Forma de onda
+                        </h3>
+
+                        <p>
+                            El audio se procesa como señal mono
+                            a una frecuencia de muestreo
+                            de 16 kHz.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mel-Spectrogram
+                        </h3>
+
+                        <p>
+                            Se calculan 128 bandas Mel usando
+                            ventanas Hanning de 25 ms
+                            y desplazamientos de 10 ms.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Segmentos
+                        </h3>
+
+                        <p>
+                            Para AudioSet se utilizan
+                            grabaciones de 10 segundos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Patches
+                        </h3>
+
+                        <p>
+                            El espectrograma se divide
+                            en regiones no solapadas
+                            de 16 × 16.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARQUITECTURA -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Encoder + Decoder
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENTRADA</span>
+
+                    <h3>
+                        Spectrogram
+                    </h3>
+
+                    <p>
+                        Representación tiempo-frecuencia.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MASKING</span>
+
+                    <h3>
+                        80 %
+                    </h3>
+
+                    <p>
+                        La mayoría de los patches
+                        se eliminan.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENCODER</span>
+
+                    <h3>
+                        ViT-Base
+                    </h3>
+
+                    <p>
+                        Procesa únicamente el 20 %
+                        de patches visibles.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DECODER</span>
+
+                    <h3>
+                        Transformer
+                    </h3>
+
+                    <p>
+                        Reconstruye las regiones
+                        del espectrograma ocultadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODELO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        ENCODER
+                    </p>
+
+                    <h3>
+                        ViT-B · 86 M
+                    </h3>
+
+                    <ul>
+                        <li>12 capas Transformer</li>
+                        <li>Solo procesa patches visibles</li>
+                        <li>Encoder usado posteriormente</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        DECODER
+                    </p>
+
+                    <h3>
+                        16 capas
+                    </h3>
+
+                    <ul>
+                        <li>Transformer</li>
+                        <li>512 dimensiones</li>
+                        <li>Atención local desplazada</li>
+                        <li>Se descarta después del pretraining</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- OBJETIVO -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · OBJETIVO DE ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Reconstrucción del espectrograma
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mask
+                        </h3>
+
+                        <p>
+                            Se oculta aleatoriamente
+                            el 80 % de los patches.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Encode
+                        </h3>
+
+                        <p>
+                            El encoder procesa exclusivamente
+                            las regiones visibles.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Restore
+                        </h3>
+
+                        <p>
+                            Se restauran las posiciones originales
+                            añadiendo tokens aprendibles para
+                            las regiones ocultas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Reconstruct
+                        </h3>
+
+                        <p>
+                            El decoder reconstruye el contenido
+                            de los patches desconocidos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            MSE
+                        </h3>
+
+                        <p>
+                            La pérdida es el error cuadrático
+                            medio calculado sobre los
+                            patches enmascarados.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRETRAINING -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · PREENTRENAMIENTO
+                </p>
+
+                <h2>
+                    AudioSet-2M
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>Dataset</span>
+                    <strong>AudioSet-2M</strong>
+                </article>
+
+                <article>
+                    <span>Clips</span>
+                    <strong>~2 M</strong>
+                </article>
+
+                <article>
+                    <span>Épocas</span>
+                    <strong>32</strong>
+                </article>
+
+                <article>
+                    <span>Batch size</span>
+                    <strong>512</strong>
+                </article>
+
+                <article>
+                    <span>Learning rate</span>
+                    <strong>0,0002</strong>
+                </article>
+
+                <article>
+                    <span>Masking</span>
+                    <strong>80 %</strong>
+                </article>
+
+                <article>
+                    <span>GPU</span>
+                    <strong>64 × V100</strong>
+                </article>
+
+                <article>
+                    <span>Tiempo</span>
+                    <strong>~36 h</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINE TUNING -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · FINE-TUNING
+                </p>
+
+                <h2>
+                    El decoder ya no se utiliza
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Encoder preentrenado
+                    </h3>
+
+                    <p>
+                        Se conserva el Transformer
+                        que ha aprendido las representaciones.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Average Pooling
+                    </h3>
+
+                    <p>
+                        Se agregan las representaciones
+                        de los patches visibles.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Clasificador
+                    </h3>
+
+                    <p>
+                        Una capa lineal se adapta
+                        a la tarea downstream.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    El masking cambia durante el fine-tuning
+                </h3>
+
+                <p>
+                    Mientras que durante el preentrenamiento
+                    funciona mejor un masking aleatorio alto
+                    del 80 %, durante el fine-tuning los autores
+                    obtienen mejores resultados utilizando
+                    masking estructurado de tiempo y frecuencia
+                    con proporciones menores.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVALUACIÓN -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Seis tareas
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>AudioSet-2M</strong>
+                    <span>Audio classification</span>
+                </article>
+
+                <article>
+                    <strong>AudioSet-20K</strong>
+                    <span>Audio classification</span>
+                </article>
+
+                <article>
+                    <strong>ESC-50</strong>
+                    <span>Environmental sounds</span>
+                </article>
+
+                <article>
+                    <strong>Speech Commands 1</strong>
+                    <span>Keyword spotting</span>
+                </article>
+
+                <article>
+                    <strong>Speech Commands 2</strong>
+                    <span>Keyword spotting</span>
+                </article>
+
+                <article>
+                    <strong>VoxCeleb</strong>
+                    <span>Speaker identification</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · RESULTADOS
+                </p>
+
+                <h2>
+                    Rendimiento downstream
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        AUDIOSET-2M
+                    </span>
+
+                    <strong>
+                        47,3
+                    </strong>
+
+                    <p>
+                        mAP
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Audio-only pretraining
+                    </h3>
+
+                    <p>
+                        Audio-MAE alcanza este resultado
+                        utilizando únicamente preentrenamiento
+                        auto-supervisado dentro del dominio
+                        acústico.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Dataset</th>
+                            <th>Métrica</th>
+                            <th>Audio-MAE</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>AudioSet-20K</td>
+                            <td>mAP</td>
+                            <td>37,0</td>
+                        </tr>
+
+                        <tr>
+                            <td>AudioSet-2M</td>
+                            <td>mAP</td>
+                            <td>47,3</td>
+                        </tr>
+
+                        <tr>
+                            <td>ESC-50</td>
+                            <td>Accuracy</td>
+                            <td>94,1 %</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speech Commands 2</td>
+                            <td>Accuracy</td>
+                            <td>98,3 %</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speech Commands 1</td>
+                            <td>Accuracy</td>
+                            <td>96,9 %</td>
+                        </tr>
+
+                        <tr>
+                            <td>VoxCeleb SID</td>
+                            <td>Accuracy</td>
+                            <td>94,8 %</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- AUDIO VS SPEECH SSL -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Audio-MAE frente a los modelos anteriores
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Representación</th>
+                            <th>Pretext task</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>wav2vec 2.0</td>
+                            <td>Waveform</td>
+                            <td>Contrastive learning</td>
+                        </tr>
+
+                        <tr>
+                            <td>HuBERT</td>
+                            <td>Waveform</td>
+                            <td>Predicción de clusters</td>
+                        </tr>
+
+                        <tr>
+                            <td>WavLM</td>
+                            <td>Waveform</td>
+                            <td>Prediction + denoising</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio-MAE</td>
+                            <td>Spectrogram</td>
+                            <td>Reconstrucción</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- TESIS -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    Audio-MAE demuestra que una representación
+                    general de audio puede aprenderse directamente
+                    mediante reconstrucción de información
+                    tiempo-frecuencia sin necesidad de disponer
+                    de etiquetas durante el preentrenamiento.
+                </p>
+
+                <p>
+                    El uso explícito del espectrograma resulta
+                    especialmente interesante para estudiar
+                    posteriormente explicabilidad acústica,
+                    ya que las evidencias del modelo pueden
+                    relacionarse directamente con regiones
+                    temporales y frecuenciales.
+                </p>
+
+                <p>
+                    Además, el hecho de utilizar únicamente
+                    el encoder tras el preentrenamiento plantea
+                    oportunidades para estudiar compresión,
+                    cuantización y adaptación eficiente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

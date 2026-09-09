@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Reconocimiento y comprensión del habla | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 03
+                </p>
+
+
+                <h1>
+                    Reconocimiento y comprensión del habla
+                </h1>
+
+
+                <p class="tema-introduccion">
+
+                    El reconocimiento automático del habla transforma
+                    una señal acústica en texto. Sin embargo, los
+                    sistemas actuales evolucionan hacia modelos capaces
+                    de comprender también intención, semántica,
+                    contexto e información no verbal presente
+                    en la señal.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASR
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RECONOCIMIENTO AUTOMÁTICO DEL HABLA
+                </p>
+
+                <h2>
+                    De audio a texto
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    El reconocimiento automático del habla,
+                    conocido como ASR, tiene como objetivo transformar
+                    una señal hablada en una representación textual.
+                </p>
+
+                <p>
+                    Los sistemas actuales de extremo a extremo reducen
+                    la necesidad de mantener separados componentes
+                    como el modelo acústico, el modelo de pronunciación
+                    y el modelo del lenguaje.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURAS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    ARQUITECTURAS
+                </p>
+
+                <h2>
+                    Principales enfoques de ASR
+                </h2>
+
+            </div>
+
+
+            <div class="pasos-grid">
+
+
+                <article class="paso-card">
+
+                    <span>01</span>
+
+                    <h3>
+                        CTC
+                    </h3>
+
+                    <p>
+                        Connectionist Temporal Classification permite
+                        entrenar modelos sin disponer de una alineación
+                        exacta entre cada fragmento acústico y cada
+                        unidad de texto.
+                    </p>
+
+                </article>
+
+
+                <article class="paso-card">
+
+                    <span>02</span>
+
+                    <h3>
+                        Encoder-Decoder
+                    </h3>
+
+                    <p>
+                        Utiliza un codificador para representar la
+                        señal acústica y un decodificador que genera
+                        progresivamente la secuencia textual.
+                    </p>
+
+                </article>
+
+
+                <article class="paso-card">
+
+                    <span>03</span>
+
+                    <h3>
+                        Atención
+                    </h3>
+
+                    <p>
+                        Permite al decodificador utilizar diferentes
+                        regiones de la representación acústica durante
+                        la generación de cada unidad textual.
+                    </p>
+
+                </article>
+
+
+                <article class="paso-card">
+
+                    <span>04</span>
+
+                    <h3>
+                        Transductores
+                    </h3>
+
+                    <p>
+                        Permiten realizar reconocimiento incremental,
+                        generando unidades lingüísticas conforme
+                        se recibe la señal.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHISPER
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MODELO PRINCIPAL
+                </p>
+
+                <h2>
+                    Whisper
+                </h2>
+
+                <p>
+                    Uno de los ejemplos más representativos del
+                    entrenamiento supervisado a gran escala.
+                </p>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Whisper
+                        </h3>
+
+                        <p>
+                            Fue entrenado con aproximadamente
+                            680.000 horas de audio supervisado
+                            procedente de múltiples fuentes,
+                            lenguas y tareas.
+                        </p>
+
+                        <p>
+                            El entrenamiento combina reconocimiento
+                            automático del habla, traducción,
+                            detección de idioma y segmentación
+                            temporal dentro de una misma arquitectura.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>ASR</span>
+                            <span>Multilingual</span>
+                            <span>Translation</span>
+                            <span>Language ID</span>
+
+                        </div>
+
+
+                        <a
+                            href="../referencias/whisper.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DIVERSIDAD
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA CLAVE
+                </p>
+
+                <h2>
+                    La diversidad de los datos importa
+                </h2>
+
+                <p>
+                    Los modelos supervisados a gran escala muestran
+                    que el rendimiento no depende exclusivamente
+                    de la arquitectura.
+                </p>
+
+                <p>
+                    La diversidad de hablantes, idiomas, tareas
+                    y condiciones acústicas presentes durante el
+                    entrenamiento puede proporcionar una mayor
+                    capacidad de transferencia a nuevos conjuntos
+                    de evaluación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES WHISPER
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Robustez fuera del entrenamiento
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Ruido extremo
+                    </h3>
+
+                    <p>
+                        El reconocimiento puede deteriorarse en
+                        condiciones acústicas especialmente adversas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Habla atípica
+                    </h3>
+
+                    <p>
+                        Formas de pronunciación alejadas de las
+                        observadas durante el entrenamiento pueden
+                        incrementar los errores.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Vocabulario especializado
+                    </h3>
+
+                    <p>
+                        Los términos propios de dominios muy
+                        específicos pueden plantear dificultades.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Lenguas poco representadas
+                    </h3>
+
+                    <p>
+                        La capacidad multilingüe no implica un
+                        comportamiento equivalente para todas
+                        las lenguas.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPRENSIÓN
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    SPEECH UNDERSTANDING
+                </p>
+
+                <h2>
+                    De transcribir a comprender
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    La comprensión del lenguaje hablado no se limita
+                    a reconocer correctamente las palabras pronunciadas.
+                </p>
+
+                <p>
+                    Un sistema puede necesitar identificar intenciones,
+                    entidades, relaciones semánticas o acciones
+                    solicitadas por el hablante.
+                </p>
+
+                <p>
+                    Desde esta perspectiva, la transcripción puede
+                    considerarse una representación intermedia
+                    y no necesariamente el resultado final.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INFORMACIÓN QUE SE PIERDE
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    INFORMACIÓN NO VERBAL
+                </p>
+
+                <h2>
+                    Lo que el texto puede perder
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-denoising-grid">
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        01
+                    </span>
+
+                    <h3>
+                        Prosodia
+                    </h3>
+
+                    <p>
+                        Variaciones melódicas y patrones
+                        de entonación presentes en la voz.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        02
+                    </span>
+
+                    <h3>
+                        Ritmo y pausas
+                    </h3>
+
+                    <p>
+                        Información temporal que puede aportar
+                        significado al mensaje.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        03
+                    </span>
+
+                    <h3>
+                        Intensidad
+                    </h3>
+
+                    <p>
+                        Cambios en la energía de la señal
+                        relacionados con énfasis y expresión.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        04
+                    </span>
+
+                    <h3>
+                        Identidad del hablante
+                    </h3>
+
+                    <p>
+                        La propia señal contiene información
+                        relacionada con quién está hablando.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span class="tema-numero">
+                        05
+                    </span>
+
+                    <h3>
+                        Estado comunicativo
+                    </h3>
+
+                    <p>
+                        Puede proporcionar indicios sobre duda,
+                        énfasis, emoción o intención.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO VS TEXTO
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Transcripción frente a señal original
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Información</th>
+                            <th>Texto</th>
+                            <th>Audio</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Palabras</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Prosodia</td>
+                            <td>Generalmente no</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Entonación</td>
+                            <td>Generalmente no</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pausas</td>
+                            <td>Parcialmente</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Intensidad</td>
+                            <td>No</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Identidad del hablante</td>
+                            <td>No</td>
+                            <td>Puede estar presente</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SEAMLESS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    HABLA MULTILINGÜE
+                </p>
+
+                <h2>
+                    SeamlessM4T
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            SeamlessM4T
+                        </h3>
+
+                        <p>
+                            Integra reconocimiento del habla,
+                            traducción de habla a texto,
+                            traducción de texto a habla y
+                            traducción directa entre señales habladas.
+                        </p>
+
+                        <p>
+                            Representa la evolución desde cadenas
+                            compuestas por módulos independientes
+                            hacia sistemas multilingües y multimodales
+                            más unificados.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Speech-to-Text</span>
+                            <span>Speech-to-Speech</span>
+                            <span>Translation</span>
+                            <span>Multilingual</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/seamlessm4t.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EVALUACIÓN
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EVALUACIÓN
+                </p>
+
+                <h2>
+                    ¿Cómo se mide un sistema de ASR?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        WER
+                    </strong>
+
+                    <span>Word Error Rate</span>
+
+                    <p>
+                        Mide errores de sustitución,
+                        inserción y eliminación a nivel
+                        de palabra.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        CER
+                    </strong>
+
+                    <span>Character Error Rate</span>
+
+                    <p>
+                        Aplica una idea equivalente
+                        utilizando caracteres como
+                        unidades de evaluación.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Evaluación semántica
+                    </strong>
+
+                    <span>Significado</span>
+
+                    <p>
+                        Analiza si los errores alteran
+                        realmente la información relevante
+                        transmitida por el hablante.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Robustez
+                    </strong>
+
+                    <span>Condiciones acústicas</span>
+
+                    <p>
+                        Estudia el comportamiento ante ruido,
+                        nuevos hablantes, dispositivos o dominios.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Confianza
+                    </strong>
+
+                    <span>Calibration</span>
+
+                    <p>
+                        Permite determinar si el sistema
+                        reconoce cuándo una transcripción
+                        puede no ser fiable.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WER NO LO ES TODO
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-destacado">
+
+                <h3>
+                    El mismo WER no implica el mismo impacto
+                </h3>
+
+                <p>
+                    Dos transcripciones pueden presentar un número
+                    similar de errores y, sin embargo, tener una
+                    utilidad completamente distinta.
+                </p>
+
+                <p>
+                    Un error sobre una palabra funcional puede tener
+                    poca importancia, mientras que equivocarse en
+                    una cantidad, una negación, un nombre propio
+                    o una instrucción puede alterar completamente
+                    el significado.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RELACIÓN CON TESIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Por qué es relevante?
+                </h2>
+
+                <p>
+                    El reconocimiento automático del habla
+                    constituye uno de los escenarios principales
+                    para estudiar adaptación a dominios específicos,
+                    robustez frente al ruido y personalización.
+                </p>
+
+                <p>
+                    Sin embargo, la línea de investigación no debe
+                    limitarse a reducir únicamente el WER.
+                    También resulta necesario determinar cuándo
+                    una predicción es fiable y qué información
+                    acústica ha utilizado el sistema.
+                </p>
+
+                <p>
+                    Además, conservar información directamente
+                    procedente de la señal permitirá avanzar desde
+                    la transcripción hacia sistemas capaces de
+                    comprender conjuntamente contenido lingüístico
+                    y características acústicas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

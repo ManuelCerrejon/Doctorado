@@ -1,0 +1,2349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Dynamic SUTA | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/adaptacion-aprendizaje-continuo.html"
+                    class="volver"
+                >
+                    ← Volver a Adaptación y aprendizaje continuo
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Dynamic SUTA
+                </h1>
+
+
+                <h2>
+                    Continual Test-time Adaptation
+                    for End-to-end Speech Recognition
+                    on Noisy Speech
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Lin, G.-T., Huang, W.-P. & Lee, H.-Y.
+                    · EMNLP 2024
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>ASR</span>
+                    <span>Continual TTA</span>
+                    <span>Fast-Slow</span>
+                    <span>SUTA</span>
+                    <span>Dynamic Reset</span>
+                    <span>Domain Shift</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Guan-Ting Lin
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        EMNLP 2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        20003–20015
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Lin, G.-T., Huang, W.-P.,
+                    & Lee, H.-Y. (2024).
+                    <em>
+                        Continual Test-time Adaptation
+                        for End-to-end Speech Recognition
+                        on Noisy Speech.
+                    </em>
+                    Proceedings of EMNLP 2024,
+                    20003–20015.
+                    DOI: 10.18653/v1/2024.emnlp-main.1116.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Aprender entre muestras sin colapsar
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los métodos de Test-Time Adaptation
+                    permiten modificar un sistema ASR
+                    utilizando únicamente las muestras
+                    recibidas durante la inferencia.
+                </p>
+
+                <p>
+                    Métodos como SUTA y SGEM realizan
+                    una adaptación independiente para
+                    cada utterance y posteriormente
+                    restauran el modelo original.
+                </p>
+
+                <p>
+                    Esta estrategia evita acumular errores,
+                    pero también descarta cualquier
+                    conocimiento útil aprendido
+                    de las muestras anteriores.
+                </p>
+
+                <p>
+                    La adaptación continua conserva
+                    ese conocimiento, pero introduce
+                    un nuevo problema: las actualizaciones
+                    sucesivas pueden provocar inestabilidad
+                    y model collapse.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN INICIAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · TRES PARADIGMAS
+                </p>
+
+                <h2>
+                    Non-Continual vs Continual vs Fast-Slow
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        NON-CONTINUAL
+                    </p>
+
+                    <h3>
+                        Adaptar → Reset
+                    </h3>
+
+                    <ul>
+                        <li>Una muestra cada vez</li>
+                        <li>Buena adaptación local</li>
+                        <li>No acumula conocimiento</li>
+                        <li>Menor riesgo a largo plazo</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONTINUAL
+                    </p>
+
+                    <h3>
+                        Adaptar → Conservar
+                    </h3>
+
+                    <ul>
+                        <li>Aprende entre muestras</li>
+                        <li>Acumula conocimiento</li>
+                        <li>Mayor plasticidad</li>
+                        <li>Riesgo de model collapse</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        FAST-SLOW
+                    </p>
+
+                    <h3>
+                        Dos velocidades
+                    </h3>
+
+                    <ul>
+                        <li>Adaptación rápida local</li>
+                        <li>Meta-parámetros lentos</li>
+                        <li>Transferencia entre muestras</li>
+                        <li>Mayor estabilidad</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FAST SLOW IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Fast adaptation + Slow learning
+                </h2>
+
+                <p>
+                    DSUTA mantiene unos meta-parámetros
+                    que evolucionan lentamente a partir
+                    de las muestras anteriores.
+                </p>
+
+                <p>
+                    Cuando llega una nueva grabación,
+                    el modelo realiza una adaptación rápida
+                    partiendo de esos meta-parámetros,
+                    en lugar de volver siempre
+                    al modelo preentrenado original.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ECUACIONES FAST SLOW
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · FAST-SLOW TTA
+                </p>
+
+                <h2>
+                    Dos conjuntos de parámetros
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Meta-parámetros
+                        </h3>
+
+                        <p>
+                            φ<sub>t</sub> representa
+                            el conocimiento acumulado
+                            lentamente hasta el instante t.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Fast Adaptation
+                        </h3>
+
+                        <p>
+                            La muestra x<sub>t</sub>
+                            se utiliza para obtener
+                            una versión rápidamente adaptada:
+                        </p>
+
+                        <strong>
+                            φ̂t = A(φt, xt)
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Predicción
+                        </h3>
+
+                        <p>
+                            La transcripción se genera
+                            utilizando los parámetros
+                            rápidamente adaptados.
+                        </p>
+
+                        <strong>
+                            ŷt = φ̂t(xt)
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Slow Update
+                        </h3>
+
+                        <p>
+                            El conocimiento permanente
+                            evoluciona de forma más lenta:
+                        </p>
+
+                        <strong>
+                            φt+1 = U(φt, xt)
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DSUTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · DYNAMIC SUTA
+                </p>
+
+                <h2>
+                    SUTA como adaptación rápida
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores utilizan SUTA
+                    como algoritmo de adaptación rápida.
+                </p>
+
+                <p>
+                    Para cada utterance se realizan
+                    varias actualizaciones minimizando
+                    la función de pérdida original
+                    de SUTA.
+                </p>
+
+                <p>
+                    La diferencia fundamental es
+                    el punto de partida:
+                    DSUTA comienza desde φt,
+                    que incorpora conocimiento
+                    de las muestras anteriores.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SUTA LOSS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    OBJETIVO SUTA
+                </p>
+
+                <h2>
+                    Entropy + Minimum Class Confusion
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        ENTROPY MINIMIZATION
+                    </p>
+
+                    <h3>
+                        LEM
+                    </h3>
+
+                    <p>
+                        Busca producir distribuciones
+                        de salida más definidas
+                        y reducir la incertidumbre.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        MINIMUM CLASS CONFUSION
+                    </p>
+
+                    <h3>
+                        LMCC
+                    </h3>
+
+                    <p>
+                        Reduce la correlación
+                        entre diferentes clases
+                        de predicción.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    LOSS
+                </p>
+
+                <h2>
+                    LSUTA =
+                    α LEM + (1 − α) LMCC
+                </h2>
+
+                <p>
+                    Los experimentos mantienen
+                    α = 0,3 y temperatura 2,5,
+                    siguiendo la configuración
+                    original de SUTA.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BUFFER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · SLOW UPDATE
+                </p>
+
+                <h2>
+                    Buffer de muestras
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Recibir utterance
+                        </h3>
+
+                        <p>
+                            Se procesa una nueva
+                            muestra x<sub>t</sub>.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Fast adaptation
+                        </h3>
+
+                        <p>
+                            El modelo se adapta
+                            rápidamente para realizar
+                            la predicción actual.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Buffer
+                        </h3>
+
+                        <p>
+                            La muestra se almacena
+                            temporalmente en un buffer
+                            de tamaño M.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Mini-batch update
+                        </h3>
+
+                        <p>
+                            Cada M muestras,
+                            los meta-parámetros
+                            reciben una actualización.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Vaciar buffer
+                        </h3>
+
+                        <p>
+                            Se inicia un nuevo
+                            ciclo de acumulación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BETTER START
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    INTUICIÓN
+                </p>
+
+                <h2>
+                    Cada muestra empieza desde un modelo mejor adaptado
+                </h2>
+
+                <p>
+                    SUTA comienza cada utterance
+                    desde el mismo modelo fuente.
+                </p>
+
+                <p>
+                    DSUTA comienza desde unos
+                    meta-parámetros que ya contienen
+                    información aprendida de las
+                    muestras anteriores.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DYNAMIC RESET PROBLEM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · NUEVO PROBLEMA
+                </p>
+
+                <h2>
+                    ¿Qué ocurre cuando cambia otra vez el dominio?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Conservar continuamente conocimiento
+                    resulta útil mientras las muestras
+                    pertenecen a condiciones relacionadas.
+                </p>
+
+                <p>
+                    Sin embargo, si el entorno cambia
+                    bruscamente, unos meta-parámetros
+                    muy especializados en el dominio anterior
+                    pueden convertirse en un mal
+                    punto de partida.
+                </p>
+
+                <p>
+                    Para resolver este problema,
+                    DSUTA incorpora una estrategia
+                    de reinicio dinámico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LII
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · LOSS IMPROVEMENT INDEX
+                </p>
+
+                <h2>
+                    Medir el cambio de dominio
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    LII
+                </p>
+
+                <h2>
+                    LIIt =
+                    L(φD, xt) − L(φpre, xt)
+                </h2>
+
+                <p>
+                    φD representa un modelo
+                    especializado en el dominio actual,
+                    mientras que φpre es el
+                    modelo fuente original.
+                </p>
+
+                <p>
+                    El índice compara cómo se comportan
+                    ambos modelos sobre la nueva muestra.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DOMAIN CONSTRUCTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · DOMAIN CONSTRUCTION
+                </p>
+
+                <h2>
+                    Aprender qué significa "normal"
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Reset
+                        </h3>
+
+                        <p>
+                            El proceso comienza
+                            desde los parámetros
+                            preentrenados.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Primer K/2
+                        </h3>
+
+                        <p>
+                            El modelo se adapta
+                            para representar el
+                            dominio actual.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            φD
+                        </h3>
+
+                        <p>
+                            Tras K/2 muestras
+                            se guarda una copia
+                            especializada en el dominio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Segundo K/2
+                        </h3>
+
+                        <p>
+                            Se calculan valores LII
+                            sobre las muestras restantes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Distribución
+                        </h3>
+
+                        <p>
+                            Los LII se modelan
+                            mediante una distribución
+                            normal N(μ, σ²).
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SHIFT DETECTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · SHIFT DETECTION
+                </p>
+
+                <h2>
+                    Detectar muestras anómalas
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Una vez construida la distribución
+                    correspondiente al dominio actual,
+                    las nuevas muestras se comparan
+                    con dicha referencia.
+                </p>
+
+                <p>
+                    El método utiliza el LII medio
+                    del buffer de M muestras para
+                    reducir la sensibilidad a valores
+                    individuales ruidosos.
+                </p>
+
+                <p>
+                    Se aplica un test estadístico
+                    unilateral y se utiliza
+                    un Z-score de 2.
+                </p>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    DECISIÓN
+                </p>
+
+                <h2>
+                    Cambio grande → Reset
+                </h2>
+
+                <p>
+                    Cuando la desviación supera
+                    el umbral establecido y se cumplen
+                    las condiciones de paciencia,
+                    los meta-parámetros vuelven
+                    a φpre.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONFIG
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · CONFIGURACIÓN
+                </p>
+
+                <h2>
+                    Experimentos principales
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>Source model</span>
+
+                    <strong>
+                        wav2vec 2.0 Base
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Fine-tuning source</span>
+
+                    <strong>
+                        LibriSpeech 960 h
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Buffer M</span>
+
+                    <strong>
+                        5
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Single-domain N</span>
+
+                    <strong>
+                        10
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Multi-domain N</span>
+
+                    <strong>
+                        5
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Domain construction K</span>
+
+                    <strong>
+                        100
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Patience P</span>
+
+                    <strong>
+                        2
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>SUTA α</span>
+
+                    <strong>
+                        0,3
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Temperature</span>
+
+                    <strong>
+                        2,5
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · DATASETS
+                </p>
+
+                <h2>
+                    Habla degradada mediante ruido
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SINGLE DOMAIN
+                    </span>
+
+                    <h3>
+                        LibriSpeech-C
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        10 ruidos
+                    </strong>
+
+                    <p>
+                        LibriSpeech contaminado
+                        con nueve tipos de ruido
+                        procedentes de MS-SNSD
+                        más Gaussian noise.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        REAL-WORLD
+                    </span>
+
+                    <h3>
+                        CHiME-3
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        Noise
+                    </strong>
+
+                    <p>
+                        Habla con ruido
+                        ambiental real.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SNR
+                    </span>
+
+                    <h3>
+                        LibriSpeech-C
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        5 dB
+                    </strong>
+
+                    <p>
+                        Nivel utilizado para
+                        construir las condiciones
+                        degradadas del estudio.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOISES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIBRISPEECH-C
+                </p>
+
+                <h2>
+                    Diez dominios de ruido
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>Air Conditioner</strong>
+                </article>
+
+                <article>
+                    <strong>Airport Announcement</strong>
+                </article>
+
+                <article>
+                    <strong>Babble</strong>
+                </article>
+
+                <article>
+                    <strong>Copy Machine</strong>
+                </article>
+
+                <article>
+                    <strong>Munching</strong>
+                </article>
+
+                <article>
+                    <strong>Neighbors</strong>
+                </article>
+
+                <article>
+                    <strong>Shutting Door</strong>
+                </article>
+
+                <article>
+                    <strong>Typing</strong>
+                </article>
+
+                <article>
+                    <strong>Vacuum Cleaner</strong>
+                </article>
+
+                <article>
+                    <strong>Gaussian Noise</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MULTI DOMAIN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · TIME-VARYING DATA
+                </p>
+
+                <h2>
+                    Tres flujos multi-dominio
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MD-EASY
+                    </span>
+
+                    <h3>
+                        Dominios relativamente fáciles
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        2.500 muestras
+                    </strong>
+
+                    <p>
+                        Cinco ruidos consecutivos
+                        con 500 muestras
+                        por dominio.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MD-HARD
+                    </span>
+
+                    <h3>
+                        Dominios difíciles
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        2.500 muestras
+                    </strong>
+
+                    <p>
+                        Cinco condiciones en las
+                        que el modelo fuente presenta
+                        mayor dificultad.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        MD-LONG
+                    </span>
+
+                    <h3>
+                        Flujo largo
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        10.000 muestras
+                    </strong>
+
+                    <p>
+                        Dominios seleccionados
+                        aleatoriamente con longitudes
+                        de entre 20 y 500 muestras.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MAIN RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    13 · RESULTADOS
+                </p>
+
+                <h2>
+                    WER en dominios variables
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>MD-Easy</th>
+                            <th>MD-Hard</th>
+                            <th>MD-Long</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Source model</td>
+                            <td>32,7</td>
+                            <td>74,6</td>
+                            <td>61,0</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>SUTA</td>
+                            <td>24,0</td>
+                            <td>60,4</td>
+                            <td>53,3</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>SGEM</td>
+                            <td>25,0</td>
+                            <td>61,0</td>
+                            <td>53,4</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>CSUTA</td>
+                            <td>37,3</td>
+                            <td>83,6</td>
+                            <td>100,3</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>AWMC</td>
+                            <td>25,8</td>
+                            <td>66,1</td>
+                            <td>60,6</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>DSUTA</td>
+                            <td>24,0</td>
+                            <td>45,6</td>
+                            <td>43,2</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <strong>
+                                    DSUTA + Dynamic Reset
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>22,7</strong>
+                            </td>
+
+                            <td>
+                                <strong>39,8</strong>
+                            </td>
+
+                            <td>
+                                <strong>35,8</strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+                            <td>Fixed Reset</td>
+                            <td>22,8</td>
+                            <td>49,4</td>
+                            <td>45,2</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Oracle Boundary</td>
+                            <td>21,7</td>
+                            <td>36,9</td>
+                            <td>39,5</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULT DESTACADO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        MD-LONG
+                    </span>
+
+                    <strong>
+                        61,0 → 35,8
+                    </strong>
+
+                    <p>
+                        WER · Source → DSUTA + Reset
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        10.000 muestras consecutivas
+                    </h3>
+
+                    <p>
+                        La estrategia continua con
+                        reinicio dinámico mantiene
+                        un rendimiento muy superior
+                        al modelo fuente y a los
+                        métodos no continuos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTERESTING ORACLE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    RESULTADO INTERESANTE
+                </p>
+
+                <h3>
+                    Saber exactamente dónde cambia el dominio
+                    no siempre es mejor
+                </h3>
+
+                <p>
+                    En MD-Long, Dynamic Reset obtiene
+                    35,8 WER frente a 39,5 WER
+                    de Oracle Boundary.
+                </p>
+
+                <p>
+                    Reiniciar exactamente en todas
+                    las fronteras puede eliminar
+                    conocimiento útil transferible
+                    entre distintos tipos de ruido.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SPEED OF CHANGES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    14 · VELOCIDAD DEL CAMBIO
+                </p>
+
+                <h2>
+                    Cambiar demasiado rápido
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>MD-Hard</th>
+                            <th>s = 20</th>
+                            <th>s = 100</th>
+                            <th>s = 500</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>DSUTA</td>
+                            <td>45,6</td>
+                            <td>44,7</td>
+                            <td>45,6</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Dynamic Reset</td>
+                            <td>
+                                <strong>42,3</strong>
+                            </td>
+                            <td>
+                                <strong>44,5</strong>
+                            </td>
+                            <td>
+                                <strong>39,8</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Fixed Reset</td>
+                            <td>53,3</td>
+                            <td>49,9</td>
+                            <td>49,4</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Oracle Boundary</td>
+                            <td>57,3</td>
+                            <td>46,6</td>
+                            <td>36,9</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EFFICIENCY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    15 · EFICIENCIA
+                </p>
+
+                <h2>
+                    Coste sobre MD-Long
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>Forward</th>
+                            <th>Backward</th>
+                            <th>Runtime total</th>
+                            <th>s / 1 s audio</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>SUTA</td>
+                            <td>100.000</td>
+                            <td>100.000</td>
+                            <td>5.040 s</td>
+                            <td>0,080</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>SGEM</td>
+                            <td>100.000</td>
+                            <td>100.000</td>
+                            <td>11.620 s</td>
+                            <td>0,186</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>AWMC</td>
+                            <td>300.000</td>
+                            <td>100.000</td>
+                            <td>11.704 s</td>
+                            <td>0,187</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>DSUTA</td>
+                            <td>52.000</td>
+                            <td>52.000</td>
+                            <td>3.885 s</td>
+                            <td>
+                                <strong>0,062</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                DSUTA + Dynamic Reset
+                            </td>
+                            <td>72.000</td>
+                            <td>52.000</td>
+                            <td>4.149 s</td>
+                            <td>
+                                <strong>0,066</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p class="tabla-nota">
+                Experimentos de eficiencia realizados
+                con una Nvidia GeForce RTX 3080 Ti.
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             OTHER MODELS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    16 · GENERALIZACIÓN
+                </p>
+
+                <h2>
+                    Otros modelos CTC
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Pretrained</th>
+                            <th>SUTA</th>
+                            <th>DSUTA</th>
+                            <th>+ Dynamic Reset</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>wav2vec 2.0 Base</td>
+                            <td>61,0</td>
+                            <td>53,3</td>
+                            <td>43,2</td>
+                            <td>
+                                <strong>35,8</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>data2vec Base</td>
+                            <td>59,6</td>
+                            <td>53,3</td>
+                            <td>52,0</td>
+                            <td>
+                                <strong>46,3</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>HuBERT Large</td>
+                            <td>43,3</td>
+                            <td>39,3</td>
+                            <td>
+                                <strong>17,8</strong>
+                            </td>
+                            <td>19,0</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Matiz importante
+                </h3>
+
+                <p>
+                    Dynamic Reset no mejora obligatoriamente
+                    a DSUTA en todas las configuraciones:
+                    con HuBERT Large, DSUTA sin reset
+                    obtiene 17,8 WER frente a 19,0.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SGEM VS DSUTA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    SGEM vs Dynamic SUTA
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>SGEM</th>
+                            <th>Dynamic SUTA</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Sin etiquetas</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Source data</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+
+                        <tr>
+                            <td>Adaptación en test</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Conserva conocimiento</td>
+                            <td>No</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Buffer</td>
+                            <td>No como memoria continua</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Fast adaptation</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Slow learning</td>
+                            <td>No</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Domain shift detection</td>
+                            <td>No</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Reset</td>
+                            <td>Cada utterance</td>
+                            <td>Solo cuando se detecta cambio</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Qué no estudia todavía
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Domain shift = ruido
+                    </h3>
+
+                    <p>
+                        Los cambios controlados
+                        utilizados en los experimentos
+                        corresponden principalmente
+                        a diferentes tipos de ruido.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Acentos y hablantes
+                    </h3>
+
+                    <p>
+                        El artículo señala como trabajo
+                        futuro estudiar otros cambios
+                        como acento, características
+                        del hablante o estilo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Modelos CTC
+                    </h3>
+
+                    <p>
+                        Los experimentos de DSUTA
+                        se centran en sistemas
+                        ASR basados en CTC.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Backpropagation online
+                    </h3>
+
+                    <p>
+                        Aunque reduce el coste frente
+                        a otros métodos, continúa
+                        requiriendo actualizaciones
+                        de parámetros durante inferencia.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Una referencia central para adaptación continua
+                </h2>
+
+                <p>
+                    Dynamic SUTA representa un paso
+                    importante desde la adaptación
+                    independiente de cada grabación
+                    hacia un sistema que aprende
+                    de un flujo acústico temporal.
+                </p>
+
+                <p>
+                    La separación fast-slow resulta
+                    especialmente interesante porque
+                    permite distinguir entre adaptación
+                    inmediata y conocimiento que merece
+                    conservarse a largo plazo.
+                </p>
+
+                <p>
+                    El mecanismo de dynamic reset
+                    introduce además una segunda idea
+                    fundamental: no toda adaptación
+                    debe conservarse indefinidamente.
+                </p>
+
+                <p>
+                    Para la tesis, este planteamiento
+                    podría ampliarse utilizando
+                    incertidumbre y detección OOD
+                    para decidir:
+                </p>
+
+                <p>
+                    cuándo adaptar,
+                    cuánto adaptar,
+                    qué conocimiento conservar
+                    y cuándo volver a un estado
+                    anterior fiable.
+                </p>
+
+                <p>
+                    También sería necesario extender
+                    este análisis más allá del ruido,
+                    estudiando secuencias reales
+                    con cambios de hablante,
+                    acento, dispositivo, canal
+                    y contexto acústico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA DERIVADA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Adaptar solo cuando la evidencia lo justifique
+                </h2>
+
+                <p>
+                    Dynamic SUTA utiliza la pérdida
+                    de adaptación para detectar
+                    cambios de distribución.
+                </p>
+
+                <p>
+                    Una posible extensión sería combinar
+                    esta señal con incertidumbre,
+                    OOD detection y estabilidad histórica.
+                </p>
+
+                <p>
+                    El sistema podría entonces decidir
+                    entre mantener, adaptar, crear
+                    un nuevo módulo o realizar rollback.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

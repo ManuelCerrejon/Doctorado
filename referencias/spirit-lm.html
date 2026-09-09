@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SpiRit-LM | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             CABECERA
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/modelos-lenguaje-audio-habla.html"
+                    class="volver"
+                >
+                    ← Volver a Modelos de lenguaje de audio y habla
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    SpiRit-LM
+                </h1>
+
+
+                <h2>
+                    Interleaved Spoken and Written
+                    Language Model
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Nguyen, T. A. et al. · TACL 2025
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Speech</span>
+                    <span>Text</span>
+                    <span>Llama 2</span>
+                    <span>HuBERT</span>
+                    <span>Interleaving</span>
+                    <span>Expressive Speech</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Tu Anh Nguyen
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2025
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        TACL · Vol. 13
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        30–52
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Nguyen, T. A., Muller, B., Yu, B.,
+                    Costa-jussa, M. R., Elbayad, M.,
+                    Popuri, S., et al. (2025).
+                    <em>
+                        SpiRit-LM: Interleaved Spoken
+                        and Written Language Model.
+                    </em>
+                    Transactions of the Association for
+                    Computational Linguistics, 13, 30–52.
+                    DOI: 10.1162/tacl_a_00728.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Eliminar la frontera entre texto y habla
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Muchos sistemas multimodales utilizan
+                    componentes distintos para procesar texto
+                    y habla y necesitan mecanismos específicos
+                    para conectar ambas modalidades.
+                </p>
+
+                <p>
+                    SpiRit-LM estudia si un único modelo
+                    autoregresivo puede aprender directamente
+                    sobre secuencias que mezclen tokens
+                    textuales y acústicos.
+                </p>
+
+                <p>
+                    De esta forma, cambiar entre texto y habla
+                    pasa a convertirse simplemente en continuar
+                    generando otro tipo de token dentro de
+                    la misma secuencia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA CENTRAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    Text + Speech = una sola secuencia
+                </h2>
+
+                <p>
+                    SpiRit-LM amplía un modelo textual
+                    Llama 2 de 7.000 millones de parámetros
+                    mediante entrenamiento continuo con
+                    tokens de habla y texto.
+                </p>
+
+                <p>
+                    El modelo utiliza predicción del siguiente
+                    token independientemente de si dicho token
+                    representa texto o una unidad acústica.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARQUITECTURA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    Llama 2 · 7B
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>TEXT</span>
+
+                    <h3>
+                        BPE Tokens
+                    </h3>
+
+                    <p>
+                        El texto utiliza el tokenizador
+                        original de Llama.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    ↘
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>SPEECH</span>
+
+                    <h3>
+                        HuBERT Tokens
+                    </h3>
+
+                    <p>
+                        El habla se transforma
+                        en unidades fonéticas discretas.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LANGUAGE MODEL</span>
+
+                    <h3>
+                        Llama 2 · 7B
+                    </h3>
+
+                    <p>
+                        Un único modelo realiza
+                        next-token prediction
+                        sobre ambas modalidades.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Text / Speech
+                    </h3>
+
+                    <p>
+                        La generación puede continuar
+                        en cualquiera de las modalidades.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SPEECH TOKENIZER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · TOKENIZACIÓN DEL HABLA
+                </p>
+
+                <h2>
+                    HuBERT
+                </h2>
+
+            </div>
+
+
+            <div class="fine-tuning-box">
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Audio
+                    </h3>
+
+                    <p>
+                        La señal hablada constituye
+                        la entrada del encoder.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        HuBERT
+                    </h3>
+
+                    <p>
+                        Produce representaciones
+                        fonéticas del habla.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        Clustering
+                    </h3>
+
+                    <p>
+                        Las representaciones se
+                        convierten en unidades discretas.
+                    </p>
+
+                </div>
+
+
+                <div class="fine-tuning-arrow">
+                    →
+                </div>
+
+
+                <div class="fine-tuning-principal">
+
+                    <h3>
+                        501 tokens
+                    </h3>
+
+                    <p>
+                        Vocabulario fonético utilizado
+                        por SpiRit-LM.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODALITY TOKENS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MODALIDAD
+                </p>
+
+                <h2>
+                    [TEXT] y [SPEECH]
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        TEXTO
+                    </span>
+
+                    <h3>
+                        [TEXT]
+                    </h3>
+
+                    <p>
+                        Indica al modelo que los tokens
+                        siguientes pertenecen al vocabulario
+                        textual.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        HABLA
+                    </span>
+
+                    <h3>
+                        [SPEECH]
+                    </h3>
+
+                    <p>
+                        Indica que los siguientes elementos
+                        corresponden a unidades discretas
+                        de habla.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTERLEAVING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · INTERLEAVING
+                </p>
+
+                <h2>
+                    Mezclar modalidades palabra a palabra
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    EJEMPLO CONCEPTUAL
+                </p>
+
+                <h2>
+                    Texto → habla → texto
+                </h2>
+
+                <p>
+                    Una misma oración alineada puede representarse
+                    parcialmente mediante tokens textuales,
+                    cambiar a tokens acústicos en una frontera
+                    entre palabras y posteriormente regresar
+                    de nuevo a texto.
+                </p>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audio + transcripción
+                        </h3>
+
+                        <p>
+                            Se parte de habla correctamente
+                            asociada con su versión textual.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Alineación
+                        </h3>
+
+                        <p>
+                            Se obtiene una alineación temporal
+                            entre las palabras de la transcripción
+                            y la señal hablada.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Cambio de modalidad
+                        </h3>
+
+                        <p>
+                            Durante el entrenamiento se decide
+                            aleatoriamente cambiar de modalidad
+                            en fronteras entre palabras.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Secuencia intercalada
+                        </h3>
+
+                        <p>
+                            Tokens textuales y acústicos
+                            terminan formando una única
+                            secuencia de entrenamiento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DOS VERSIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · VERSIONES
+                </p>
+
+                <h2>
+                    Base vs Expressive
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        SPIRIT-LM BASE
+                    </p>
+
+                    <h3>
+                        HuBERT
+                    </h3>
+
+                    <ul>
+                        <li>Tokens fonéticos</li>
+                        <li>Contenido hablado</li>
+                        <li>Modelo Llama 2 7B</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        SPIRIT-LM EXPRESSIVE
+                    </p>
+
+                    <h3>
+                        HuBERT + Pitch + Style
+                    </h3>
+
+                    <ul>
+                        <li>Tokens fonéticos</li>
+                        <li>Tokens de pitch</li>
+                        <li>Tokens de estilo</li>
+                        <li>Modelo Llama 2 7B</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXPRESSIVE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · EXPRESIVIDAD
+                </p>
+
+                <h2>
+                    El contenido no es suficiente
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        HuBERT
+                    </strong>
+
+                    <span>
+                        Phonetic content
+                    </span>
+
+                    <p>
+                        Representa principalmente
+                        el contenido fonético.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Pitch
+                    </strong>
+
+                    <span>
+                        Fundamental frequency
+                    </span>
+
+                    <p>
+                        Introduce información relacionada
+                        con variaciones tonales.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Style
+                    </strong>
+
+                    <span>
+                        Expressive characteristics
+                    </span>
+
+                    <p>
+                        Añade información relacionada
+                        con el estilo expresivo
+                        de la señal.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DECODER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · DECODIFICACIÓN
+                </p>
+
+                <h2>
+                    Volver de tokens a habla
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>LANGUAGE MODEL</span>
+
+                    <h3>
+                        Tokens
+                    </h3>
+
+                    <p>
+                        SpiRit-LM genera las
+                        unidades discretas.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DURATION</span>
+
+                    <h3>
+                        Duration Predictor
+                    </h3>
+
+                    <p>
+                        Recupera la duración temporal
+                        de las unidades HuBERT.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>VOCODER</span>
+
+                    <h3>
+                        HiFi-GAN
+                    </h3>
+
+                    <p>
+                        Convierte las unidades
+                        acústicas nuevamente
+                        en una forma de onda.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · DATOS DE ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Tres tipos de secuencias
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SPEECH-ONLY
+                    </span>
+
+                    <h3>
+                        Solo habla
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        458.000 h
+                    </strong>
+
+                    <p>
+                        Aproximadamente 28,2 mil millones
+                        de tokens acústicos.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        SPEECH + TEXT
+                    </span>
+
+                    <h3>
+                        Datos alineados
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        111.000 h
+                    </strong>
+
+                    <p>
+                        Aproximadamente 7 mil millones
+                        de tokens acústicos y 1,4 mil
+                        millones de tokens textuales.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        TEXT-ONLY
+                    </span>
+
+                    <h3>
+                        Solo texto
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        307 B
+                    </strong>
+
+                    <p>
+                        Tokens procedentes de una selección
+                        de los datos utilizados originalmente
+                        para entrenar Llama.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        AUDIO TOTAL
+                    </span>
+
+                    <h3>
+                        Speech
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        ~570.000 h
+                    </strong>
+
+                    <p>
+                        Suma del habla sin texto
+                        y los conjuntos alineados
+                        habla-texto.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SAMPLING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · BALANCEO
+                </p>
+
+                <h2>
+                    Evitar que el texto domine
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+
+                <article>
+
+                    <span>Speech-only</span>
+
+                    <strong>
+                        33,3 %
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Speech + Text</span>
+
+                    <strong>
+                        33,3 %
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Text-only</span>
+
+                    <strong>
+                        33,3 %
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Entrenamiento</span>
+
+                    <strong>
+                        100K pasos
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Tokens procesados</span>
+
+                    <strong>
+                        100 B
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>Modelo</span>
+
+                    <strong>
+                        7B
+                    </strong>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EVALUACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Comprensión multimodal
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        WUGGY
+                    </strong>
+
+                    <span>
+                        Lexical knowledge
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        BLIMP
+                    </strong>
+
+                    <span>
+                        Grammatical knowledge
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        StoryCloze
+                    </strong>
+
+                    <span>
+                        Semantic understanding
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        MMLU
+                    </strong>
+
+                    <span>
+                        General knowledge
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        ASR
+                    </strong>
+
+                    <span>
+                        Speech → Text
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        TTS
+                    </strong>
+
+                    <span>
+                        Text → Speech
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Intent Classification
+                    </strong>
+
+                    <span>
+                        Speech understanding
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FEW SHOT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · FEW-SHOT LEARNING
+                </p>
+
+                <h2>
+                    Aprender tareas mediante ejemplos
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    CAPACIDAD EMERGENTE
+                </p>
+
+                <h2>
+                    ASR, TTS y clasificación sin cambiar la arquitectura
+                </h2>
+
+                <p>
+                    Al igual que un LLM textual puede aprender
+                    temporalmente una tarea a partir de ejemplos
+                    incluidos en el prompt, SpiRit-LM puede
+                    hacerlo también entre modalidades.
+                </p>
+
+                <p>
+                    Un prompt puede contener ejemplos de
+                    habla seguida de texto para representar ASR,
+                    o texto seguido de habla para representar TTS.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS FEW-SHOT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADOS
+                </p>
+
+                <h2>
+                    Few-shot en LibriSpeech
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>LS clean ASR ↓</th>
+                            <th>LS clean TTS ↓</th>
+                            <th>LS other ASR ↓</th>
+                            <th>LS other TTS ↓</th>
+                            <th>Intent ↑</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>SpiRit-LM Base</td>
+                            <td>21,9</td>
+                            <td>45,5</td>
+                            <td>29,2</td>
+                            <td>43,8</td>
+                            <td>71,9</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                SpiRit-LM Base
+                                + ASR + TTS
+                            </td>
+                            <td>6,0</td>
+                            <td>6,7</td>
+                            <td>11,0</td>
+                            <td>7,9</td>
+                            <td>75,8</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>SpiRit-LM Expressive</td>
+                            <td>37,9</td>
+                            <td>52,0</td>
+                            <td>50,0</td>
+                            <td>53,6</td>
+                            <td>66,2</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p class="tabla-nota">
+
+                ASR se evalúa mediante WER y TTS mediante
+                CER en un escenario de 10 ejemplos.
+                Intent Classification utiliza accuracy
+                con 30 ejemplos.
+
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTERLEAVING ABLATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    ABLATION
+                </p>
+
+                <h3>
+                    Interleaving es una pieza fundamental
+                </h3>
+
+                <p>
+                    Los experimentos muestran que continuar
+                    el entrenamiento únicamente con tokens
+                    de habla produce peor rendimiento que
+                    entrenar con secuencias intercaladas.
+                </p>
+
+                <p>
+                    El interleaving ayuda simultáneamente
+                    a conservar las capacidades textuales
+                    originales y a desarrollar comprensión
+                    entre modalidades.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SENTIMENT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    13 · EXPRESIVIDAD
+                </p>
+
+                <h2>
+                    Speech-Text Sentiment Preservation
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores introducen el benchmark STSP
+                    para comprobar si una continuación conserva
+                    el sentimiento expresado en el prompt.
+                </p>
+
+                <p>
+                    En habla, dicho sentimiento puede estar
+                    codificado no solo mediante las palabras,
+                    sino mediante características expresivas
+                    de la voz.
+                </p>
+
+                <p>
+                    SpiRit-LM Expressive utiliza los tokens
+                    adicionales de pitch y estilo precisamente
+                    para conservar mejor esta información.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARACIÓN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    AudioPaLM vs SpiRit-LM
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>AudioPaLM</th>
+                            <th>SpiRit-LM</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Modelo textual</td>
+                            <td>PaLM / PaLM-2</td>
+                            <td>Llama 2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tamaño principal</td>
+                            <td>8B</td>
+                            <td>7B</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio discreto</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Texto + habla</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Interleaving palabra a palabra</td>
+                            <td>No es el mecanismo central</td>
+                            <td>Sí</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pitch explícito</td>
+                            <td>No como token separado</td>
+                            <td>Sí · Expressive</td>
+                        </tr>
+
+                        <tr>
+                            <td>Style explícito</td>
+                            <td>No como token separado</td>
+                            <td>Sí · Expressive</td>
+                        </tr>
+
+                        <tr>
+                            <td>Few-shot cross-modal</td>
+                            <td>No es su aportación central</td>
+                            <td>Sí</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Unidades discretas
+                    </h3>
+
+                    <p>
+                        La tokenización inevitablemente
+                        descarta parte de la información
+                        presente en la señal original.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Alineaciones automáticas
+                    </h3>
+
+                    <p>
+                        Los datos utilizados para interleaving
+                        dependen de alineaciones palabra-audio
+                        obtenidas automáticamente.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Escala
+                    </h3>
+
+                    <p>
+                        El modelo conserva aproximadamente
+                        7.000 millones de parámetros,
+                        además de los componentes necesarios
+                        para codificar y reconstruir habla.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Seguridad
+                    </h3>
+
+                    <p>
+                        Al heredar las capacidades generativas
+                        de un LLM también hereda riesgos
+                        relacionados con generación de
+                        contenido problemático.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    ¿Qué aporta a mi investigación?
+                </h2>
+
+                <p>
+                    SpiRit-LM demuestra que el habla no tiene
+                    por qué utilizarse únicamente como una entrada
+                    que posteriormente se transforma en texto.
+                </p>
+
+                <p>
+                    Las dos modalidades pueden coexistir dentro
+                    de una representación autoregresiva común,
+                    permitiendo transferencia directa entre
+                    conocimiento textual y acústico.
+                </p>
+
+                <p>
+                    La variante Expressive es especialmente
+                    relevante porque muestra que conservar
+                    únicamente contenido fonético resulta
+                    insuficiente para determinadas tareas.
+                </p>
+
+                <p>
+                    Información como pitch, estilo y prosodia
+                    puede constituir evidencia necesaria para
+                    comprender correctamente una señal hablada.
+                </p>
+
+                <p>
+                    Esto conecta directamente con la investigación
+                    sobre representaciones multimodales,
+                    explicabilidad acústica y razonamiento
+                    sobre información lingüística y no lingüística.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Explanations for ASR | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/explicabilidad-habla-audio.html"
+                    class="volver"
+                >
+                    ← Volver a Explicabilidad
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    X-ASR
+                </h1>
+
+
+                <h2>
+                    Explanations for
+                    Automatic Speech Recognition
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Wu, Bell & Rajan · ICASSP 2023
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Explainable ASR</span>
+                    <span>SFL</span>
+                    <span>Causal</span>
+                    <span>LIME</span>
+                    <span>Minimal Explanation</span>
+                    <span>Common Voice</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Xiaoliang Wu
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        ICASSP 2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.1109/ICASSP49357.2023.10094635
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Wu, X., Bell, P., & Rajan, A. (2023).
+                    <em>
+                        Explanations for Automatic
+                        Speech Recognition.
+                    </em>
+                    IEEE International Conference
+                    on Acoustics, Speech and Signal
+                    Processing (ICASSP 2023).
+                    DOI:
+                    10.1109/ICASSP49357.2023.10094635.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Explicar una secuencia,
+                    no una simple clase
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    La mayoría de los métodos clásicos
+                    de XAI están diseñados para explicar
+                    una etiqueta de clasificación.
+                </p>
+
+                <p>
+                    En reconocimiento automático del habla,
+                    la salida es una secuencia textual
+                    de longitud variable.
+                </p>
+
+                <p>
+                    Además, dos transcripciones ligeramente
+                    diferentes pueden transmitir prácticamente
+                    el mismo contenido.
+                </p>
+
+                <p>
+                    Por ello, los autores desarrollan
+                    un procedimiento específico para convertir
+                    primero las transcripciones en decisiones
+                    Correct / Incorrect y posteriormente
+                    explicar qué frames acústicos son
+                    responsables de mantener la transcripción.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DEFINICION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    DEFINICIÓN DE EXPLICACIÓN
+                </p>
+
+                <h2>
+                    Minimal + Sufficient
+                </h2>
+
+                <p>
+                    Una explicación es un subconjunto
+                    de frames de audio suficientemente
+                    pequeño que conserva una transcripción
+                    equivalente a la obtenida
+                    con el audio original.
+                </p>
+
+                <p>
+                    El objetivo no consiste simplemente
+                    en ordenar todos los frames
+                    por importancia, sino en encontrar
+                    la menor evidencia acústica posible
+                    que permita mantener la salida.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FRAMES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    Frames = fragmentos de la señal temporal
+                </h3>
+
+                <p>
+                    Los autores utilizan como unidad
+                    de explicación bins de datos
+                    de la señal en el dominio temporal.
+                </p>
+
+                <p>
+                    No se refieren a frames representados
+                    mediante características como
+                    filterbanks o MFCCs.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             X-ASR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · X-ASR
+                </p>
+
+                <h2>
+                    Framework en dos etapas
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Clasificar transcripciones
+                        </h3>
+
+                        <p>
+                            Se determina si la transcripción
+                            obtenida de un audio perturbado
+                            continúa siendo suficientemente
+                            similar a la transcripción
+                            original.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Explicar mediante frames
+                        </h3>
+
+                        <p>
+                            Se adaptan métodos de XAI
+                            de clasificación de imágenes
+                            sustituyendo pixels por
+                            frames de audio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SIMILARITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · SIMILITUD
+                </p>
+
+                <h2>
+                    Correct / Incorrect
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        WORD-LEVEL
+                    </p>
+
+                    <h3>
+                        WER
+                    </h3>
+
+                    <p>
+                        Compara las transcripciones
+                        mediante inserciones,
+                        sustituciones y eliminaciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        SEMANTIC
+                    </p>
+
+                    <h3>
+                        Sentence-BERT
+                    </h3>
+
+                    <p>
+                        Compara los embeddings
+                        semánticos de las
+                        dos transcripciones.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THRESHOLDS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        BERT threshold
+                    </span>
+
+                    <strong>
+                        0,5
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        WER threshold
+                    </span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Similarity classes
+                    </span>
+
+                    <strong>
+                        Correct / Incorrect
+                    </strong>
+
+                </article>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    WER especialmente estricto
+                </h3>
+
+                <p>
+                    El umbral WER = 0 utilizado
+                    en el experimento exige que
+                    la transcripción perturbada
+                    coincida estrictamente con
+                    la transcripción de referencia
+                    considerada por el framework.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRES MÉTODOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MÉTODOS
+                </p>
+
+                <h2>
+                    Tres técnicas de explicación
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        PROPUESTA
+                    </p>
+
+                    <h3>
+                        SFL
+                    </h3>
+
+                    <ul>
+                        <li>Statistical Fault Localisation</li>
+                        <li>Perturbaciones</li>
+                        <li>Ranking de frames</li>
+                        <li>Explicación mínima</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        PROPUESTA
+                    </p>
+
+                    <h3>
+                        Causal
+                    </h3>
+
+                    <ul>
+                        <li>Counterfactual reasoning</li>
+                        <li>Superframes</li>
+                        <li>Responsibility</li>
+                        <li>Refinamiento iterativo</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        BASELINE
+                    </p>
+
+                    <h3>
+                        LIME
+                    </h3>
+
+                    <ul>
+                        <li>Model-agnostic</li>
+                        <li>Ranking local</li>
+                        <li>Perturbaciones</li>
+                        <li>Adaptado posteriormente a conjunto mínimo</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PERTURBACION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PERTURBACIÓN
+                </p>
+
+                <h2>
+                    Frame → 0
+                </h2>
+
+                <p>
+                    Para generar versiones modificadas
+                    del audio, determinados frames
+                    se seleccionan aleatoriamente
+                    y sus muestras se ponen a cero.
+                </p>
+
+                <p>
+                    Después se vuelve a ejecutar
+                    el sistema ASR para comprobar
+                    si la transcripción cambia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SFL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · SFL
+                </p>
+
+                <h2>
+                    Statistical Fault Localisation
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Generar mutants
+                        </h3>
+
+                        <p>
+                            Se crean numerosas versiones
+                            del audio ocultando
+                            aleatoriamente diferentes frames.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Transcribir
+                        </h3>
+
+                        <p>
+                            Cada audio perturbado
+                            se procesa mediante
+                            el sistema ASR.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Passing / Failing
+                        </h3>
+
+                        <p>
+                            Cada perturbación
+                            se clasifica como Correct
+                            o Incorrect dependiendo
+                            de la similitud de
+                            su transcripción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ranking
+                        </h3>
+
+                        <p>
+                            Se calcula una puntuación
+                            para cada frame teniendo
+                            en cuenta cuándo está
+                            presente o enmascarado
+                            en los diferentes mutants.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Explicación
+                        </h3>
+
+                        <p>
+                            Los frames se añaden
+                            desde el más importante
+                            hasta que el subconjunto
+                            conserva la transcripción.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SFL CONCEPT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    INTUICIÓN SFL
+                </p>
+
+                <h2>
+                    ¿Qué ocurre cuando desaparece este frame?
+                </h2>
+
+                <p>
+                    Si eliminar repetidamente un frame
+                    está asociado con que la transcripción
+                    deje de ser correcta, ese frame
+                    recibe una mayor importancia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CAUSAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · CAUSAL
+                </p>
+
+                <h2>
+                    Counterfactual responsibility
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Causal intenta estimar la responsabilidad
+                    de una región de audio sobre
+                    la transcripción obtenida.
+                </p>
+
+                <p>
+                    La señal se divide inicialmente
+                    en superframes sin solapamiento.
+                </p>
+
+                <p>
+                    Para cada superframe se busca
+                    la mínima modificación adicional
+                    necesaria para que su eliminación
+                    produzca un cambio en la salida.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESPONSIBILITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    RESPONSIBILITY
+                </p>
+
+                <h2>
+                    r = 1 / (k + 1)
+                </h2>
+
+                <p>
+                    k representa el tamaño de
+                    la mínima contingencia necesaria
+                    para crear la dependencia
+                    contrafactual.
+                </p>
+
+                <p>
+                    Cuanto menor sea k,
+                    mayor es la responsabilidad
+                    atribuida al superframe.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CAUSAL ITERATIVE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Particionar
+                        </h3>
+
+                        <p>
+                            Dividir el audio
+                            en superframes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Calcular responsibility
+                        </h3>
+
+                        <p>
+                            Medir la dependencia
+                            causal de cada región.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Refinar
+                        </h3>
+
+                        <p>
+                            Dividir las regiones
+                            en particiones
+                            progresivamente menores.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Ranking final
+                        </h3>
+
+                        <p>
+                            Utilizar las responsabilidades
+                            para seleccionar
+                            los frames explicativos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIME
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · LIME BASELINE
+                </p>
+
+                <h2>
+                    De ranking a explicación mínima
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    LIME produce originalmente
+                    una importancia para cada frame.
+                </p>
+
+                <p>
+                    Para hacer la comparación
+                    con SFL y Causal más homogénea,
+                    los autores modifican el procedimiento.
+                </p>
+
+                <p>
+                    Comienzan por el frame mejor
+                    clasificado y añaden progresivamente
+                    nuevos frames hasta que
+                    la transcripción vuelve
+                    a considerarse correcta.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONFIGURACION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · CONFIGURACIÓN EXPERIMENTAL
+                </p>
+
+                <h2>
+                    Parámetros
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+                    <span>Audios</span>
+                    <strong>100</strong>
+                </article>
+
+                <article>
+                    <span>Dataset</span>
+                    <strong>Common Voice</strong>
+                </article>
+
+                <article>
+                    <span>Sample rate</span>
+                    <strong>16 kHz</strong>
+                </article>
+
+                <article>
+                    <span>Frame length</span>
+                    <strong>512 samples</strong>
+                </article>
+
+                <article>
+                    <span>Mutation factor</span>
+                    <strong>0,05</strong>
+                </article>
+
+                <article>
+                    <span>Mutants</span>
+                    <strong>100</strong>
+                </article>
+
+                <article>
+                    <span>Causal runs</span>
+                    <strong>3</strong>
+                </article>
+
+                <article>
+                    <span>BERT threshold</span>
+                    <strong>0,5</strong>
+                </article>
+
+                <article>
+                    <span>WER threshold</span>
+                    <strong>0</strong>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · SISTEMAS ASR
+                </p>
+
+                <h2>
+                    Tres reconocedores diferentes
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        CLOUD
+                    </p>
+
+                    <h3>
+                        Google API
+                    </h3>
+
+                    <p>
+                        Sistema utilizado como
+                        caja negra comercial.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CLASSIC ASR
+                    </p>
+
+                    <h3>
+                        CMU Sphinx
+                    </h3>
+
+                    <p>
+                        Modelo baseline
+                        del toolkit Sphinx.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        NEURAL ASR
+                    </p>
+
+                    <h3>
+                        DeepSpeech
+                    </h3>
+
+                    <p>
+                        Versión 0.7.3
+                        utilizada en el estudio.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHY THREE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    OBJETIVO
+                </p>
+
+                <h2>
+                    Explicaciones portables
+                </h2>
+
+                <p>
+                    Los métodos utilizados no necesitan
+                    acceder a la arquitectura interna
+                    del sistema ASR.
+                </p>
+
+                <p>
+                    Esto permite aplicar el framework
+                    sobre reconocedores muy diferentes
+                    e incluso sobre servicios
+                    tratados como caja negra.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METRICAS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Size + Consistency
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        SIZE
+                    </p>
+
+                    <h3>
+                        Selectividad
+                    </h3>
+
+                    <p>
+                        Mide qué proporción
+                        de los frames originales
+                        necesita la explicación.
+                    </p>
+
+                    <p>
+                        Menor es mejor.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONSISTENCY
+                    </p>
+
+                    <h3>
+                        Estabilidad entre ASR
+                    </h3>
+
+                    <p>
+                        Mide cuánto se solapan
+                        las explicaciones producidas
+                        para el mismo audio
+                        en sistemas diferentes.
+                    </p>
+
+                    <p>
+                        Mayor es mejor.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULTADOS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        SFL + BERT
+                    </span>
+
+                    <strong>
+                        56 %
+                    </strong>
+
+                    <p>
+                        tamaño medio de explicación
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        74 % de consistencia media
+                    </h3>
+
+                    <p>
+                        Los autores consideran
+                        esta combinación un buen
+                        compromiso entre producir
+                        explicaciones pequeñas
+                        y mantener consistencia
+                        entre distintos sistemas ASR.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONSISTENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADOS
+                </p>
+
+                <h2>
+                    Consistency entre sistemas
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Comparación</th>
+                            <th>Métrica</th>
+                            <th>SFL</th>
+                            <th>Causal</th>
+                            <th>LIME</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Google ↔ Sphinx</td>
+                            <td>BERT</td>
+                            <td>
+                                <strong>0,81</strong>
+                            </td>
+                            <td>0,61</td>
+                            <td>0,80</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Google ↔ Sphinx</td>
+                            <td>WER</td>
+                            <td>0,97</td>
+                            <td>
+                                <strong>0,98</strong>
+                            </td>
+                            <td>0,92</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Google ↔ DeepSpeech</td>
+                            <td>BERT</td>
+                            <td>
+                                <strong>0,67</strong>
+                            </td>
+                            <td>0,60</td>
+                            <td>
+                                <strong>0,67</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Google ↔ DeepSpeech</td>
+                            <td>WER</td>
+                            <td>0,96</td>
+                            <td>
+                                <strong>0,98</strong>
+                            </td>
+                            <td>0,89</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SIZE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    RESULTADO
+                </p>
+
+                <h3>
+                    Causal produce explicaciones
+                    especialmente pequeñas con BERT
+                </h3>
+
+                <p>
+                    Con similitud semántica BERT,
+                    SFL y Causal producen explicaciones
+                    significativamente menores
+                    que LIME.
+                </p>
+
+                <p>
+                    Causal resulta además
+                    significativamente más selectivo
+                    que SFL debido a sus condiciones
+                    causales más estrictas
+                    y al refinamiento iterativo
+                    de superframes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WER EFFECT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    WER vs BERT
+                </p>
+
+                <h2>
+                    La definición de "misma transcripción"
+                    cambia la explicación
+                </h2>
+
+                <p>
+                    WER = 0 no tolera ninguna
+                    modificación en la transcripción.
+                </p>
+
+                <p>
+                    Como consecuencia, las explicaciones
+                    necesitan conservar más frames
+                    que cuando se utiliza similitud
+                    semántica mediante BERT.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LARGE EXPLANATION PROBLEM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    MATIZ
+                </p>
+
+                <h3>
+                    Consistencia alta puede ser engañosa
+                </h3>
+
+                <p>
+                    Con WER, Causal presenta
+                    una consistencia muy elevada.
+                </p>
+
+                <p>
+                    Sin embargo, sus explicaciones
+                    contienen aproximadamente
+                    el 92 % de los frames de entrada
+                    de media.
+                </p>
+
+                <p>
+                    Cuanto mayor es una explicación,
+                    más fácil resulta que dos
+                    explicaciones se solapen.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIME VS XASR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    LIME vs SFL vs Causal
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>LIME</th>
+                            <th>SFL</th>
+                            <th>Causal</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Model-agnostic</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Perturbation-based</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Frame ranking</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                            <td>Responsibility</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Minimal explanation</td>
+                            <td>Adaptación greedy</td>
+                            <td>Sí</td>
+                            <td>Sí</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Causal formulation</td>
+                            <td>No</td>
+                            <td>Indirecta</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Iterative partitioning</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITACIONES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Qué continúa abierto
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Perturbaciones artificiales
+                    </h3>
+
+                    <p>
+                        Poner frames a cero
+                        puede generar señales que
+                        no corresponden a habla natural.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Explicaciones grandes
+                    </h3>
+
+                    <p>
+                        Dependiendo del criterio
+                        de similitud, puede ser
+                        necesario conservar gran
+                        parte del audio.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Dependencias distribuidas
+                    </h3>
+
+                    <p>
+                        Una palabra puede depender
+                        de información repartida
+                        entre múltiples regiones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Frames poco interpretables
+                    </h3>
+
+                    <p>
+                        Un conjunto de posiciones
+                        temporales no es necesariamente
+                        comprensible para una persona.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Solo post hoc
+                    </h3>
+
+                    <p>
+                        La explicación se genera
+                        después de que el modelo
+                        ya haya producido
+                        la transcripción.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        No utiliza estructura interna
+                    </h3>
+
+                    <p>
+                        Su portabilidad es una ventaja,
+                        pero no permite estudiar
+                        directamente los mecanismos
+                        internos del ASR.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    De "importante" a
+                    "suficiente para la decisión"
+                </h2>
+
+                <p>
+                    X-ASR resulta especialmente
+                    interesante porque cambia
+                    la pregunta habitual de
+                    los mapas de saliencia.
+                </p>
+
+                <p>
+                    No pregunta únicamente qué
+                    frames tienen mayor importancia,
+                    sino qué subconjunto mínimo
+                    mantiene la salida del sistema.
+                </p>
+
+                <p>
+                    Esta idea se aproxima mucho
+                    al objetivo de vincular
+                    una decisión con evidencia
+                    acústica observable.
+                </p>
+
+                <p>
+                    Sin embargo, los frames siguen
+                    siendo unidades de bajo nivel
+                    difíciles de interpretar.
+                </p>
+
+                <p>
+                    Para la tesis podría añadirse
+                    una segunda capa que agrupe
+                    los frames seleccionados en
+                    fonemas, palabras, eventos,
+                    patrones prosódicos o regiones
+                    espectrales.
+                </p>
+
+                <p>
+                    De este modo la explicación
+                    podría avanzar desde una causa
+                    temporal mínima hacia una
+                    explicación acústico-lingüística
+                    comprensible.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA DERIVADA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Minimal Sufficient
+                    Acoustic Evidence
+                </h2>
+
+                <p>
+                    Buscar primero el mínimo
+                    conjunto de evidencia necesario
+                    para mantener una predicción.
+                </p>
+
+                <p>
+                    Posteriormente transformar
+                    esa evidencia en unidades
+                    interpretables y verificar
+                    que eliminarla modifica
+                    realmente la decisión.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
