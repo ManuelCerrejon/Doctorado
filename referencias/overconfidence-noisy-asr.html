@@ -1,0 +1,2564 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Overconfidence in Noisy ASR | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/incertidumbre-calibracion-ood.html"
+                    class="volver"
+                >
+                    ← Volver a Incertidumbre y OOD
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Overconfidence in Noisy ASR
+                </h1>
+
+
+                <h2>
+                    Identifying and Calibrating
+                    Overconfidence in Noisy
+                    Speech Recognition
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Huo, Zhang & Tang · ASRU 2025
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Whisper</span>
+                    <span>Confidence Calibration</span>
+                    <span>Overconfidence</span>
+                    <span>Noise</span>
+                    <span>Temperature Scaling</span>
+                    <span>Token-Level</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Mingyue Huo
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2025
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        IEEE ASRU 2025
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.1109/ASRU65441.2025.11434626
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Huo, M., Zhang, Y.,
+                    & Tang, Y. (2025).
+                    <em>
+                        Identifying and Calibrating
+                        Overconfidence in Noisy
+                        Speech Recognition.
+                    </em>
+                    IEEE Automatic Speech Recognition
+                    and Understanding Workshop
+                    (ASRU 2025).
+                    DOI:
+                    10.1109/ASRU65441.2025.11434626.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Equivocarse con mucha confianza
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los modelos ASR modernos
+                    pueden deteriorar su precisión
+                    cuando aumenta el ruido.
+                </p>
+
+                <p>
+                    Sin embargo, una degradación
+                    del reconocimiento no implica
+                    necesariamente una reducción
+                    equivalente de la confianza.
+                </p>
+
+                <p>
+                    Bajo ruido intenso,
+                    Whisper puede producir
+                    tokens incorrectos y asignarles
+                    aun así probabilidades elevadas.
+                </p>
+
+                <p>
+                    Los autores estudian sistemáticamente
+                    este fenómeno y proponen
+                    un calibrador post hoc
+                    específicamente dirigido
+                    a esas predicciones
+                    sobreconfiadas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DEFINITION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    DEFINICIÓN
+                </p>
+
+                <h2>
+                    Overconfident Token
+                </h2>
+
+                <p>
+                    Un token se considera
+                    sobreconfiado cuando:
+                </p>
+
+                <p>
+                    es INCORRECTO
+                </p>
+
+                <p>
+                    Y
+                </p>
+
+                <p>
+                    confidence ≥ 0,7
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHISPER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · MODELO ASR
+                </p>
+
+                <h2>
+                    Whisper-medium.en
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Modelo
+                    </span>
+
+                    <strong>
+                        Whisper-medium.en
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Sample rate
+                    </span>
+
+                    <strong>
+                        16 kHz
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Vocabulary
+                    </span>
+
+                    <strong>
+                        51.865
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Confidence
+                    </span>
+
+                    <strong>
+                        Token softmax
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOISE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · RUIDO
+                </p>
+
+                <h2>
+                    Speech-shaped temporally
+                    modulated noise
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            White Noise
+                        </h3>
+
+                        <p>
+                            El proceso comienza
+                            con ruido blanco.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Speech Spectrum
+                        </h3>
+
+                        <p>
+                            Se filtra para ajustarse
+                            al espectro medio
+                            de 500 utterances.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Temporal Modulation
+                        </h3>
+
+                        <p>
+                            Su amplitud se modula
+                            utilizando la envolvente
+                            media de otras
+                            500 utterances.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Controlled Noise
+                        </h3>
+
+                        <p>
+                            Se obtiene ruido
+                            con dinámica similar
+                            al habla pero
+                            sin contenido lingüístico.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SNR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        SNR
+                    </span>
+
+                    <strong>
+                        +10 → −18 dB
+                    </strong>
+
+                    <p>
+                        pasos de 1 dB
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        29 niveles de ruido
+                    </h3>
+
+                    <p>
+                        Esta configuración permite
+                        estudiar progresivamente
+                        cuándo empieza a deteriorarse
+                        la precisión y cuándo
+                        se rompe la calibración.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · DATOS
+                </p>
+
+                <h2>
+                    LibriTTS + R-SPIN
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        TRAIN
+                    </span>
+
+                    <h3>
+                        LibriTTS clean-100
+                    </h3>
+
+                    <p>
+                        Audio limpio utilizado
+                        para construir los ejemplos
+                        ruidosos de entrenamiento.
+                    </p>
+
+                    <p>
+                        Se conservan utterances
+                        de entre 3 y 10 segundos.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        EVALUATION
+                    </span>
+
+                    <h3>
+                        R-SPIN
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        400
+                    </strong>
+
+                    <p>
+                        Frases fonéticamente
+                        balanceadas evaluadas
+                        en todos los niveles SNR.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        LOW-SNR TRAINING
+                    </span>
+
+                    <h3>
+                        Calibration
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        −18 → −5 dB
+                    </strong>
+
+                    <p>
+                        El calibrador final
+                        se entrena específicamente
+                        sobre el rango donde
+                        la sobreconfianza resulta
+                        más problemática.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONFIDENCE EXTRACTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · CONFIANZA
+                </p>
+
+                <h2>
+                    Token-level confidence
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Transcribir
+                        </h3>
+
+                        <p>
+                            Whisper procesa
+                            la utterance ruidosa.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Logits
+                        </h3>
+
+                        <p>
+                            Se almacena el vector
+                            completo de logits
+                            en cada paso
+                            autoregresivo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Softmax
+                        </h3>
+
+                        <p>
+                            Se calcula la confianza
+                            del token seleccionado.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Correctness
+                        </h3>
+
+                        <p>
+                            El token se compara
+                            con el ground truth
+                            para determinar
+                            si es correcto.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Overconfidence
+                        </h3>
+
+                        <p>
+                            Incorrecto
+                            + confidence ≥ 0,7
+                            → overconfident.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OBSERVATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    HALLAZGO PRINCIPAL
+                </p>
+
+                <h2>
+                    El WER empeora antes
+                    que la calibración
+                </h2>
+
+                <p>
+                    El WER comienza
+                    a aumentar claramente
+                    por debajo de aproximadamente
+                    0 dB.
+                </p>
+
+                <p>
+                    En cambio,
+                    ECE y NCE permanecen
+                    relativamente estables
+                    hasta aproximadamente
+                    −5 / −10 dB.
+                </p>
+
+                <p>
+                    Bajo ruido más severo,
+                    la calibración también
+                    empieza a deteriorarse
+                    rápidamente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTERPRETATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    INTERPRETACIÓN
+                </p>
+
+                <h3>
+                    Durante un tiempo el modelo
+                    "sabe que está fallando"
+                </h3>
+
+                <p>
+                    El reconocimiento puede empezar
+                    a degradarse antes de que
+                    las estimaciones de confianza
+                    pierdan completamente
+                    su utilidad.
+                </p>
+
+                <p>
+                    Con ruido extremo,
+                    esa capacidad también
+                    termina deteriorándose
+                    y aparecen errores
+                    altamente confiados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             10-20
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        LOW SNR
+                    </span>
+
+                    <strong>
+                        10–20 %
+                    </strong>
+
+                    <p>
+                        errores con confidence > 0,7
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Sobreconfianza severa
+                    </h3>
+
+                    <p>
+                        Bajo los niveles
+                        más intensos de ruido,
+                        una proporción considerable
+                        de tokens incorrectos
+                        continúa recibiendo
+                        una confianza elevada.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FRAMEWORK
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · PROPUESTA
+                </p>
+
+                <h2>
+                    Selective Calibration
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>WHISPER</span>
+
+                    <h3>
+                        Token logits
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>FEATURES</span>
+
+                    <h3>
+                        fᵢ
+                    </h3>
+
+                    <p>
+                        Confidence +
+                        token +
+                        acoustics
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>STAGE 1</span>
+
+                    <h3>
+                        Overconfidence
+                        Classifier
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>STAGE 2</span>
+
+                    <h3>
+                        Temperature
+                        Calibrator
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Calibrated
+                        Confidence
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FEATURES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · FEATURES
+                </p>
+
+                <h2>
+                    Tres fuentes de información
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        UNCERTAINTY
+                    </p>
+
+                    <h3>
+                        Confidence Signals
+                    </h3>
+
+                    <ul>
+                        <li>Top-1 probability</li>
+                        <li>Top-2 margin</li>
+                        <li>Entropy</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        TOKEN
+                    </p>
+
+                    <h3>
+                        Plausibility
+                    </h3>
+
+                    <ul>
+                        <li>Token embedding</li>
+                        <li>Position</li>
+                        <li>Top-5 logits</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUDIO
+                    </p>
+
+                    <h3>
+                        Acoustic Clarity
+                    </h3>
+
+                    <ul>
+                        <li>Mel spectrogram</li>
+                        <li>Attention pooling</li>
+                        <li>Utterance-level embedding</li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO FEATURE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    ACOUSTIC FEATURE
+                </p>
+
+                <h2>
+                    Primeros 3 segundos
+                </h2>
+
+                <p>
+                    El modelo final utiliza
+                    únicamente los primeros
+                    tres segundos del Mel spectrogram
+                    con attention pooling.
+                </p>
+
+                <p>
+                    En los experimentos,
+                    esta representación supera
+                    ligeramente al uso
+                    del audio completo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CLASSIFIER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · OVERCONFIDENCE CLASSIFIER
+                </p>
+
+                <h2>
+                    Detectar qué tokens calibrar
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Architecture
+                    </span>
+
+                    <strong>
+                        2-layer MLP
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Loss
+                    </span>
+
+                    <strong>
+                        Weighted BCE
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Positive weight
+                    </span>
+
+                    <strong>
+                        7
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Decision threshold
+                    </span>
+
+                    <strong>
+                        0,5
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Recall
+                    </span>
+
+                    <strong>
+                        ≈ 0,7
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Precision
+                    </span>
+
+                    <strong>
+                        ≈ 0,3
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        F1
+                    </span>
+
+                    <strong>
+                        ≈ 0,4
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Full framework
+                    </span>
+
+                    <strong>
+                        3,4 M params
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SELECTIVITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    SELECTIVIDAD
+                </p>
+
+                <h2>
+                    No calibrar todo
+                </h2>
+
+                <p>
+                    Si el clasificador considera
+                    que un token no presenta
+                    sobreconfianza,
+                    sus logits permanecen
+                    sin modificar.
+                </p>
+
+                <p>
+                    Solo los tokens
+                    identificados como problemáticos
+                    pasan al calibrador.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEMPERATURE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · SELECTIVE CALIBRATOR
+                </p>
+
+                <h2>
+                    Temperature Scaling
+                    específico por token
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    SCALING
+                </p>
+
+                <h2>
+                    logits'ᵢ =
+                    logitsᵢ / Tᵢ
+                </h2>
+
+                <p>
+                    El calibrador predice
+                    una temperatura diferente
+                    para cada token
+                    seleccionado.
+                </p>
+
+                <p>
+                    Tᵢ siempre es mayor que 1,
+                    por lo que el procedimiento
+                    únicamente puede reducir
+                    la confianza.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEMPERATURE NETWORK
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    TOKEN TEMPERATURE
+                </p>
+
+                <h2>
+                    Tᵢ =
+                    1 + softplus(MLP(fᵢ))
+                </h2>
+
+                <p>
+                    El mismo vector de características
+                    utilizado para detectar
+                    sobreconfianza sirve también
+                    para calcular cuánto
+                    debe reducirse la confianza.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAINING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Joint Training
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    LOSS
+                </p>
+
+                <h2>
+                    L =
+                    λBCE LBCE
+                    +
+                    λCE LCE
+                    +
+                    λECE LECE
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        λBCE
+                    </span>
+
+                    <strong>
+                        0,5
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        λCE
+                    </span>
+
+                    <strong>
+                        1,0
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        λECE
+                    </span>
+
+                    <strong>
+                        10,0
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Training SNR
+                    </span>
+
+                    <strong>
+                        −18 → −5 dB
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METRICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · MÉTRICAS
+                </p>
+
+                <h2>
+                    Precisión y calibración
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        WER
+                    </strong>
+
+                    <span>
+                        Recognition
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        ECE
+                    </strong>
+
+                    <span>
+                        Calibration ↓
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        NCE
+                    </strong>
+
+                    <span>
+                        Calibration ↑
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        NLL
+                    </strong>
+
+                    <span>
+                        Calibration ↓
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        EER
+                    </strong>
+
+                    <span>
+                        Discrimination ↓
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Overconfident Mass
+                    </strong>
+
+                    <span>
+                        Incorrect + conf ≥ 0,7
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MAIN RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · RESULTADOS
+                </p>
+
+                <h2>
+                    Low SNR · −18 a −5 dB
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>ECE ↓</th>
+                            <th>NLL ↓</th>
+                            <th>NCE ↑</th>
+                            <th>EER ↓</th>
+                            <th>Overconf. ↓</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                No calibration
+                            </td>
+
+                            <td>0,086</td>
+                            <td>5,910</td>
+                            <td>0,064</td>
+                            <td>28,8 %</td>
+                            <td>11,1 %</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                SNR-based
+                            </td>
+
+                            <td>0,082</td>
+                            <td>5,688</td>
+                            <td>0,082</td>
+                            <td>27,4 %</td>
+                            <td>9,0 %</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    Selective · Token T
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>0,036</strong>
+                            </td>
+
+                            <td>
+                                <strong>5,651</strong>
+                            </td>
+
+                            <td>
+                                <strong>0,192</strong>
+                            </td>
+
+                            <td>27,8 %</td>
+
+                            <td>
+                                <strong>6,6 %</strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Utterance-level T
+                            </td>
+
+                            <td>0,040</td>
+                            <td>5,651</td>
+                            <td>0,191</td>
+                            <td>27,9 %</td>
+                            <td>
+                                <strong>6,5 %</strong>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MAIN RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        ECE
+                    </span>
+
+                    <strong>
+                        0,086 → 0,036
+                    </strong>
+
+                    <p>
+                        −58 % relativo
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Selective token calibration
+                    </h3>
+
+                    <p>
+                        La reducción se consigue
+                        sin modificar ni reentrenar
+                        los parámetros de Whisper.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OVERCONF
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        OVERCONFIDENT MASS
+                    </span>
+
+                    <strong>
+                        11,1 → 6,6 %
+                    </strong>
+
+                    <p>
+                        low-SNR
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Casi se reduce a la mitad
+                    </h3>
+
+                    <p>
+                        Disminuye específicamente
+                        la proporción de errores
+                        que el modelo presentaba
+                        con confianza ≥ 0,7.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NCE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    NCE
+                </p>
+
+                <h2>
+                    0,064 → 0,192
+                </h2>
+
+                <p>
+                    El normalized cross entropy
+                    se triplica en el rango
+                    de ruido severo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SNR RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    13 · EFECTO DEL SNR
+                </p>
+
+                <h2>
+                    Cuanto peor el ruido,
+                    mayor el beneficio
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>SNR</th>
+                            <th>ECE antes</th>
+                            <th>ECE después</th>
+                            <th>Overconf. antes</th>
+                            <th>Overconf. después</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>(5, 10]</td>
+                            <td>0,0412</td>
+                            <td>
+                                <strong>0,0335</strong>
+                            </td>
+                            <td>5,0 %</td>
+                            <td>3,9 %</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>(0, 5]</td>
+                            <td>
+                                <strong>0,0361</strong>
+                            </td>
+                            <td>0,0460</td>
+                            <td>5,0 %</td>
+                            <td>3,9 %</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>(−5, 0]</td>
+                            <td>
+                                <strong>0,0381</strong>
+                            </td>
+                            <td>0,0755</td>
+                            <td>5,1 %</td>
+                            <td>3,8 %</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>[−10, −5]</td>
+                            <td>0,0573</td>
+                            <td>
+                                <strong>0,0517</strong>
+                            </td>
+                            <td>8,1 %</td>
+                            <td>
+                                <strong>5,4 %</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>[−15, −10)</td>
+                            <td>0,1115</td>
+                            <td>
+                                <strong>0,0611</strong>
+                            </td>
+                            <td>12,7 %</td>
+                            <td>
+                                <strong>7,6 %</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>[−18, −15]</td>
+                            <td>0,2396</td>
+                            <td>
+                                <strong>0,1349</strong>
+                            </td>
+                            <td>22,4 %</td>
+                            <td>
+                                <strong>10,2 %</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MID SNR CAVEAT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    MATIZ IMPORTANTE
+                </p>
+
+                <h3>
+                    La calibración selectiva
+                    no mejora todas las condiciones
+                </h3>
+
+                <p>
+                    Entre aproximadamente
+                    −5 y +5 dB,
+                    el método puede producir
+                    un ligero deterioro
+                    de algunas métricas
+                    de calibración.
+                </p>
+
+                <p>
+                    Su principal beneficio
+                    aparece precisamente
+                    en las condiciones
+                    de ruido severo
+                    para las que fue entrenado.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ABLATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    14 · ABLATION
+                </p>
+
+                <h2>
+                    Qué información necesita
+                    el calibrador
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Configuración</th>
+                            <th>ECE Improvement ↑</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Full Mel + avg pooling
+                            </td>
+
+                            <td>
+                                0,0481
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Full Mel + attention pooling
+                            </td>
+
+                            <td>
+                                0,0493
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    3 s Mel + attention
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>0,0502</strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Whisper encoder states
+                            </td>
+
+                            <td>
+                                0,0507
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                No token embedding
+                            </td>
+
+                            <td>
+                                0,0441
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                No top-5 logits
+                            </td>
+
+                            <td>
+                                0,0476
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                No Mel spectrogram
+                            </td>
+
+                            <td>
+                                0,0485
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTERESTING FEATURES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    RESULTADO INTERESANTE
+                </p>
+
+                <h3>
+                    La confianza no depende
+                    solo de la probabilidad máxima
+                </h3>
+
+                <p>
+                    El clasificador utiliza
+                    conjuntamente información
+                    acústica, semántica
+                    y de incertidumbre.
+                </p>
+
+                <p>
+                    Los top-5 logits,
+                    el token embedding
+                    y la representación Mel
+                    aportan información complementaria
+                    para detectar errores
+                    sobreconfiados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WORD CONF VS PAPER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Word Confidence vs
+                    Selective Calibration
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Oneață et al.</th>
+                            <th>Huo et al.</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Nivel principal
+                            </td>
+
+                            <td>
+                                Palabra
+                            </td>
+
+                            <td>
+                                Token
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Pregunta
+                            </td>
+
+                            <td>
+                                ¿Es correcta?
+                            </td>
+
+                            <td>
+                                ¿Está sobreconfiado?
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Ruido severo
+                            </td>
+
+                            <td>
+                                No es el foco
+                            </td>
+
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Temperature scaling
+                            </td>
+
+                            <td>
+                                Global
+                            </td>
+
+                            <td>
+                                <strong>Selectivo por token</strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Features acústicas
+                            </td>
+
+                            <td>
+                                No como núcleo
+                            </td>
+
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Modifica ASR
+                            </td>
+
+                            <td>No</td>
+                            <td>No</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITATIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Whisper-medium.en
+                    </h3>
+
+                    <p>
+                        El estudio experimental
+                        utiliza este modelo
+                        como caso principal.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Ruido sintético
+                    </h3>
+
+                    <p>
+                        Las condiciones acústicas
+                        son controladas y no representan
+                        toda la variabilidad
+                        de ruido real.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Acoustic feature global
+                    </h3>
+
+                    <p>
+                        La representación acústica
+                        se comparte entre todos
+                        los tokens de la utterance.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Token alignment
+                    </h3>
+
+                    <p>
+                        No se utiliza todavía
+                        una representación acústica
+                        alineada específicamente
+                        con cada token.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Mid-SNR
+                    </h3>
+
+                    <p>
+                        En ciertas condiciones
+                        moderadas pueden aparecer
+                        pequeñas degradaciones
+                        de calibración.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Post hoc
+                    </h3>
+
+                    <p>
+                        El sistema mejora
+                        las probabilidades,
+                        pero no hace que Whisper
+                        reconozca mejor.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Especialmente relevante
+                    para Whisper en condiciones reales
+                </h2>
+
+                <p>
+                    Esta referencia muestra
+                    que la robustez de un ASR
+                    no debe evaluarse únicamente
+                    mediante WER.
+                </p>
+
+                <p>
+                    También debemos estudiar
+                    si el sistema conoce
+                    cuándo su transcripción
+                    ha dejado de ser fiable.
+                </p>
+
+                <p>
+                    Para la tesis,
+                    una señal de sobreconfianza
+                    podría utilizarse para impedir
+                    que una transcripción dudosa
+                    alimente mecanismos
+                    de adaptación continua.
+                </p>
+
+                <p>
+                    También podría activar
+                    una segunda decodificación,
+                    solicitar otra grabación,
+                    marcar regiones para revisión
+                    humana o provocar
+                    la abstención del sistema.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Confidence-Controlled
+                    Continual Adaptation
+                </h2>
+
+                <p>
+                    Audio
+                    ↓
+                    Whisper
+                    ↓
+                    predicción + confidence
+                    ↓
+                    overconfidence detector
+                    ↓
+                    ¿predicción fiable?
+                    ↓
+                    sí → utilizar / adaptar
+                    ↓
+                    no → descartar /
+                    abstenerse /
+                    supervisar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Gender and Dialect Bias
+        in YouTube's Automatic Captions
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+            <h1>Doctorado</h1>
+            <span>Seguimiento de investigación</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#investigacion">Investigación</a></li>
+                <li><a href="../index.html#estado-arte">Estado del arte</a></li>
+                <li><a href="../index.html#experimentos">Experimentos</a></li>
+                <li><a href="../index.html#documentos">Documentos</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="referencia-hero">
+
+    <div class="referencia-hero-contenido">
+
+        <a
+            href="../estado-arte/equidad-privacidad-seguridad.html"
+            class="volver"
+        >
+            ← Volver a Equidad, privacidad y seguridad
+        </a>
+
+        <p class="etiqueta">
+            REFERENCIA CIENTÍFICA · [62]
+        </p>
+
+        <h1>
+            Gender and Dialect Bias
+            in YouTube's Automatic Captions
+        </h1>
+
+        <p class="autores-referencia">
+            Rachael Tatman · ACL EthNLP 2017
+        </p>
+
+        <div class="referencia-tags">
+            <span>Fairness</span>
+            <span>ASR</span>
+            <span>Dialect</span>
+            <span>Gender</span>
+            <span>WER</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            REFERENCIA
+        </p>
+
+        <h2>
+            Información bibliográfica
+        </h2>
+
+    </div>
+
+    <div class="ficha-bibliografica">
+
+        <div>
+            <span class="ficha-label">Autora</span>
+            <strong>Rachael Tatman</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Año</span>
+            <strong>2017</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Publicación</span>
+            <strong>ACL EthNLP Workshop</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Páginas</span>
+            <strong>53–59</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">DOI</span>
+            <strong>10.18653/v1/W17-1606</strong>
+        </div>
+
+    </div>
+
+    <div class="cita-completa">
+
+        <p>
+            Tatman, R. (2017).
+            <em>
+                Gender and Dialect Bias
+                in YouTube's Automatic Captions.
+            </em>
+            Proceedings of the First ACL Workshop
+            on Ethics in Natural Language Processing,
+            53–59.
+            DOI: 10.18653/v1/W17-1606.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            01 · OBJETIVO
+        </p>
+
+        <h2>
+            ¿Funciona igual el ASR
+            para todos los hablantes?
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            El trabajo evalúa si la precisión
+            de los subtítulos automáticos
+            de YouTube presenta diferencias
+            sistemáticas relacionadas
+            con género y variedad dialectal.
+        </p>
+
+        <p>
+            El objetivo no es desarrollar
+            un nuevo modelo de reconocimiento,
+            sino auditar un sistema existente
+            utilizando grupos
+            sociolingüísticamente diferenciados.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · DATOS
+        </p>
+
+        <h2>
+            Accent Tag Challenge
+        </h2>
+
+    </div>
+
+    <div class="hiperparametros-grid">
+
+        <article>
+            <span>Speakers</span>
+            <strong>80</strong>
+        </article>
+
+        <article>
+            <span>Regions</span>
+            <strong>5</strong>
+        </article>
+
+        <article>
+            <span>Men / region</span>
+            <strong>8</strong>
+        </article>
+
+        <article>
+            <span>Women / region</span>
+            <strong>8</strong>
+        </article>
+
+        <article>
+            <span>Metric</span>
+            <strong>WER</strong>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            DIALECT REGIONS
+        </p>
+
+        <h2>
+            Cinco regiones
+        </h2>
+
+    </div>
+
+    <div class="wavlm-tareas-grid">
+
+        <article>
+            <strong>California</strong>
+            <span>USA</span>
+        </article>
+
+        <article>
+            <strong>Georgia</strong>
+            <span>USA</span>
+        </article>
+
+        <article>
+            <strong>New England</strong>
+            <span>Maine + New Hampshire</span>
+        </article>
+
+        <article>
+            <strong>New Zealand</strong>
+            <span>NZ</span>
+        </article>
+
+        <article>
+            <strong>Scotland</strong>
+            <span>UK</span>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · PROCEDIMIENTO
+        </p>
+
+        <h2>
+            Word list
+            → captions
+            → WER
+        </h2>
+
+    </div>
+
+    <div class="entrenamiento-pasos">
+
+        <article>
+            <div class="entrenamiento-numero">01</div>
+            <div>
+                <h3>Buscar vídeos</h3>
+                <p>
+                    Se seleccionan vídeos
+                    del Accent Tag Challenge
+                    donde los hablantes explican
+                    su origen lingüístico.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <div class="entrenamiento-numero">02</div>
+            <div>
+                <h3>Word List</h3>
+                <p>
+                    Se analiza únicamente
+                    la parte donde se pronuncia
+                    una lista de palabras aisladas.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <div class="entrenamiento-numero">03</div>
+            <div>
+                <h3>Automatic Captions</h3>
+                <p>
+                    Solo se incluyen vídeos
+                    que disponen de subtítulos
+                    generados automáticamente.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <div class="entrenamiento-numero">04</div>
+            <div>
+                <h3>Human Check</h3>
+                <p>
+                    Una persona con formación
+                    fonética revisa
+                    las transcripciones.
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <div class="entrenamiento-numero">05</div>
+            <div>
+                <h3>WER</h3>
+                <p>
+                    Se calcula un WER
+                    independiente para cada hablante.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            DIFICULTAD DE LA TAREA
+        </p>
+
+        <h3>
+            Palabras aisladas
+            y diseñadas para mostrar
+            diferencias dialectales
+        </h3>
+
+        <p>
+            Las palabras se presentan
+            fuera de frases completas,
+            reduciendo la ayuda
+            que puede aportar
+            un modelo de lenguaje.
+        </p>
+
+        <p>
+            Además,
+            la propia lista contiene
+            palabras con pronunciaciones
+            variables entre dialectos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            04 · ANÁLISIS
+        </p>
+
+        <h2>
+            Linear Mixed-Effects Regression
+        </h2>
+
+    </div>
+
+    <div class="modelos-configuracion">
+
+        <article>
+            <p class="etiqueta">FIXED EFFECT</p>
+            <h3>Gender</h3>
+        </article>
+
+        <article>
+            <p class="etiqueta">FIXED EFFECT</p>
+            <h3>Dialect</h3>
+        </article>
+
+        <article>
+            <p class="etiqueta">RANDOM EFFECT</p>
+            <h3>Speaker</h3>
+        </article>
+
+        <article>
+            <p class="etiqueta">RANDOM EFFECT</p>
+            <h3>Year</h3>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            05 · RESULTADOS
+        </p>
+
+        <h2>
+            Diferencias estadísticamente
+            significativas
+        </h2>
+
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla-modelos">
+
+            <thead>
+                <tr>
+                    <th>Efecto</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <strong>Significativo · p &lt; 0,01</strong>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Dialect</td>
+                    <td>
+                        <strong>Significativo · p &lt; 0,01</strong>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender × Dialect</td>
+                    <td>
+                        <strong>Significativo · p &lt; 0,01</strong>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            HALLAZGO PRINCIPAL
+        </p>
+
+        <h2>
+            Women WER
+            &gt;
+            Men WER
+        </h2>
+
+        <p>
+            En la muestra estudiada,
+            el WER fue significativamente
+            mayor para las mujeres.
+        </p>
+
+        <p>
+            Los hablantes de Escocia
+            mostraron además
+            un rendimiento peor
+            que los grupos
+            de Estados Unidos
+            y Nueva Zelanda.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="nota-metodologica">
+
+        <h3>
+            No asignamos medias
+            de WER inventadas
+        </h3>
+
+        <p>
+            El artículo muestra
+            las distribuciones mediante figuras,
+            pero no proporciona
+            una tabla completa
+            con medias exactas
+            para todos los grupos.
+        </p>
+
+        <p>
+            Por ello,
+            esta ficha conserva
+            los resultados estadísticos
+            informados por la autora
+            sin reconstruir valores
+            aproximados desde los gráficos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="limitaciones-grid">
+
+        <article>
+            <h3>Opportunity Sample</h3>
+            <p>
+                Los vídeos proceden
+                de personas que decidieron
+                participar en un reto
+                de YouTube.
+            </p>
+        </article>
+
+        <article>
+            <h3>Proprietary ASR</h3>
+            <p>
+                No se conocen
+                arquitectura ni datos
+                de entrenamiento del sistema.
+            </p>
+        </article>
+
+        <article>
+            <h3>Isolated Words</h3>
+            <p>
+                No representa
+                conversación continua natural.
+            </p>
+        </article>
+
+        <article>
+            <h3>Limited Demographics</h3>
+            <p>
+                El estudio no controla
+                todos los posibles factores
+                sociales y demográficos.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            RELACIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            La adaptación también
+            debe evaluarse por subgrupos
+        </h2>
+
+        <p>
+            Una mejora del WER promedio
+            no garantiza
+            una mejora equivalente
+            para todos los hablantes.
+        </p>
+
+        <p>
+            Los experimentos de adaptación
+            deberían reportar resultados
+            por acento,
+            hablante,
+            dominio
+            y otras condiciones relevantes,
+            además de la media global.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Recursos, datasets y evaluación | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 11
+                </p>
+
+
+                <h1>
+                    Recursos, conjuntos de datos
+                    y evaluación experimental
+                </h1>
+
+
+                <p class="tema-introduccion">
+
+                    La calidad de un sistema
+                    de habla o audio depende
+                    no solo del modelo,
+                    sino también de los datos
+                    con los que se entrena
+                    y de cómo se evalúa.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    PROBLEMA CENTRAL
+                </p>
+
+                <h2>
+                    Un buen resultado
+                    depende del protocolo experimental
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    Dos modelos no pueden compararse
+                    correctamente si utilizan
+                    diferentes particiones,
+                    preprocesamiento,
+                    datos externos
+                    o procedimientos
+                    de aumento de datos.
+                </p>
+
+                <p>
+                    La selección del corpus
+                    también condiciona
+                    qué tipo de generalización
+                    estamos midiendo.
+                </p>
+
+                <p>
+                    Una puntuación elevada
+                    sobre un único benchmark
+                    no garantiza robustez
+                    ante nuevos hablantes,
+                    lenguas, dispositivos,
+                    ruidos o dominios.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SPEECH DATASETS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    CORPUS DE HABLA
+                </p>
+
+                <h2>
+                    Referencias principales
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <!-- 01 -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            LibriSpeech
+                        </h3>
+
+                        <p>
+                            Corpus de aproximadamente
+                            1.000 horas de habla
+                            inglesa leída derivada
+                            de audiolibros de LibriVox,
+                            ampliamente utilizado
+                            para entrenamiento
+                            y evaluación de ASR.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>English</span>
+                            <span>1K h</span>
+                            <span>16 kHz</span>
+                            <span>ASR</span>
+                            <span>LibriVox</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/librispeech.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 02 -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Multilingual LibriSpeech
+                        </h3>
+
+                        <p>
+                            Extiende el paradigma de LibriSpeech
+                            a ocho lenguas y más de 50.000 horas
+                            de habla leída, proporcionando
+                            particiones estandarizadas,
+                            conjuntos de baja supervisión,
+                            modelos ASR de referencia
+                            y modelos de lenguaje.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>8 Languages</span>
+                            <span>≈ 50K h</span>
+                            <span>Multilingual ASR</span>
+                            <span>Low Resource</span>
+                            <span>LibriVox</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/multilingual-librispeech.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 03 -->
+
+                
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            VoxPopuli
+                        </h3>
+
+                        <p>
+                            Corpus multilingüe construido
+                            a partir de grabaciones del Parlamento
+                            Europeo. Proporciona alrededor
+                            de 400.000 horas de habla no etiquetada
+                            en 23 lenguas, junto con datos
+                            transcritos e interpretaciones
+                            orales alineadas.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>23 Languages</span>
+                            <span>≈ 400K h</span>
+                            <span>European Parliament</span>
+                            <span>wav2vec 2.0</span>
+                            <span>Semi-Supervised</span>
+                            <span>Speech Translation</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/voxpopuli.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 04 -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        04
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Common Voice
+                        </h3>
+
+                        <p>
+                            Corpus multilingüe abierto
+                            construido mediante crowdsourcing.
+                            Las personas voluntarias graban
+                            frases y otras personas validan
+                            la correspondencia entre
+                            audio y transcripción mediante
+                            un sistema de votación.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Crowdsourcing</span>
+                            <span>Multilingual</span>
+                            <span>CC0</span>
+                            <span>Low Resource</span>
+                            <span>DeepSpeech</span>
+                            <span>Transfer Learning</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/common-voice.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 05 -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        05
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            ML-SUPERB
+                        </h3>
+
+                        <p>
+                            Benchmark diseñado para evaluar
+                            representaciones auto-supervisadas
+                            del habla en 143 lenguas,
+                            utilizando ASR, identificación
+                            de idioma y escenarios
+                            de muy baja disponibilidad
+                            de datos.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>143 Languages</span>
+                            <span>SSL</span>
+                            <span>ASR</span>
+                            <span>LID</span>
+                            <span>Few-Shot</span>
+                            <span>XLS-R</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/ml-superb.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO DATASETS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    AUDIO GENERAL
+                </p>
+
+                <h2>
+                    Recursos complementarios
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        AudioSet
+                    </strong>
+
+                    <span>
+                        Large-Scale Audio Events
+                    </span>
+
+                    <p>
+                        Dataset de eventos acústicos
+                        basado en segmentos de YouTube
+                        etiquetados manualmente mediante
+                        una ontología jerárquica
+                        de sonidos del mundo real.
+                    </p>
+
+                    <a
+                        href="../referencias/audioset.html"
+                        class="boton-referencia"
+                    >
+                        Ver referencia científica →
+                    </a>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        ESC-50
+                    </strong>
+
+                    <span>
+                        Environmental Sound Classification
+                    </span>
+
+                    <p>
+                        Benchmark equilibrado de 2.000
+                        grabaciones ambientales de 5 segundos,
+                        distribuidas en 50 clases
+                        y cinco folds de validación cruzada.
+                    </p>
+
+                    <a
+                        href="../referencias/esc-50.html"
+                        class="boton-referencia"
+                    >
+                        Ver referencia científica →
+                    </a>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        UrbanSound8K
+                    </strong>
+
+                    <span>
+                        Urban Environmental Audio
+                    </span>
+
+                    <p>
+                        Benchmark de clasificación
+                        de sonidos urbanos formado
+                        por 8.732 fragmentos
+                        de hasta 4 segundos,
+                        pertenecientes a 10 clases
+                        y organizados en 10 folds
+                        que preservan las grabaciones
+                        fuente originales.
+                    </p>
+
+                    <a
+                        href="../referencias/urbansound8k.html"
+                        class="boton-referencia"
+                    >
+                        Ver referencia científica →
+                    </a>
+                </article>
+
+                <article>
+
+                    <strong>
+                        FSD50K
+                    </strong>
+
+                    <span>
+                        Open Sound Event Dataset
+                    </span>
+
+                    <p>
+                        Dataset abierto de 51.197
+                        grabaciones procedentes de Freesound,
+                        con más de 108 horas de audio
+                        y 200 clases jerárquicas
+                        derivadas de la ontología
+                        de AudioSet.
+                    </p>
+
+                    <a
+                        href="../referencias/fsd50k.html"
+                        class="boton-referencia"
+                    >
+                        Ver referencia científica →
+                    </a>
+
+                </article>
+
+
+               <article>
+
+                    <strong>
+                        DCASE Challenges
+                    </strong>
+
+                    <span>
+                        Detection and Classification
+                        of Acoustic Scenes and Events
+                    </span>
+
+                    <p>
+                        Familia de benchmarks internacionales
+                        cuyas tareas evolucionan cada año
+                        e incluyen clasificación acústica,
+                        detección y localización de eventos,
+                        anomalías industriales
+                        y comprensión multimodal del audio.
+                    </p>
+
+                    <a
+                        href="../referencias/dcase.html"
+                        class="boton-referencia"
+                    >
+                        Explorar benchmark →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASET DIMENSIONS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REPRESENTATIVIDAD
+                </p>
+
+                <h2>
+                    Un corpus no son solo
+                    horas de audio
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>Lengua</strong>
+                    <span>Language</span>
+                </article>
+
+                <article>
+                    <strong>Hablante</strong>
+                    <span>Speaker</span>
+                </article>
+
+                <article>
+                    <strong>Acento</strong>
+                    <span>Accent</span>
+                </article>
+
+                <article>
+                    <strong>Edad</strong>
+                    <span>Age</span>
+                </article>
+
+                <article>
+                    <strong>Dispositivo</strong>
+                    <span>Microphone</span>
+                </article>
+
+                <article>
+                    <strong>Ruido</strong>
+                    <span>Environment</span>
+                </article>
+
+                <article>
+                    <strong>Dominio</strong>
+                    <span>Context</span>
+                </article>
+
+                <article>
+                    <strong>Etiqueta</strong>
+                    <span>Annotation</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METRICS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MÉTRICAS
+                </p>
+
+                <h2>
+                    La métrica depende
+                    de la tarea
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Tarea</th>
+                            <th>Métricas habituales</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>ASR</td>
+                            <td>WER · CER</td>
+                        </tr>
+
+                        <tr>
+                            <td>Speaker Recognition</td>
+                            <td>EER</td>
+                        </tr>
+
+                        <tr>
+                            <td>Audio Classification</td>
+                            <td>Accuracy · F1 · mAP</td>
+                        </tr>
+
+                        <tr>
+                            <td>Temporal Detection</td>
+                            <td>
+                                Event / Segment metrics
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BEYOND TASK METRICS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    TESIS
+                </p>
+
+                <h2>
+                    WER no será suficiente
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        ADAPTACIÓN
+                    </p>
+
+                    <h3>
+                        Learning Dynamics
+                    </h3>
+
+                    <ul>
+                        <li>Velocidad de adaptación</li>
+                        <li>Olvido</li>
+                        <li>Estabilidad</li>
+                        <li>Coste de actualización</li>
+                        <li>Recuperación ante errores</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        EXPLICABILIDAD
+                    </p>
+
+                    <h3>
+                        Explanation Quality
+                    </h3>
+
+                    <ul>
+                        <li>Fidelidad</li>
+                        <li>Estabilidad</li>
+                        <li>Comprensibilidad</li>
+                        <li>Utilidad</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        FIABILIDAD
+                    </p>
+
+                    <h3>
+                        Confidence / OOD
+                    </h3>
+
+                    <ul>
+                        <li>Calibration</li>
+                        <li>Confidence</li>
+                        <li>OOD detection</li>
+                        <li>Abstention</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        SOSTENIBILIDAD
+                    </p>
+
+                    <h3>
+                        Resource Cost
+                    </h3>
+
+                    <ul>
+                        <li>Latencia</li>
+                        <li>Memoria</li>
+                        <li>Operaciones</li>
+                        <li>Energía</li>
+                        <li>Hardware</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXPERIMENTAL PROTOCOL
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    PROTOCOLO EXPERIMENTAL
+                </p>
+
+                <h2>
+                    Comparaciones reproducibles
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Datos
+                        </h3>
+
+                        <p>
+                            Documentar corpus,
+                            particiones
+                            y criterios de selección.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Preprocesado
+                        </h3>
+
+                        <p>
+                            Frecuencia de muestreo,
+                            normalización,
+                            segmentación
+                            y augmentation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Modelo
+                        </h3>
+
+                        <p>
+                            Arquitectura,
+                            checkpoint
+                            y parámetros entrenables.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Adaptación
+                        </h3>
+
+                        <p>
+                            Definir exactamente
+                            cuándo y cómo
+                            se actualiza el modelo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Evaluación
+                        </h3>
+
+                        <p>
+                            Mismas particiones
+                            y métricas
+                            para todos los métodos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Recursos
+                        </h3>
+
+                        <p>
+                            Informar hardware,
+                            memoria, tiempo
+                            y coste computacional.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Un protocolo común
+                    para toda la línea
+                </h2>
+
+                <p>
+                    Los diferentes componentes
+                    de la tesis deberían evaluarse
+                    bajo una estructura
+                    experimental compartida.
+                </p>
+
+                <p>
+                    Así será posible analizar
+                    conjuntamente precisión,
+                    adaptación, robustez,
+                    incertidumbre,
+                    explicabilidad
+                    y eficiencia.
+                </p>
+
+                <p>
+                    Además de benchmarks públicos,
+                    será importante disponer
+                    de escenarios propios
+                    con cambios controlados
+                    de ruido, dispositivo,
+                    hablante y dominio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

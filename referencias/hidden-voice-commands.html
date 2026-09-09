@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Hidden Voice Commands
+    </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+            <h1>Doctorado</h1>
+            <span>Seguimiento de investigación</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#investigacion">Investigación</a></li>
+                <li><a href="../index.html#estado-arte">Estado del arte</a></li>
+                <li><a href="../index.html#experimentos">Experimentos</a></li>
+                <li><a href="../index.html#documentos">Documentos</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="referencia-hero">
+
+    <div class="referencia-hero-contenido">
+
+        <a
+            href="../estado-arte/equidad-privacidad-seguridad.html"
+            class="volver"
+        >
+            ← Volver a Equidad, privacidad y seguridad
+        </a>
+
+        <p class="etiqueta">
+            REFERENCIA CIENTÍFICA · [69]
+        </p>
+
+        <h1>
+            Hidden Voice Commands
+        </h1>
+
+        <p class="autores-referencia">
+            Carlini et al.
+            · USENIX Security 2016
+        </p>
+
+        <div class="referencia-tags">
+            <span>Voice Commands</span>
+            <span>Security</span>
+            <span>Black-Box</span>
+            <span>White-Box</span>
+            <span>Over-the-Air</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+        <p class="etiqueta">REFERENCIA</p>
+        <h2>Información bibliográfica</h2>
+    </div>
+
+    <div class="ficha-bibliografica">
+
+        <div>
+            <span class="ficha-label">Primer autor</span>
+            <strong>Nicholas Carlini</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Año</span>
+            <strong>2016</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Publicación</span>
+            <strong>USENIX Security 16</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Páginas</span>
+            <strong>513–530</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">ISBN</span>
+            <strong>978-1-931971-32-4</strong>
+        </div>
+
+    </div>
+
+    <div class="cita-completa">
+
+        <p>
+            Carlini, N.,
+            Mishra, P.,
+            Vaidya, T.,
+            Zhang, Y.,
+            Sherr, M.,
+            Shields, C.,
+            Wagner, D.,
+            & Zhou, W. (2016).
+            <em>
+                Hidden Voice Commands.
+            </em>
+            25th USENIX Security Symposium,
+            513–530.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            PROBLEMA
+        </p>
+
+        <h2>
+            Machine understands
+            ≠
+            Human understands
+        </h2>
+
+        <p>
+            Una interfaz de voz
+            puede aceptar una señal
+            como comando
+            aunque la persona
+            no comprenda
+            su contenido.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            01 · THREAT MODELS
+        </p>
+
+        <h2>
+            Black-Box
+            y White-Box
+        </h2>
+
+    </div>
+
+    <div class="modelos-configuracion">
+
+        <article>
+
+            <p class="etiqueta">
+                BLACK-BOX
+            </p>
+
+            <h3>
+                Opaque ASR
+            </h3>
+
+            <p>
+                El atacante
+                únicamente observa
+                las respuestas
+                del sistema.
+            </p>
+
+            <p>
+                Se prueba
+                contra Google Now.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <p class="etiqueta">
+                WHITE-BOX
+            </p>
+
+            <h3>
+                Internal Knowledge
+            </h3>
+
+            <p>
+                Se dispone
+                de información interna
+                del reconocedor.
+            </p>
+
+            <p>
+                Se utiliza
+                CMU Sphinx.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · WHITE-BOX EVALUATION
+        </p>
+
+        <h2>
+            Human vs Machine
+        </h2>
+
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla-modelos">
+
+            <thead>
+                <tr>
+                    <th>Audio</th>
+                    <th>Human understanding</th>
+                    <th>Machine understanding</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Normal</td>
+                    <td>74 %</td>
+                    <td>—</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>Obfuscated</strong>
+                    </td>
+                    <td>
+                        <strong>≈0 %</strong>
+                    </td>
+                    <td>
+                        <strong>82 %</strong>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-destacado-wav2vec">
+
+        <div>
+            <span>OVER-THE-AIR</span>
+            <strong>82 / 100</strong>
+            <p>CMU Sphinx</p>
+        </div>
+
+        <div class="resultado-explicacion">
+
+            <h3>
+                Speaker
+                → microphone
+            </h3>
+
+            <p>
+                El comando se reproduce
+                mediante un altavoz,
+                se captura
+                con un micrófono externo
+                y posteriormente
+                se reconoce.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            HUMAN STUDY
+        </p>
+
+        <h3>
+            Las personas
+            apenas recuperan
+            el contenido objetivo
+        </h3>
+
+        <p>
+            Ningún participante
+            consiguió transcribir
+            correctamente más
+            de la mitad
+            de las palabras
+            del comando obfuscado.
+        </p>
+
+        <p>
+            El 75 %
+            de las transcripciones
+            no compartía ninguna palabra
+            con la frase objetivo.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · DEFENSAS
+        </p>
+
+        <h2>
+            Tres familias
+        </h2>
+
+    </div>
+
+    <div class="wavlm-tareas-grid">
+
+        <article>
+            <strong>Notification</strong>
+            <span>Avisar al usuario</span>
+        </article>
+
+        <article>
+            <strong>Challenge-Response</strong>
+            <span>Confirmación activa</span>
+        </article>
+
+        <article>
+            <strong>Detection</strong>
+            <span>Clasificador automático</span>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-destacado-wav2vec">
+
+        <div>
+            <span>DETECTOR</span>
+            <strong>99,8 %</strong>
+            <p>obfuscated detected</p>
+        </div>
+
+        <div class="resultado-explicacion">
+
+            <h3>
+                0,2 %
+                false positive
+            </h3>
+
+            <p>
+                El detector
+                utiliza regresión logística
+                sobre características
+                acústicas agregadas.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="nota-metodologica">
+
+        <h3>
+            La defensa tampoco
+            generaliza perfectamente
+        </h3>
+
+        <p>
+            Cuando el clasificador
+            entrenado con ataques black-box
+            se prueba sobre ataques
+            white-box no vistos,
+            su tasa de detección
+            disminuye considerablemente.
+        </p>
+
+        <p>
+            Esto vuelve a introducir
+            el problema
+            de generalización OOD.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="limitaciones-grid">
+
+        <article>
+            <h3>2016 ASR</h3>
+            <p>
+                Los sistemas actuales
+                utilizan arquitecturas
+                muy diferentes.
+            </p>
+        </article>
+
+        <article>
+            <h3>System-Specific</h3>
+            <p>
+                La eficacia depende
+                del reconocedor objetivo.
+            </p>
+        </article>
+
+        <article>
+            <h3>Human Perception</h3>
+            <p>
+                La inteligibilidad
+                puede depender
+                de la persona
+                y del contexto.
+            </p>
+        </article>
+
+        <article>
+            <h3>Defense Generalization</h3>
+            <p>
+                Detectar una familia
+                de ataques
+                no garantiza
+                detectar otras.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            RELACIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            Agentes conversacionales
+            auditables y seguros
+        </h2>
+
+        <p>
+            Un agente de voz
+            no debería ejecutar
+            automáticamente
+            cualquier entrada
+            que el ASR considere válida.
+        </p>
+
+        <p>
+            Confidence,
+            OOD,
+            detección de ataques
+            y confirmación humana
+            pueden combinarse
+            antes de aceptar
+            acciones sensibles.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+</footer>
+
+
+</body>
+</html>

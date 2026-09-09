@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Word-Level Confidence Estimation | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/incertidumbre-calibracion-ood.html"
+                    class="volver"
+                >
+                    ← Volver a Incertidumbre y OOD
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Word-Level
+                    Confidence Estimation
+                </h1>
+
+
+                <h2>
+                    An Evaluation of Word-Level
+                    Confidence Estimation for End-to-End
+                    Automatic Speech Recognition
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Oneață, Caranica, Stan & Cucu
+                    · SLT 2021
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>ASR</span>
+                    <span>Confidence</span>
+                    <span>Negative Entropy</span>
+                    <span>Temperature Scaling</span>
+                    <span>Dropout</span>
+                    <span>Word-Level</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BIBLIOGRAPHY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Dan Oneață
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2021
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        IEEE SLT 2021
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        258–265
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Oneață, D., Caranica, A.,
+                    Stan, A., & Cucu, H. (2021).
+                    <em>
+                        An Evaluation of Word-Level
+                        Confidence Estimation for
+                        End-to-End Automatic Speech
+                        Recognition.
+                    </em>
+                    IEEE Spoken Language Technology
+                    Workshop (SLT),
+                    258–265.
+                    DOI:
+                    10.1109/SLT48900.2021.9383570.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Saber qué palabras
+                    probablemente están mal
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Un sistema ASR no debería
+                    producir únicamente
+                    una transcripción.
+                </p>
+
+                <p>
+                    También resulta útil conocer
+                    qué partes de esa transcripción
+                    son probablemente correctas
+                    y cuáles deberían revisarse.
+                </p>
+
+                <p>
+                    El trabajo estudia
+                    cómo obtener puntuaciones
+                    de confianza a nivel
+                    de palabra en sistemas
+                    end-to-end.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TWO CHALLENGES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · DOS RETOS
+                </p>
+
+                <h2>
+                    Secuencias + granularidad
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CHALLENGE 1
+                    </p>
+
+                    <h3>
+                        Structured Output
+                    </h3>
+
+                    <p>
+                        ASR transforma
+                        una secuencia acústica
+                        en otra secuencia.
+                    </p>
+
+                    <p>
+                        La probabilidad de cada token
+                        depende también
+                        de los tokens anteriores.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CHALLENGE 2
+                    </p>
+
+                    <h3>
+                        Token → Word
+                    </h3>
+
+                    <p>
+                        Los modelos utilizan
+                        unidades subword.
+                    </p>
+
+                    <p>
+                        Sin embargo, para una persona
+                        resulta mucho más útil
+                        conocer la confianza
+                        de una palabra completa.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PIPELINE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · METODOLOGÍA
+                </p>
+
+                <h2>
+                    Token probabilities
+                    → Word confidence
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>ASR</span>
+
+                    <h3>
+                        Token posterior
+                    </h3>
+
+                    <p>
+                        pₖ
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>FEATURE</span>
+
+                    <h3>
+                        Confidence
+                    </h3>
+
+                    <p>
+                        Log-proba
+                        o negative entropy.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>AGGREGATION</span>
+
+                    <h3>
+                        Token → Word
+                    </h3>
+
+                    <p>
+                        Sum · Min · Average
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Word Confidence
+                    </h3>
+
+                    <p>
+                        Una puntuación
+                        por palabra.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TOKEN FEATURES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · TOKEN-LEVEL
+                </p>
+
+                <h2>
+                    Dos medidas de confianza
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        LOG-PROBA
+                    </p>
+
+                    <h3>
+                        Máxima probabilidad
+                    </h3>
+
+                    <p>
+                        Utiliza el logaritmo
+                        de la probabilidad
+                        del token más probable.
+                    </p>
+
+                    <strong>
+                        s = log max(p)
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        NEGATIVE ENTROPY
+                    </p>
+
+                    <h3>
+                        Distribución completa
+                    </h3>
+
+                    <p>
+                        Utiliza la entropía
+                        de toda la distribución
+                        sobre el vocabulario.
+                    </p>
+
+                    <p>
+                        Una entropía menor
+                        indica una predicción
+                        más concentrada.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ENTROPY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    NEGATIVE ENTROPY
+                </p>
+
+                <h2>
+                    −H(p)
+                </h2>
+
+                <p>
+                    Si el modelo reparte
+                    la probabilidad entre
+                    muchos tokens posibles,
+                    existe mayor incertidumbre.
+                </p>
+
+                <p>
+                    Si concentra la probabilidad
+                    sobre pocas alternativas,
+                    la confianza aumenta.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AGGREGATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · WORD-LEVEL
+                </p>
+
+                <h2>
+                    Tres formas de agregar tokens
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        SUM
+                    </p>
+
+                    <h3>
+                        Σ scores
+                    </h3>
+
+                    <p>
+                        Acumula la confianza
+                        de todos los tokens
+                        pertenecientes a una palabra.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        MIN
+                    </p>
+
+                    <h3>
+                        Minimum
+                    </h3>
+
+                    <p>
+                        Una palabra recibe
+                        baja confianza si al menos
+                        uno de sus tokens
+                        presenta baja confianza.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AVG
+                    </p>
+
+                    <h3>
+                        Average
+                    </h3>
+
+                    <p>
+                        Calcula la confianza media
+                        de sus tokens.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IMPROVING PROBABILITIES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · MEJORAR PROBABILIDADES
+                </p>
+
+                <h2>
+                    Tres estrategias
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        TEMPERATURE
+                    </p>
+
+                    <h3>
+                        Temperature Scaling
+                    </h3>
+
+                    <p>
+                        Divide los logits
+                        por una temperatura τ
+                        aprendida sobre validación.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        STOCHASTIC
+                    </p>
+
+                    <h3>
+                        Dropout
+                    </h3>
+
+                    <p>
+                        Mantiene dropout
+                        durante inferencia
+                        y promedia múltiples
+                        predicciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        MULTI-MODEL
+                    </p>
+
+                    <h3>
+                        Ensemble
+                    </h3>
+
+                    <p>
+                        Promedia las probabilidades
+                        de varios modelos
+                        entrenados independientemente.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEMPERATURE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    TEMPERATURE SCALING
+                </p>
+
+                <h2>
+                    p' = softmax(z / τ)
+                </h2>
+
+                <p>
+                    El parámetro τ modifica
+                    la distribución de probabilidades
+                    sin cambiar necesariamente
+                    la predicción seleccionada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CALIBRATION MODEL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    APRENDIZAJE
+                </p>
+
+                <h2>
+                    Correct / Incorrect
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Las palabras de la transcripción
+                    se alinean con el ground truth
+                    para determinar cuáles
+                    son correctas y cuáles incorrectas.
+                </p>
+
+                <p>
+                    Los parámetros utilizados
+                    para transformar la puntuación
+                    de confianza se aprenden
+                    minimizando cross-entropy
+                    sobre un conjunto de validación.
+                </p>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    WORD PROBABILITY
+                </p>
+
+                <h2>
+                    P(correct) =
+                    σ(α · s(word) + β)
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DROPOUT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    MONTE CARLO DROPOUT
+                </p>
+
+                <h2>
+                    64 predictions
+                </h2>
+
+                <p>
+                    En los experimentos,
+                    las probabilidades se promedian
+                    sobre 64 ejecuciones independientes
+                    con dropout.
+                </p>
+
+                <p>
+                    El rendimiento comienza
+                    a estabilizarse alrededor
+                    de ese número de ejecuciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · DATASETS
+                </p>
+
+                <h2>
+                    Cuatro conjuntos de evaluación
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        IN-DOMAIN
+                    </span>
+
+                    <h3>
+                        LibriSpeech Clean
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        2,6K
+                    </strong>
+
+                    <p>
+                        5,4 horas.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        IN-DOMAIN
+                    </span>
+
+                    <h3>
+                        LibriSpeech Other
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        2,9K
+                    </strong>
+
+                    <p>
+                        5,3 horas.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        OUT-OF-DOMAIN
+                    </span>
+
+                    <h3>
+                        TED-LIUM 2
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        1,1K
+                    </strong>
+
+                    <p>
+                        2,6 horas.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        OUT-OF-DOMAIN
+                    </span>
+
+                    <h3>
+                        Common Voice
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        66K
+                    </strong>
+
+                    <p>
+                        72 horas.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASR MODEL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · MODELO ASR
+                </p>
+
+                <h2>
+                    Transformer de ESPnet
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Toolkit
+                    </span>
+
+                    <strong>
+                        ESPnet
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Architecture
+                    </span>
+
+                    <strong>
+                        Transformer
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Input
+                    </span>
+
+                    <strong>
+                        80 Mel filterbanks
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Vocabulary
+                    </span>
+
+                    <strong>
+                        5.000 tokens
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        ASR training
+                    </span>
+
+                    <strong>
+                        LibriSpeech 960 h
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Augmentation
+                    </span>
+
+                    <strong>
+                        SpecAugment
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Decoding
+                    </span>
+
+                    <strong>
+                        Beam Search
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Language model
+                    </span>
+
+                    <strong>
+                        Transformer
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    ASR PERFORMANCE
+                </p>
+
+                <h2>
+                    El cambio de dominio
+                    aumenta el error
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Dataset</th>
+                            <th>WER</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>LibriSpeech Clean</td>
+                            <td>
+                                <strong>2,7 %</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>LibriSpeech Other</td>
+                            <td>
+                                <strong>6,0 %</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>TED</td>
+                            <td>
+                                <strong>13,3 %</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Common Voice</td>
+                            <td>
+                                <strong>28,6 %</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METRICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · MÉTRICAS
+                </p>
+
+                <h2>
+                    Detectar palabras correctas
+                    e incorrectas
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUPR-e
+                    </p>
+
+                    <h3>
+                        Errors positive
+                    </h3>
+
+                    <p>
+                        Evalúa la capacidad
+                        de identificar
+                        palabras incorrectas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUPR-s
+                    </p>
+
+                    <h3>
+                        Success positive
+                    </h3>
+
+                    <p>
+                        Evalúa la capacidad
+                        de identificar
+                        palabras correctas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUROC
+                    </p>
+
+                    <h3>
+                        Ranking
+                    </h3>
+
+                    <p>
+                        Mide la separación
+                        entre palabras correctas
+                        e incorrectas.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RAW RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · RESULTADOS BASE
+                </p>
+
+                <h2>
+                    Log-proba funciona mejor
+                    antes de calibrar
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Sin mejorar previamente
+                    las probabilidades de tokens,
+                    log-proba supera generalmente
+                    a negative entropy.
+                </p>
+
+                <p>
+                    Las agregaciones SUM y MIN
+                    funcionan mejor que AVG
+                    en la mayoría
+                    de configuraciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEMPERATURE RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · TEMPERATURE + DROPOUT
+                </p>
+
+                <h2>
+                    TED-LIUM
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>AUPR-e</th>
+                            <th>AUPR-s</th>
+                            <th>AUROC</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Neg-entropy + SUM
+                            </td>
+
+                            <td>
+                                34,96
+                            </td>
+
+                            <td>
+                                95,41
+                            </td>
+
+                            <td>
+                                77,57
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                + Dropout
+                            </td>
+
+                            <td>
+                                33,14
+                            </td>
+
+                            <td>
+                                96,22
+                            </td>
+
+                            <td>
+                                79,45
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                + Temperature Scaling
+                            </td>
+
+                            <td>
+                                42,16
+                            </td>
+
+                            <td>
+                                96,91
+                            </td>
+
+                            <td>
+                                83,50
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    Temperature
+                                    + Dropout
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>43,59</strong>
+                            </td>
+
+                            <td>
+                                <strong>97,62</strong>
+                            </td>
+
+                            <td>
+                                <strong>85,51</strong>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             KEY RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        AUROC · TED
+                    </span>
+
+                    <strong>
+                        77,57 → 85,51
+                    </strong>
+
+                    <p>
+                        Neg-entropy + SUM
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Temperature Scaling + Dropout
+                    </h3>
+
+                    <p>
+                        La combinación mejora
+                        notablemente la discriminación
+                        entre palabras correctas
+                        e incorrectas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MAIN BASELINE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    CONCLUSIÓN PRÁCTICA
+                </p>
+
+                <h2>
+                    Temperature
+                    + Negative Entropy
+                    + SUM
+                </h2>
+
+                <p>
+                    Los autores destacan
+                    esta combinación como
+                    una referencia sencilla
+                    y sólida para obtener
+                    confianza a nivel de palabra.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ENSEMBLE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · ENSEMBLES
+                </p>
+
+                <h2>
+                    Más coste no garantiza
+                    automáticamente mejor resultado
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores entrenan cuatro
+                    modelos independientes
+                    para estudiar ensembles.
+                </p>
+
+                <p>
+                    Debido al coste computacional,
+                    esos modelos se entrenan
+                    durante menos épocas
+                    que el sistema principal.
+                </p>
+
+                <p>
+                    Temperature scaling produce
+                    el mayor incremento individual
+                    entre las técnicas comparadas
+                    sobre esos modelos.
+                </p>
+
+                <p>
+                    Temperature scaling y ensemble
+                    resultan complementarios
+                    cuando se combinan.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IMPORTANT CAVEAT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    MATIZ IMPORTANTE
+                </p>
+
+                <h3>
+                    El artículo no evalúa
+                    calibración con ECE
+                </h3>
+
+                <p>
+                    Los autores indican que
+                    su metodología produce
+                    principalmente scores relacionados
+                    con la corrección de una palabra,
+                    no necesariamente probabilidades
+                    perfectamente calibradas.
+                </p>
+
+                <p>
+                    Por ello utilizan AUPR
+                    y AUROC como métricas
+                    principales y no realizan
+                    una evaluación específica
+                    de calibración probabilística.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITATIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+
+                <article>
+
+                    <h3>
+                        Token posteriors
+                    </h3>
+
+                    <p>
+                        El método se apoya
+                        principalmente en probabilidades
+                        disponibles directamente
+                        en el ASR.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Features limitadas
+                    </h3>
+
+                    <p>
+                        No incorpora todavía
+                        duración de tokens
+                        u otras señales
+                        internas complementarias.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Calibration
+                    </h3>
+
+                    <p>
+                        La evaluación se centra
+                        en discriminación
+                        de errores y aciertos,
+                        no en calibración probabilística
+                        completa.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Domain shift
+                    </h3>
+
+                    <p>
+                        El rendimiento ASR
+                        cambia considerablemente
+                        entre LibriSpeech,
+                        TED y Common Voice.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Dropout cost
+                    </h3>
+
+                    <p>
+                        Monte Carlo Dropout
+                        necesita múltiples
+                        inferencias por muestra.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Ensemble cost
+                    </h3>
+
+                    <p>
+                        Utilizar varios modelos
+                        incrementa memoria
+                        y coste computacional.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    La confianza puede convertirse
+                    en una señal de control
+                </h2>
+
+                <p>
+                    Este trabajo demuestra
+                    que las probabilidades
+                    internas de un sistema ASR
+                    pueden transformarse
+                    en indicadores útiles
+                    de fiabilidad.
+                </p>
+
+                <p>
+                    Para la tesis,
+                    estas señales podrían utilizarse
+                    no solo para señalar
+                    palabras dudosas.
+                </p>
+
+                <p>
+                    También podrían intervenir
+                    en decisiones como:
+                </p>
+
+                <p>
+                    aceptar una predicción,
+                    solicitar otra grabación,
+                    activar adaptación,
+                    descartar una pseudoetiqueta
+                    o abstenerse.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA DERIVED
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Confidence-Guided
+                    Adaptive ASR
+                </h2>
+
+                <p>
+                    Audio
+                    ↓
+                    ASR
+                    ↓
+                    transcripción
+                    +
+                    confianza
+                    ↓
+                    detectar regiones dudosas
+                    ↓
+                    comprobar domain shift
+                    ↓
+                    decidir:
+                    aceptar / adaptar /
+                    abstenerse / supervisar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

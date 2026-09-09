@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Generalization of Audio Deepfake Detection
+    </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+            <h1>Doctorado</h1>
+            <span>Seguimiento de investigación</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#investigacion">Investigación</a></li>
+                <li><a href="../index.html#estado-arte">Estado del arte</a></li>
+                <li><a href="../index.html#experimentos">Experimentos</a></li>
+                <li><a href="../index.html#documentos">Documentos</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="referencia-hero">
+
+    <div class="referencia-hero-contenido">
+
+        <a
+            href="../estado-arte/equidad-privacidad-seguridad.html"
+            class="volver"
+        >
+            ← Volver a Equidad, privacidad y seguridad
+        </a>
+
+        <p class="etiqueta">
+            REFERENCIA CIENTÍFICA · [66]
+        </p>
+
+        <h1>
+            Generalization
+            of Audio Deepfake Detection
+        </h1>
+
+        <p class="autores-referencia">
+            Chen et al. · Odyssey 2020
+        </p>
+
+        <div class="referencia-tags">
+            <span>Deepfake</span>
+            <span>ASVspoof</span>
+            <span>ResNet18</span>
+            <span>LMCL</span>
+            <span>FreqAugment</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+        <p class="etiqueta">REFERENCIA</p>
+        <h2>Información bibliográfica</h2>
+    </div>
+
+    <div class="ficha-bibliografica">
+
+        <div>
+            <span class="ficha-label">Primer autor</span>
+            <strong>Tianxiang Chen</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Año</span>
+            <strong>2020</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Publicación</span>
+            <strong>Odyssey 2020</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Páginas</span>
+            <strong>132–137</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">DOI</span>
+            <strong>10.21437/Odyssey.2020-19</strong>
+        </div>
+
+    </div>
+
+    <div class="cita-completa">
+
+        <p>
+            Chen, T.,
+            Kumar, A.,
+            Nagarsheth, P.,
+            Sivaraman, G.,
+            & Khoury, E. (2020).
+            <em>
+                Generalization
+                of Audio Deepfake Detection.
+            </em>
+            Odyssey 2020,
+            132–137.
+            DOI:
+            10.21437/Odyssey.2020-19.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            01 · PROBLEMA
+        </p>
+
+        <h2>
+            Detectar generadores
+            no vistos
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            Los sistemas TTS
+            y voice conversion
+            evolucionan rápidamente.
+        </p>
+
+        <p>
+            Un detector entrenado
+            con unas técnicas concretas
+            debe generalizar
+            a métodos de síntesis
+            que no aparecieron
+            durante entrenamiento.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · DATASET
+        </p>
+
+        <h2>
+            ASVspoof 2019 LA
+        </h2>
+
+    </div>
+
+    <div class="hiperparametros-grid">
+
+        <article>
+            <span>TTS + VC techniques</span>
+            <strong>17</strong>
+        </article>
+
+        <article>
+            <span>Known</span>
+            <strong>6</strong>
+        </article>
+
+        <article>
+            <span>Unknown</span>
+            <strong>11</strong>
+        </article>
+
+        <article>
+            <span>Base corpus</span>
+            <strong>VCTK</strong>
+        </article>
+
+        <article>
+            <span>Main metric</span>
+            <strong>EER</strong>
+        </article>
+
+        <article>
+            <span>Secondary metric</span>
+            <strong>t-DCF</strong>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · MODELO BASE
+        </p>
+
+        <h2>
+            ResNet18
+        </h2>
+
+    </div>
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            CHALLENGE BASELINE
+        </p>
+
+        <h2>
+            EER = 4,04 %
+        </h2>
+
+        <p>
+            Corresponde al sistema
+            de los autores
+            utilizado como punto
+            de partida.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            04 · MEJORAS
+        </p>
+
+        <h2>
+            Robust embeddings
+        </h2>
+
+    </div>
+
+    <div class="modelos-configuracion">
+
+        <article>
+            <p class="etiqueta">LOSS</p>
+            <h3>LMCL</h3>
+            <p>
+                Large Margin
+                Cosine Loss.
+            </p>
+        </article>
+
+        <article>
+            <p class="etiqueta">AUGMENTATION</p>
+            <h3>Frequency Masking</h3>
+            <p>
+                Ocultación aleatoria
+                de regiones de frecuencia.
+            </p>
+        </article>
+
+        <article>
+            <p class="etiqueta">AUGMENTATION</p>
+            <h3>Noise + RIR</h3>
+            <p>
+                Ruido ambiental
+                y reverberación.
+            </p>
+        </article>
+
+        <article>
+            <p class="etiqueta">CHANNEL</p>
+            <h3>Telephony</h3>
+            <p>
+                Simulación
+                de canal telefónico.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            05 · RUIDO
+        </p>
+
+        <h2>
+            Data augmentation
+        </h2>
+
+    </div>
+
+    <div class="wavlm-tareas-grid">
+
+        <article>
+            <strong>Music</strong>
+            <span>Noise</span>
+        </article>
+
+        <article>
+            <strong>TV / Movies</strong>
+            <span>≈46 h</span>
+        </article>
+
+        <article>
+            <strong>Babble</strong>
+            <span>MUSAN</span>
+        </article>
+
+        <article>
+            <strong>Freesound Noise</strong>
+            <span>MUSAN</span>
+        </article>
+
+        <article>
+            <strong>RIR</strong>
+            <span>Reverberation</span>
+        </article>
+
+        <article>
+            <strong>SNR</strong>
+            <span>5–20 dB</span>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            06 · PROTOCOLOS
+        </p>
+
+        <h2>
+            Tres niveles
+            de robustez
+        </h2>
+
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla-modelos">
+
+            <thead>
+                <tr>
+                    <th>Train</th>
+                    <th>Contenido</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>T1</td>
+                    <td>ASVspoof original</td>
+                </tr>
+
+                <tr>
+                    <td>T2</td>
+                    <td>T1 + noise / reverb</td>
+                </tr>
+
+                <tr>
+                    <td>T3</td>
+                    <td>T2 + telephony</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla-modelos">
+
+            <thead>
+                <tr>
+                    <th>Training</th>
+                    <th>E1 Original</th>
+                    <th>E2 Noise</th>
+                    <th>E3 Telephony</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>T1</td>
+                    <td>1,81 %</td>
+                    <td>20,43 %</td>
+                    <td>8,70 %</td>
+                </tr>
+
+                <tr>
+                    <td>T2</td>
+                    <td>1,64 %</td>
+                    <td>5,34 %</td>
+                    <td>8,21 %</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>T3</strong>
+                    </td>
+                    <td>
+                        <strong>1,26 %</strong>
+                    </td>
+                    <td>
+                        <strong>5,32 %</strong>
+                    </td>
+                    <td>
+                        <strong>2,62 %</strong>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-destacado-wav2vec">
+
+        <div>
+            <span>BASE</span>
+            <strong>4,04 %</strong>
+            <p>EER</p>
+        </div>
+
+        <div class="resultado-explicacion">
+
+            <h3>
+                Final = 1,26 %
+            </h3>
+
+            <p>
+                LMCL,
+                frequency masking
+                y data augmentation
+                mejoran considerablemente
+                el resultado
+                en el benchmark original.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            LECCIÓN
+        </p>
+
+        <h3>
+            Data augmentation
+            puede ser crítica
+            para generalización
+        </h3>
+
+        <p>
+            Entrenar únicamente
+            con audio limpio
+            produce una degradación
+            extrema en la evaluación
+            con ruido.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="limitaciones-grid">
+
+        <article>
+            <h3>Known Distortions</h3>
+            <p>
+                La augmentación
+                prepara específicamente
+                al modelo para determinados
+                cambios de canal.
+            </p>
+        </article>
+
+        <article>
+            <h3>2020 Generators</h3>
+            <p>
+                Nuevas familias TTS
+                pueden producir
+                shifts diferentes.
+            </p>
+        </article>
+
+        <article>
+            <h3>Benchmark Domain</h3>
+            <p>
+                ASVspoof no cubre
+                todos los escenarios
+                de deepfake reales.
+            </p>
+        </article>
+
+        <article>
+            <h3>Closed Decision</h3>
+            <p>
+                El sistema decide
+                bona fide / spoof
+                sin modelar explícitamente
+                generadores desconocidos.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            RELACIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            Deepfake detection
+            como problema
+            de cambio de dominio
+        </h2>
+
+        <p>
+            Ruido,
+            códec,
+            canal
+            y generador
+            pueden tratarse
+            como fuentes distintas
+            de domain shift.
+        </p>
+
+        <p>
+            Una extensión natural
+            consistiría en detectar
+            automáticamente
+            cuándo el detector
+            se encuentra fuera
+            de su distribución
+            y adaptar únicamente
+            cuando resulte seguro.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+</footer>
+
+
+</body>
+</html>

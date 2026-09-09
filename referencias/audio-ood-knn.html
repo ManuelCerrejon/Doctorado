@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Audio OOD with Deep k-NN | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/incertidumbre-calibracion-ood.html"
+                    class="volver"
+                >
+                    ← Volver a Incertidumbre y OOD
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Deep k-NN for Audio OOD
+                </h1>
+
+
+                <h2>
+                    On Out-of-Distribution Detection
+                    for Audio with Deep
+                    Nearest Neighbors
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Bukhsh & Saeed · ICASSP 2023
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>OOD Detection</span>
+                    <span>Audio</span>
+                    <span>Speech</span>
+                    <span>Deep k-NN</span>
+                    <span>Embeddings</span>
+                    <span>Faiss</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primera autora
+                    </span>
+
+                    <strong>
+                        Zaharah Bukhsh
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        ICASSP 2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.1109/ICASSP49357.2023.10094846
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Bukhsh, Z., & Saeed, A. (2023).
+                    <em>
+                        On Out-of-Distribution Detection
+                        for Audio with Deep
+                        Nearest Neighbors.
+                    </em>
+                    IEEE International Conference
+                    on Acoustics, Speech and Signal
+                    Processing (ICASSP 2023),
+                    1–5.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    ¿Pertenece esta señal
+                    al mundo que conoce el modelo?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los clasificadores neuronales
+                    pueden producir predicciones
+                    muy seguras incluso cuando
+                    reciben entradas muy diferentes
+                    de las utilizadas durante
+                    el entrenamiento.
+                </p>
+
+                <p>
+                    En aplicaciones reales,
+                    esta situación puede aparecer
+                    cuando cambia la tarea,
+                    el tipo de sonido,
+                    el idioma o el dominio.
+                </p>
+
+                <p>
+                    Los autores estudian si
+                    el espacio de representación
+                    aprendido por un modelo acústico
+                    puede utilizarse para detectar
+                    estas entradas fuera
+                    de distribución.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OOD
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    OUT-OF-DISTRIBUTION
+                </p>
+
+                <h2>
+                    ID cerca · OOD lejos
+                </h2>
+
+                <p>
+                    La hipótesis es que
+                    las muestras pertenecientes
+                    al dominio de entrenamiento
+                    ocupan regiones próximas
+                    dentro del embedding space.
+                </p>
+
+                <p>
+                    Una muestra OOD debería
+                    aparecer más aislada
+                    y tener vecinos más alejados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             KEY IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · IDEA PRINCIPAL
+                </p>
+
+                <h2>
+                    No mirar el softmax:
+                    mirar la representación
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Audio
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        Neural Network
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>PENULTIMATE</span>
+
+                    <h3>
+                        Embedding z
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>SEARCH</span>
+
+                    <h3>
+                        k-NN
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        ID / OOD
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NORMALIZATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · REPRESENTACIÓN
+                </p>
+
+                <h2>
+                    Normalización L2
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    EMBEDDING
+                </p>
+
+                <h2>
+                    z =
+                    ψ(x) / ||ψ(x)||₂
+                </h2>
+
+                <p>
+                    ψ(x) corresponde
+                    a la representación obtenida
+                    en la penúltima capa
+                    del modelo.
+                </p>
+
+                <p>
+                    Antes de calcular distancias,
+                    los embeddings se normalizan
+                    mediante norma L2.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MEMORY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MEMORIA DE REFERENCIA
+                </p>
+
+                <h2>
+                    Embeddings del training set
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Entrenar modelo
+                        </h3>
+
+                        <p>
+                            El clasificador
+                            se entrena únicamente
+                            utilizando datos
+                            in-distribution.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Extraer embeddings
+                        </h3>
+
+                        <p>
+                            Se procesa todo
+                            el training set.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Normalizar
+                        </h3>
+
+                        <p>
+                            Cada representación
+                            se normaliza con L2.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Almacenar
+                        </h3>
+
+                        <p>
+                            Los embeddings forman
+                            el espacio de referencia
+                            in-distribution.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEST SAMPLE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · INFERENCIA
+                </p>
+
+                <h2>
+                    Distancia al k-ésimo vecino
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Nueva muestra
+                        </h3>
+
+                        <p>
+                            Se recibe un audio
+                            x* durante inferencia.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Embedding
+                        </h3>
+
+                        <p>
+                            El modelo produce
+                            z* para esa muestra.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Euclidean Distance
+                        </h3>
+
+                        <p>
+                            Se calcula la distancia
+                            de z* a los embeddings
+                            de entrenamiento.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            k Nearest Neighbours
+                        </h3>
+
+                        <p>
+                            Se ordenan los vecinos
+                            desde el más cercano
+                            al más lejano.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            dₖ
+                        </h3>
+
+                        <p>
+                            Se utiliza la distancia
+                            al k-ésimo vecino
+                            como señal OOD.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Threshold
+                        </h3>
+
+                        <p>
+                            Si la muestra está
+                            demasiado alejada,
+                            se considera OOD.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DISTANCE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    DISTANCIA
+                </p>
+
+                <h2>
+                    dₖ =
+                    ||zₖ − z*||₂
+                </h2>
+
+                <p>
+                    Cuanto mayor sea
+                    la distancia al vecino
+                    de referencia,
+                    mayor será la evidencia
+                    de que la muestra
+                    es fuera de distribución.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THRESHOLD
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    VENTAJA IMPORTANTE
+                </p>
+
+                <h3>
+                    El threshold no necesita
+                    ejemplos OOD
+                </h3>
+
+                <p>
+                    γ puede establecerse
+                    únicamente utilizando
+                    datos in-distribution.
+                </p>
+
+                <p>
+                    Los autores seleccionan
+                    el threshold para aceptar
+                    una proporción elevada,
+                    por ejemplo 95 %,
+                    de muestras ID.
+                </p>
+
+                <p>
+                    No es necesario conocer
+                    previamente qué tipos
+                    de OOD aparecerán.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS ID
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · IN-DISTRIBUTION
+                </p>
+
+                <h2>
+                    Dos tareas principales
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        ID 1
+                    </span>
+
+                    <h3>
+                        MSWC Micro-EN
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        31 clases
+                    </strong>
+
+                    <p>
+                        Keyword spotting
+                        en inglés.
+                    </p>
+
+                </article>
+
+
+                <article class="dataset-card">
+
+                    <span class="dataset-tipo">
+                        ID 2
+                    </span>
+
+                    <h3>
+                        VocalSound
+                    </h3>
+
+                    <strong class="dataset-cantidad">
+                        6 clases
+                    </strong>
+
+                    <p>
+                        Sonidos vocales humanos,
+                        como tos o estornudos.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Uso cruzado
+                </h3>
+
+                <p>
+                    MSWC Micro-EN y VocalSound
+                    también actúan como
+                    conjunto OOD
+                    el uno para el otro.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OOD DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · OOD TEST DATASETS
+                </p>
+
+                <h2>
+                    Seis dominios adicionales
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        VoxForge
+                    </strong>
+
+                    <span>
+                        Language ID · 6 clases
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        CREMA-D
+                    </strong>
+
+                    <span>
+                        Emotion · 6 clases
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        ESC-50
+                    </strong>
+
+                    <span>
+                        Environmental sounds · 50
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        MSWC Micro-ES
+                    </strong>
+
+                    <span>
+                        Spanish keywords · 20
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        SpeechCommands
+                    </strong>
+
+                    <span>
+                        Commands · 12
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        FluentSpeech
+                    </strong>
+
+                    <span>
+                        Action recognition · 6
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · PREPROCESADO
+                </p>
+
+                <h2>
+                    Log-Mel filterbanks
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Sample rate
+                    </span>
+
+                    <strong>
+                        16 kHz
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Window
+                    </span>
+
+                    <strong>
+                        25 ms
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Hop
+                    </span>
+
+                    <strong>
+                        10 ms
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Mel bins
+                    </span>
+
+                    <strong>
+                        64
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Frequency
+                    </span>
+
+                    <strong>
+                        60–7800 Hz
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Frames
+                    </span>
+
+                    <strong>
+                        98
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Duration
+                    </span>
+
+                    <strong>
+                        980 ms
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             YAMNET
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · MODELO PRINCIPAL
+                </p>
+
+                <h2>
+                    MobileNet / YAMNet
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Architecture
+                    </span>
+
+                    <strong>
+                        MobileNet
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Loss
+                    </span>
+
+                    <strong>
+                        Negative Log-Likelihood
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Optimizer
+                    </span>
+
+                    <strong>
+                        Adam
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Learning rate
+                    </span>
+
+                    <strong>
+                        0,001
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Epochs
+                    </span>
+
+                    <strong>
+                        100
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Batch size
+                    </span>
+
+                    <strong>
+                        128
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Embedding
+                    </span>
+
+                    <strong>
+                        1024
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EFFICIENTNET
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    GENERALIZACIÓN
+                </p>
+
+                <h2>
+                    EfficientNet-B0
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    SECOND ARCHITECTURE
+                </p>
+
+                <h2>
+                    1280-dimensional embedding
+                </h2>
+
+                <p>
+                    Los autores repiten
+                    el análisis con
+                    EfficientNet-B0 para comprobar
+                    que el método no depende
+                    exclusivamente de MobileNet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             K
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · k-NN
+                </p>
+
+                <h2>
+                    Diferente k según
+                    el dominio ID
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        MSWC MICRO-EN
+                    </p>
+
+                    <h3>
+                        k = 5
+                    </h3>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        VOCALSOUND
+                    </p>
+
+                    <h3>
+                        k = 100
+                    </h3>
+
+                </article>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Faiss
+                </h3>
+
+                <p>
+                    La búsqueda de vecinos
+                    se realiza mediante Faiss
+                    utilizando distancia euclídea.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BASELINES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · BASELINES
+                </p>
+
+                <h2>
+                    Output · Gradient · Distance
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        MSP
+                    </strong>
+
+                    <span>
+                        Maximum Softmax Probability
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        ODIN
+                    </strong>
+
+                    <span>
+                        Output-based
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        GradNorm
+                    </strong>
+
+                    <span>
+                        Gradient-based
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Deep k-NN
+                    </strong>
+
+                    <span>
+                        Feature distance
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METRICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · MÉTRICAS
+                </p>
+
+                <h2>
+                    FPR95 + AUROC
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        FPR95 ↓
+                    </p>
+
+                    <h3>
+                        False Positive Rate
+                    </h3>
+
+                    <p>
+                        Falsos positivos
+                        OOD cuando se conserva
+                        un 95 % de verdaderos
+                        positivos ID.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUROC ↑
+                    </p>
+
+                    <h3>
+                        Separación ID / OOD
+                    </h3>
+
+                    <p>
+                        Cuanto mayor,
+                        mejor distingue
+                        ambas distribuciones.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             VOCALSOUND RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    13 · RESULTADOS
+                </p>
+
+                <h2>
+                    VocalSound como ID
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>FPR95 ↓</th>
+                            <th>AUROC ↑</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>MSP</td>
+                            <td>64,43</td>
+                            <td>84,85</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>ODIN</td>
+                            <td>63,96</td>
+                            <td>84,90</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>GradNorm</td>
+                            <td>61,84</td>
+                            <td>85,33</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <strong>
+                                    Deep k-NN
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    43,94
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    92,40
+                                </strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             KEY RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        AUROC
+                    </span>
+
+                    <strong>
+                        85,33 → 92,40
+                    </strong>
+
+                    <p>
+                        GradNorm → k-NN
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        +7 puntos aproximadamente
+                    </h3>
+
+                    <p>
+                        La distancia dentro
+                        del embedding space
+                        proporciona una señal
+                        OOD especialmente útil
+                        en VocalSound.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MICRO EN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MSWC MICRO-EN COMO ID
+                </p>
+
+                <h2>
+                    Resultados medios
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>FPR95 ↓</th>
+                            <th>AUROC ↑</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>MSP</td>
+                            <td>45,11</td>
+                            <td>91,64</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>ODIN</td>
+                            <td>20,03</td>
+                            <td>94,62</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>GradNorm</td>
+                            <td>26,84</td>
+                            <td>93,29</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <strong>
+                                    Deep k-NN
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    17,00
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    95,88
+                                </strong>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SIMILAR OOD
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    RESULTADO IMPORTANTE
+                </p>
+
+                <h3>
+                    Cuanto más parecido es el OOD,
+                    más difícil resulta detectarlo
+                </h3>
+
+                <p>
+                    SpeechCommands
+                    y MSWC Micro-ES
+                    presentan características
+                    similares al keyword spotting
+                    de MSWC Micro-EN.
+                </p>
+
+                <p>
+                    En estos casos existe
+                    mayor solapamiento entre
+                    las distribuciones de distancia
+                    y aumenta el FPR.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXAMPLE TABLE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EJEMPLOS · MSWC MICRO-EN ID
+                </p>
+
+                <h2>
+                    Diferentes grados de dificultad
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>OOD</th>
+                            <th>k-NN FPR95 ↓</th>
+                            <th>k-NN AUROC ↑</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>VocalSound</td>
+                            <td>4,65</td>
+                            <td>98,80</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>VoxForge</td>
+                            <td>2,73</td>
+                            <td>98,94</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>CREMA-D</td>
+                            <td>2,63</td>
+                            <td>
+                                <strong>99,25</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>ESC-50</td>
+                            <td>9,75</td>
+                            <td>98,59</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>MSWC Micro-ES</td>
+                            <td>39,37</td>
+                            <td>93,11</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>SpeechCommands</td>
+                            <td>
+                                <strong>52,29</strong>
+                            </td>
+                            <td>84,14</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>FluentSpeech</td>
+                            <td>7,62</td>
+                            <td>98,33</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EFFICIENTNET RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    14 · OTRA ARQUITECTURA
+                </p>
+
+                <h2>
+                    EfficientNet-B0
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>VocalSound FPR95</th>
+                            <th>VocalSound AUROC</th>
+                            <th>MSWC FPR95</th>
+                            <th>MSWC AUROC</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>MSP</td>
+                            <td>35,93</td>
+                            <td>94,06</td>
+                            <td>45,61</td>
+                            <td>92,19</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>ODIN</td>
+                            <td>16,77</td>
+                            <td>96,53</td>
+                            <td>41,01</td>
+                            <td>92,17</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>GradNorm</td>
+                            <td>24,15</td>
+                            <td>94,86</td>
+                            <td>32,39</td>
+                            <td>93,27</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <strong>
+                                    k-NN
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>16,71</strong>
+                            </td>
+
+                            <td>
+                                <strong>96,87</strong>
+                            </td>
+
+                            <td>
+                                <strong>19,63</strong>
+                            </td>
+
+                            <td>
+                                <strong>95,20</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CLASSICAL METHODS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    15 · MÉTODOS NO PARAMÉTRICOS
+                </p>
+
+                <h2>
+                    Deep k-NN frente
+                    a detectores clásicos
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>FPR95 ↓</th>
+                            <th>AUROC ↑</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Isolation Forest</td>
+                            <td>97,21</td>
+                            <td>52,09</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>One-Class SVM</td>
+                            <td>61,24</td>
+                            <td>76,70</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>LODA</td>
+                            <td>97,75</td>
+                            <td>32,69</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>LOF</td>
+                            <td>70,74</td>
+                            <td>85,15</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>PCA</td>
+                            <td>93,92</td>
+                            <td>51,92</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <strong>
+                                    Deep k-NN
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    43,94
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    92,40
+                                </strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHY WORKS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    16 · ¿POR QUÉ FUNCIONA?
+                </p>
+
+                <h2>
+                    El embedding contiene
+                    más información que el softmax
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    La capa de clasificación
+                    transforma una representación
+                    rica en un conjunto reducido
+                    de logits.
+                </p>
+
+                <p>
+                    Dos muestras diferentes
+                    pueden producir probabilidades
+                    elevadas para una misma clase
+                    aunque se encuentren
+                    en regiones distintas
+                    del embedding space.
+                </p>
+
+                <p>
+                    Analizar directamente
+                    las representaciones permite
+                    detectar esa separación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ADVANTAGES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    VENTAJAS
+                </p>
+
+                <h2>
+                    Método sencillo y flexible
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        No OOD training
+                    </strong>
+
+                    <span>
+                        Solo ID
+                    </span>
+
+                    <p>
+                        No necesita disponer
+                        previamente de ejemplos
+                        fuera de distribución.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Non-parametric
+                    </strong>
+
+                    <span>
+                        No distribution assumption
+                    </span>
+
+                    <p>
+                        No asume una forma
+                        estadística concreta
+                        para el embedding space.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Model flexible
+                    </strong>
+
+                    <span>
+                        MobileNet / EfficientNet
+                    </span>
+
+                    <p>
+                        Puede aplicarse
+                        sobre distintas
+                        arquitecturas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Faiss
+                    </strong>
+
+                    <span>
+                        Efficient search
+                    </span>
+
+                    <p>
+                        Permite realizar
+                        búsquedas eficientes
+                        en espacios grandes.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITATIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        OOD parecido
+                    </h3>
+
+                    <p>
+                        Cuando ID y OOD
+                        representan tareas acústicas
+                        muy similares,
+                        la separación empeora.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Memoria
+                    </h3>
+
+                    <p>
+                        Es necesario conservar
+                        representaciones del
+                        conjunto de referencia.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Dependencia del embedding
+                    </h3>
+
+                    <p>
+                        Si el modelo aprende
+                        representaciones poco adecuadas,
+                        las distancias pueden
+                        no reflejar correctamente
+                        el cambio de distribución.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        k
+                    </h3>
+
+                    <p>
+                        El valor óptimo
+                        depende del dominio
+                        in-distribution.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Clasificación
+                    </h3>
+
+                    <p>
+                        El trabajo estudia
+                        tareas de clasificación
+                        de audio y habla,
+                        no ASR secuencial.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        OOD binario
+                    </h3>
+
+                    <p>
+                        Detectar que una muestra
+                        es desconocida no indica
+                        automáticamente qué
+                        ha cambiado.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONFIDENCE VS OOD
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    Confidence vs OOD
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>Confidence</th>
+                            <th>OOD Detection</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Pregunta</td>
+                            <td>
+                                ¿Es probable
+                                que la predicción
+                                sea correcta?
+                            </td>
+                            <td>
+                                ¿Pertenece
+                                esta entrada
+                                al dominio conocido?
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Señal</td>
+                            <td>
+                                Probabilidad /
+                                entropía
+                            </td>
+                            <td>
+                                Distancia
+                                en embedding
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Error ID</td>
+                            <td>
+                                Puede detectarlo
+                            </td>
+                            <td>
+                                No necesariamente
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Entrada desconocida</td>
+                            <td>
+                                Puede estar
+                                sobreconfiado
+                            </td>
+                            <td>
+                                Diseñado
+                                para detectarla
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Una señal para decidir
+                    cuándo el sistema
+                    ha entrado en terreno desconocido
+                </h2>
+
+                <p>
+                    Este trabajo resulta
+                    directamente relevante
+                    para la detección
+                    de cambios de distribución.
+                </p>
+
+                <p>
+                    Un sistema adaptativo
+                    podría mantener un espacio
+                    de representaciones
+                    correspondientes a condiciones
+                    conocidas.
+                </p>
+
+                <p>
+                    Cuando una nueva muestra
+                    aparece muy alejada
+                    de esas representaciones,
+                    el sistema podría evitar
+                    utilizarla automáticamente
+                    para actualizar el modelo.
+                </p>
+
+                <p>
+                    El OOD score podría combinarse
+                    con confidence y calibración
+                    para decidir si aceptar,
+                    adaptar, crear un nuevo
+                    componente o abstenerse.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Representation-Guided
+                    Adaptive Audio
+                </h2>
+
+                <p>
+                    Audio
+                    ↓
+                    encoder
+                    ↓
+                    embedding
+                    ↓
+                    nearest neighbours
+                    ↓
+                    OOD score
+                    ↓
+                    combinar con confidence
+                    ↓
+                    aceptar /
+                    adaptar /
+                    nueva memoria /
+                    abstenerse.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

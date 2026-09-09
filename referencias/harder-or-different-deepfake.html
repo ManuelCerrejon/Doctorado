@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Harder or Different?
+        Audio Deepfake Detection
+    </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+            <h1>Doctorado</h1>
+            <span>Seguimiento de investigación</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#investigacion">Investigación</a></li>
+                <li><a href="../index.html#estado-arte">Estado del arte</a></li>
+                <li><a href="../index.html#experimentos">Experimentos</a></li>
+                <li><a href="../index.html#documentos">Documentos</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="referencia-hero">
+
+    <div class="referencia-hero-contenido">
+
+        <a
+            href="../estado-arte/equidad-privacidad-seguridad.html"
+            class="volver"
+        >
+            ← Volver a Equidad, privacidad y seguridad
+        </a>
+
+        <p class="etiqueta">
+            REFERENCIA CIENTÍFICA · [67]
+        </p>
+
+        <h1>
+            Harder or Different?
+        </h1>
+
+        <h2>
+            Understanding Generalization
+            of Audio Deepfake Detection
+        </h2>
+
+        <p class="autores-referencia">
+            Müller et al. · Interspeech 2024
+        </p>
+
+        <div class="referencia-tags">
+            <span>Deepfake</span>
+            <span>Generalization</span>
+            <span>OOD</span>
+            <span>Domain Shift</span>
+            <span>ASVspoof</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+        <p class="etiqueta">REFERENCIA</p>
+        <h2>Información bibliográfica</h2>
+    </div>
+
+    <div class="ficha-bibliografica">
+
+        <div>
+            <span class="ficha-label">Primer autor</span>
+            <strong>Nicolas M. Müller</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Año</span>
+            <strong>2024</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Publicación</span>
+            <strong>Interspeech 2024</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Páginas</span>
+            <strong>2705–2709</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">DOI</span>
+            <strong>10.21437/Interspeech.2024-247</strong>
+        </div>
+
+    </div>
+
+    <div class="cita-completa">
+
+        <p>
+            Müller, N. M.,
+            Evans, N.,
+            Tak, H.,
+            Sperl, P.,
+            & Böttinger, K. (2024).
+            <em>
+                Harder or Different?
+                Understanding Generalization
+                of Audio Deepfake Detection.
+            </em>
+            Interspeech 2024,
+            2705–2709.
+            DOI:
+            10.21437/Interspeech.2024-247.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            PREGUNTA CENTRAL
+        </p>
+
+        <h2>
+            ¿Harder
+            o
+            Different?
+        </h2>
+
+        <p>
+            Cuando un detector
+            pierde rendimiento
+            sobre nuevos deepfakes,
+            ¿es porque esos ejemplos
+            son intrínsecamente
+            más difíciles?
+        </p>
+
+        <p>
+            ¿O porque pertenecen
+            a una distribución
+            diferente
+            de la utilizada
+            durante entrenamiento?
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+            <span>TRAIN</span>
+            <h3>Domain D</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>TEST</span>
+            <h3>Domain D'</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>GAP</span>
+            <h3>Performance Drop</h3>
+        </div>
+
+        <div class="arquitectura-flecha">=</div>
+
+        <div class="arquitectura-bloque">
+            <span>PART 1</span>
+            <h3>Hardness</h3>
+        </div>
+
+        <div class="arquitectura-flecha">+</div>
+
+        <div class="arquitectura-bloque">
+            <span>PART 2</span>
+            <h3>Difference</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="modelos-configuracion">
+
+        <article>
+            <p class="etiqueta">HARDNESS</p>
+            <h3>Intrinsic Difficulty</h3>
+            <p>
+                ¿El nuevo conjunto
+                es difícil incluso
+                cuando entrenamos
+                directamente sobre él?
+            </p>
+        </article>
+
+        <article>
+            <p class="etiqueta">DIFFERENCE</p>
+            <h3>Transfer Failure</h3>
+            <p>
+                ¿El problema aparece
+                porque entrenamos
+                sobre otra distribución?
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · MODELOS
+        </p>
+
+        <h2>
+            Cuatro detectores
+        </h2>
+
+    </div>
+
+    <div class="wavlm-tareas-grid">
+
+        <article>
+            <strong>LCNN</strong>
+            <span>Light CNN</span>
+        </article>
+
+        <article>
+            <strong>RawNet2</strong>
+            <span>Raw waveform</span>
+        </article>
+
+        <article>
+            <strong>WhisperDF</strong>
+            <span>Whisper-based</span>
+        </article>
+
+        <article>
+            <strong>SSL-W2V2</strong>
+            <span>wav2vec 2.0</span>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · DATASETS
+        </p>
+
+        <h2>
+            Varios dominios deepfake
+        </h2>
+
+    </div>
+
+    <div class="wavlm-tareas-grid">
+
+        <article>
+            <strong>ASVspoof 2019</strong>
+            <span>Training domain</span>
+        </article>
+
+        <article>
+            <strong>ASVspoof 2021 LA</strong>
+            <span>Logical Access</span>
+        </article>
+
+        <article>
+            <strong>ASVspoof 2021 DF</strong>
+            <span>Deepfake</span>
+        </article>
+
+        <article>
+            <strong>In-the-Wild</strong>
+            <span>Real-world shift</span>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            CONTROL EXPERIMENT
+        </p>
+
+        <h3>
+            Audio truncado
+            a 0,25 segundos
+        </h3>
+
+        <p>
+            Los autores crean
+            deliberadamente
+            una versión más difícil
+            del mismo dominio
+            para comprobar
+            cómo se comporta
+            el componente hardness.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-destacado-wav2vec">
+
+        <div>
+            <span>MAIN RESULT</span>
+            <strong>Difference</strong>
+            <p>dominates</p>
+        </div>
+
+        <div class="resultado-explicacion">
+
+            <h3>
+                Hardness
+                ≈ negligible
+            </h3>
+
+            <p>
+                En los experimentos
+                con conjuntos OOD,
+                la mayor parte
+                de la degradación
+                procede de diferencia
+                entre distribuciones.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            CONSECUENCIA
+        </p>
+
+        <h2>
+            Bigger model
+            ≠
+            solved generalization
+        </h2>
+
+        <p>
+            Si el problema
+            es principalmente
+            cambio de distribución,
+            aumentar únicamente
+            la capacidad del detector
+            no soluciona
+            necesariamente el fallo.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            SHORTCUT LEARNING
+        </p>
+
+        <h3>
+            Un detector puede aprender
+            pistas accidentales
+        </h3>
+
+        <p>
+            El trabajo discute
+            que características
+            irrelevantes del dataset,
+            como patrones de silencio,
+            pueden correlacionarse
+            con las etiquetas
+            y convertirse
+            en atajos predictivos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="limitaciones-grid">
+
+        <article>
+            <h3>Selected Datasets</h3>
+            <p>
+                La descomposición
+                se evalúa en conjuntos
+                concretos de deepfake.
+            </p>
+        </article>
+
+        <article>
+            <h3>Binary Detection</h3>
+            <p>
+                El problema principal
+                continúa formulado
+                como real / fake.
+            </p>
+        </article>
+
+        <article>
+            <h3>Future Generators</h3>
+            <p>
+                Nuevos generadores
+                pueden introducir
+                cambios todavía diferentes.
+            </p>
+        </article>
+
+        <article>
+            <h3>Shortcut Risk</h3>
+            <p>
+                Un buen benchmark score
+                puede apoyarse
+                en características
+                no causales.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            RELACIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            Deepfake
+            como OOD
+        </h2>
+
+        <p>
+            La conclusión encaja
+            directamente con OE2
+            y OE5:
+            detectar el cambio
+            de distribución
+            puede ser tan importante
+            como mejorar
+            el clasificador base.
+        </p>
+
+        <p>
+            Un futuro sistema
+            podría detectar
+            que el generador
+            es desconocido,
+            reducir su confianza
+            y activar adaptación
+            o supervisión humana.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+</footer>
+
+
+</body>
+</html>

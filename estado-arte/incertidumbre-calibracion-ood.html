@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Incertidumbre, calibración y OOD | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 09
+                </p>
+
+
+                <h1>
+                    Incertidumbre, calibración
+                    y detección fuera de distribución
+                </h1>
+
+
+                <p class="tema-introduccion">
+
+                    Un sistema fiable no debería
+                    limitarse a producir una predicción.
+                    También debería estimar cuándo
+                    esa predicción puede ser incorrecta.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    PROBLEMA CENTRAL
+                </p>
+
+                <h2>
+                    Alta probabilidad no significa
+                    necesariamente alta fiabilidad
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    Las probabilidades generadas
+                    por una red neuronal no están
+                    necesariamente bien calibradas.
+                </p>
+
+                <p>
+                    Un modelo puede asignar
+                    una confianza elevada
+                    a una predicción incorrecta.
+                </p>
+
+                <p>
+                    Este comportamiento resulta
+                    especialmente problemático
+                    ante ruido, hablantes desconocidos,
+                    nuevos dispositivos o señales
+                    alejadas de la distribución
+                    utilizada durante entrenamiento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONCEPTOS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    CONCEPTOS
+                </p>
+
+                <h2>
+                    Tres problemas relacionados
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONFIDENCE
+                    </p>
+
+                    <h3>
+                        ¿Es probable que acierte?
+                    </h3>
+
+                    <p>
+                        Asignar una puntuación
+                        relacionada con la probabilidad
+                        de que una predicción
+                        sea correcta.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CALIBRATION
+                    </p>
+
+                    <h3>
+                        ¿La confianza es realista?
+                    </h3>
+
+                    <p>
+                        Una confianza del 80 %
+                        debería corresponder,
+                        idealmente, a aproximadamente
+                        un 80 % de aciertos.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        OOD
+                    </p>
+
+                    <h3>
+                        ¿Conozco esta entrada?
+                    </h3>
+
+                    <p>
+                        Detectar señales procedentes
+                        de condiciones o clases
+                        diferentes a las utilizadas
+                        durante el entrenamiento.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LEVELS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    ASR
+                </p>
+
+                <h2>
+                    Diferentes niveles de confianza
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Token
+                    </strong>
+
+                    <span>
+                        Token-level
+                    </span>
+
+                    <p>
+                        Confianza asociada
+                        a una unidad individual
+                        del vocabulario.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Word
+                    </strong>
+
+                    <span>
+                        Word-level
+                    </span>
+
+                    <p>
+                        Agrega diferentes tokens
+                        para estimar la confianza
+                        de una palabra.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Segment
+                    </strong>
+
+                    <span>
+                        Segment-level
+                    </span>
+
+                    <p>
+                        Permite localizar regiones
+                        potencialmente problemáticas
+                        de la transcripción.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Sequence
+                    </strong>
+
+                    <span>
+                        Utterance-level
+                    </span>
+
+                    <p>
+                        Resume la fiabilidad
+                        de la transcripción
+                        completa.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCES
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIAS CLAVE
+                </p>
+
+                <h2>
+                    De confianza ASR
+                    a detección OOD
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <!-- 01 -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Word-Level Confidence
+                            Estimation for E2E ASR
+                        </h3>
+
+                        <p>
+                            Evalúa diferentes formas
+                            de obtener confianza
+                            a nivel de palabra
+                            a partir de las probabilidades
+                            de tokens producidas
+                            por un sistema ASR
+                            end-to-end.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Confidence</span>
+                            <span>Entropy</span>
+                            <span>Temperature Scaling</span>
+                            <span>Word-Level</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/word-level-confidence-asr.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 02 -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Identifying and Calibrating
+                            Overconfidence in Noisy
+                            Speech Recognition
+                        </h3>
+
+                        <p>
+                            Analiza cómo Whisper puede mantener
+                            una confianza elevada incluso cuando
+                            el ruido provoca errores de reconocimiento
+                            y propone calibrar selectivamente
+                            únicamente los tokens potencialmente
+                            sobreconfiados.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Whisper</span>
+                            <span>Overconfidence</span>
+                            <span>Noise</span>
+                            <span>Calibration</span>
+                            <span>Temperature Scaling</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/overconfidence-noisy-asr.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 03 -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            OOD Detection for Audio
+                            with Deep Nearest Neighbors
+                        </h3>
+
+                        <p>
+                            Detecta entradas acústicas fuera
+                            de distribución comparando su
+                            representación profunda con las
+                            muestras de entrenamiento mediante
+                            k-nearest neighbours.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>OOD Detection</span>
+                            <span>Deep k-NN</span>
+                            <span>Embeddings</span>
+                            <span>YAMNet</span>
+                            <span>Faiss</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/audio-ood-knn.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONFIDENCE PIPELINE
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    CONFIANZA
+                </p>
+
+                <h2>
+                    De la predicción a una decisión fiable
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Audio
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        ASR / Audio Model
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Prediction
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    +
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>RELIABILITY</span>
+
+                    <h3>
+                        Confidence
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OOD
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    OUT-OF-DISTRIBUTION
+                </p>
+
+                <h2>
+                    ¿Qué significa desconocido
+                    en audio?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Hablante
+                    </strong>
+
+                    <span>
+                        New speaker
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Acento
+                    </strong>
+
+                    <span>
+                        New accent
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Dispositivo
+                    </strong>
+
+                    <span>
+                        New microphone
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Ruido
+                    </strong>
+
+                    <span>
+                        New environment
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Evento
+                    </strong>
+
+                    <span>
+                        Unknown sound
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Clase
+                    </strong>
+
+                    <span>
+                        Unknown category
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEM
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA ABIERTO
+                </p>
+
+                <h2>
+                    En audio la frontera OOD
+                    puede ser difusa
+                </h2>
+
+                <p>
+                    Hablante, ruido, canal,
+                    contenido y contexto cambian
+                    de forma continua.
+                </p>
+
+                <p>
+                    Por ello no siempre existe
+                    una frontera clara entre
+                    una muestra conocida
+                    y una completamente desconocida.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ABSTENTION
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    ABSTENTION
+                </p>
+
+                <h2>
+                    No siempre hay que responder
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Predicción fiable
+                        </h3>
+
+                        <p>
+                            Confidence elevada
+                            y evidencia conocida.
+                        </p>
+
+                        <strong>
+                            → responder
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Evidencia insuficiente
+                        </h3>
+
+                        <p>
+                            Confianza reducida
+                            o entrada sospechosa.
+                        </p>
+
+                        <strong>
+                            → predicción provisional
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            OOD / incertidumbre alta
+                        </h3>
+
+                        <p>
+                            El sistema no puede
+                            justificar adecuadamente
+                            su salida.
+                        </p>
+
+                        <strong>
+                            → abstenerse
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Supervisión
+                        </h3>
+
+                        <p>
+                            Solicitar otra grabación
+                            o intervención humana.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ADAPTATION LINK
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    CONEXIÓN CON ADAPTACIÓN
+                </p>
+
+                <h2>
+                    La confianza puede controlar
+                    cuándo aprende el modelo
+                </h2>
+
+                <p>
+                    Un modelo adaptativo no debería
+                    actualizarse automáticamente
+                    con todas las muestras recibidas.
+                </p>
+
+                <p>
+                    La incertidumbre y la detección
+                    de cambios de distribución
+                    pueden actuar como mecanismos
+                    para decidir cuándo adaptar,
+                    conservar, descartar o solicitar
+                    supervisión.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    De modelo adaptativo
+                    a modelo consciente
+                    de sus limitaciones
+                </h2>
+
+                <p>
+                    La estimación de incertidumbre
+                    no debería considerarse
+                    únicamente una salida adicional.
+                </p>
+
+                <p>
+                    Puede utilizarse para controlar
+                    el propio funcionamiento
+                    del sistema.
+                </p>
+
+                <p>
+                    Confidence, calibración
+                    y OOD detection pueden decidir
+                    cuándo aceptar una predicción,
+                    cuándo adaptar el modelo
+                    y cuándo abstenerse.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

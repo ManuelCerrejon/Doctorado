@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Privacy-Oriented Manipulation
+        of Speaker Representations
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAV
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/equidad-privacidad-seguridad.html"
+                    class="volver"
+                >
+                    ← Volver a Equidad,
+                    privacidad y seguridad
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA · [61]
+                </p>
+
+
+                <h1>
+                    Privacy-Oriented Manipulation
+                    of Speaker Representations
+                </h1>
+
+
+                <p class="autores-referencia">
+                    Teixeira, Abad, Raj & Trancoso
+                    · IEEE Access 2024
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Privacy</span>
+                    <span>Speaker Embeddings</span>
+                    <span>VQ-VAE</span>
+                    <span>Adversarial</span>
+                    <span>Mutual Information</span>
+                    <span>ASV</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BIBLIOGRAPHY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Francisco Teixeira
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2024
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Revista
+                    </span>
+
+                    <strong>
+                        IEEE Access
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Volumen
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        82949–82971
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.1109/ACCESS.2024.3409067
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Teixeira, F.,
+                    Abad, A.,
+                    Raj, B.,
+                    & Trancoso, I. (2024).
+                    <em>
+                        Privacy-Oriented Manipulation
+                        of Speaker Representations.
+                    </em>
+                    IEEE Access,
+                    12,
+                    82949–82971.
+                    DOI:
+                    10.1109/ACCESS.2024.3409067.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OBJECTIVE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Un speaker embedding
+                    contiene información
+                    que quizá no queremos revelar
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los embeddings de hablante
+                    se utilizan para tareas
+                    como speaker recognition,
+                    diarización,
+                    síntesis de voz
+                    y anonimización.
+                </p>
+
+                <p>
+                    Sin embargo,
+                    también pueden codificar
+                    información sobre atributos
+                    del hablante
+                    que no son necesarios
+                    para la tarea.
+                </p>
+
+                <p>
+                    El trabajo propone
+                    eliminar o manipular
+                    específicamente
+                    información de sexo
+                    y edad
+                    dentro del embedding,
+                    intentando conservar
+                    la identidad necesaria
+                    para verificación
+                    de hablante.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PRIVACY UTILITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        PRIVACY
+                    </p>
+
+                    <h3>
+                        Ocultar atributo
+                    </h3>
+
+                    <p>
+                        El atacante
+                        debería dejar
+                        de poder inferir
+                        sexo o edad
+                        desde el embedding.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        UTILITY
+                    </p>
+
+                    <h3>
+                        Mantener identidad
+                    </h3>
+
+                    <p>
+                        El embedding
+                        debe seguir permitiendo
+                        Automatic Speaker
+                        Verification.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SCENARIO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ESCENARIO
+                </p>
+
+                <h2>
+                    Privacidad
+                    en speaker verification remoto
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>USER DEVICE</span>
+
+                    <h3>
+                        Voice
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LOCAL</span>
+
+                    <h3>
+                        Speaker
+                        Embedding
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LOCAL</span>
+
+                    <h3>
+                        Privacy
+                        Transformation
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>REMOTE</span>
+
+                    <h3>
+                        ASV Vendor
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ATTACKERS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · MODELO DE ATAQUE
+                </p>
+
+                <h2>
+                    Dos atacantes
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        IGNORANT ATTACKER
+                    </p>
+
+                    <h3>
+                        No conoce
+                        la transformación
+                    </h3>
+
+                    <p>
+                        Su clasificador
+                        de atributos
+                        está entrenado
+                        sobre embeddings
+                        originales.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        INFORMED ATTACKER
+                    </p>
+
+                    <h3>
+                        Conoce
+                        el mecanismo
+                    </h3>
+
+                    <p>
+                        Puede transformar
+                        sus propios datos
+                        y entrenar
+                        un nuevo atacante
+                        directamente
+                        sobre embeddings
+                        protegidos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ATTACK
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    ATACANTE FUERTE
+                </p>
+
+                <h2>
+                    No basta con engañar
+                    a un clasificador antiguo
+                </h2>
+
+                <p>
+                    La evaluación
+                    debe comprobar
+                    también si un atacante
+                    puede aprender nuevamente
+                    el atributo sensible
+                    observando embeddings
+                    ya privatizados.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FULL MODEL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MODELO PROPUESTO
+                </p>
+
+                <h2>
+                    VQ-VAE
+                    + ADV
+                    + Mutual Information
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Speaker
+                        Embedding
+                    </h3>
+
+                    <p>
+                        192 dims
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENCODER</span>
+
+                    <h3>
+                        VQ-VAE
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DISCRETE</span>
+
+                    <h3>
+                        Quantization
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>PRIVATE</span>
+
+                    <h3>
+                        Attribute
+                        Removal
+                    </h3>
+
+                    <p>
+                        ADV + MI
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DECODER</span>
+
+                    <h3>
+                        Conditioned
+                        Reconstruction
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Protected
+                        Embedding
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPONENTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPONENTES
+                </p>
+
+                <h2>
+                    Cinco piezas
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        VQ-VAE
+                    </strong>
+
+                    <span>
+                        Reconstruction
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Speaker Classifier
+                    </strong>
+
+                    <span>
+                        Preserve identity
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        External
+                        Attribute Classifier
+                    </strong>
+
+                    <span>
+                        Decoder conditioning
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Adversarial
+                        Classifier
+                    </strong>
+
+                    <span>
+                        Attribute suppression
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Mutual
+                        Information Loss
+                    </strong>
+
+                    <span>
+                        Attribute independence
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTUITION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    INTUICIÓN
+                </p>
+
+                <h2>
+                    Identity
+                    ── mantener
+                    <br>
+                    Sex / Age
+                    ── eliminar
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             VQ CONFIG
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · ARQUITECTURA
+                </p>
+
+                <h2>
+                    VQ-VAE
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Input
+                    </span>
+
+                    <strong>
+                        192
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Encoder hidden
+                    </span>
+
+                    <strong>
+                        512 · 512 · 128
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Bottleneck
+                    </span>
+
+                    <strong>
+                        128
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Decoder hidden
+                    </span>
+
+                    <strong>
+                        3 × 512
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Output
+                    </span>
+
+                    <strong>
+                        192
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Codebooks
+                    </span>
+
+                    <strong>
+                        64
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Entries / codebook
+                    </span>
+
+                    <strong>
+                        128
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Model
+                    </span>
+
+                    <strong>
+                        ≈ 1 M params
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXTRACTOR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        EXTRACTOR
+                    </span>
+
+                    <strong>
+                        ECAPA-TDNN
+                    </strong>
+
+                    <p>
+                        SpeechBrain
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        192-dimensional embeddings
+                    </h3>
+
+                    <p>
+                        El extractor
+                        de identidad
+                        permanece separado
+                        del mecanismo
+                        de privacidad.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PARAMETERS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    COSTE
+                </p>
+
+                <h3>
+                    ≈ 1 M
+                    frente a
+                    ≈ 14 M parámetros
+                </h3>
+
+                <p>
+                    El mecanismo
+                    de privacidad propuesto
+                    es considerablemente
+                    menor que el extractor
+                    de speaker embeddings.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · DATASETS
+                </p>
+
+                <h2>
+                    Cuatro recursos
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        VoxCeleb
+                    </strong>
+
+                    <span>
+                        Main domain
+                    </span>
+
+                    <p>
+                        Entrenamiento
+                        principal
+                        y evaluación
+                        de sexo y ASV.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        LibriTTS
+                    </strong>
+
+                    <span>
+                        Cross-domain
+                    </span>
+
+                    <p>
+                        Habla leída
+                        utilizada
+                        para estudiar
+                        cambio de dominio.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        AgeVoxCeleb
+                    </strong>
+
+                    <span>
+                        Age labels
+                    </span>
+
+                    <p>
+                        Entrenamiento
+                        de los experimentos
+                        relacionados con edad.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        VoxCelebPT
+                    </strong>
+
+                    <span>
+                        Portuguese
+                    </span>
+
+                    <p>
+                        Evaluación externa
+                        de los experimentos
+                        relacionados con edad.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             VOX PARTITIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    SEX · VOXCELEB
+                </p>
+
+                <h2>
+                    Particiones separadas
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Partición</th>
+                            <th>Uso</th>
+                            <th>Speakers</th>
+                            <th>Utterances</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>train_vox_spk</td>
+                            <td>Embedding extractor</td>
+                            <td>7.205</td>
+                            <td>2.346.694</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>train_vox_vq</td>
+                            <td>VQ-VAE</td>
+                            <td>5.144</td>
+                            <td>880.095</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>train_vox_att</td>
+                            <td>Privacy attacker</td>
+                            <td>400</td>
+                            <td>67.279</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>test_vox_att</td>
+                            <td>Evaluation</td>
+                            <td>137</td>
+                            <td>34.109</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONTAMINATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    DATA LEAKAGE
+                </p>
+
+                <h3>
+                    21 speakers
+                    fueron eliminados
+                    del test
+                </h3>
+
+                <p>
+                    Los autores comprobaron
+                    posibles solapamientos
+                    entre particiones
+                    de VoxCeleb
+                    y eliminaron
+                    hablantes contaminados
+                    antes de evaluar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASV
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    AUTOMATIC SPEAKER VERIFICATION
+                </p>
+
+                <h2>
+                    Medida de utilidad
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Test speakers
+                    </span>
+
+                    <strong>
+                        40
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Utterances
+                    </span>
+
+                    <strong>
+                        4.874
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Trials
+                    </span>
+
+                    <strong>
+                        37.720
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Scoring
+                    </span>
+
+                    <strong>
+                        Cosine
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRAINING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · ENTRENAMIENTO
+                </p>
+
+                <h2>
+                    Configuración
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Optimizer
+                    </span>
+
+                    <strong>
+                        Adam
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        VQ-VAE epochs
+                    </span>
+
+                    <strong>
+                        100
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Batch
+                    </span>
+
+                    <strong>
+                        128
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Start LR
+                    </span>
+
+                    <strong>
+                        8e-4
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Max LR
+                    </span>
+
+                    <strong>
+                        0,01
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Dropout
+                    </span>
+
+                    <strong>
+                        0,1
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PRIVACY METRICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Privacidad
+                    y utilidad
+                    por separado
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Objetivo</th>
+                            <th>Métricas</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Sex privacy
+                            </td>
+
+                            <td>
+                                UAR
+                                ·
+                                AUPRC
+                                ·
+                                D-ECE
+                                ·
+                                llr-max
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Age privacy
+                            </td>
+
+                            <td>
+                                CCC
+                                ·
+                                PCC
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                ASV utility
+                            </td>
+
+                            <td>
+                                EER
+                                ·
+                                minDCF
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SEX RESULTS IGNORANT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · SEX · IGNORANT ATTACKER
+                </p>
+
+                <h2>
+                    Mejor combinación
+                    VQ-VAE + ADV + MI
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Representación</th>
+                            <th>EER ↓</th>
+                            <th>AUPRC ↓</th>
+                            <th>UAR ↓</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Original</td>
+                            <td>
+                                <strong>0,88 %</strong>
+                            </td>
+                            <td>99,40 %</td>
+                            <td>97,74 %</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>VQ-VAE</td>
+                            <td>1,44 %</td>
+                            <td>82,35 %</td>
+                            <td>73,82 %</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>VQ-VAE + MI</td>
+                            <td>2,12 %</td>
+                            <td>60,54 %</td>
+                            <td>56,11 %</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>VQ-VAE + ADV</td>
+                            <td>2,45 %</td>
+                            <td>56,72 %</td>
+                            <td>54,76 %</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <strong>
+                                    VQ-VAE + ADV + MI
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    1,48 %
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    52,92 %
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    50,91 %
+                                </strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SEX RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        SEX PRIVACY
+                    </span>
+
+                    <strong>
+                        50,91 %
+                    </strong>
+
+                    <p>
+                        UAR
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Chance level
+                        ≈ 50 %
+                    </h3>
+
+                    <p>
+                        Para el atacante ignorante,
+                        la combinación completa
+                        reduce la capacidad
+                        de predecir sexo
+                        casi hasta azar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INFORMED
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    INFORMED ATTACKER
+                </p>
+
+                <h2>
+                    El problema
+                    es más difícil
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    FULL MODEL
+                </p>
+
+                <h2>
+                    UAR = 57,71 %
+                </h2>
+
+                <p>
+                    El atacante informado
+                    consigue recuperar
+                    parte de la información.
+                </p>
+
+                <p>
+                    Por tanto,
+                    el atributo
+                    no desaparece completamente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASV UTILITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        ORIGINAL ASV
+                    </span>
+
+                    <strong>
+                        0,88 %
+                    </strong>
+
+                    <p>
+                        EER
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Protected
+                        = 1,48 %
+                    </h3>
+
+                    <p>
+                        El incremento absoluto
+                        es de aproximadamente
+                        0,6 puntos de EER
+                        para eliminación
+                        de sexo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AGE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · AGE
+                </p>
+
+                <h2>
+                    Eliminar una variable
+                    continua
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Representación</th>
+                            <th>EER ↓</th>
+                            <th>CCC ignorante ↓</th>
+                            <th>PCC ignorante ↓</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Original</td>
+                            <td>0,88 %</td>
+                            <td>0,681</td>
+                            <td>0,753</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>VQ-VAE</td>
+                            <td>1,74 %</td>
+                            <td>0,194</td>
+                            <td>0,370</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>VQ-VAE + MI</td>
+                            <td>1,97 %</td>
+                            <td>0,147</td>
+                            <td>0,279</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>VQ-VAE + ADV</td>
+                            <td>2,68 %</td>
+                            <td>0,117</td>
+                            <td>0,229</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <strong>
+                                    VQ-VAE + ADV + MI
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    4,24 %
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    0,042
+                                </strong>
+                            </td>
+
+                            <td>
+                                <strong>
+                                    0,084
+                                </strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AGE TRADEOFF
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    PRIVACY / UTILITY TRADE-OFF
+                </p>
+
+                <h3>
+                    Edad se elimina mejor,
+                    pero daña más ASV
+                </h3>
+
+                <p>
+                    La mejor configuración
+                    reduce fuertemente
+                    la correlación
+                    con la edad real.
+                </p>
+
+                <p>
+                    Sin embargo,
+                    el EER aumenta
+                    desde 0,88 %
+                    hasta 4,24 %.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MANIPULATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · MANIPULACIÓN
+                </p>
+
+                <h2>
+                    No solo elimina:
+                    puede sustituir
+                    el atributo
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>ORIGINAL</span>
+
+                    <h3>
+                        Embedding
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    +
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CONDITION</span>
+
+                    <h3>
+                        Fake Attribute
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        VQ-VAE
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OUTPUT</span>
+
+                    <h3>
+                        Manipulated
+                        Embedding
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CROSS DOMAIN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · CROSS-DOMAIN
+                </p>
+
+                <h2>
+                    VoxCeleb
+                    ↔
+                    LibriTTS
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        VOXCELEB
+                    </p>
+
+                    <h3>
+                        Interviews
+                    </h3>
+
+                    <p>
+                        Habla espontánea,
+                        condiciones ruidosas
+                        y heterogéneas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        LIBRITTS
+                    </p>
+
+                    <h3>
+                        Audiobooks
+                    </h3>
+
+                    <p>
+                        Habla leída
+                        y condiciones
+                        más controladas.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DOMAIN
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    RESULTADO
+                </p>
+
+                <h3>
+                    La privacidad
+                    también sufre
+                    domain shift
+                </h3>
+
+                <p>
+                    Los modelos
+                    de privatización
+                    muestran dependencia
+                    del dominio
+                    con el que fueron
+                    entrenados.
+                </p>
+
+                <p>
+                    Combinar datos
+                    de VoxCeleb
+                    y LibriTTS
+                    mejora la robustez
+                    entre ambos dominios.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITATIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    La privacidad
+                    no está resuelta
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Residual Information
+                    </h3>
+
+                    <p>
+                        Un atacante informado
+                        sigue recuperando
+                        parte de los atributos.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Empirical Privacy
+                    </h3>
+
+                    <p>
+                        El método
+                        no proporciona
+                        garantías formales
+                        de privacidad.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Two Attributes
+                    </h3>
+
+                    <p>
+                        Los experimentos
+                        se centran únicamente
+                        en sexo y edad.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Utility
+                    </h3>
+
+                    <p>
+                        La utilidad
+                        se evalúa
+                        principalmente mediante ASV.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Domain Dependency
+                    </h3>
+
+                    <p>
+                        La protección
+                        puede degradarse
+                        al cambiar
+                        el dominio.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Trade-Off
+                    </h3>
+
+                    <p>
+                        No existe
+                        un mecanismo sencillo
+                        para controlar
+                        linealmente
+                        privacidad
+                        frente a utilidad.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Adaptación
+                    y privacidad
+                    no deberían estudiarse
+                    por separado
+                </h2>
+
+                <p>
+                    Un modelo adaptativo
+                    puede necesitar
+                    información sobre
+                    hablante,
+                    dispositivo
+                    o dominio
+                    para personalizarse.
+                </p>
+
+                <p>
+                    Sin embargo,
+                    almacenar toda esa información
+                    puede aumentar
+                    los riesgos de privacidad.
+                </p>
+
+                <p>
+                    Una posible dirección
+                    consiste en aprender
+                    representaciones
+                    que conserven
+                    únicamente la información
+                    necesaria para adaptación
+                    y para la tarea objetivo.
+                </p>
+
+                <p>
+                    Además,
+                    la robustez
+                    de los mecanismos
+                    de privacidad
+                    debería evaluarse
+                    también bajo cambios
+                    de dominio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA
+                </p>
+
+                <h2>
+                    Privacy-Aware
+                    Continual Adaptation
+                </h2>
+
+                <p>
+                    audio local
+                    ↓
+                    embedding
+                    ↓
+                    separar:
+                </p>
+
+                <p>
+                    información útil
+                    para adaptación
+                    +
+                    información sensible
+                    ↓
+                    eliminar atributo sensible
+                    ↓
+                    adaptar modelo
+                    ↓
+                    evaluar:
+                </p>
+
+                <p>
+                    task performance
+                    +
+                    privacy leakage
+                    +
+                    adaptation gain
+                    +
+                    forgetting
+                    +
+                    compute cost.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

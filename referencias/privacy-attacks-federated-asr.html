@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Privacy Attacks for ASR
+        in Federated Learning
+    </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+            <h1>Doctorado</h1>
+            <span>Seguimiento de investigación</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#investigacion">Investigación</a></li>
+                <li><a href="../index.html#estado-arte">Estado del arte</a></li>
+                <li><a href="../index.html#experimentos">Experimentos</a></li>
+                <li><a href="../index.html#documentos">Documentos</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="referencia-hero">
+
+    <div class="referencia-hero-contenido">
+
+        <a
+            href="../estado-arte/equidad-privacidad-seguridad.html"
+            class="volver"
+        >
+            ← Volver a Equidad, privacidad y seguridad
+        </a>
+
+        <p class="etiqueta">
+            REFERENCIA CIENTÍFICA · [65]
+        </p>
+
+        <h1>
+            Privacy Attacks
+            for Automatic Speech Recognition
+            Acoustic Models
+            in a Federated Learning Framework
+        </h1>
+
+        <p class="autores-referencia">
+            Tomashenko et al. · ICASSP 2022
+        </p>
+
+        <div class="referencia-tags">
+            <span>Federated Learning</span>
+            <span>Privacy Attack</span>
+            <span>Speaker Identity</span>
+            <span>ASR</span>
+            <span>EER</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+        <p class="etiqueta">REFERENCIA</p>
+        <h2>Información bibliográfica</h2>
+    </div>
+
+    <div class="ficha-bibliografica">
+
+        <div>
+            <span class="ficha-label">Primera autora</span>
+            <strong>Natalia Tomashenko</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Año</span>
+            <strong>2022</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Publicación</span>
+            <strong>ICASSP 2022</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Páginas</span>
+            <strong>6972–6976</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">DOI</span>
+            <strong>10.1109/ICASSP43922.2022.9746541</strong>
+        </div>
+
+    </div>
+
+    <div class="cita-completa">
+
+        <p>
+            Tomashenko, N.,
+            Mdhaffar, S.,
+            Tommasi, M.,
+            Estève, Y.,
+            & Bonastre, J.-F. (2022).
+            <em>
+                Privacy Attacks
+                for Automatic Speech Recognition
+                Acoustic Models
+                in a Federated Learning Framework.
+            </em>
+            ICASSP 2022,
+            6972–6976.
+            DOI:
+            10.1109/ICASSP43922.2022.9746541.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            01 · PROBLEMA
+        </p>
+
+        <h2>
+            No compartir audio
+            no significa
+            no compartir identidad
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            En un escenario federado,
+            cada usuario adapta localmente
+            un modelo acústico global.
+        </p>
+
+        <p>
+            El servidor puede recibir
+            modelos o actualizaciones
+            personalizadas sin recibir
+            directamente las grabaciones.
+        </p>
+
+        <p>
+            El artículo estudia
+            si esos modelos adaptados
+            contienen todavía
+            una huella identificable
+            del hablante.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+            <span>SERVER</span>
+            <h3>Global AM</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>CLIENT</span>
+            <h3>Private Speech</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>LOCAL</span>
+            <h3>Adaptation</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>OUTPUT</span>
+            <h3>Personalized AM</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · THREAT MODEL
+        </p>
+
+        <h2>
+            El atacante no necesita
+            el audio privado
+        </h2>
+
+    </div>
+
+    <div class="modelos-configuracion">
+
+        <article>
+            <p class="etiqueta">AVAILABLE</p>
+            <h3>Global Model</h3>
+        </article>
+
+        <article>
+            <p class="etiqueta">AVAILABLE</p>
+            <h3>Personalized Model</h3>
+        </article>
+
+        <article>
+            <p class="etiqueta">AVAILABLE</p>
+            <h3>Indicator Data</h3>
+        </article>
+
+        <article>
+            <p class="etiqueta">NOT AVAILABLE</p>
+            <h3>Private User Audio</h3>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · INDICATOR DATASET
+        </p>
+
+        <h2>
+            Sondear el modelo
+            con audio externo
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            Se utiliza un conjunto
+            de audio externo
+            que no pertenece
+            a los hablantes objetivo.
+        </p>
+
+        <p>
+            Ese audio se procesa
+            mediante el modelo global
+            y el modelo personalizado.
+        </p>
+
+        <p>
+            Las diferencias
+            entre sus activaciones
+            constituyen la huella
+            utilizada por los ataques.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+            <span>INDICATOR</span>
+            <h3>External Speech</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>MODEL A</span>
+            <h3>Global</h3>
+        </div>
+
+        <div class="arquitectura-flecha">+</div>
+
+        <div class="arquitectura-bloque">
+            <span>MODEL B</span>
+            <h3>Personalized</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>DIFFERENCE</span>
+            <h3>Footprint</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>ATTACK</span>
+            <h3>Speaker ID</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            04 · ATAQUES
+        </p>
+
+        <h2>
+            Dos estrategias
+        </h2>
+
+    </div>
+
+    <div class="modelos-configuracion">
+
+        <article>
+
+            <p class="etiqueta">
+                ATTACK 1
+            </p>
+
+            <h3>
+                Footprint Distance
+            </h3>
+
+            <p>
+                Compara directamente
+                las huellas derivadas
+                de las activaciones
+                de los modelos.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <p class="etiqueta">
+                ATTACK 2
+            </p>
+
+            <h3>
+                Neural Attack Model
+            </h3>
+
+            <p>
+                Aprende una representación
+                específica orientada
+                a identificar
+                al hablante.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            05 · DATASET
+        </p>
+
+        <h2>
+            TED-LIUM 3
+        </h2>
+
+    </div>
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            SPEAKER PRIVACY
+        </p>
+
+        <h2>
+            EER ≈ 1–2 %
+        </h2>
+
+        <p>
+            Los dos ataques
+            consiguen verificar
+            la identidad del hablante
+            con tasas de error
+            muy reducidas.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-destacado-wav2vec">
+
+        <div>
+            <span>LESS EER</span>
+            <strong>More Leakage</strong>
+            <p>speaker identity</p>
+        </div>
+
+        <div class="resultado-explicacion">
+
+            <h3>
+                Federated
+                ≠
+                Anonymous
+            </h3>
+
+            <p>
+                Mantener el waveform
+                en el dispositivo
+                no impide automáticamente
+                que las actualizaciones
+                codifiquen información
+                identificativa.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="limitaciones-grid">
+
+        <article>
+            <h3>Attack Assumptions</h3>
+            <p>
+                El ataque presupone
+                acceso a modelos
+                personalizados.
+            </p>
+        </article>
+
+        <article>
+            <h3>Specific Architecture</h3>
+            <p>
+                Los resultados pertenecen
+                al escenario ASR
+                estudiado en 2022.
+            </p>
+        </article>
+
+        <article>
+            <h3>Speaker Identity</h3>
+            <p>
+                Se evalúa principalmente
+                fuga de identidad,
+                no reconstrucción completa
+                del audio.
+            </p>
+        </article>
+
+        <article>
+            <h3>Indicator Data</h3>
+            <p>
+                La metodología
+                presupone disponer
+                de audio externo
+                para sondear los modelos.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            RELACIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            ¿Qué puede revelar
+            un adapter o LoRA?
+        </h2>
+
+        <p>
+            En una tesis centrada
+            en adaptación continua,
+            no basta con proteger
+            los datos originales.
+        </p>
+
+        <p>
+            También sería necesario
+            analizar qué información
+            queda codificada
+            en adaptadores,
+            gradientes
+            o módulos LoRA
+            personalizados.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+</footer>
+
+
+</body>
+</html>

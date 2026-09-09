@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CommanderSong
+    </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+            <h1>Doctorado</h1>
+            <span>Seguimiento de investigación</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#investigacion">Investigación</a></li>
+                <li><a href="../index.html#estado-arte">Estado del arte</a></li>
+                <li><a href="../index.html#experimentos">Experimentos</a></li>
+                <li><a href="../index.html#documentos">Documentos</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="referencia-hero">
+
+    <div class="referencia-hero-contenido">
+
+        <a
+            href="../estado-arte/equidad-privacidad-seguridad.html"
+            class="volver"
+        >
+            ← Volver a Equidad, privacidad y seguridad
+        </a>
+
+        <p class="etiqueta">
+            REFERENCIA CIENTÍFICA · [70]
+        </p>
+
+        <h1>
+            CommanderSong
+        </h1>
+
+        <h2>
+            A Systematic Approach
+            for Practical
+            Adversarial Voice Recognition
+        </h2>
+
+        <p class="autores-referencia">
+            Yuan et al.
+            · USENIX Security 2018
+        </p>
+
+        <div class="referencia-tags">
+            <span>Adversarial Audio</span>
+            <span>Music</span>
+            <span>ASR</span>
+            <span>Over-the-Air</span>
+            <span>Kaldi</span>
+            <span>Security</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+        <p class="etiqueta">REFERENCIA</p>
+        <h2>Información bibliográfica</h2>
+    </div>
+
+    <div class="ficha-bibliografica">
+
+        <div>
+            <span class="ficha-label">Primer autor</span>
+            <strong>Xuejing Yuan</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Año</span>
+            <strong>2018</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Publicación</span>
+            <strong>USENIX Security 18</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Páginas</span>
+            <strong>49–64</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">ISBN</span>
+            <strong>978-1-939133-04-5</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">DOI</span>
+            <strong>No especificado</strong>
+        </div>
+
+    </div>
+
+    <div class="cita-completa">
+
+        <p>
+            Yuan, X.,
+            Chen, Y.,
+            Zhao, Y.,
+            Long, Y.,
+            Liu, X.,
+            Chen, K.,
+            Zhang, S.,
+            Huang, H.,
+            Wang, X.,
+            & Gunter, C. A. (2018).
+            <em>
+                CommanderSong:
+                A Systematic Approach
+                for Practical
+                Adversarial Voice Recognition.
+            </em>
+            27th USENIX Security Symposium,
+            49–64.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            01 · PROBLEMA
+        </p>
+
+        <h2>
+            Ocultar comandos
+            dentro de música
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            Trabajos anteriores
+            habían demostrado
+            comandos difíciles
+            de entender por personas
+            o perturbaciones adversarias
+            introducidas digitalmente.
+        </p>
+
+        <p>
+            CommanderSong estudia
+            un escenario más práctico:
+            integrar una orden
+            dentro de una canción
+            y conservar
+            su efecto después
+            de reproducirla
+            físicamente.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            OBJETIVO
+        </p>
+
+        <h2>
+            Song
+            +
+            hidden command
+        </h2>
+
+        <p>
+            La canción debería
+            seguir siendo percibida
+            principalmente como música,
+            mientras el ASR
+            interpreta internamente
+            la orden objetivo.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · MODELO ANALIZADO
+        </p>
+
+        <h2>
+            Kaldi ASpIRE
+        </h2>
+
+    </div>
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+            <span>AUDIO</span>
+            <h3>Song</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>FEATURES</span>
+            <h3>Acoustic Features</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>MODEL</span>
+            <h3>Kaldi ASpIRE</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>OUTPUT</span>
+            <h3>Voice Command</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · DOS ESCENARIOS
+        </p>
+
+        <h2>
+            Digital
+            vs
+            Acoustic Channel
+        </h2>
+
+    </div>
+
+    <div class="modelos-configuracion">
+
+        <article>
+
+            <p class="etiqueta">
+                WTA
+            </p>
+
+            <h3>
+                WAV-To-API
+            </h3>
+
+            <p>
+                El archivo
+                se introduce directamente
+                en el reconocedor.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <p class="etiqueta">
+                WAA
+            </p>
+
+            <h3>
+                WAV-Air-API
+            </h3>
+
+            <p>
+                El audio
+                se reproduce
+                mediante altavoz
+                y vuelve a capturarse
+                acústicamente.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            OVER-THE-AIR
+        </p>
+
+        <h3>
+            El canal físico
+            introduce ruido
+            y distorsión
+        </h3>
+
+        <p>
+            Un ejemplo adversario
+            que funciona
+            mediante entrada digital
+            puede dejar
+            de funcionar
+            después de pasar
+            por altavoz,
+            sala y micrófono.
+        </p>
+
+        <p>
+            El artículo estudia
+            explícitamente
+            este problema.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            04 · EVALUACIÓN WTA
+        </p>
+
+        <h2>
+            Más de 200
+            adversarial songs
+        </h2>
+
+    </div>
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            DIGITAL INPUT
+        </p>
+
+        <h2>
+            100 %
+            word-level success
+        </h2>
+
+        <p>
+            En el escenario
+            WAV-To-API del paper,
+            Kaldi reconoce
+            correctamente las palabras
+            de los comandos objetivo.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            05 · OVER-THE-AIR
+        </p>
+
+        <h2>
+            Diferentes altavoces
+        </h2>
+
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla-modelos">
+
+            <thead>
+                <tr>
+                    <th>Dispositivo</th>
+                    <th>Ejemplo 1</th>
+                    <th>Ejemplo 2</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>JBL Speaker</td>
+                    <td>90 %</td>
+                    <td>96 %</td>
+                </tr>
+
+                <tr>
+                    <td>ASUS Laptop</td>
+                    <td>82 %</td>
+                    <td>60 %</td>
+                </tr>
+
+                <tr>
+                    <td>SENMATE</td>
+                    <td>72 %</td>
+                    <td>70 %</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="nota-metodologica">
+
+        <h3>
+            Resultados de los dos
+            comandos WAA
+            incluidos en la tabla
+            del artículo
+        </h3>
+
+        <p>
+            No deben interpretarse
+            como una tasa universal
+            de éxito del ataque.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            06 · HUMAN STUDY
+        </p>
+
+        <h2>
+            204 participantes
+        </h2>
+
+    </div>
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            WTA SAMPLES
+        </p>
+
+        <h2>
+            0 %
+            recognized command
+        </h2>
+
+        <p>
+            En las categorías musicales
+            evaluadas en la encuesta WTA,
+            ninguno de los participantes
+            reportó reconocer
+            el comando oculto.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            ROBUSTNESS / STEALTH
+        </p>
+
+        <h3>
+            Existe un compromiso
+        </h3>
+
+        <p>
+            Modificaciones mayores
+            pueden mejorar
+            la robustez
+            del ataque físico,
+            pero también
+            aumentar la probabilidad
+            de que una persona
+            perciba algo extraño.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            07 · TRANSFERABILITY
+        </p>
+
+        <h2>
+            Kaldi
+            → DeepSpeech
+        </h2>
+
+    </div>
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            RESULTADO
+        </p>
+
+        <h2>
+            No transfer
+        </h2>
+
+        <p>
+            Los ejemplos
+            creados para Kaldi
+            no fueron reconocidos
+            correctamente por DeepSpeech
+            en el experimento
+            de transferencia.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            08 · DISTRIBUCIÓN
+        </p>
+
+        <h2>
+            YouTube
+            y radio
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            Los autores prueban
+            también escenarios
+            en los que el audio
+            adversario atraviesa
+            plataformas de distribución
+            como YouTube
+            o canales de radio.
+        </p>
+
+        <p>
+            El objetivo es estudiar
+            si la señal conserva
+            capacidad adversaria
+            tras estos procesos.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            09 · DEFENSAS
+        </p>
+
+        <h2>
+            Perturbar la entrada
+            para revelar
+            su fragilidad
+        </h2>
+
+    </div>
+
+    <div class="modelos-configuracion">
+
+        <article>
+            <p class="etiqueta">DEFENSE 1</p>
+            <h3>Audio Turbulence</h3>
+        </article>
+
+        <article>
+            <p class="etiqueta">DEFENSE 2</p>
+            <h3>Audio Squeezing</h3>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="limitaciones-grid">
+
+        <article>
+            <h3>Model-Specific</h3>
+            <p>
+                La transferencia
+                entre ASR
+                no está garantizada.
+            </p>
+        </article>
+
+        <article>
+            <h3>2018 Systems</h3>
+            <p>
+                Los modelos actuales
+                difieren considerablemente.
+            </p>
+        </article>
+
+        <article>
+            <h3>Physical Conditions</h3>
+            <p>
+                La eficacia depende
+                del altavoz,
+                micrófono,
+                distancia
+                y entorno.
+            </p>
+        </article>
+
+        <article>
+            <h3>Stealth Trade-Off</h3>
+            <p>
+                Mayor robustez
+                puede implicar
+                mayor perceptibilidad.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            RELACIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            Seguridad
+            antes de adaptación
+        </h2>
+
+        <p>
+            CommanderSong demuestra
+            que una señal
+            aparentemente legítima
+            puede provocar
+            una interpretación
+            maliciosa.
+        </p>
+
+        <p>
+            Un sistema adaptativo
+            debería impedir
+            que entradas sospechosas
+            pasen a formar parte
+            de su aprendizaje continuo.
+        </p>
+
+        <p>
+            Esto conecta
+            seguridad,
+            OOD,
+            incertidumbre
+            y control
+            de la adaptación.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+</footer>
+
+
+</body>
+</html>

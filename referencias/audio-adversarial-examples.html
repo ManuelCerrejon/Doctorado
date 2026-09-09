@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Audio Adversarial Examples
+    </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+            <h1>Doctorado</h1>
+            <span>Seguimiento de investigación</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#investigacion">Investigación</a></li>
+                <li><a href="../index.html#estado-arte">Estado del arte</a></li>
+                <li><a href="../index.html#experimentos">Experimentos</a></li>
+                <li><a href="../index.html#documentos">Documentos</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="referencia-hero">
+
+    <div class="referencia-hero-contenido">
+
+        <a
+            href="../estado-arte/equidad-privacidad-seguridad.html"
+            class="volver"
+        >
+            ← Volver a Equidad, privacidad y seguridad
+        </a>
+
+        <p class="etiqueta">
+            REFERENCIA CIENTÍFICA · [68]
+        </p>
+
+        <h1>
+            Audio Adversarial Examples
+        </h1>
+
+        <h2>
+            Targeted Attacks
+            on Speech-to-Text
+        </h2>
+
+        <p class="autores-referencia">
+            Carlini & Wagner · IEEE SPW 2018
+        </p>
+
+        <div class="referencia-tags">
+            <span>Adversarial Audio</span>
+            <span>DeepSpeech</span>
+            <span>White-Box</span>
+            <span>CTC</span>
+            <span>Security</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+        <p class="etiqueta">REFERENCIA</p>
+        <h2>Información bibliográfica</h2>
+    </div>
+
+    <div class="ficha-bibliografica">
+
+        <div>
+            <span class="ficha-label">Autores</span>
+            <strong>Nicholas Carlini & David Wagner</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Año</span>
+            <strong>2018</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Publicación</span>
+            <strong>IEEE SPW 2018</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Páginas</span>
+            <strong>1–7</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">DOI</span>
+            <strong>10.1109/SPW.2018.00009</strong>
+        </div>
+
+    </div>
+
+    <div class="cita-completa">
+
+        <p>
+            Carlini, N.,
+            & Wagner, D. (2018).
+            <em>
+                Audio Adversarial Examples:
+                Targeted Attacks
+                on Speech-to-Text.
+            </em>
+            2018 IEEE Security
+            and Privacy Workshops,
+            1–7.
+            DOI:
+            10.1109/SPW.2018.00009.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            PREGUNTA
+        </p>
+
+        <h2>
+            ¿Puede un audio
+            casi igual
+            producir una transcripción
+            completamente distinta?
+        </h2>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            01 · MODELO OBJETIVO
+        </p>
+
+        <h2>
+            Mozilla DeepSpeech
+        </h2>
+
+    </div>
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+            <span>AUDIO</span>
+            <h3>16 kHz</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>FEATURE</span>
+            <h3>MFC</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>NETWORK</span>
+            <h3>RNN / LSTM</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>LOSS</span>
+            <h3>CTC</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>OUTPUT</span>
+            <h3>Text</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · THREAT MODEL
+        </p>
+
+        <h2>
+            White-Box
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            El atacante dispone
+            de conocimiento
+            del modelo
+            y puede calcular
+            cómo pequeñas modificaciones
+            de la entrada
+            afectan a la pérdida.
+        </p>
+
+        <p>
+            El objetivo es dirigido:
+            se fija previamente
+            la transcripción
+            que se desea producir.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+            <span>SOURCE</span>
+            <h3>Original Audio</h3>
+        </div>
+
+        <div class="arquitectura-flecha">+</div>
+
+        <div class="arquitectura-bloque">
+            <span>CHANGE</span>
+            <h3>Small Perturbation</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>MODEL</span>
+            <h3>DeepSpeech</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>TARGET</span>
+            <h3>Chosen Text</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · EVALUACIÓN
+        </p>
+
+        <h2>
+            Common Voice
+        </h2>
+
+    </div>
+
+    <div class="hiperparametros-grid">
+
+        <article>
+            <span>Test samples</span>
+            <strong>100</strong>
+        </article>
+
+        <article>
+            <span>Targets / sample</span>
+            <strong>10</strong>
+        </article>
+
+        <article>
+            <span>Attack</span>
+            <strong>Targeted</strong>
+        </article>
+
+        <article>
+            <span>Knowledge</span>
+            <strong>White-Box</strong>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-destacado-wav2vec">
+
+        <div>
+            <span>SUCCESS</span>
+            <strong>100 %</strong>
+            <p>target transcription</p>
+        </div>
+
+        <div class="resultado-explicacion">
+
+            <h3>
+                &gt;99,9 %
+                similar
+            </h3>
+
+            <p>
+                Los autores reportan
+                que consiguen
+                las transcripciones objetivo
+                manteniendo muy alta
+                similitud con
+                la señal original.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            FLEXIBILIDAD
+        </p>
+
+        <h3>
+            El objetivo
+            no tiene que parecerse
+            fonéticamente al original
+        </h3>
+
+        <p>
+            El ataque puede dirigirse
+            a una frase arbitraria
+            compatible con
+            la duración disponible.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            LIMITACIÓN FUNDAMENTAL
+        </p>
+
+        <h3>
+            Digital
+            ≠
+            Over-the-Air
+        </h3>
+
+        <p>
+            Las perturbaciones mínimas
+            estudiadas no conservan
+            necesariamente el ataque
+            tras reproducir la señal
+            mediante un altavoz
+            y volver a capturarla
+            con un micrófono.
+        </p>
+
+        <p>
+            El propio artículo
+            identifica este problema
+            como trabajo futuro.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="limitaciones-grid">
+
+        <article>
+            <h3>White-Box</h3>
+            <p>
+                Requiere acceso
+                al modelo objetivo.
+            </p>
+        </article>
+
+        <article>
+            <h3>DeepSpeech</h3>
+            <p>
+                Se evalúa sobre
+                una arquitectura concreta.
+            </p>
+        </article>
+
+        <article>
+            <h3>Digital Channel</h3>
+            <p>
+                No demuestra
+                un ataque físico robusto
+                para las perturbaciones mínimas.
+            </p>
+        </article>
+
+        <article>
+            <h3>Perceptual Metric</h3>
+            <p>
+                Similaridad numérica
+                no equivale necesariamente
+                a imperceptibilidad humana.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            RELACIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            Adaptation poisoning
+        </h2>
+
+        <p>
+            Un sistema que aprende
+            continuamente puede ser
+            todavía más vulnerable
+            si utiliza entradas adversarias
+            para actualizar
+            sus parámetros.
+        </p>
+
+        <p>
+            Antes de adaptar,
+            sería necesario comprobar
+            confianza,
+            OOD,
+            consistencia
+            y seguridad
+            de la muestra.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+</footer>
+
+
+</body>
+</html>

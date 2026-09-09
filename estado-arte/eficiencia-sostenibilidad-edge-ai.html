@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Eficiencia, sostenibilidad y Edge AI | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="tema-hero">
+
+            <div class="tema-hero-contenido">
+
+                <a
+                    href="../index.html#estado-arte"
+                    class="volver"
+                >
+                    ← Volver al Estado del arte
+                </a>
+
+
+                <p class="etiqueta">
+                    ESTADO DEL ARTE · 10
+                </p>
+
+
+                <h1>
+                    Eficiencia computacional,
+                    sostenibilidad y Edge AI
+                </h1>
+
+
+                <p class="tema-introduccion">
+
+                    Mejorar el rendimiento de un modelo
+                    no debería implicar necesariamente
+                    aumentar indefinidamente
+                    sus requisitos computacionales.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEM
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    PROBLEMA CENTRAL
+                </p>
+
+                <h2>
+                    Modelos cada vez mayores
+                    frente a dispositivos limitados
+                </h2>
+
+            </div>
+
+
+            <div class="detalle-texto">
+
+                <p>
+                    Los modelos fundacionales
+                    de habla y audio han aumentado
+                    progresivamente su número
+                    de parámetros, datos
+                    y necesidades computacionales.
+                </p>
+
+                <p>
+                    Sin embargo, muchas aplicaciones
+                    reales requieren ejecutar
+                    estos sistemas en móviles,
+                    sensores, microcontroladores
+                    o equipos empotrados.
+                </p>
+
+                <p>
+                    Estos dispositivos imponen
+                    restricciones de memoria,
+                    cómputo, almacenamiento,
+                    energía y latencia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHY EDGE
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    EDGE AI
+                </p>
+
+                <h2>
+                    ¿Por qué procesar localmente?
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Latencia
+                    </strong>
+
+                    <span>
+                        Real-time
+                    </span>
+
+                    <p>
+                        Evita depender continuamente
+                        de la comunicación
+                        con un servidor remoto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Privacidad
+                    </strong>
+
+                    <span>
+                        Local processing
+                    </span>
+
+                    <p>
+                        El audio puede procesarse
+                        sin enviarse permanentemente
+                        a la nube.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Disponibilidad
+                    </strong>
+
+                    <span>
+                        Offline
+                    </span>
+
+                    <p>
+                        El sistema puede funcionar
+                        incluso sin conexión.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Coste
+                    </strong>
+
+                    <span>
+                        Communications
+                    </span>
+
+                    <p>
+                        Reduce la necesidad
+                        de transmitir continuamente
+                        información acústica.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             STRATEGIES
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    OPTIMIZACIÓN
+                </p>
+
+                <h2>
+                    Principales estrategias
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+
+                <article>
+
+                    <strong>
+                        Quantization
+                    </strong>
+
+                    <span>
+                        Lower precision
+                    </span>
+
+                    <p>
+                        Representar pesos
+                        y activaciones utilizando
+                        menos bits.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Pruning
+                    </strong>
+
+                    <span>
+                        Remove components
+                    </span>
+
+                    <p>
+                        Eliminar parámetros
+                        o estructuras
+                        poco relevantes.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Distillation
+                    </strong>
+
+                    <span>
+                        Teacher → Student
+                    </span>
+
+                    <p>
+                        Entrenar un modelo pequeño
+                        para reproducir
+                        el comportamiento
+                        de otro mayor.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Compact Architectures
+                    </strong>
+
+                    <span>
+                        Efficient design
+                    </span>
+
+                    <p>
+                        Diseñar directamente
+                        arquitecturas orientadas
+                        a dispositivos limitados.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        PEFT
+                    </strong>
+
+                    <span>
+                        Efficient adaptation
+                    </span>
+
+                    <p>
+                        Adaptar solo una fracción
+                        reducida de los parámetros.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Dynamic Selection
+                    </strong>
+
+                    <span>
+                        Adaptive compute
+                    </span>
+
+                    <p>
+                        Activar únicamente
+                        los componentes necesarios
+                        según la entrada
+                        o los recursos disponibles.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCES
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIAS CLAVE
+                </p>
+
+                <h2>
+                    De Green AI
+                    a Whisper en el Edge
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-lista">
+
+
+                <!-- GREEN AI -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        01
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Green AI
+                        </h3>
+
+                        <p>
+                            Propone considerar
+                            la eficiencia computacional
+                            como un criterio científico
+                            junto al rendimiento
+                            y reportar explícitamente
+                            el coste necesario
+                            para obtener los resultados.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Green AI</span>
+                            <span>Efficiency</span>
+                            <span>FPO</span>
+                            <span>Compute Cost</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/green-ai.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TINYSPEECH -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        02
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            TinySpeech
+                        </h3>
+
+                        <p>
+                            Introduce Attention Condensers y una
+                            estrategia de diseño automático para
+                            construir redes de reconocimiento
+                            de palabras clave con muy pocos
+                            parámetros y operaciones, incluyendo
+                            una variante diseñada bajo restricciones
+                            de microcontroladores.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Attention Condenser</span>
+                            <span>Keyword Spotting</span>
+                            <span>8-bit</span>
+                            <span>TinyML</span>
+                            <span>Edge AI</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/tinyspeech.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TINYML -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        03
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            TinyML for Speech Recognition
+                        </h3>
+
+                        <p>
+                            Despliega un modelo 1D-CNN cuantizado
+                            para reconocimiento de comandos directamente
+                            sobre un Arduino Nano 33 BLE Sense,
+                            utilizando MFCC y un vocabulario
+                            de 23 etiquetas.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Arduino</span>
+                            <span>1D-CNN</span>
+                            <span>MFCC</span>
+                            <span>Quantization</span>
+                            <span>Edge Impulse</span>
+                            <span>TinyML</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/tinyml-speech-recognition.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- EDGE ASR -->
+
+                <article class="modelo-card">
+
+                    <div class="modelo-numero">
+                        04
+                    </div>
+
+                    <div class="modelo-contenido">
+
+                        <h3>
+                            Edge-ASR
+                        </h3>
+
+                        <p>
+                            Evalúa sistemáticamente ocho técnicas
+                            de cuantización postentrenamiento sobre
+                            las familias Whisper y Moonshine,
+                            analizando el compromiso entre WER,
+                            tamaño, tráfico de memoria y coste
+                            computacional en baja precisión.
+                        </p>
+
+                        <div class="tema-tags">
+
+                            <span>Whisper</span>
+                            <span>Moonshine</span>
+                            <span>PTQ</span>
+                            <span>Low-Bit</span>
+                            <span>Memory I/O</span>
+                            <span>BOPs</span>
+
+                        </div>
+
+                        <a
+                            href="../referencias/edge-asr.html"
+                            class="boton-referencia"
+                        >
+                            Ver referencia científica →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TINY VS FOUNDATION
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DOS EXTREMOS
+                </p>
+
+                <h2>
+                    TinyML vs Foundation Models
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>TinyML</th>
+                            <th>Foundation Model</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Tamaño</td>
+                            <td>Muy reducido</td>
+                            <td>Elevado</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Tarea</td>
+                            <td>Habitualmente cerrada</td>
+                            <td>General</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Vocabulario</td>
+                            <td>Limitado</td>
+                            <td>Amplio</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Dispositivo</td>
+                            <td>Microcontrolador</td>
+                            <td>GPU / CPU potente</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Flexibilidad</td>
+                            <td>Reducida</td>
+                            <td>Alta</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Reto</td>
+                            <td>Ampliar capacidad</td>
+                            <td>Reducir coste</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SUSTAINABILITY
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    SOSTENIBILIDAD
+                </p>
+
+                <h2>
+                    Parámetros ≠ coste completo
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>Parameters</strong>
+                    <span>Model size</span>
+                </article>
+
+                <article>
+                    <strong>Operations</strong>
+                    <span>Compute</span>
+                </article>
+
+                <article>
+                    <strong>Memory</strong>
+                    <span>RAM / VRAM</span>
+                </article>
+
+                <article>
+                    <strong>Latency</strong>
+                    <span>Response time</span>
+                </article>
+
+                <article>
+                    <strong>Energy</strong>
+                    <span>Consumption</span>
+                </article>
+
+                <article>
+                    <strong>Communication</strong>
+                    <span>Cloud traffic</span>
+                </article>
+
+                <article>
+                    <strong>Adaptation</strong>
+                    <span>Update cost</span>
+                </article>
+
+                <article>
+                    <strong>Runtime</strong>
+                    <span>Continuous operation</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FULL LIFECYCLE
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    CICLO COMPLETO
+                </p>
+
+                <h2>
+                    La sostenibilidad no termina
+                    al acabar el entrenamiento
+                </h2>
+
+                <p>
+                    Datos
+                    →
+                    entrenamiento
+                    →
+                    adaptación
+                    →
+                    inferencia
+                    →
+                    comunicaciones
+                    →
+                    mantenimiento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRADE OFF
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    PROBLEMA DE OPTIMIZACIÓN
+                </p>
+
+                <h2>
+                    Accuracy / WER
+                    vs
+                    recursos
+                </h2>
+
+                <p>
+                    El objetivo no debería
+                    ser simplemente conseguir
+                    el modelo más pequeño.
+                </p>
+
+                <p>
+                    Debemos encontrar configuraciones
+                    que mantengan un rendimiento
+                    suficiente utilizando
+                    el menor coste posible.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="detalle-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Modelos que adapten también
+                    su coste computacional
+                </h2>
+
+                <p>
+                    La eficiencia puede integrarse
+                    con la adaptación continua.
+                </p>
+
+                <p>
+                    Un sistema podría seleccionar
+                    dinámicamente el modelo,
+                    precisión numérica,
+                    número de capas
+                    o componentes activos
+                    según los recursos disponibles.
+                </p>
+
+                <p>
+                    El objetivo final sería
+                    adaptar no solo
+                    qué conocimiento utiliza
+                    el sistema,
+                    sino también cuánto
+                    cómputo necesita.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

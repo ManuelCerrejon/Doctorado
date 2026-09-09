@@ -1,0 +1,2563 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Edge-ASR | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/eficiencia-sostenibilidad-edge-ai.html"
+                    class="volver"
+                >
+                    ← Volver a Eficiencia y Edge AI
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    Edge-ASR
+                </h1>
+
+
+                <h2>
+                    Towards Low-Bit Quantization
+                    of Automatic Speech
+                    Recognition Models
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Feng et al. · 2025
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Whisper</span>
+                    <span>Moonshine</span>
+                    <span>Post-Training Quantization</span>
+                    <span>Low-Bit</span>
+                    <span>WER</span>
+                    <span>Memory I/O</span>
+                    <span>BOPs</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BIBLIOGRAPHY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Chen Feng
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2025
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Estado
+                    </span>
+
+                    <strong>
+                        Preprint
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Identificador
+                    </span>
+
+                    <strong>
+                        arXiv:2507.07877
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Feng, C., Lin, Y.,
+                    Zhuo, S., Su, C.,
+                    Ramakrishnan, R. K.,
+                    Yuan, Z., & Zhang, X. (2025).
+                    <em>
+                        Edge-ASR: Towards Low-Bit
+                        Quantization of Automatic
+                        Speech Recognition Models.
+                    </em>
+                    arXiv:2507.07877.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    ASR potente
+                    bajo restricciones Edge
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Modelos como Whisper
+                    proporcionan reconocimiento
+                    robusto y de vocabulario abierto,
+                    pero continúan requiriendo
+                    cantidades importantes
+                    de memoria y cómputo.
+                </p>
+
+                <p>
+                    Los dispositivos Edge
+                    suelen utilizar aceleradores
+                    orientados a inferencia
+                    de precisión reducida.
+                </p>
+
+                <p>
+                    Edge-ASR estudia hasta qué punto
+                    diferentes técnicas de
+                    Post-Training Quantization
+                    pueden reducir esos requisitos
+                    sin provocar una degradación
+                    excesiva del WER.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IMPORTANT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    Es un benchmark,
+                    no un nuevo modelo ASR
+                </h3>
+
+                <p>
+                    Los autores mantienen
+                    las arquitecturas originales
+                    de Whisper y Moonshine
+                    y comparan diferentes
+                    procedimientos de cuantización.
+                </p>
+
+                <p>
+                    El objetivo es estudiar
+                    qué configuración ofrece
+                    el mejor compromiso
+                    entre precisión y eficiencia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PTQ
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · POST-TRAINING QUANTIZATION
+                </p>
+
+                <h2>
+                    Reducir precisión
+                    sin reentrenar el ASR
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    QUANTIZATION
+                </p>
+
+                <h2>
+                    FP32
+                    →
+                    INT8 / INT4 / INT3
+                </h2>
+
+                <p>
+                    Los pesos y activaciones
+                    de alta precisión
+                    se representan mediante
+                    un número menor de bits.
+                </p>
+
+                <p>
+                    El objetivo es reducir
+                    almacenamiento, movimiento
+                    de datos y coste aritmético.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PTQ PIPELINE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        FP32 ASR
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>CALIBRATION</span>
+
+                    <h3>
+                        256 utterances
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>PTQ</span>
+
+                    <h3>
+                        Quantization
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        Low-Bit ASR
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>EVALUATION</span>
+
+                    <h3>
+                        WER + Cost
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METHODS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · MÉTODOS PTQ
+                </p>
+
+                <h2>
+                    Ocho algoritmos
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>SmoothQuant</strong>
+                    <span>Scaling</span>
+                </article>
+
+                <article>
+                    <strong>AWQ</strong>
+                    <span>Scaling</span>
+                </article>
+
+                <article>
+                    <strong>OmniQuant</strong>
+                    <span>Scaling / optimization</span>
+                </article>
+
+                <article>
+                    <strong>GPTQ</strong>
+                    <span>Reconstruction</span>
+                </article>
+
+                <article>
+                    <strong>RTN</strong>
+                    <span>Round-to-nearest</span>
+                </article>
+
+                <article>
+                    <strong>TesseraQ</strong>
+                    <span>Adaptive rounding</span>
+                </article>
+
+                <article>
+                    <strong>QUIK</strong>
+                    <span>Hybrid</span>
+                </article>
+
+                <article>
+                    <strong>SpQR</strong>
+                    <span>Hybrid</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             GROUPS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        TRANSFORMATION
+                    </p>
+
+                    <h3>
+                        Scaling
+                    </h3>
+
+                    <p>
+                        Modifica la distribución
+                        de pesos y activaciones
+                        para facilitar
+                        su cuantización.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        RECONSTRUCTION
+                    </p>
+
+                    <h3>
+                        GPTQ
+                    </h3>
+
+                    <p>
+                        Intenta minimizar
+                        el error introducido
+                        por la cuantización
+                        reconstruyendo salidas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        ROUNDING
+                    </p>
+
+                    <h3>
+                        RTN / TesseraQ
+                    </h3>
+
+                    <p>
+                        Modifican cómo
+                        se asignan los valores
+                        al nivel discreto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        HYBRID
+                    </p>
+
+                    <h3>
+                        QUIK / SpQR
+                    </h3>
+
+                    <p>
+                        Mantienen determinados
+                        outliers a mayor precisión
+                        mientras comprimen
+                        el resto.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODELS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MODELOS
+                </p>
+
+                <h2>
+                    Cinco configuraciones ASR
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Familia</th>
+                            <th>Modelo</th>
+                            <th>Parámetros</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Whisper</td>
+                            <td>Tiny</td>
+                            <td>39 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Whisper</td>
+                            <td>Base</td>
+                            <td>74 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Whisper</td>
+                            <td>Small</td>
+                            <td>244 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Moonshine</td>
+                            <td>Tiny</td>
+                            <td>27 M</td>
+                        </tr>
+
+                        <tr>
+                            <td>Moonshine</td>
+                            <td>Base</td>
+                            <td>61 M</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ARCHITECTURES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    WHISPER vs MOONSHINE
+                </p>
+
+                <h2>
+                    Dos enfoques para ASR
+                    relativamente compacto
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        WHISPER
+                    </p>
+
+                    <h3>
+                        Log-Mel
+                    </h3>
+
+                    <ul>
+                        <li>16 kHz</li>
+                        <li>30 s chunks</li>
+                        <li>80 canales Mel</li>
+                        <li>Encoder-Decoder Transformer</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        MOONSHINE
+                    </p>
+
+                    <h3>
+                        Raw Audio
+                    </h3>
+
+                    <ul>
+                        <li>Encoder-Decoder Transformer</li>
+                        <li>Entrada de longitud variable</li>
+                        <li>RoPE</li>
+                        <li>Orientado a baja latencia</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASETS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Open ASR Leaderboard
+                </h2>
+
+            </div>
+
+
+            <div class="dataset-grid">
+
+                <article class="dataset-card">
+                    <h3>AMI</h3>
+                    <p>Meetings</p>
+                </article>
+
+                <article class="dataset-card">
+                    <h3>Earnings-22</h3>
+                    <p>Accents in the wild</p>
+                </article>
+
+                <article class="dataset-card">
+                    <h3>GigaSpeech</h3>
+                    <p>Multi-domain speech</p>
+                </article>
+
+                <article class="dataset-card">
+                    <h3>LibriSpeech</h3>
+                    <p>Clean + Other</p>
+                </article>
+
+                <article class="dataset-card">
+                    <h3>SPGISpeech</h3>
+                    <p>Financial speech</p>
+                </article>
+
+                <article class="dataset-card">
+                    <h3>TED-Lium</h3>
+                    <p>TED talks</p>
+                </article>
+
+                <article class="dataset-card">
+                    <h3>VoxPopuli</h3>
+                    <p>Multilingual speech</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CALIBRATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    CALIBRATION DATA
+                </p>
+
+                <h2>
+                    256 Common Voice
+                    English utterances
+                </h2>
+
+                <p>
+                    Para los algoritmos
+                    que necesitan calibración,
+                    los autores utilizan
+                    un conjunto fijo de
+                    256 utterances en inglés.
+                </p>
+
+                <p>
+                    Estas muestras no pertenecen
+                    a los datasets utilizados
+                    posteriormente para evaluación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METRICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · MÉTRICAS
+                </p>
+
+                <h2>
+                    Precisión + eficiencia
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>WER</strong>
+                    <span>Accuracy</span>
+                </article>
+
+                <article>
+                    <strong>Model Size</strong>
+                    <span>Storage</span>
+                </article>
+
+                <article>
+                    <strong>Memory I/O</strong>
+                    <span>Data movement</span>
+                </article>
+
+                <article>
+                    <strong>BOPs</strong>
+                    <span>Bit Operations</span>
+                </article>
+
+                <article>
+                    <strong>Kurtosis</strong>
+                    <span>Outlier analysis</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHY MEMORY IO
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    GREEN AI
+                </p>
+
+                <h3>
+                    El coste no son solo
+                    las operaciones
+                </h3>
+
+                <p>
+                    El movimiento de pesos
+                    y activaciones entre memoria
+                    y procesador puede dominar
+                    la latencia y el consumo
+                    energético.
+                </p>
+
+                <p>
+                    Por ello Edge-ASR
+                    reporta Memory I/O
+                    además del número
+                    de operaciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BIT WIDTH RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · BIT-WIDTH
+                </p>
+
+                <h2>
+                    8 bits es la zona
+                    más segura
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>FP32</th>
+                            <th>Mejor w8-a8</th>
+                            <th>Mejor w4-a16</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Whisper Tiny</td>
+                            <td>12,80</td>
+                            <td>
+                                <strong>12,94</strong>
+                            </td>
+                            <td>14,24</td>
+                        </tr>
+
+                        <tr>
+                            <td>Whisper Base</td>
+                            <td>10,32</td>
+                            <td>
+                                <strong>10,18</strong>
+                            </td>
+                            <td>10,94</td>
+                        </tr>
+
+                        <tr>
+                            <td>Whisper Small</td>
+                            <td>8,59</td>
+                            <td>
+                                <strong>8,44</strong>
+                            </td>
+                            <td>8,65</td>
+                        </tr>
+
+                        <tr>
+                            <td>Moonshine Tiny</td>
+                            <td>12,72</td>
+                            <td>
+                                <strong>12,81</strong>
+                            </td>
+                            <td>13,61</td>
+                        </tr>
+
+                        <tr>
+                            <td>Moonshine Base</td>
+                            <td>9,99</td>
+                            <td>
+                                <strong>10,04</strong>
+                            </td>
+                            <td>10,14</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    WER medio
+                </h3>
+
+                <p>
+                    Los valores representan
+                    el promedio sobre
+                    los siete conjuntos
+                    de evaluación y muestran
+                    el mejor algoritmo PTQ
+                    para cada configuración.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             INTERPRETATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    RESULTADO
+                </p>
+
+                <h2>
+                    w8-a8 conserva
+                    muy bien el rendimiento
+                </h2>
+
+                <p>
+                    La cuantización
+                    con pesos de 8 bits
+                    y activaciones de 8 bits
+                    mantiene un WER muy próximo
+                    al modelo de punto flotante
+                    en las cinco variantes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODEL CAPACITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    CAPACIDAD DEL MODELO
+                </p>
+
+                <h3>
+                    Los modelos grandes
+                    toleran mejor 4 bits
+                </h3>
+
+                <p>
+                    Whisper Small,
+                    Whisper Base
+                    y Moonshine Base
+                    mantienen relativamente
+                    bien su rendimiento.
+                </p>
+
+                <p>
+                    Whisper Tiny
+                    y Moonshine Tiny
+                    son mucho más sensibles
+                    a la reducción
+                    de precisión.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ULTRA LOW
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · ULTRA-LOW BIT
+                </p>
+
+                <h2>
+                    ¿Hasta dónde puede llegar PTQ?
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Modelo</th>
+                            <th>FP32 WER</th>
+                            <th>Mejor w3-a16</th>
+                            <th>Método</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Whisper Base
+                            </td>
+
+                            <td>
+                                10,32
+                            </td>
+
+                            <td>
+                                <strong>
+                                    12,15
+                                </strong>
+                            </td>
+
+                            <td>
+                                SpQR
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Moonshine Base
+                            </td>
+
+                            <td>
+                                9,99
+                            </td>
+
+                            <td>
+                                <strong>
+                                    10,67
+                                </strong>
+                            </td>
+
+                            <td>
+                                SpQR
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             2 BIT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        3 BIT
+                    </span>
+
+                    <strong>
+                        VIABLE
+                    </strong>
+
+                    <p>
+                        con métodos avanzados
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        2 bits falla
+                    </h3>
+
+                    <p>
+                        En los experimentos,
+                        todos los métodos PTQ
+                        producen WER inaceptablemente
+                        elevado con pesos
+                        de 2 bits.
+                    </p>
+
+                    <p>
+                        Los autores señalan
+                        que por debajo
+                        de 3 bits sería necesario
+                        recurrir a entrenamiento
+                        consciente de cuantización.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             OUTLIERS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · OUTLIERS
+                </p>
+
+                <h2>
+                    ¿Por qué algunos métodos
+                    fallan a 3 bits?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores analizan
+                    la curtosis de pesos
+                    y activaciones para estudiar
+                    la presencia de distribuciones
+                    con colas pesadas y outliers.
+                </p>
+
+                <p>
+                    A precisiones extremas,
+                    unos pocos valores
+                    de gran magnitud pueden
+                    dificultar enormemente
+                    la representación cuantizada.
+                </p>
+
+                <p>
+                    Los métodos híbridos
+                    como QUIK y SpQR
+                    protegen una pequeña fracción
+                    de outliers utilizando
+                    mayor precisión.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SPQR
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    HYBRID QUANTIZATION
+                </p>
+
+                <h2>
+                    &lt; 1 % outliers
+                    → 16 bit
+                </h2>
+
+                <p>
+                    El resto de los pesos
+                    puede mantenerse
+                    a baja precisión.
+                </p>
+
+                <p>
+                    Esta estrategia resulta
+                    especialmente útil
+                    en el escenario
+                    de 3 bits.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             GRANULARITY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · GRANULARIDAD
+                </p>
+
+                <h2>
+                    Per-channel vs Per-group
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        PER-CHANNEL
+                    </p>
+
+                    <h3>
+                        Más simple
+                    </h3>
+
+                    <p>
+                        Puede funcionar
+                        razonablemente bien
+                        en modelos
+                        de mayor capacidad.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        PER-GROUP
+                    </p>
+
+                    <h3>
+                        Más fino
+                    </h3>
+
+                    <p>
+                        Resulta especialmente
+                        útil para modelos pequeños,
+                        donde reduce el efecto
+                        del ruido de cuantización.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             GPTQ
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    GRANULARITY RESULT
+                </p>
+
+                <h2>
+                    GPTQ
+                </h2>
+
+                <p>
+                    Entre AWQ,
+                    GPTQ y TesseraQ,
+                    GPTQ obtiene
+                    el menor WER medio
+                    de forma consistente
+                    en las configuraciones
+                    de granularidad evaluadas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SYMMETRY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    11 · SYMMETRIC vs ASYMMETRIC
+                </p>
+
+                <h2>
+                    Hardware simple
+                    vs mayor precisión
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        SYMMETRIC
+                    </p>
+
+                    <h3>
+                        z = 0
+                    </h3>
+
+                    <p>
+                        Más sencillo
+                        para hardware
+                        de inferencia.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        ASYMMETRIC
+                    </p>
+
+                    <h3>
+                        Zero-point
+                    </h3>
+
+                    <p>
+                        Introduce mayor flexibilidad
+                        para representar
+                        el rango de valores.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    RESULTADO
+                </p>
+
+                <h2>
+                    7 de 8 métodos
+                </h2>
+
+                <p>
+                    La cuantización asimétrica
+                    supera a la simétrica
+                    en siete de los ocho
+                    algoritmos comparados
+                    en este experimento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CLIPPING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    12 · WEIGHT CLIPPING
+                </p>
+
+                <h2>
+                    No siempre eliminar
+                    outliers ayuda
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        WHISPER TINY
+                    </p>
+
+                    <h3>
+                        Clipping perjudica
+                    </h3>
+
+                    <p>
+                        La pérdida introducida
+                        al recortar pesos
+                        supera el beneficio
+                        obtenido al reducir
+                        el rango.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        WHISPER BASE
+                    </p>
+
+                    <h3>
+                        Puede ayudar
+                    </h3>
+
+                    <p>
+                        A precisiones más altas,
+                        el modelo posee
+                        suficiente capacidad
+                        para tolerar el clipping.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DEPLOYMENT COST
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    13 · COSTE DE DESPLIEGUE
+                </p>
+
+                <h2>
+                    Whisper Base
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>W/A</th>
+                            <th>Enc. weights</th>
+                            <th>Enc. I/O</th>
+                            <th>Dec. weights</th>
+                            <th>Dec. I/O</th>
+                            <th>Rel. BOPs</th>
+                            <th>WER</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>32/32</td>
+                            <td>79,29 MB</td>
+                            <td>2143,21 MB</td>
+                            <td>208,01 MB</td>
+                            <td>294,69 MB</td>
+                            <td>100 %</td>
+                            <td>10,32</td>
+                        </tr>
+
+                        <tr>
+                            <td>4/8</td>
+                            <td>9,91 MB</td>
+                            <td>525,89 MB</td>
+                            <td>26,00 MB</td>
+                            <td>47,67 MB</td>
+                            <td>
+                                <strong>3,13 %</strong>
+                            </td>
+                            <td>11,06</td>
+                        </tr>
+
+                        <tr>
+                            <td>4/16</td>
+                            <td>9,91 MB</td>
+                            <td>1041,87 MB</td>
+                            <td>26,00 MB</td>
+                            <td>69,34 MB</td>
+                            <td>6,25 %</td>
+                            <td>10,94</td>
+                        </tr>
+
+                        <tr>
+                            <td>8/8</td>
+                            <td>19,82 MB</td>
+                            <td>535,80 MB</td>
+                            <td>52,00 MB</td>
+                            <td>73,67 MB</td>
+                            <td>6,25 %</td>
+                            <td>
+                                <strong>10,18</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>8/16</td>
+                            <td>19,82 MB</td>
+                            <td>1051,78 MB</td>
+                            <td>52,00 MB</td>
+                            <td>95,34 MB</td>
+                            <td>12,50 %</td>
+                            <td>10,17</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Cálculos para 30 segundos
+                </h3>
+
+                <p>
+                    Las métricas de memoria
+                    y operaciones de esta tabla
+                    se calculan utilizando
+                    una entrada de audio
+                    de 30 segundos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MOONSHINE COST
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COSTE DE DESPLIEGUE
+                </p>
+
+                <h2>
+                    Moonshine Base
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>W/A</th>
+                            <th>Enc. weights</th>
+                            <th>Enc. I/O</th>
+                            <th>Dec. weights</th>
+                            <th>Dec. I/O</th>
+                            <th>Rel. BOPs</th>
+                            <th>WER</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>32/32</td>
+                            <td>80,61 MB</td>
+                            <td>371,40 MB</td>
+                            <td>165,44 MB</td>
+                            <td>199,13 MB</td>
+                            <td>100 %</td>
+                            <td>9,99</td>
+                        </tr>
+
+                        <tr>
+                            <td>4/8</td>
+                            <td>10,08 MB</td>
+                            <td>82,77 MB</td>
+                            <td>20,68 MB</td>
+                            <td>29,10 MB</td>
+                            <td>
+                                <strong>3,13 %</strong>
+                            </td>
+                            <td>10,31</td>
+                        </tr>
+
+                        <tr>
+                            <td>4/16</td>
+                            <td>10,08 MB</td>
+                            <td>155,47 MB</td>
+                            <td>20,68 MB</td>
+                            <td>37,52 MB</td>
+                            <td>6,25 %</td>
+                            <td>10,14</td>
+                        </tr>
+
+                        <tr>
+                            <td>8/8</td>
+                            <td>20,15 MB</td>
+                            <td>92,85 MB</td>
+                            <td>41,36 MB</td>
+                            <td>49,78 MB</td>
+                            <td>6,25 %</td>
+                            <td>10,04</td>
+                        </tr>
+
+                        <tr>
+                            <td>8/16</td>
+                            <td>20,15 MB</td>
+                            <td>165,54 MB</td>
+                            <td>41,36 MB</td>
+                            <td>58,20 MB</td>
+                            <td>12,50 %</td>
+                            <td>
+                                <strong>9,98</strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ENCODER DECODER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    HALLAZGO PARA EDGE
+                </p>
+
+                <h2>
+                    Encoder y decoder
+                    tienen cuellos de botella distintos
+                </h2>
+
+                <p>
+                    En el encoder,
+                    el coste está fuertemente
+                    condicionado por
+                    el tamaño de activaciones
+                    y el Memory I/O.
+                </p>
+
+                <p>
+                    En el decoder,
+                    el tamaño de los pesos
+                    tiene un peso relativo
+                    mayor.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             POSSIBLE MIX
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    PROPUESTA DE DESPLIEGUE
+                </p>
+
+                <h3>
+                    Encoder w8-a8
+                    +
+                    Decoder w4-a16
+                </h3>
+
+                <p>
+                    Los autores señalan
+                    esta combinación
+                    como una configuración
+                    que podría considerarse
+                    para escenarios Edge.
+                </p>
+
+                <p>
+                    No debe interpretarse
+                    como una nueva fila
+                    experimental completa
+                    de la tabla,
+                    sino como una recomendación
+                    derivada del análisis
+                    de los dos componentes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CALIBRATION ABLATION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    14 · CALIBRATION ABLATION
+                </p>
+
+                <h2>
+                    ¿Importa qué audio
+                    usamos para calibrar?
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores comparan
+                    256 muestras de Common Voice
+                    con 256 muestras
+                    de LibriSpeech Dev.
+                </p>
+
+                <p>
+                    En general,
+                    el cambio de corpus
+                    produce variaciones
+                    relativamente pequeñas
+                    entre los métodos analizados.
+                </p>
+
+                <p>
+                    La diferencia máxima
+                    observada en este estudio
+                    es inferior a 1,82 puntos
+                    de WER.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AWQ CAVEAT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    MATIZ
+                </p>
+
+                <h3>
+                    Más datos de calibración
+                    no siempre es mejor
+                </h3>
+
+                <p>
+                    Al aumentar de 256
+                    a 512 muestras,
+                    la mayoría de algoritmos
+                    permanece estable.
+                </p>
+
+                <p>
+                    AWQ, sin embargo,
+                    sufre una degradación
+                    muy pronunciada.
+                </p>
+
+                <p>
+                    Los autores la relacionan
+                    con activaciones extremas
+                    que dominan el cálculo
+                    de las escalas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             QUANTIZATION COST
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    15 · COSTE DEL PROPIO PTQ
+                </p>
+
+                <h2>
+                    Los algoritmos también
+                    tienen costes distintos
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Método</th>
+                            <th>Whisper Base</th>
+                            <th>Moonshine Base</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>RTN</td>
+                            <td>
+                                <strong>0,78 s</strong>
+                            </td>
+                            <td>
+                                <strong>0,76 s</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>QUIK</td>
+                            <td>21,79 s</td>
+                            <td>25,28 s</td>
+                        </tr>
+
+                        <tr>
+                            <td>SmoothQuant</td>
+                            <td>30,30 s</td>
+                            <td>32,31 s</td>
+                        </tr>
+
+                        <tr>
+                            <td>SpQR</td>
+                            <td>69,83 s</td>
+                            <td>90,36 s</td>
+                        </tr>
+
+                        <tr>
+                            <td>GPTQ</td>
+                            <td>85,06 s</td>
+                            <td>99,36 s</td>
+                        </tr>
+
+                        <tr>
+                            <td>OmniQuant</td>
+                            <td>773,13 s</td>
+                            <td>1035,37 s</td>
+                        </tr>
+
+                        <tr>
+                            <td>TesseraQ</td>
+                            <td>331,12 s</td>
+                            <td>978,33 s</td>
+                        </tr>
+
+                        <tr>
+                            <td>AWQ</td>
+                            <td>
+                                33409,44 s
+                            </td>
+                            <td>
+                                44360,54 s
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="nota-metodologica">
+
+                <h3>
+                    Configuración
+                </h3>
+
+                <p>
+                    Los tiempos corresponden
+                    a cuantización w4-a16
+                    con 256 muestras,
+                    batch size 1
+                    y una única RTX 4090
+                    de 24 GB.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOT DEPLOYMENT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    Edge-ASR todavía no es
+                    una evaluación física completa
+                    en un dispositivo Edge
+                </h3>
+
+                <p>
+                    El trabajo cuantifica
+                    model size,
+                    Memory I/O
+                    y BOPs.
+                </p>
+
+                <p>
+                    Sin embargo,
+                    no presenta como núcleo
+                    del benchmark medidas físicas
+                    de energía, temperatura
+                    o latencia sobre
+                    varios dispositivos reales.
+                </p>
+
+                <p>
+                    Los propios autores
+                    dejan el despliegue
+                    hardware-specific
+                    como trabajo futuro.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITATIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    16 · LIMITACIONES
+                </p>
+
+                <h2>
+                    Aspectos abiertos
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Dos familias
+                    </h3>
+
+                    <p>
+                        Solo se evalúan
+                        Whisper y Moonshine.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Transformers
+                    </h3>
+
+                    <p>
+                        No se comparan todavía
+                        RNN, Conformer,
+                        State Space Models
+                        o Canary.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Ocho PTQ
+                    </h3>
+
+                    <p>
+                        No incluye todas
+                        las técnicas modernas,
+                        por ejemplo algunos
+                        métodos basados
+                        en rotaciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Dynamic Quantization
+                    </h3>
+
+                    <p>
+                        No forma parte
+                        del benchmark.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Hardware-specific
+                    </h3>
+
+                    <p>
+                        No se estudian todavía
+                        configuraciones específicas
+                        para múltiples
+                        aceleradores Edge.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Energía física
+                    </h3>
+
+                    <p>
+                        BOPs y Memory I/O
+                        aproximan el coste,
+                        pero no sustituyen
+                        una medida energética real.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPARISON
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    TinySpeech · TinyML · Edge-ASR
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>TinySpeech</th>
+                            <th>TinyML Arduino</th>
+                            <th>Edge-ASR</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Tarea</td>
+                            <td>Keyword spotting</td>
+                            <td>Command recognition</td>
+                            <td>
+                                <strong>Open ASR</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Modelo</td>
+                            <td>Attention Condenser</td>
+                            <td>1D-CNN</td>
+                            <td>Transformer</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Vocabulario</td>
+                            <td>Cerrado</td>
+                            <td>Cerrado</td>
+                            <td>
+                                <strong>Abierto</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Optimización</td>
+                            <td>Diseño compacto</td>
+                            <td>Quantization</td>
+                            <td>
+                                <strong>8 PTQ</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Hardware real</td>
+                            <td>No central</td>
+                            <td>
+                                <strong>Sí</strong>
+                            </td>
+                            <td>No central</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Métrica ASR</td>
+                            <td>Accuracy</td>
+                            <td>Accuracy/F1</td>
+                            <td>
+                                <strong>WER</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Coste</td>
+                            <td>Params/Mult-Adds</td>
+                            <td>Limitado</td>
+                            <td>
+                                Size/I-O/BOPs
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Especialmente relevante
+                    para nuestro trabajo con Whisper
+                </h2>
+
+                <p>
+                    Edge-ASR proporciona
+                    una metodología directamente
+                    reutilizable para estudiar
+                    modelos de reconocimiento
+                    de propósito general.
+                </p>
+
+                <p>
+                    La tesis podría aplicar
+                    diferentes niveles
+                    de cuantización sobre
+                    un modelo adaptado
+                    al dominio objetivo
+                    y evaluar simultáneamente
+                    WER y coste.
+                </p>
+
+                <p>
+                    También sería posible
+                    estudiar si todos
+                    los componentes del modelo
+                    necesitan la misma precisión.
+                </p>
+
+                <p>
+                    Encoder, decoder,
+                    capas acústicas
+                    y adaptadores podrían
+                    utilizar configuraciones
+                    diferentes dependiendo
+                    de su sensibilidad.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA 1
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Mixed-Precision
+                    Adaptive Whisper
+                </h2>
+
+                <p>
+                    Whisper adaptado
+                    ↓
+                    analizar sensibilidad
+                    por componente
+                    ↓
+                    asignar bits
+                    dinámicamente
+                    ↓
+                    encoder / decoder /
+                    LoRA
+                    con distinta precisión
+                    ↓
+                    minimizar:
+                </p>
+
+                <p>
+                    WER
+                    +
+                    memoria
+                    +
+                    latencia
+                    +
+                    energía.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA 2
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    EXTENSIÓN
+                </p>
+
+                <h2>
+                    Resource-Aware
+                    Dynamic Precision
+                </h2>
+
+                <p>
+                    batería alta
+                    →
+                    mayor precisión
+                </p>
+
+                <p>
+                    batería baja
+                    →
+                    menor precisión
+                </p>
+
+                <p>
+                    audio sencillo
+                    →
+                    modelo compacto
+                </p>
+
+                <p>
+                    audio difícil / baja confianza
+                    →
+                    mayor capacidad
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

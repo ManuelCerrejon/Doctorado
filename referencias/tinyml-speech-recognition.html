@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        TinyML for Speech Recognition | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/eficiencia-sostenibilidad-edge-ai.html"
+                    class="volver"
+                >
+                    ← Volver a Eficiencia y Edge AI
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    TinyML for Speech Recognition
+                </h1>
+
+
+                <h2>
+                    Speech Recognition on
+                    Resource-Constrained
+                    IoT Edge Devices
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Barovic & Moin · IEEE COMPSAC 2025
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>TinyML</span>
+                    <span>Arduino Nano 33 BLE Sense</span>
+                    <span>1D-CNN</span>
+                    <span>MFCC</span>
+                    <span>Quantization</span>
+                    <span>Edge Impulse</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REFERENCIA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Andrew Barovic
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2025
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        IEEE COMPSAC 2025
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        1631–1636
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.1109/COMPSAC65507.2025.00220
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Preprint
+                    </span>
+
+                    <strong>
+                        arXiv:2504.16213
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Barovic, A., & Moin, A. (2025).
+                    <em>
+                        TinyML for Speech Recognition.
+                    </em>
+                    IEEE 49th Annual Computers,
+                    Software, and Applications Conference
+                    (COMPSAC),
+                    1631–1636.
+                    DOI:
+                    10.1109/COMPSAC65507.2025.00220.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEMA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Reconocimiento local
+                    en un microcontrolador
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los sistemas de reconocimiento
+                    del habla suelen requerir
+                    recursos superiores a los
+                    disponibles en microcontroladores.
+                </p>
+
+                <p>
+                    Los autores estudian
+                    la posibilidad de ejecutar
+                    reconocimiento de comandos
+                    completamente en el dispositivo,
+                    evitando depender continuamente
+                    de servicios en la nube.
+                </p>
+
+                <p>
+                    El objetivo es desplegar
+                    un modelo compacto y cuantizado
+                    sobre Arduino Nano 33 BLE Sense
+                    y ampliar el número de comandos
+                    que puede reconocer
+                    un sistema TinyML.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IMPORTANT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    No es reconocimiento
+                    de habla abierta
+                </h3>
+
+                <p>
+                    Aunque el artículo utiliza
+                    el término speech recognition,
+                    experimentalmente se trata
+                    de clasificación de palabras
+                    pertenecientes a un vocabulario
+                    previamente definido.
+                </p>
+
+                <p>
+                    El sistema no genera
+                    transcripciones libres
+                    de longitud variable
+                    como Whisper.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONTRIBUTIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · CONTRIBUCIONES
+                </p>
+
+                <h2>
+                    Dataset + despliegue TinyML
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONTRIBUCIÓN 1
+                    </p>
+
+                    <h3>
+                        Dataset propio
+                    </h3>
+
+                    <p>
+                        Más de una hora
+                        de audio grabado
+                        directamente mediante
+                        el micrófono integrado
+                        en la placa.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CONTRIBUCIÓN 2
+                    </p>
+
+                    <h3>
+                        TinyML Speech System
+                    </h3>
+
+                    <p>
+                        Modelo 1D-CNN cuantizado
+                        desplegado físicamente
+                        en Arduino Nano
+                        33 BLE Sense.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             HARDWARE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · HARDWARE
+                </p>
+
+                <h2>
+                    Arduino Nano 33 BLE Sense Rev2
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Plataforma
+                    </span>
+
+                    <strong>
+                        Arduino Nano
+                        33 BLE Sense Rev2
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Memoria principal
+                    </span>
+
+                    <strong>
+                        256 KB SRAM
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Captura
+                    </span>
+
+                    <strong>
+                        Micrófono integrado
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Conectividad probada
+                    </span>
+
+                    <strong>
+                        BLE
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SYSTEM STATES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · FUNCIONAMIENTO
+                </p>
+
+                <h2>
+                    Wake-up → Active → Idle
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>STATE 1</span>
+
+                    <h3>
+                        Idle
+                    </h3>
+
+                    <p>
+                        Espera el comando
+                        WAKE UP.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>WAKE WORD</span>
+
+                    <h3>
+                        WAKE UP
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>STATE 2</span>
+
+                    <h3>
+                        Active
+                    </h3>
+
+                    <p>
+                        Reconocimiento
+                        de comandos.
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ACTION</span>
+
+                    <h3>
+                        LED
+                    </h3>
+
+                    <p>
+                        Ejecuta la acción
+                        asociada.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             COMPLEX COMMANDS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    COMANDOS COMPLEJOS
+                </p>
+
+                <h2>
+                    Dividir una orden
+                    en palabras reconocibles
+                </h2>
+
+                <p>
+                    El sistema no intenta
+                    comprender una frase completa
+                    mediante un modelo lingüístico.
+                </p>
+
+                <p>
+                    La orden se divide
+                    en pequeños fragmentos
+                    reconocidos independientemente.
+                </p>
+
+                <p>
+                    Cada palabra reconocida
+                    activa variables o flags
+                    utilizados posteriormente
+                    por la lógica del programa.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXAMPLE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    EJEMPLO CONCEPTUAL
+                </p>
+
+                <h2>
+                    WAKE UP →
+                    RED →
+                    AND →
+                    BLUE →
+                    LED
+                </h2>
+
+                <p>
+                    Las diferentes palabras
+                    modifican estados internos
+                    hasta formar una orden
+                    más compleja.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MODEL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · MODELO
+                </p>
+
+                <h2>
+                    Quantized 1D-CNN
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>INPUT</span>
+
+                    <h3>
+                        Audio
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DSP</span>
+
+                    <h3>
+                        MFCC
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        1D-CNN
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>OPTIMIZATION</span>
+
+                    <h3>
+                        Quantization
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DEVICE</span>
+
+                    <h3>
+                        Arduino
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EDGE IMPULSE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · EDGE IMPULSE
+                </p>
+
+                <h2>
+                    Pipeline de desarrollo
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Captura
+                        </h3>
+
+                        <p>
+                            Audio grabado
+                            con el micrófono
+                            del propio Arduino.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            MFCC
+                        </h3>
+
+                        <p>
+                            Extracción de
+                            características acústicas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            1D-CNN
+                        </h3>
+
+                        <p>
+                            Entrenamiento
+                            del clasificador.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Quantization
+                        </h3>
+
+                        <p>
+                            Reducción del modelo
+                            para el dispositivo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Deployment
+                        </h3>
+
+                        <p>
+                            Ejecución local
+                            en el microcontrolador.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TRANSPARENCY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    La cuantización exacta
+                    no está suficientemente especificada
+                </h3>
+
+                <p>
+                    Los autores indican
+                    que el modelo es cuantizado,
+                    pero no proporcionan
+                    todos los detalles internos
+                    del procedimiento utilizado
+                    por Edge Impulse.
+                </p>
+
+                <p>
+                    El propio artículo reconoce
+                    esta dependencia y falta
+                    de transparencia como
+                    una limitación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATASET
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · DATASET
+                </p>
+
+                <h2>
+                    Dataset capturado
+                    en el propio dispositivo
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Duración total
+                    </span>
+
+                    <strong>
+                        1 h 03 min 31 s
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Duración muestra
+                    </span>
+
+                    <strong>
+                        1 segundo
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Etiquetas
+                    </span>
+
+                    <strong>
+                        23
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Audio / keyword
+                    </span>
+
+                    <strong>
+                        ≈ 1 min 30 s
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Train
+                    </span>
+
+                    <strong>
+                        ≈ 80 %
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Test
+                    </span>
+
+                    <strong>
+                        ≈ 20 %
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LABELS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · VOCABULARIO
+                </p>
+
+                <h2>
+                    23 etiquetas
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>WAKE UP</strong>
+                    <span>Activation</span>
+                </article>
+
+                <article>
+                    <strong>ON / OFF</strong>
+                    <span>State</span>
+                </article>
+
+                <article>
+                    <strong>RED / GREEN / BLUE</strong>
+                    <span>Colour</span>
+                </article>
+
+                <article>
+                    <strong>CYAN / MAGENTA</strong>
+                    <span>Colour</span>
+                </article>
+
+                <article>
+                    <strong>YELLOW / WHITE</strong>
+                    <span>Colour</span>
+                </article>
+
+                <article>
+                    <strong>AND / PLUS</strong>
+                    <span>Combination</span>
+                </article>
+
+                <article>
+                    <strong>BLINK / FLASH</strong>
+                    <span>Behaviour</span>
+                </article>
+
+                <article>
+                    <strong>FAST / SLOW</strong>
+                    <span>Modifier</span>
+                </article>
+
+                <article>
+                    <strong>QUICK / TOGGLE</strong>
+                    <span>Modifier</span>
+                </article>
+
+                <article>
+                    <strong>CANCEL / LED</strong>
+                    <span>Control</span>
+                </article>
+
+                <article>
+                    <strong>NOISE / NOISE2</strong>
+                    <span>Rejection</span>
+                </article>
+
+                <article>
+                    <strong>UNKNOWN</strong>
+                    <span>Rejection</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOISE LABELS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REJECTION CLASSES
+                </p>
+
+                <h2>
+                    NOISE · NOISE2 · UNKNOWN
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        NOISE
+                    </p>
+
+                    <h3>
+                        Edge Impulse
+                    </h3>
+
+                    <p>
+                        Ruido general
+                        generado automáticamente
+                        por la plataforma.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        UNKNOWN
+                    </p>
+
+                    <h3>
+                        Other sounds
+                    </h3>
+
+                    <p>
+                        Colección automática
+                        de audio fuera
+                        del vocabulario objetivo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        NOISE2
+                    </p>
+
+                    <h3>
+                        Lab environment
+                    </h3>
+
+                    <p>
+                        Ruido recogido
+                        mediante el micrófono
+                        del Arduino
+                        en el entorno real.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DEVICE MATCH
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    DECISIÓN METODOLÓGICA
+                </p>
+
+                <h2>
+                    Train microphone
+                    =
+                    Deployment microphone
+                </h2>
+
+                <p>
+                    Los autores capturan
+                    el dataset mediante
+                    el mismo tipo de micrófono
+                    integrado en el dispositivo
+                    donde posteriormente
+                    ejecutan el sistema.
+                </p>
+
+                <p>
+                    Esto reduce la diferencia
+                    entre las condiciones
+                    de recopilación
+                    y las de despliegue.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METRICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · EVALUACIÓN
+                </p>
+
+                <h2>
+                    Accuracy · Precision
+                    · Recall · F1
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Accuracy media
+                    </span>
+
+                    <strong>
+                        0,97
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Precision media
+                    </span>
+
+                    <strong>
+                        0,97
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Recall medio
+                    </span>
+
+                    <strong>
+                        0,98
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        F1 medio
+                    </span>
+
+                    <strong>
+                        0,98
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Confidence threshold
+                    </span>
+
+                    <strong>
+                        60 %
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        ACCURACY
+                    </span>
+
+                    <strong>
+                        97 %
+                    </strong>
+
+                    <p>
+                        media
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        F1 medio = 0,98
+                    </h3>
+
+                    <p>
+                        Precision media = 0,97
+                        y Recall medio = 0,98
+                        sobre el conjunto
+                        experimental utilizado.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CLASS RESULTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADOS POR CLASE
+                </p>
+
+                <h2>
+                    Ejemplos
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Etiqueta</th>
+                            <th>F1</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>GREEN</td>
+                            <td>1,00</td>
+                            <td>1,00</td>
+                            <td>1,00</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>RED</td>
+                            <td>1,00</td>
+                            <td>1,00</td>
+                            <td>1,00</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>WAKE UP</td>
+                            <td>0,98</td>
+                            <td>0,96</td>
+                            <td>1,00</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>WHITE</td>
+                            <td>0,95</td>
+                            <td>1,00</td>
+                            <td>0,91</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>NOISE</td>
+                            <td>
+                                <strong>0,93</strong>
+                            </td>
+                            <td>0,91</td>
+                            <td>0,96</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>NOISE2</td>
+                            <td>0,94</td>
+                            <td>0,97</td>
+                            <td>0,92</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LOWEST RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    RESULTADO MÁS BAJO
+                </p>
+
+                <h2>
+                    F1 = 0,93
+                </h2>
+
+                <p>
+                    La clase NOISE
+                    generada automáticamente
+                    por Edge Impulse presenta
+                    el menor F1
+                    de la tabla experimental.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             REAL DEPLOYMENT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    DIFERENCIA RESPECTO A TINYSPEECH
+                </p>
+
+                <h3>
+                    El modelo sí se despliega
+                    físicamente en la placa
+                </h3>
+
+                <p>
+                    El trabajo no se limita
+                    a comprobar restricciones
+                    teóricas de microcontrolador.
+                </p>
+
+                <p>
+                    Los autores construyen
+                    el prototipo y ejecutan
+                    el reconocimiento sobre
+                    Arduino Nano 33 BLE Sense Rev2.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOT REPORTED
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    NO ESPECIFICADO
+                </p>
+
+                <h2>
+                    Información importante
+                    que el artículo no reporta
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Tamaño exacto
+                        del modelo
+                    </h3>
+
+                    <p>
+                        No especificado
+                        en la publicación.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        RAM de inferencia
+                    </h3>
+
+                    <p>
+                        No se proporciona
+                        un consumo máximo
+                        medido del modelo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Flash utilizada
+                    </h3>
+
+                    <p>
+                        No especificado.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Latencia
+                    </h3>
+
+                    <p>
+                        No se reportan
+                        milisegundos
+                        por inferencia.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Energía
+                    </h3>
+
+                    <p>
+                        No se realiza
+                        una medición energética
+                        del prototipo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Cuantización exacta
+                    </h3>
+
+                    <p>
+                        No se documenta
+                        completamente el esquema
+                        aplicado por Edge Impulse.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THREATS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · LIMITACIONES
+                </p>
+
+                <h2>
+                    Amenazas a la validez
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Un único hablante
+                    </h3>
+
+                    <p>
+                        Todo el dataset
+                        fue recogido utilizando
+                        la voz de una persona.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Generalización
+                    </h3>
+
+                    <p>
+                        Los resultados no demuestran
+                        robustez ante hablantes,
+                        acentos y voces diferentes.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Edge Impulse
+                    </h3>
+
+                    <p>
+                        Parte del pipeline
+                        funciona como una
+                        caja negra externa.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Una única plataforma
+                    </h3>
+
+                    <p>
+                        La validación se centra
+                        en una familia concreta
+                        de microcontrolador.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Vocabulario cerrado
+                    </h3>
+
+                    <p>
+                        El sistema no realiza
+                        reconocimiento abierto
+                        de secuencias.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Funcionalidad incompleta
+                    </h3>
+
+                    <p>
+                        Algunas palabras se reconocen,
+                        pero su lógica de actuación
+                        todavía no está implementada.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOT IMPLEMENTED
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    PROTOTIPO
+                </p>
+
+                <h3>
+                    Reconocido ≠ comportamiento implementado
+                </h3>
+
+                <p>
+                    BLINK, FAST, SLOW,
+                    PLUS, QUICK y TOGGLE
+                    pueden ser reconocidos
+                    por el sistema,
+                    pero la lógica completa
+                    asociada a estas órdenes
+                    no está implementada
+                    en el prototipo publicado.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TINYSPEECH COMPARISON
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    TinySpeech vs
+                    TinyML for Speech Recognition
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>TinySpeech</th>
+                            <th>Barovic & Moin</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Año
+                            </td>
+
+                            <td>
+                                2020
+                            </td>
+
+                            <td>
+                                2025
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Modelo
+                            </td>
+
+                            <td>
+                                Attention Condensers
+                            </td>
+
+                            <td>
+                                1D-CNN
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Entrada
+                            </td>
+
+                            <td>
+                                MFCC
+                            </td>
+
+                            <td>
+                                MFCC
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Hardware-aware
+                            </td>
+
+                            <td>
+                                Sí
+                            </td>
+
+                            <td>
+                                Sí
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Hardware físico
+                            </td>
+
+                            <td>
+                                No como evaluación
+                                central
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Arduino Nano
+                                    33 BLE Sense
+                                </strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Params / Ops
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Reportados
+                                </strong>
+                            </td>
+
+                            <td>
+                                No especificados
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Dataset
+                            </td>
+
+                            <td>
+                                Speech Commands
+                            </td>
+
+                            <td>
+                                Dataset propio
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Captura
+                            </td>
+
+                            <td>
+                                Dataset existente
+                            </td>
+
+                            <td>
+                                Micrófono de la placa
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Vocabulario
+                            </td>
+
+                            <td>
+                                Cerrado
+                            </td>
+
+                            <td>
+                                Cerrado
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Del benchmark
+                    al dispositivo real
+                </h2>
+
+                <p>
+                    Esta referencia demuestra
+                    que un pipeline acústico
+                    completo puede ejecutarse
+                    localmente sobre
+                    un microcontrolador.
+                </p>
+
+                <p>
+                    También muestra
+                    la importancia de recopilar
+                    los datos utilizando
+                    el mismo hardware
+                    que aparecerá durante
+                    el despliegue.
+                </p>
+
+                <p>
+                    Sin embargo,
+                    para una evaluación sostenible
+                    más completa sería necesario
+                    registrar además
+                    memoria, almacenamiento,
+                    latencia y energía.
+                </p>
+
+                <p>
+                    Para la tesis,
+                    estas métricas deberían
+                    evaluarse conjuntamente
+                    con precisión y robustez
+                    ante cambios de hablante,
+                    ruido y dispositivo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA DERIVADA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Hardware-in-the-Loop
+                    Audio Evaluation
+                </h2>
+
+                <p>
+                    Dataset real
+                    ↓
+                    dispositivo objetivo
+                    ↓
+                    captura real
+                    ↓
+                    modelo optimizado
+                    ↓
+                    inferencia local
+                    ↓
+                    medir simultáneamente:
+                </p>
+
+                <p>
+                    accuracy / WER
+                    +
+                    robustez
+                    +
+                    RAM
+                    +
+                    Flash
+                    +
+                    latencia
+                    +
+                    energía.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

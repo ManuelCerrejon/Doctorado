@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        DCASE Challenges | Benchmark
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/recursos-datasets-evaluacion.html"
+                    class="volver"
+                >
+                    ← Volver a Recursos y evaluación
+                </a>
+
+
+                <p class="etiqueta">
+                    BENCHMARK · COMUNIDAD
+                </p>
+
+
+                <h1>
+                    DCASE Challenges
+                </h1>
+
+
+                <h2>
+                    Detection and Classification
+                    of Acoustic Scenes and Events
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Desde 2013 · Benchmark evolutivo
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Acoustic Scenes</span>
+                    <span>Sound Events</span>
+                    <span>Anomaly Detection</span>
+                    <span>SELD</span>
+                    <span>Audio Reasoning</span>
+                    <span>Machine Monitoring</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NOT A SINGLE DATASET
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    DCASE no es
+                    un único dataset
+                </h3>
+
+                <p>
+                    DCASE organiza desafíos
+                    de evaluación
+                    cuyas tareas,
+                    datasets,
+                    métricas
+                    y condiciones experimentales
+                    pueden cambiar
+                    entre ediciones.
+                </p>
+
+                <p>
+                    Por ello,
+                    no debe citarse
+                    como si existiera
+                    una única metodología
+                    o un único corpus DCASE.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             HISTORICAL REFERENCES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIAS HISTÓRICAS
+                </p>
+
+                <h2>
+                    Origen del benchmark
+                </h2>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Giannoulis, D.,
+                    Stowell, D.,
+                    Benetos, E.,
+                    Rossignol, M.,
+                    Lagrange, M.,
+                    & Plumbley, M. D. (2013).
+                    <em>
+                        A Database and Challenge
+                        for Acoustic Scene
+                        Classification
+                        and Event Detection.
+                    </em>
+                    21st European Signal
+                    Processing Conference
+                    (EUSIPCO 2013),
+                    1–5.
+                </p>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Stowell, D.,
+                    Giannoulis, D.,
+                    Benetos, E.,
+                    Lagrange, M.,
+                    & Plumbley, M. D. (2015).
+                    <em>
+                        Detection and Classification
+                        of Acoustic Scenes
+                        and Events.
+                    </em>
+                    IEEE Transactions
+                    on Multimedia,
+                    17(10),
+                    1733–1746.
+                    DOI:
+                    10.1109/TMM.2015.2428998.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             HISTORY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · ORIGEN
+                </p>
+
+                <h2>
+                    Un protocolo común
+                    para comparar sistemas
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    El reto DCASE original
+                    surge ante la dificultad
+                    de comparar algoritmos
+                    de análisis de escenas
+                    acústicas cuando cada trabajo
+                    utilizaba datasets
+                    y protocolos diferentes.
+                </p>
+
+                <p>
+                    La propuesta consiste
+                    en proporcionar tareas,
+                    conjuntos de datos,
+                    protocolos y métricas
+                    comunes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PIPELINE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>TASK</span>
+
+                    <h3>
+                        Problema común
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DATA</span>
+
+                    <h3>
+                        Development
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>BASELINE</span>
+
+                    <h3>
+                        Sistema inicial
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>EVALUATION</span>
+
+                    <h3>
+                        Test oculto
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>RESULTS</span>
+
+                    <h3>
+                        Leaderboard
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CORE AREAS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · ÁREAS HISTÓRICAS
+                </p>
+
+                <h2>
+                    Tres problemas
+                    especialmente relevantes
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        ASC
+                    </p>
+
+                    <h3>
+                        Acoustic Scene
+                        Classification
+                    </h3>
+
+                    <p>
+                        Determinar
+                        en qué tipo
+                        de entorno acústico
+                        se realizó
+                        una grabación.
+                    </p>
+
+                    <p>
+                        Ejemplos:
+                        parque,
+                        transporte,
+                        hogar,
+                        oficina
+                        o espacio urbano.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        SED
+                    </p>
+
+                    <h3>
+                        Sound Event
+                        Detection
+                    </h3>
+
+                    <p>
+                        Identificar
+                        qué eventos sonoros
+                        aparecen
+                        y cuándo ocurren.
+                    </p>
+
+                    <p>
+                        Introduce
+                        una dimensión temporal
+                        que no está presente
+                        en clasificación
+                        de clips.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        ASD
+                    </p>
+
+                    <h3>
+                        Anomalous Sound
+                        Detection
+                    </h3>
+
+                    <p>
+                        Determinar
+                        si el sonido
+                        de una máquina
+                        corresponde
+                        a funcionamiento normal
+                        o anómalo.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    ACOUSTIC SCENE CLASSIFICATION
+                </p>
+
+                <h2>
+                    ¿Dónde estamos?
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    INPUT
+                </p>
+
+                <h2>
+                    Audio
+                    →
+                    Scene
+                </h2>
+
+                <p>
+                    El objetivo clásico
+                    es asignar una grabación
+                    a una escena acústica
+                    predefinida.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DEVICE SHIFT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    EVOLUCIÓN DEL PROBLEMA
+                </p>
+
+                <h3>
+                    No basta con reconocer
+                    la escena
+                </h3>
+
+                <p>
+                    Ediciones posteriores
+                    incorporaron explícitamente
+                    problemas como
+                    generalización
+                    entre dispositivos
+                    y baja complejidad
+                    computacional.
+                </p>
+
+                <p>
+                    De esta forma,
+                    el problema pasó
+                    de clasificación pura
+                    hacia robustez
+                    y despliegue real.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SED
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    SOUND EVENT DETECTION
+                </p>
+
+                <h2>
+                    ¿Qué ocurre
+                    y cuándo?
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIO</span>
+
+                    <h3>
+                        Continuous Signal
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>EVENT</span>
+
+                    <h3>
+                        Dog Bark
+                    </h3>
+
+                    <p>
+                        02.1–03.0 s
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    +
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>EVENT</span>
+
+                    <h3>
+                        Vehicle
+                    </h3>
+
+                    <p>
+                        01.0–07.8 s
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEMPORAL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    DIFERENCIA CLAVE
+                </p>
+
+                <h2>
+                    Classification
+                    ≠
+                    Detection
+                </h2>
+
+                <p>
+                    Clasificar un clip
+                    únicamente responde
+                    a qué sonido aparece.
+                </p>
+
+                <p>
+                    Sound Event Detection
+                    añade información
+                    sobre comienzo,
+                    final
+                    y posible solapamiento
+                    entre eventos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASD
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    ANOMALOUS SOUND DETECTION
+                </p>
+
+                <h2>
+                    Aprender normalidad
+                    para detectar lo desconocido
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>TRAIN</span>
+
+                    <h3>
+                        Normal Machine
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>MODEL</span>
+
+                    <h3>
+                        Normality
+                        Representation
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>TEST</span>
+
+                    <h3>
+                        Machine Sound
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>SCORE</span>
+
+                    <h3>
+                        Anomaly Score
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CURRENT ASD
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    DCASE 2026 · TASK 2
+                </p>
+
+                <h3>
+                    Noise-aware
+                    Unsupervised ASD
+                </h3>
+
+                <p>
+                    La edición 2026
+                    mantiene el escenario
+                    no supervisado:
+                    durante entrenamiento
+                    solo se dispone
+                    de sonidos normales.
+                </p>
+
+                <p>
+                    Además,
+                    introduce explícitamente
+                    condiciones de ruido
+                    y cambios de dominio
+                    para acercar la tarea
+                    al funcionamiento industrial
+                    real.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ASD METRICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    MÉTRICAS ASD · 2026
+                </p>
+
+                <h2>
+                    AUC
+                    +
+                    pAUC
+                </h2>
+
+            </div>
+
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        AUC
+                    </p>
+
+                    <h3>
+                        Global Ranking
+                    </h3>
+
+                    <p>
+                        Evalúa
+                        la separación
+                        entre sonidos
+                        normales
+                        y anómalos.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        pAUC
+                    </p>
+
+                    <h3>
+                        Low FPR
+                    </h3>
+
+                    <p>
+                        Se calcula
+                        sobre una región
+                        de baja tasa
+                        de falsas alarmas.
+                    </p>
+
+                    <p>
+                        En DCASE 2026
+                        se utiliza
+                        FPR ≤ 0,1.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHY PAUC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    APLICACIÓN REAL
+                </p>
+
+                <h2>
+                    Muchas falsas alarmas
+                    =
+                    sistema poco útil
+                </h2>
+
+                <p>
+                    En monitorización
+                    industrial,
+                    detectar anomalías
+                    no es suficiente.
+                </p>
+
+                <p>
+                    El sistema debe hacerlo
+                    manteniendo una tasa
+                    de falsas alarmas
+                    suficientemente baja.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             2026
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · DCASE 2026
+                </p>
+
+                <h2>
+                    Cómo ha evolucionado
+                    el campo
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Task</th>
+                            <th>Problema</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Task 1
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Heterogeneous
+                                    Audio Classification
+                                </strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Task 2
+                            </td>
+
+                            <td>
+                                Noise-aware
+                                Unsupervised
+                                Anomalous Sound Detection
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Task 3
+                            </td>
+
+                            <td>
+                                Semantic Acoustic Imaging
+                                for Sound Event Localization
+                                and Detection
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Task 4
+                            </td>
+
+                            <td>
+                                Spatial Semantic Segmentation
+                                of Sound Scenes
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Task 5
+                            </td>
+
+                            <td>
+                                <strong>
+                                    Audio-Dependent
+                                    Question Answering
+                                </strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Task 6
+                            </td>
+
+                            <td>
+                                Audio Moment Retrieval
+                                from Long Audio
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             2026 T1
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    DCASE 2026 · TASK 1
+                </p>
+
+                <h3>
+                    Heterogeneous Audio
+                    Classification
+                </h3>
+
+                <p>
+                    En 2026,
+                    la histórica tarea
+                    de Acoustic Scene
+                    Classification
+                    es sustituida
+                    por clasificación
+                    heterogénea de audio.
+                </p>
+
+                <p>
+                    Utiliza la
+                    Broad Sound Taxonomy,
+                    formada por cinco
+                    categorías de primer nivel
+                    y 23 categorías
+                    de segundo nivel.
+                </p>
+
+                <p>
+                    El objetivo es trabajar
+                    con audio real
+                    de naturaleza,
+                    duración
+                    y condiciones
+                    de grabación
+                    muy diferentes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             T1 DATA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        CURATED
+                    </p>
+
+                    <h3>
+                        BSD10k
+                    </h3>
+
+                    <p>
+                        Conjunto más pequeño
+                        y cuidadosamente
+                        etiquetado.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        CROWDSOURCED
+                    </p>
+
+                    <h3>
+                        BSD35k-CS
+                    </h3>
+
+                    <p>
+                        Conjunto mayor
+                        con etiquetas
+                        más ruidosas
+                        procedentes
+                        de usuarios.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SELD
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DCASE 2026 · TASK 3
+                </p>
+
+                <h2>
+                    Semantic Acoustic Imaging
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    El clásico Sound Event
+                    Localization and Detection
+                    combina reconocimiento
+                    del evento
+                    y localización espacial.
+                </p>
+
+                <p>
+                    En DCASE 2026,
+                    Task 3 evoluciona
+                    hacia mapas acústicos
+                    densos de alta resolución.
+                </p>
+
+                <p>
+                    El sistema debe representar
+                    qué sonidos están activos,
+                    dónde se encuentran
+                    y cómo se distribuye
+                    espacialmente
+                    su energía acústica.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SELD GRAPH
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>AUDIO</span>
+
+                    <h3>
+                        Spatial Audio
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>SEMANTIC</span>
+
+                    <h3>
+                        Event Class
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    +
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>SPACE</span>
+
+                    <h3>
+                        Location
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    +
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>ENERGY</span>
+
+                    <h3>
+                        Acoustic Map
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO QA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    DCASE 2026 · TASK 5
+                </p>
+
+                <h2>
+                    Audio-Dependent
+                    Question Answering
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    NUEVO PARADIGMA
+                </p>
+
+                <h2>
+                    ¿El modelo
+                    realmente escucha?
+                </h2>
+
+                <p>
+                    La tarea intenta evitar
+                    preguntas que puedan
+                    contestarse utilizando
+                    únicamente conocimiento
+                    lingüístico
+                    o sentido común.
+                </p>
+
+                <p>
+                    Las respuestas
+                    deben depender
+                    realmente
+                    de la información
+                    contenida en el audio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             QA FILTER
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Silent Audio
+                        </h3>
+
+                        <p>
+                            Eliminar preguntas
+                            que el modelo
+                            puede responder
+                            sin escuchar audio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Common-Sense Check
+                        </h3>
+
+                        <p>
+                            Evitar respuestas
+                            resolubles únicamente
+                            mediante conocimiento
+                            externo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Text Shortcut
+                        </h3>
+
+                        <p>
+                            Reducir correlaciones
+                            puramente textuales
+                            entre pregunta
+                            y respuesta.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Human Verification
+                        </h3>
+
+                        <p>
+                            Revisión humana
+                            final.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             QA EFFICIENCY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    EFICIENCIA · 2026
+                </p>
+
+                <h3>
+                    Lightweight Champion
+                </h3>
+
+                <p>
+                    DCASE 2026 Task 5
+                    incluye una categoría
+                    específica para modelos
+                    con menos de
+                    10.000 millones
+                    de parámetros.
+                </p>
+
+                <p>
+                    Esto conecta
+                    comprensión de audio
+                    y eficiencia
+                    dentro del mismo
+                    protocolo experimental.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METRICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · MÉTRICAS
+                </p>
+
+                <h2>
+                    No existe
+                    una métrica DCASE única
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Tarea</th>
+                            <th>Ejemplos de métricas</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Audio Classification
+                            </td>
+
+                            <td>
+                                Accuracy
+                                ·
+                                F-score
+                                ·
+                                métricas jerárquicas
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Sound Event Detection
+                            </td>
+
+                            <td>
+                                Métricas
+                                event-based
+                                o segment-based
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Anomalous Sound Detection
+                            </td>
+
+                            <td>
+                                <strong>
+                                    AUC · pAUC
+                                </strong>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Localization
+                            </td>
+
+                            <td>
+                                Detección
+                                +
+                                error espacial
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Audio Question Answering
+                            </td>
+
+                            <td>
+                                Top-1 Accuracy
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SCIENTIFIC VALUE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · VALOR EXPERIMENTAL
+                </p>
+
+                <h2>
+                    DCASE no aporta
+                    únicamente datasets
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Task Definition
+                    </strong>
+
+                    <span>
+                        Problema preciso
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Development Data
+                    </strong>
+
+                    <span>
+                        Protocolo reproducible
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Evaluation Data
+                    </strong>
+
+                    <span>
+                        Test independiente
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Baseline
+                    </strong>
+
+                    <span>
+                        Punto de partida
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Metrics
+                    </strong>
+
+                    <span>
+                        Criterios comunes
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Technical Reports
+                    </strong>
+
+                    <span>
+                        Comparación metodológica
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITATIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Comparar DCASE
+                    requiere contexto
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        Changing Tasks
+                    </h3>
+
+                    <p>
+                        Las tareas
+                        evolucionan
+                        entre ediciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Changing Data
+                    </h3>
+
+                    <p>
+                        Los datasets
+                        pueden variar
+                        año a año.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Changing Metrics
+                    </h3>
+
+                    <p>
+                        Una puntuación
+                        de una edición
+                        no siempre
+                        puede compararse
+                        directamente
+                        con otra.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        External Data
+                    </h3>
+
+                    <p>
+                        Las reglas
+                        sobre modelos
+                        preentrenados
+                        y datos externos
+                        dependen de la tarea.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Baselines
+                    </h3>
+
+                    <p>
+                        El baseline
+                        debe interpretarse
+                        dentro de su edición
+                        concreta.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Leaderboard
+                    </h3>
+
+                    <p>
+                        Obtener mejor puntuación
+                        no implica
+                        necesariamente
+                        mejor eficiencia,
+                        explicabilidad
+                        o robustez
+                        fuera del benchmark.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Probablemente el ecosistema
+                    de evaluación más alineado
+                    con la monitorización acústica
+                </h2>
+
+                <p>
+                    DCASE cubre directamente
+                    clasificación,
+                    detección temporal,
+                    localización,
+                    detección de anomalías
+                    y análisis
+                    de escenas acústicas.
+                </p>
+
+                <p>
+                    Sus tareas de anomalías
+                    industriales encajan
+                    especialmente bien
+                    con el caso de uso
+                    de monitorización acústica
+                    inteligente.
+                </p>
+
+                <p>
+                    La incorporación reciente
+                    de Audio Question Answering
+                    conecta además DCASE
+                    con la comprensión
+                    y razonamiento
+                    sobre audio.
+                </p>
+
+                <p>
+                    Para nuestra investigación,
+                    la filosofía DCASE
+                    puede reutilizarse
+                    para construir protocolos
+                    en los que no se mida
+                    únicamente rendimiento,
+                    sino también adaptación,
+                    confianza,
+                    OOD,
+                    explicabilidad
+                    y coste computacional.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS PROTOCOL
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA PARA LA TESIS
+                </p>
+
+                <h2>
+                    Adaptive DCASE
+                    Protocol
+                </h2>
+
+                <p>
+                    condición conocida
+                    ↓
+                    baseline
+                    ↓
+                    cambio de ruido /
+                    sensor /
+                    máquina /
+                    dominio
+                    ↓
+                    detectar shift
+                    ↓
+                    estimar confianza
+                    ↓
+                    adaptar si procede
+                    ↓
+                    medir:
+                </p>
+
+                <p>
+                    task performance
+                    +
+                    adaptation gain
+                    +
+                    forgetting
+                    +
+                    calibration
+                    +
+                    OOD
+                    +
+                    explanation
+                    +
+                    latency
+                    +
+                    memory
+                    +
+                    energy.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONNECTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    CONEXIÓN CON LOS BLOQUES
+                </p>
+
+                <h2>
+                    Un punto de unión
+                    para toda la tesis
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th>Eje</th>
+                            <th>DCASE permite estudiar</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Representación
+                            </td>
+
+                            <td>
+                                Audio classification
+                                · SED · SELD
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Adaptación
+                            </td>
+
+                            <td>
+                                Device shift
+                                · domain shift
+                                · new machines
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Incertidumbre
+                            </td>
+
+                            <td>
+                                ASD
+                                · false alarms
+                                · unknown anomalies
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Explicabilidad
+                            </td>
+
+                            <td>
+                                Temporal
+                                y espacial
+                                evidence
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Eficiencia
+                            </td>
+
+                            <td>
+                                Low-complexity
+                                tasks
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                Razonamiento
+                            </td>
+
+                            <td>
+                                Audio-dependent QA
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

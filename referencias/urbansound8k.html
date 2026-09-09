@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        UrbanSound8K | Referencia científica
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVEGACIÓN
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+
+                <h1>Doctorado</h1>
+
+                <span>
+                    Seguimiento de investigación
+                </span>
+
+            </div>
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#investigacion">
+                            Investigación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#estado-arte">
+                            Estado del arte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#experimentos">
+                            Experimentos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#documentos">
+                            Documentos
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="referencia-hero">
+
+            <div class="referencia-hero-contenido">
+
+                <a
+                    href="../estado-arte/recursos-datasets-evaluacion.html"
+                    class="volver"
+                >
+                    ← Volver a Recursos y evaluación
+                </a>
+
+
+                <p class="etiqueta">
+                    REFERENCIA CIENTÍFICA
+                </p>
+
+
+                <h1>
+                    UrbanSound8K
+                </h1>
+
+
+                <h2>
+                    A Dataset and Taxonomy
+                    for Urban Sound Research
+                </h2>
+
+
+                <p class="autores-referencia">
+                    Salamon, Jacoby & Bello
+                    · ACM Multimedia 2014
+                </p>
+
+
+                <div class="referencia-tags">
+
+                    <span>Urban Audio</span>
+                    <span>Freesound</span>
+                    <span>10 Classes</span>
+                    <span>8.732 Clips</span>
+                    <span>10-Fold CV</span>
+                    <span>MFCC</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BIBLIOGRAPHY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    REFERENCIA
+                </p>
+
+                <h2>
+                    Información bibliográfica
+                </h2>
+
+            </div>
+
+
+            <div class="ficha-bibliografica">
+
+                <div>
+
+                    <span class="ficha-label">
+                        Primer autor
+                    </span>
+
+                    <strong>
+                        Justin Salamon
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Año
+                    </span>
+
+                    <strong>
+                        2014
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Publicación
+                    </span>
+
+                    <strong>
+                        ACM Multimedia 2014
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Páginas
+                    </span>
+
+                    <strong>
+                        1041–1044
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        DOI
+                    </span>
+
+                    <strong>
+                        10.1145/2647868.2655045
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="ficha-label">
+                        Licencia dataset
+                    </span>
+
+                    <strong>
+                        CC BY-NC 3.0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="cita-completa">
+
+                <p>
+                    Salamon, J.,
+                    Jacoby, C.,
+                    & Bello, J. P. (2014).
+                    <em>
+                        A Dataset and Taxonomy
+                        for Urban Sound Research.
+                    </em>
+                    Proceedings of the 22nd
+                    ACM International Conference
+                    on Multimedia,
+                    1041–1044.
+                    DOI:
+                    10.1145/2647868.2655045.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IMPORTANT DISTINCTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    IMPORTANTE
+                </p>
+
+                <h3>
+                    UrbanSound
+                    ≠
+                    UrbanSound8K
+                </h3>
+
+                <p>
+                    El artículo crea primero
+                    UrbanSound,
+                    formado por grabaciones
+                    completas con eventos
+                    anotados temporalmente.
+                </p>
+
+                <p>
+                    A partir de este recurso
+                    se construye UrbanSound8K,
+                    un subconjunto de clips cortos
+                    pensado específicamente
+                    para clasificación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PROBLEM
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    01 · PROBLEMA Y OBJETIVO
+                </p>
+
+                <h2>
+                    Datos reales
+                    y una taxonomía común
+                    para sonidos urbanos
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    Los autores identifican
+                    dos obstáculos principales
+                    para la investigación
+                    en audio urbano.
+                </p>
+
+                <p>
+                    El primero es la escasez
+                    de grandes colecciones
+                    de grabaciones reales
+                    con anotaciones.
+                </p>
+
+                <p>
+                    El segundo es la ausencia
+                    de una taxonomía común
+                    que permita comparar
+                    de forma coherente
+                    diferentes trabajos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TAXONOMY
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    02 · TAXONOMÍA
+                </p>
+
+                <h2>
+                    Urban Acoustic Environment
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>ROOT</span>
+
+                    <h3>
+                        Urban Acoustic
+                        Environment
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>GROUP</span>
+
+                    <h3>
+                        Human
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    /
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>GROUP</span>
+
+                    <h3>
+                        Nature
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    /
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>GROUP</span>
+
+                    <h3>
+                        Mechanical
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    /
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>GROUP</span>
+
+                    <h3>
+                        Music
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TAXONOMY PRINCIPLES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Previous Research
+                        </h3>
+
+                        <p>
+                            Se parte
+                            de taxonomías
+                            acústicas anteriores.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Low-Level Sources
+                        </h3>
+
+                        <p>
+                            Se priorizan
+                            fuentes concretas
+                            como car horn
+                            o jackhammer
+                            frente a categorías
+                            demasiado generales.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Urban Relevance
+                        </h3>
+
+                        <p>
+                            Se consideran
+                            sonidos especialmente
+                            relevantes
+                            para entornos urbanos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             NYC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        NYC 311
+                    </span>
+
+                    <strong>
+                        &gt; 370K
+                    </strong>
+
+                    <p>
+                        noise complaints
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        Taxonomía orientada
+                        a problemas urbanos reales
+                    </h3>
+
+                    <p>
+                        Los autores examinan
+                        más de 370.000
+                        quejas por ruido
+                        registradas en Nueva York
+                        para identificar
+                        fuentes particularmente
+                        relevantes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CLASSES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    03 · CLASES DEL DATASET
+                </p>
+
+                <h2>
+                    10 sonidos urbanos
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>Air Conditioner</strong>
+                    <span>0</span>
+                </article>
+
+                <article>
+                    <strong>Car Horn</strong>
+                    <span>1</span>
+                </article>
+
+                <article>
+                    <strong>Children Playing</strong>
+                    <span>2</span>
+                </article>
+
+                <article>
+                    <strong>Dog Bark</strong>
+                    <span>3</span>
+                </article>
+
+                <article>
+                    <strong>Drilling</strong>
+                    <span>4</span>
+                </article>
+
+                <article>
+                    <strong>Engine Idling</strong>
+                    <span>5</span>
+                </article>
+
+                <article>
+                    <strong>Gun Shot</strong>
+                    <span>6</span>
+                </article>
+
+                <article>
+                    <strong>Jackhammer</strong>
+                    <span>7</span>
+                </article>
+
+                <article>
+                    <strong>Siren</strong>
+                    <span>8</span>
+                </article>
+
+                <article>
+                    <strong>Street Music</strong>
+                    <span>9</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CLASS SELECTION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    SELECCIÓN
+                </p>
+
+                <h3>
+                    Mayoría basada
+                    en quejas por ruido
+                </h3>
+
+                <p>
+                    Ocho de las diez
+                    clases fueron seleccionadas
+                    debido a su frecuencia
+                    en las quejas urbanas
+                    analizadas.
+                </p>
+
+                <p>
+                    Children playing
+                    y gun shot
+                    fueron añadidas
+                    para aumentar
+                    la variedad del dataset.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DATA ACQUISITION
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    04 · CONSTRUCCIÓN DE URBANSOUND
+                </p>
+
+                <h2>
+                    Freesound
+                    → filtrado manual
+                    → anotación temporal
+                </h2>
+
+            </div>
+
+
+            <div class="entrenamiento-pasos">
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Freesound Search
+                        </h3>
+
+                        <p>
+                            Se busca cada clase
+                            utilizando su nombre
+                            mediante la API
+                            de Freesound.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            &gt; 3.000 recordings
+                        </h3>
+
+                        <p>
+                            La búsqueda inicial
+                            produce más
+                            de 60 horas
+                            de audio.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Manual Filtering
+                        </h3>
+
+                        <p>
+                            Cada grabación
+                            se escucha
+                            y se inspeccionan
+                            sus metadatos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Field Recordings
+                        </h3>
+
+                        <p>
+                            Solo se conservan
+                            grabaciones reales
+                            donde aparece
+                            la clase objetivo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Audacity
+                        </h3>
+
+                        <p>
+                            Se marca el inicio
+                            y final
+                            de cada aparición
+                            del sonido.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <div class="entrenamiento-numero">
+                        06
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Salience
+                        </h3>
+
+                        <p>
+                            Cada evento
+                            se etiqueta
+                            como foreground
+                            o background.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             URBANSOUND
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    URBANSOUND
+                </p>
+
+                <h2>
+                    Grabaciones completas
+                    anotadas temporalmente
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Recordings
+                    </span>
+
+                    <strong>
+                        1.302
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Audio total
+                    </span>
+
+                    <strong>
+                        &gt; 27 h
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Eventos etiquetados
+                    </span>
+
+                    <strong>
+                        3.075
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Audio etiquetado
+                    </span>
+
+                    <strong>
+                        18,5 h
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEMPORAL EVENTS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    DURACIÓN VARIABLE
+                </p>
+
+                <h2>
+                    1–2 s
+                    → más de 30 s
+                </h2>
+
+                <p>
+                    Un gun shot
+                    puede durar apenas
+                    uno o dos segundos.
+                </p>
+
+                <p>
+                    Un jackhammer
+                    o engine idling
+                    puede mantenerse
+                    durante más
+                    de treinta segundos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CREATE 8K
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    05 · URBANSOUND8K
+                </p>
+
+                <h2>
+                    Convertir eventos largos
+                    en clips clasificables
+                </h2>
+
+            </div>
+
+
+            <div class="arquitectura-flujo">
+
+                <div class="arquitectura-bloque">
+
+                    <span>SOURCE</span>
+
+                    <h3>
+                        Labeled Event
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LIMIT</span>
+
+                    <h3>
+                        ≤ 4 s
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>LONG EVENT</span>
+
+                    <h3>
+                        Sliding Window
+                    </h3>
+
+                    <p>
+                        4 s
+                    </p>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>HOP</span>
+
+                    <h3>
+                        2 s
+                    </h3>
+
+                </div>
+
+
+                <div class="arquitectura-flecha">
+                    →
+                </div>
+
+
+                <div class="arquitectura-bloque">
+
+                    <span>DATASET</span>
+
+                    <h3>
+                        UrbanSound8K
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             8K STATS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        URBANSOUND8K
+                    </span>
+
+                    <strong>
+                        8.732
+                    </strong>
+
+                    <p>
+                        labeled slices
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        8,75 horas
+                    </h3>
+
+                    <p>
+                        Se limita además
+                        el número máximo
+                        a 1.000 slices
+                        por clase
+                        para reducir
+                        grandes desequilibrios.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHY 4 SEC
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    ¿POR QUÉ 4 SEGUNDOS?
+                </p>
+
+                <h3>
+                    Duración suficiente
+                    para identificar
+                    sonidos ambientales
+                </h3>
+
+                <p>
+                    El artículo se apoya
+                    en un estudio previo
+                    donde clips
+                    de cuatro segundos
+                    permitían identificar
+                    sonidos ambientales
+                    con aproximadamente
+                    82 % de precisión humana.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             AUDIO FORMAT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    06 · AUDIO
+                </p>
+
+                <h2>
+                    Sin normalización global
+                    de formato
+                </h2>
+
+            </div>
+
+
+            <div class="referencia-texto">
+
+                <p>
+                    La distribución oficial
+                    de UrbanSound8K
+                    contiene archivos WAV.
+                </p>
+
+                <p>
+                    La frecuencia
+                    de muestreo,
+                    profundidad de bits
+                    y número de canales
+                    mantienen las características
+                    de la grabación original
+                    de Freesound
+                    y pueden variar
+                    entre archivos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             METADATA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    07 · METADATOS
+                </p>
+
+                <h2>
+                    UrbanSound8K.csv
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>slice_file_name</strong>
+                    <span>Clip</span>
+                </article>
+
+                <article>
+                    <strong>fsID</strong>
+                    <span>Freesound source</span>
+                </article>
+
+                <article>
+                    <strong>start</strong>
+                    <span>Start time</span>
+                </article>
+
+                <article>
+                    <strong>end</strong>
+                    <span>End time</span>
+                </article>
+
+                <article>
+                    <strong>salience</strong>
+                    <span>Foreground / Background</span>
+                </article>
+
+                <article>
+                    <strong>fold</strong>
+                    <span>1–10</span>
+                </article>
+
+                <article>
+                    <strong>classID</strong>
+                    <span>0–9</span>
+                </article>
+
+                <article>
+                    <strong>class</strong>
+                    <span>Sound category</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             FOLDS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    08 · PARTICIONES
+                </p>
+
+                <h2>
+                    10 folds predefinidos
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    REGLA CRÍTICA
+                </p>
+
+                <h2>
+                    Same Freesound recording
+                    → same fold
+                </h2>
+
+                <p>
+                    Todos los slices
+                    procedentes de una misma
+                    grabación original
+                    deben permanecer
+                    dentro del mismo fold.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LEAKAGE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    DATA LEAKAGE
+                </p>
+
+                <h3>
+                    No debemos
+                    volver a barajar
+                    UrbanSound8K
+                </h3>
+
+                <p>
+                    Una división aleatoria
+                    puede colocar fragmentos
+                    de la misma grabación
+                    original en train y test.
+                </p>
+
+                <p>
+                    El resultado puede ser
+                    una accuracy artificialmente
+                    alta que no representa
+                    generalización
+                    a grabaciones realmente nuevas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CV
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-destacado-wav2vec">
+
+                <div>
+
+                    <span>
+                        PROTOCOLO
+                    </span>
+
+                    <strong>
+                        10-FOLD
+                    </strong>
+
+                    <p>
+                        cross-validation
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-explicacion">
+
+                    <h3>
+                        9 train + 1 test
+                    </h3>
+
+                    <p>
+                        Repetir diez veces
+                        utilizando cada fold
+                        una vez como test
+                        y reportar
+                        el promedio final.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WARNING
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    ADVERTENCIA OFICIAL
+                </p>
+
+                <h3>
+                    No evaluar únicamente
+                    sobre fold 10
+                </h3>
+
+                <p>
+                    La página oficial
+                    indica que los folds
+                    no tienen exactamente
+                    la misma dificultad.
+                </p>
+
+                <p>
+                    Entrenar sobre 1–9
+                    y probar exclusivamente
+                    sobre 10 puede producir
+                    resultados más altos
+                    que otras combinaciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             BASELINE FEATURES
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    09 · BASELINE
+                </p>
+
+                <h2>
+                    MFCC + estadísticas
+                    temporales
+                </h2>
+
+            </div>
+
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Window
+                    </span>
+
+                    <strong>
+                        23,2 ms
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Overlap
+                    </span>
+
+                    <strong>
+                        50 %
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Mel bands
+                    </span>
+
+                    <strong>
+                        40
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Mel range
+                    </span>
+
+                    <strong>
+                        0–22.050 Hz
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        MFCC
+                    </span>
+
+                    <strong>
+                        25
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Vector
+                    </span>
+
+                    <strong>
+                        225 dims
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             STATISTICS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESUMEN TEMPORAL
+                </p>
+
+                <h2>
+                    Bag-of-Frames
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>Minimum</strong>
+                    <span>Statistic</span>
+                </article>
+
+                <article>
+                    <strong>Maximum</strong>
+                    <span>Statistic</span>
+                </article>
+
+                <article>
+                    <strong>Median</strong>
+                    <span>Statistic</span>
+                </article>
+
+                <article>
+                    <strong>Mean</strong>
+                    <span>Statistic</span>
+                </article>
+
+                <article>
+                    <strong>Variance</strong>
+                    <span>Statistic</span>
+                </article>
+
+                <article>
+                    <strong>Skewness</strong>
+                    <span>Statistic</span>
+                </article>
+
+                <article>
+                    <strong>Kurtosis</strong>
+                    <span>Statistic</span>
+                </article>
+
+                <article>
+                    <strong>Derivatives</strong>
+                    <span>1st + 2nd</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CLASSIFIERS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    10 · CLASIFICADORES
+                </p>
+
+                <h2>
+                    Cinco métodos
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+                    <strong>SVM</strong>
+                    <span>RBF kernel</span>
+                </article>
+
+                <article>
+                    <strong>Random Forest</strong>
+                    <span>500 trees</span>
+                </article>
+
+                <article>
+                    <strong>k-NN</strong>
+                    <span>k = 5</span>
+                </article>
+
+                <article>
+                    <strong>J48</strong>
+                    <span>Decision Tree</span>
+                </article>
+
+                <article>
+                    <strong>ZeroR</strong>
+                    <span>Majority baseline</span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             EXP SETUP
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="hiperparametros-grid">
+
+                <article>
+
+                    <span>
+                        Toolkit
+                    </span>
+
+                    <strong>
+                        Weka
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Evaluation
+                    </span>
+
+                    <strong>
+                        10-fold CV
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Feature selection
+                    </span>
+
+                    <strong>
+                        Correlation-based
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        Metric
+                    </span>
+
+                    <strong>
+                        Accuracy
+                    </strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             DURATION RESULT
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    RESULTADO 1
+                </p>
+
+                <h2>
+                    Por debajo de 4 s
+                    el rendimiento empeora
+                </h2>
+
+                <p>
+                    El rendimiento de los
+                    clasificadores permanece
+                    relativamente estable
+                    entre 10 y 6 segundos.
+                </p>
+
+                <p>
+                    Para el SVM,
+                    no existe diferencia
+                    estadísticamente significativa
+                    entre clips de 6 s
+                    y de 4 s.
+                </p>
+
+                <p>
+                    Por debajo de 4 segundos
+                    la reducción sí pasa
+                    a ser significativa.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             TEMPORAL SCALE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="modelos-configuracion">
+
+                <article>
+
+                    <p class="etiqueta">
+                        SHORT SCALE
+                    </p>
+
+                    <h3>
+                        Gun Shot · Siren
+                    </h3>
+
+                    <p>
+                        Eventos rápidos
+                        que pueden identificarse
+                        incluso con fragmentos
+                        relativamente cortos.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <p class="etiqueta">
+                        LONGER SCALE
+                    </p>
+
+                    <h3>
+                        Street Music
+                        ·
+                        Children Playing
+                    </h3>
+
+                    <p>
+                        Pierden rendimiento
+                        conforme disminuye
+                        la duración disponible.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             CONFUSIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADO 2
+                </p>
+
+                <h2>
+                    Principales confusiones
+                </h2>
+
+            </div>
+
+
+            <div class="wavlm-tareas-grid">
+
+                <article>
+
+                    <strong>
+                        Air Conditioner
+                    </strong>
+
+                    <span>
+                        ↔ Engine Idling
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Jackhammer
+                    </strong>
+
+                    <span>
+                        ↔ Drilling
+                    </span>
+
+                </article>
+
+
+                <article>
+
+                    <strong>
+                        Children
+                    </strong>
+
+                    <span>
+                        ↔ Street Music
+                    </span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             WHY CONFUSIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-destacado">
+
+                <p class="etiqueta">
+                    INTERPRETACIÓN
+                </p>
+
+                <h3>
+                    MFCC + bag-of-frames
+                    pierde dinámica temporal
+                </h3>
+
+                <p>
+                    Los autores señalan
+                    dificultades especialmente
+                    con sonidos continuos,
+                    de banda ancha
+                    y similares tímbricamente.
+                </p>
+
+                <p>
+                    Proponen que modelar
+                    mejor las dinámicas
+                    de energía y timbre
+                    constituye una línea
+                    de trabajo futura.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             SALIENCE
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    RESULTADO 3
+                </p>
+
+                <h2>
+                    Foreground vs Background
+                </h2>
+
+            </div>
+
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    SALIENCE
+                </p>
+
+                <h2>
+                    FG
+                    &gt;
+                    BG
+                </h2>
+
+                <p>
+                    El clasificador
+                    presenta en general
+                    mejores resultados
+                    cuando la fuente objetivo
+                    aparece claramente
+                    en primer plano.
+                </p>
+
+                <p>
+                    La presencia de fuentes
+                    competidoras y ruido
+                    incrementa la dificultad.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIMITATIONS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    LIMITACIONES
+                </p>
+
+                <h2>
+                    Qué debemos tener
+                    en cuenta
+                </h2>
+
+            </div>
+
+
+            <div class="limitaciones-grid">
+
+                <article>
+
+                    <h3>
+                        10 clases
+                    </h3>
+
+                    <p>
+                        El universo
+                        de sonidos urbanos
+                        es mucho más amplio.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Closed Set
+                    </h3>
+
+                    <p>
+                        La clasificación
+                        presupone que el sonido
+                        pertenece a alguna
+                        de las clases conocidas.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Freesound Bias
+                    </h3>
+
+                    <p>
+                        Los datos dependen
+                        de grabaciones subidas
+                        voluntariamente
+                        a un repositorio web.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Variable Format
+                    </h3>
+
+                    <p>
+                        Frecuencia,
+                        canales y profundidad
+                        pueden variar
+                        entre grabaciones.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Background Sources
+                    </h3>
+
+                    <p>
+                        Los eventos reales
+                        pueden aparecer
+                        junto a otras fuentes.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <h3>
+                        Short Clips
+                    </h3>
+
+                    <p>
+                        UrbanSound8K limita
+                        el contexto temporal
+                        a cuatro segundos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ESC COMPARISON
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="detalle-cabecera">
+
+                <p class="etiqueta">
+                    COMPARACIÓN
+                </p>
+
+                <h2>
+                    ESC-50 vs UrbanSound8K
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table class="tabla-modelos">
+
+                    <thead>
+
+                        <tr>
+                            <th></th>
+                            <th>ESC-50</th>
+                            <th>UrbanSound8K</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>Dominio</td>
+                            <td>Environmental</td>
+                            <td>
+                                <strong>Urban</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Clips</td>
+                            <td>2.000</td>
+                            <td>
+                                <strong>8.732</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Clases</td>
+                            <td>50</td>
+                            <td>10</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Duración</td>
+                            <td>5 s</td>
+                            <td>≤ 4 s</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Folds</td>
+                            <td>5</td>
+                            <td>
+                                <strong>10</strong>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Fuente</td>
+                            <td>Freesound</td>
+                            <td>Freesound</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Salience</td>
+                            <td>No central</td>
+                            <td>
+                                <strong>
+                                    FG / BG
+                                </strong>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             THESIS
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="relacion-tesis">
+
+                <p class="etiqueta">
+                    RELACIÓN CON LA TESIS
+                </p>
+
+                <h2>
+                    Un buen escenario
+                    para estudiar
+                    domain shift y ruido
+                </h2>
+
+                <p>
+                    UrbanSound8K introduce
+                    grabaciones reales
+                    con condiciones
+                    de captura heterogéneas
+                    y diferentes grados
+                    de interferencia.
+                </p>
+
+                <p>
+                    La etiqueta
+                    foreground/background
+                    permite estudiar
+                    cómo cambia
+                    el rendimiento
+                    cuando la evidencia
+                    acústica objetivo
+                    pierde prominencia.
+                </p>
+
+                <p>
+                    También resulta
+                    apropiado para evaluar
+                    representación,
+                    incertidumbre,
+                    detección OOD
+                    y adaptación
+                    a diferentes
+                    condiciones acústicas.
+                </p>
+
+                <p>
+                    El protocolo de folds
+                    demuestra además
+                    la importancia
+                    de diseñar correctamente
+                    las particiones
+                    para evitar
+                    conclusiones artificiales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             IDEA
+        =========================================== -->
+
+        <section class="referencia-contenedor">
+
+            <div class="resultado-clave">
+
+                <p class="etiqueta">
+                    IDEA EXPERIMENTAL
+                </p>
+
+                <h2>
+                    Salience-Aware
+                    Adaptive Audio
+                </h2>
+
+                <p>
+                    evento foreground
+                    ↓
+                    condición sencilla
+                    ↓
+                    evento background
+                    ↓
+                    interferencia creciente
+                    ↓
+                    confidence baja
+                    ↓
+                    activar adaptación
+                    o mayor capacidad
+                    ↓
+                    medir:
+                </p>
+
+                <p>
+                    accuracy
+                    +
+                    calibration
+                    +
+                    OOD
+                    +
+                    adaptation gain
+                    +
+                    cost.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Seguimiento de tesis doctoral · Universidad de Huelva
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

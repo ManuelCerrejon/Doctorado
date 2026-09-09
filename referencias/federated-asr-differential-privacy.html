@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Federated Learning with Differential Privacy
+        for End-to-End Speech Recognition
+    </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+            <h1>Doctorado</h1>
+            <span>Seguimiento de investigación</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#investigacion">Investigación</a></li>
+                <li><a href="../index.html#estado-arte">Estado del arte</a></li>
+                <li><a href="../index.html#experimentos">Experimentos</a></li>
+                <li><a href="../index.html#documentos">Documentos</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="referencia-hero">
+
+    <div class="referencia-hero-contenido">
+
+        <a
+            href="../estado-arte/equidad-privacidad-seguridad.html"
+            class="volver"
+        >
+            ← Volver a Equidad, privacidad y seguridad
+        </a>
+
+        <p class="etiqueta">
+            REFERENCIA CIENTÍFICA · [64]
+        </p>
+
+        <h1>
+            Federated Learning
+            with Differential Privacy
+            for End-to-End Speech Recognition
+        </h1>
+
+        <p class="autores-referencia">
+            Pelikan et al. · 2023
+        </p>
+
+        <div class="referencia-tags">
+            <span>Federated Learning</span>
+            <span>Differential Privacy</span>
+            <span>Transformer</span>
+            <span>CTC</span>
+            <span>ASR</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+        <p class="etiqueta">REFERENCIA</p>
+        <h2>Información bibliográfica</h2>
+    </div>
+
+    <div class="ficha-bibliografica">
+
+        <div>
+            <span class="ficha-label">Primer autor</span>
+            <strong>Martin Pelikan</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Año</span>
+            <strong>2023</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">Tipo</span>
+            <strong>Preprint</strong>
+        </div>
+
+        <div>
+            <span class="ficha-label">arXiv</span>
+            <strong>2310.00098</strong>
+        </div>
+
+    </div>
+
+    <div class="cita-completa">
+
+        <p>
+            Pelikan, M.,
+            Azam, S. S.,
+            Feldman, V.,
+            Silovsky, J.,
+            Talwar, K.,
+            & Likhomanenko, T. (2023).
+            <em>
+                Federated Learning
+                with Differential Privacy
+                for End-to-End Speech Recognition.
+            </em>
+            arXiv:2310.00098.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            01 · PROBLEMA
+        </p>
+
+        <h2>
+            Federated Learning
+            no garantiza privacidad
+            por sí solo
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            En aprendizaje federado,
+            los datos permanecen
+            en los dispositivos
+            y se comparten
+            actualizaciones del modelo.
+        </p>
+
+        <p>
+            Sin embargo,
+            esas actualizaciones
+            pueden seguir revelando
+            información sobre los usuarios.
+        </p>
+
+        <p>
+            El artículo incorpora
+            privacidad diferencial
+            a nivel de usuario
+            para proporcionar
+            garantías más fuertes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+            <span>CLIENT</span>
+            <h3>Local Speech</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>LOCAL</span>
+            <h3>Model Update</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>PRIVACY</span>
+            <h3>Clipping + Noise</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>SERVER</span>
+            <h3>Aggregation</h3>
+        </div>
+
+        <div class="arquitectura-flecha">→</div>
+
+        <div class="arquitectura-bloque">
+            <span>GLOBAL</span>
+            <h3>ASR Model</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · MODELO
+        </p>
+
+        <h2>
+            Large End-to-End Transformer
+        </h2>
+
+    </div>
+
+    <div class="hiperparametros-grid">
+
+        <article>
+            <span>Parameters</span>
+            <strong>≈250 M</strong>
+        </article>
+
+        <article>
+            <span>Architecture</span>
+            <strong>Encoder Transformer</strong>
+        </article>
+
+        <article>
+            <span>Loss</span>
+            <strong>CTC</strong>
+        </article>
+
+        <article>
+            <span>Metric</span>
+            <strong>WER</strong>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · DATOS
+        </p>
+
+        <h2>
+            LibriSpeech
+            + Common Voice v13
+        </h2>
+
+    </div>
+
+    <div class="modelos-configuracion">
+
+        <article>
+            <p class="etiqueta">LIBRISPEECH</p>
+            <h3>English</h3>
+            <p>
+                Habla leída
+                relativamente controlada.
+            </p>
+        </article>
+
+        <article>
+            <p class="etiqueta">COMMON VOICE</p>
+            <h3>English</h3>
+            <p>
+                Mayor heterogeneidad
+                de usuarios y condiciones.
+            </p>
+        </article>
+
+        <article>
+            <p class="etiqueta">COMMON VOICE</p>
+            <h3>French</h3>
+        </article>
+
+        <article>
+            <p class="etiqueta">COMMON VOICE</p>
+            <h3>German</h3>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            DOMAIN SHIFT
+        </p>
+
+        <h3>
+            El seed model
+            puede proceder
+            de otro dominio
+        </h3>
+
+        <p>
+            Los autores estudian
+            modelos iniciales
+            preentrenados con datos
+            distintos del dominio
+            utilizado posteriormente
+            en federated learning.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            04 · DIFFERENTIAL PRIVACY
+        </p>
+
+        <h2>
+            Clipping
+            + ruido
+        </h2>
+
+    </div>
+
+    <div class="referencia-texto">
+
+        <p>
+            Las contribuciones
+            de los clientes
+            se limitan mediante clipping
+            antes de añadir
+            ruido aleatorio
+            para obtener garantías
+            de privacidad diferencial.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            PROBLEMA
+        </p>
+
+        <h2>
+            Global clipping
+            puede perjudicar
+            a grandes Transformers
+        </h2>
+
+        <p>
+            Los gradientes
+            de diferentes capas
+            presentan escalas
+            muy distintas.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-destacado-wav2vec">
+
+        <div>
+
+            <span>
+                SOLUCIÓN
+            </span>
+
+            <strong>
+                Per-Layer
+            </strong>
+
+            <p>
+                clipping
+            </p>
+
+        </div>
+
+        <div class="resultado-explicacion">
+
+            <h3>
+                Presupuesto distribuido
+                entre capas
+            </h3>
+
+            <p>
+                Cada grupo de parámetros
+                se recorta
+                de forma independiente
+                antes de añadir
+                el ruido de DP.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="resultado-clave">
+
+        <p class="etiqueta">
+            EJEMPLO DEL PAPER
+        </p>
+
+        <h2>
+            19,1 %
+            →
+            21,2 % WER
+        </h2>
+
+        <p>
+            Con per-layer clipping
+            y ruido de DP,
+            un experimento pasa
+            de 19,1 % a 21,2 % WER
+            manteniendo la garantía
+            de privacidad considerada.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            PRIVACY RESULTS
+        </p>
+
+        <h2>
+            User-level DP
+        </h2>
+
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table class="tabla-modelos">
+
+            <thead>
+                <tr>
+                    <th>Escenario extrapolado</th>
+                    <th>DP</th>
+                    <th>WER drop absoluto</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>High population</td>
+                    <td>(7,2 · 10⁻⁹)-DP</td>
+                    <td>
+                        <strong>1,3 puntos</strong>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Low population</td>
+                    <td>(4,5 · 10⁻⁹)-DP</td>
+                    <td>
+                        <strong>4,6 puntos</strong>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="nota-metodologica">
+
+        <h3>
+            Extrapolación
+        </h3>
+
+        <p>
+            Estas garantías
+            se presentan para escenarios
+            de escala poblacional
+            extrapolada por los autores.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="limitaciones-grid">
+
+        <article>
+            <h3>Privacy / Utility</h3>
+            <p>
+                Más ruido DP
+                puede degradar WER.
+            </p>
+        </article>
+
+        <article>
+            <h3>Simulation</h3>
+            <p>
+                Los experimentos
+                utilizan datasets públicos
+                para simular FL.
+            </p>
+        </article>
+
+        <article>
+            <h3>Large Communication</h3>
+            <p>
+                Un modelo de 250 M
+                parámetros implica
+                costes de comunicación.
+            </p>
+        </article>
+
+        <article>
+            <h3>Language Differences</h3>
+            <p>
+                Per-layer clipping
+                no produce el mismo beneficio
+                en todas las lenguas.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="referencia-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            RELACIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            Adaptación local
+            con privacidad formal
+        </h2>
+
+        <p>
+            La adaptación continua
+            podría realizarse localmente
+            en cada dispositivo
+            sin centralizar
+            permanentemente el audio.
+        </p>
+
+        <p>
+            Pero sería necesario
+            evaluar conjuntamente
+            privacidad,
+            WER,
+            coste de comunicación
+            y capacidad de adaptación.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+</footer>
+
+
+</body>
+</html>
