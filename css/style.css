@@ -110,6 +110,7 @@ nav a:hover {
     margin: auto;
 }
 
+.hero h1,
 .hero h2 {
     max-width: 950px;
 
@@ -391,6 +392,7 @@ footer {
         gap: 15px;
     }
 
+    .hero h1,
     .hero h2 {
         font-size: 2.2rem;
     }
@@ -1909,11 +1911,9 @@ nav a.active::after {
 }
 
 .concepto-filtro.activo {
-    background: currentColor;
-}
-
-.concepto-filtro.activo {
-    color: var(--fondo, #ffffff);
+    background-color: #111827;
+    border-color: #111827;
+    color: #ffffff;
 }
 
 
@@ -2025,4 +2025,188 @@ nav a.active::after {
         grid-template-columns: 1fr;
     }
 
+}
+
+
+/* =====================================================
+   AJUSTES GENERALES DE CONSISTENCIA Y ACCESIBILIDAD
+===================================================== */
+
+/* Evita que la barra sticky tape los títulos al navegar mediante #anclas. */
+section[id] {
+    scroll-margin-top: 105px;
+}
+
+/* Imágenes futuras siempre adaptadas al contenedor. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Título visual del logo si se sustituye el <h1> del logo por un elemento
+   neutro con class="logo-titulo". Mantiene compatibilidad con el HTML actual. */
+.logo .logo-titulo {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Foco visible para navegación con teclado. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #6b7280;
+    outline-offset: 3px;
+}
+
+
+/* =====================================================
+   ESPACIADO ENTRE BLOQUES DE PORTADA Y DETALLE
+===================================================== */
+
+.grid-investigacion + .detalle-destacado,
+.estado-arte-grid + .detalle-destacado {
+    margin-top: 40px;
+}
+
+/* Útil en Seguimiento, donde pueden aparecer varios destacados seguidos. */
+.detalle-destacado + .detalle-destacado {
+    margin-top: 18px;
+}
+
+
+/* =====================================================
+   BOTONES SOBRE FONDOS OSCUROS
+===================================================== */
+
+/*
+   El botón general es oscuro, por lo que sobre bloques también oscuros
+   se perdía visualmente. En estos contextos se invierte.
+*/
+.conclusion-estado-arte .boton-referencia,
+.relacion-tesis .boton-referencia,
+.resultado-clave .boton-referencia,
+.modelos-configuracion .boton-referencia {
+    background-color: #ffffff;
+    color: #111827;
+}
+
+.conclusion-estado-arte .boton-referencia:hover,
+.relacion-tesis .boton-referencia:hover,
+.resultado-clave .boton-referencia:hover,
+.modelos-configuracion .boton-referencia:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+/* Texto secundario algo más suave en las tarjetas oscuras. */
+.modelos-configuracion article > p:not(.etiqueta) {
+    color: #d1d5db;
+}
+
+
+/* =====================================================
+   PEQUEÑAS MEJORAS DE INTERACCIÓN
+===================================================== */
+
+.boton-referencia:active,
+.tema-card-link:active,
+.concepto-filtro:active {
+    transform: translateY(0);
+}
+
+.card,
+.research-card,
+.tema-card,
+.modelo-card,
+.dataset-card,
+.paso-card,
+.limitaciones-grid article,
+.wavlm-tareas-grid article,
+.wavlm-denoising-grid article {
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   RESPONSIVE GENERAL REFORZADO
+===================================================== */
+
+@media (max-width: 750px) {
+
+    /*
+       En móvil es preferible mantener el menú en una sola línea desplazable
+       antes que convertir la cabecera sticky en un bloque demasiado alto.
+    */
+    .navbar-container {
+        padding: 14px 20px;
+    }
+
+    nav {
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+
+    nav ul {
+        width: max-content;
+        flex-wrap: nowrap;
+        gap: 18px;
+        padding-bottom: 4px;
+    }
+
+    nav a {
+        white-space: nowrap;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .contenedor {
+        margin: 65px auto;
+    }
+
+    .detalle-contenedor {
+        margin: 65px auto;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        min-height: 0;
+    }
+
+    .detalle-destacado,
+    .resultado-clave,
+    .relacion-tesis,
+    .conclusion-estado-arte {
+        padding: 28px;
+    }
+}
+
+
+/* =====================================================
+   PREFERENCIAS DE MOVIMIENTO
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
