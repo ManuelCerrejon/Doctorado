@@ -1825,3 +1825,204 @@ nav a.active::after {
     line-height: 1.5;
     margin-top: 10px;
 }
+
+/* ==========================================
+   GUÍA DE CONCEPTOS CLAVE
+========================================== */
+
+.conceptos-buscador {
+    margin-bottom: 1.5rem;
+}
+
+.conceptos-buscador label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.conceptos-buscador-fila {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.conceptos-buscador input {
+    flex: 1;
+    min-width: 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 12px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+}
+
+.conceptos-buscador input:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.conceptos-buscador button {
+    padding: 0.9rem 1.2rem;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 12px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#resultados-conceptos {
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+
+/* FILTROS */
+
+.conceptos-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.concepto-filtro {
+    padding: 0.65rem 0.9rem;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.88rem;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.concepto-filtro:hover {
+    transform: translateY(-2px);
+}
+
+.concepto-filtro.activo {
+    background: currentColor;
+}
+
+.concepto-filtro.activo {
+    color: var(--fondo, #ffffff);
+}
+
+
+/* GRID */
+
+.conceptos-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+
+/* CONCEPTO */
+
+.concepto-card {
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(128, 128, 128, 0.035);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.concepto-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(128, 128, 128, 0.4);
+}
+
+.concepto-card summary {
+    position: relative;
+    padding: 1.1rem 3rem 1.1rem 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 1.02rem;
+    font-weight: 700;
+}
+
+.concepto-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.concepto-card summary::after {
+    content: "+";
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.35rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.concepto-card[open] summary::after {
+    content: "−";
+}
+
+.concepto-card > div {
+    padding:
+        0
+        1.15rem
+        1.15rem
+        1.15rem;
+}
+
+.concepto-card > div p {
+    margin-top: 0;
+    line-height: 1.65;
+}
+
+.concepto-en-una-frase {
+    margin-top: 1rem !important;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    font-size: 0.92rem;
+}
+
+
+/* FILTRADO */
+
+.concepto-card.oculto,
+.concepto-seccion.oculto {
+    display: none;
+}
+
+
+/* RESALTAR ELEMENTO POR HASH */
+
+.concepto-card:target {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .conceptos-buscador-fila {
+        flex-direction: column;
+    }
+
+    .conceptos-buscador button {
+        width: 100%;
+    }
+
+    .conceptos-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

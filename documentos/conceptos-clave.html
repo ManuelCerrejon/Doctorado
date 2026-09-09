@@ -1,0 +1,3280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Guía de conceptos clave | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVEGACIÓN
+=========================================== -->
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+
+            <h1>
+                Doctorado
+            </h1>
+
+            <span>
+                Seguimiento de investigación
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="../index.html#inicio">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#investigacion">
+                        Investigación
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#estado-arte">
+                        Estado del arte
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#experimentos">
+                        Experimentos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#documentos">
+                        Documentos
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- ==========================================
+     HERO
+=========================================== -->
+
+<section class="tema-hero">
+
+    <div class="tema-hero-contenido">
+
+        <a
+            href="../index.html#documentos"
+            class="volver"
+        >
+            ← Volver a Documentos
+        </a>
+
+
+        <p class="etiqueta">
+            GUÍA DE ESTUDIO
+        </p>
+
+
+        <h1>
+            Conceptos clave
+            de procesamiento
+            del habla y del audio
+        </h1>
+
+
+        <p class="tema-introduccion">
+
+            Guía de consulta rápida
+            para comprender los conceptos
+            técnicos que aparecen
+            en el Estado del arte
+            y en la línea
+            de investigación doctoral.
+
+        </p>
+
+
+        <div class="tema-tags">
+
+            <span>Speech</span>
+            <span>Audio</span>
+            <span>Deep Learning</span>
+            <span>Adaptation</span>
+            <span>XAI</span>
+            <span>Reliability</span>
+            <span>Edge AI</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     HOW TO USE
+=========================================== -->
+
+<section class="detalle-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            CÓMO UTILIZAR LA GUÍA
+        </p>
+
+        <h2>
+            Consulta rápida
+            mientras estudias
+        </h2>
+
+    </div>
+
+
+    <div class="detalle-texto">
+
+        <p>
+            No es necesario
+            memorizar todos los conceptos
+            al mismo tiempo.
+        </p>
+
+        <p>
+            La guía está organizada
+            por bloques temáticos.
+            Puedes utilizar el buscador
+            para localizar un término
+            concreto o filtrar
+            únicamente la categoría
+            que estés estudiando.
+        </p>
+
+        <p>
+            Haz clic sobre cualquier concepto
+            para desplegar
+            su explicación.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SEARCH
+=========================================== -->
+
+<section class="detalle-contenedor">
+
+    <div class="conceptos-buscador">
+
+        <label for="buscar-concepto">
+            Buscar concepto
+        </label>
+
+        <div class="conceptos-buscador-fila">
+
+            <input
+                type="search"
+                id="buscar-concepto"
+                placeholder="Ej.: LoRA, OOD, Transformer, WER..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="limpiar-conceptos"
+            >
+                Limpiar
+            </button>
+
+        </div>
+
+        <p id="resultados-conceptos">
+            Mostrando todos los conceptos
+        </p>
+
+    </div>
+
+
+    <div class="conceptos-filtros">
+
+        <button
+            type="button"
+            class="concepto-filtro activo"
+            data-filter="todos"
+        >
+            Todos
+        </button>
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="representacion"
+        >
+            Señal y representación
+        </button>
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="modelos"
+        >
+            Modelos
+        </button>
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="habla"
+        >
+            Habla y multimodal
+        </button>
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="adaptacion"
+        >
+            Adaptación
+        </button>
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="xai"
+        >
+            Explicabilidad
+        </button>
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="fiabilidad"
+        >
+            Fiabilidad
+        </button>
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="eficiencia"
+        >
+            Eficiencia
+        </button>
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="datos"
+        >
+            Datos y seguridad
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     01 REPRESENTACIÓN
+=========================================== -->
+
+<section
+    class="detalle-contenedor concepto-seccion"
+    data-seccion="representacion"
+>
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            01 · SEÑAL Y REPRESENTACIÓN
+        </p>
+
+        <h2>
+            Cómo representamos
+            el sonido
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-grid">
+
+
+        <details
+            class="concepto-card"
+            id="senal-acustica"
+            data-categoria="representacion"
+        >
+
+            <summary>
+                Señal acústica
+            </summary>
+
+            <div>
+
+                <p>
+                    Representación física
+                    de las variaciones
+                    de presión producidas
+                    por un sonido
+                    a lo largo del tiempo.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Idea:</strong>
+                    es el punto de partida
+                    antes de convertir el audio
+                    en características
+                    procesables por un modelo.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="frecuencia-muestreo"
+            data-categoria="representacion"
+        >
+
+            <summary>
+                Frecuencia de muestreo
+            </summary>
+
+            <div>
+
+                <p>
+                    Número de muestras
+                    de audio registradas
+                    por segundo.
+                </p>
+
+                <p>
+                    Una señal a 16 kHz
+                    contiene 16.000 muestras
+                    por segundo.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>En habla:</strong>
+                    16 kHz es una frecuencia
+                    muy habitual
+                    en sistemas ASR.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="espectrograma"
+            data-categoria="representacion"
+        >
+
+            <summary>
+                Espectrograma
+            </summary>
+
+            <div>
+
+                <p>
+                    Representación visual
+                    de cómo cambia
+                    el contenido frecuencial
+                    del audio con el tiempo.
+                </p>
+
+                <p>
+                    Normalmente:
+                    tiempo en el eje horizontal,
+                    frecuencia en el vertical
+                    e intensidad mediante
+                    el valor de cada región.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Idea:</strong>
+                    permite observar
+                    simultáneamente
+                    cuándo y en qué frecuencias
+                    ocurre un fenómeno.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="log-mel"
+            data-categoria="representacion"
+        >
+
+            <summary>
+                Log-Mel Spectrogram
+            </summary>
+
+            <div>
+
+                <p>
+                    Espectrograma
+                    cuya frecuencia
+                    se transforma
+                    a la escala Mel
+                    y cuya energía
+                    se representa
+                    normalmente en escala logarítmica.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    Whisper trabaja
+                    con representaciones
+                    log-Mel.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="mfcc"
+            data-categoria="representacion"
+        >
+
+            <summary>
+                MFCC
+            </summary>
+
+            <div>
+
+                <p>
+                    Mel-Frequency
+                    Cepstral Coefficients.
+                </p>
+
+                <p>
+                    Características acústicas
+                    diseñadas manualmente
+                    para representar
+                    principalmente
+                    la envolvente espectral
+                    del habla.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Contexto:</strong>
+                    fueron fundamentales
+                    en ASR clásico
+                    antes del predominio
+                    de representaciones aprendidas.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="embedding"
+            data-categoria="representacion"
+        >
+
+            <summary>
+                Embedding
+            </summary>
+
+            <div>
+
+                <p>
+                    Vector numérico
+                    aprendido por un modelo
+                    que resume determinadas
+                    características
+                    de una entrada.
+                </p>
+
+                <p>
+                    Dos sonidos similares
+                    para la tarea
+                    pueden quedar próximos
+                    dentro del espacio
+                    de embeddings.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>En tu tesis:</strong>
+                    es una de las representaciones
+                    principales sobre las que
+                    pueden actuar adaptación,
+                    OOD o explicabilidad.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="token-acustico"
+            data-categoria="representacion"
+        >
+
+            <summary>
+                Token acústico
+            </summary>
+
+            <div>
+
+                <p>
+                    Unidad discreta
+                    obtenida a partir
+                    de una señal de audio.
+                </p>
+
+                <p>
+                    Permite transformar
+                    una señal continua
+                    en una secuencia
+                    que puede procesarse
+                    de forma parecida
+                    a los tokens de texto.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplos:</strong>
+                    AudioLM, Spirit LM
+                    o distintos códecs neuronales.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="codec-neuronal"
+            data-categoria="representacion"
+        >
+
+            <summary>
+                Códec neuronal
+            </summary>
+
+            <div>
+
+                <p>
+                    Sistema neuronal
+                    que comprime audio
+                    en representaciones
+                    compactas
+                    y posteriormente
+                    permite reconstruirlo.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Importancia:</strong>
+                    sus códigos discretos
+                    pueden utilizarse
+                    como tokens acústicos
+                    para generación de habla
+                    y audio.
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     02 MODELOS
+=========================================== -->
+
+<section
+    class="detalle-contenedor concepto-seccion"
+    data-seccion="modelos"
+>
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            02 · MODELOS Y APRENDIZAJE
+        </p>
+
+        <h2>
+            Cómo aprende
+            el sistema
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-grid">
+
+
+        <details
+            class="concepto-card"
+            id="transformer"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Transformer
+            </summary>
+
+            <div>
+
+                <p>
+                    Arquitectura neuronal
+                    basada principalmente
+                    en mecanismos
+                    de atención.
+                </p>
+
+                <p>
+                    Permite relacionar
+                    elementos alejados
+                    dentro de una secuencia
+                    sin depender exclusivamente
+                    de recurrencia.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Idea:</strong>
+                    es una de las arquitecturas
+                    fundamentales
+                    de los modelos modernos
+                    de habla y lenguaje.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="self-attention"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Self-Attention
+            </summary>
+
+            <div>
+
+                <p>
+                    Mecanismo que permite
+                    que cada elemento
+                    de una secuencia
+                    determine qué otros elementos
+                    son relevantes
+                    para construir
+                    su representación.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>En audio:</strong>
+                    permite modelar
+                    dependencias temporales
+                    de largo alcance.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="conformer"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Conformer
+            </summary>
+
+            <div>
+
+                <p>
+                    Arquitectura que combina
+                    Transformer
+                    y convoluciones.
+                </p>
+
+                <p>
+                    La atención modela
+                    dependencias globales
+                    mientras las convoluciones
+                    capturan patrones
+                    acústicos locales.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Uso:</strong>
+                    especialmente relevante
+                    en reconocimiento
+                    automático del habla.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="aprendizaje-supervisado"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Aprendizaje supervisado
+            </summary>
+
+            <div>
+
+                <p>
+                    Entrenamiento utilizando
+                    ejemplos acompañados
+                    de una respuesta
+                    o etiqueta correcta.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo ASR:</strong>
+                    audio
+                    +
+                    transcripción humana.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="ssl"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Self-Supervised Learning
+            </summary>
+
+            <div>
+
+                <p>
+                    Aprendizaje auto-supervisado.
+                </p>
+
+                <p>
+                    El propio dato
+                    proporciona la señal
+                    de entrenamiento,
+                    evitando necesitar
+                    una etiqueta humana
+                    para cada ejemplo.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplos:</strong>
+                    wav2vec 2.0,
+                    HuBERT,
+                    WavLM.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="pretraining"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Pretraining
+            </summary>
+
+            <div>
+
+                <p>
+                    Etapa inicial
+                    en la que un modelo
+                    aprende conocimiento general
+                    a partir de una gran
+                    colección de datos.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Después:</strong>
+                    ese modelo puede adaptarse
+                    a tareas o dominios
+                    más específicos.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="transfer-learning"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Transfer Learning
+            </summary>
+
+            <div>
+
+                <p>
+                    Reutilización
+                    del conocimiento aprendido
+                    por un modelo
+                    en una tarea
+                    o dominio diferente.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    utilizar Whisper
+                    como punto de partida
+                    para radiocomunicaciones marítimas.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="fine-tuning"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Fine-Tuning
+            </summary>
+
+            <div>
+
+                <p>
+                    Adaptación posterior
+                    de un modelo preentrenado
+                    utilizando datos
+                    de una tarea
+                    o dominio concreto.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Riesgo:</strong>
+                    sobreajuste,
+                    coste computacional
+                    o pérdida
+                    de conocimiento anterior.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="foundation-model"
+            data-categoria="modelos"
+        >
+
+            <summary>
+                Foundation Model
+            </summary>
+
+            <div>
+
+                <p>
+                    Modelo entrenado
+                    a gran escala
+                    para adquirir
+                    capacidades generales
+                    reutilizables
+                    en numerosas tareas.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Idea:</strong>
+                    pasar de un modelo
+                    diseñado para una sola tarea
+                    a una base
+                    reutilizable.
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     03 HABLA
+=========================================== -->
+
+<section
+    class="detalle-contenedor concepto-seccion"
+    data-seccion="habla"
+>
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            03 · HABLA Y MULTIMODALIDAD
+        </p>
+
+        <h2>
+            Reconocer
+            y comprender audio
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-grid">
+
+
+        <details
+            class="concepto-card"
+            id="asr"
+            data-categoria="habla"
+        >
+
+            <summary>
+                ASR
+            </summary>
+
+            <div>
+
+                <p>
+                    Automatic Speech Recognition.
+                </p>
+
+                <p>
+                    Tecnología destinada
+                    a convertir
+                    una señal de habla
+                    en una secuencia textual.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    Whisper.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="ctc"
+            data-categoria="habla"
+        >
+
+            <summary>
+                CTC
+            </summary>
+
+            <div>
+
+                <p>
+                    Connectionist Temporal
+                    Classification.
+                </p>
+
+                <p>
+                    Función objetivo
+                    que permite entrenar
+                    modelos secuenciales
+                    cuando no se conoce
+                    la alineación exacta
+                    entre cada instante
+                    del audio
+                    y cada símbolo textual.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="wer"
+            data-categoria="habla"
+        >
+
+            <summary>
+                WER
+            </summary>
+
+            <div>
+
+                <p>
+                    Word Error Rate.
+                </p>
+
+                <p>
+                    Métrica habitual
+                    para ASR
+                    basada en sustituciones,
+                    eliminaciones
+                    e inserciones
+                    de palabras.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Interpretación:</strong>
+                    cuanto menor,
+                    mejor.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="cer"
+            data-categoria="habla"
+        >
+
+            <summary>
+                CER
+            </summary>
+
+            <div>
+
+                <p>
+                    Character Error Rate.
+                </p>
+
+                <p>
+                    Variante de WER
+                    que calcula los errores
+                    a nivel de caracteres
+                    en lugar de palabras.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="speaker-verification"
+            data-categoria="habla"
+        >
+
+            <summary>
+                Speaker Verification
+            </summary>
+
+            <div>
+
+                <p>
+                    Tarea destinada
+                    a comprobar
+                    si una muestra de voz
+                    pertenece
+                    a una identidad
+                    de hablante determinada.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>No es ASR:</strong>
+                    importa quién habla,
+                    no qué palabras dice.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="diarizacion"
+            data-categoria="habla"
+        >
+
+            <summary>
+                Diarización
+            </summary>
+
+            <div>
+
+                <p>
+                    Proceso que determina
+                    qué hablante
+                    está hablando
+                    en cada intervalo
+                    de una grabación.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Pregunta:</strong>
+                    “¿quién habló cuándo?”
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="audio-language-model"
+            data-categoria="habla"
+        >
+
+            <summary>
+                Audio-Language Model
+            </summary>
+
+            <div>
+
+                <p>
+                    Modelo que integra
+                    información acústica
+                    con mecanismos
+                    de modelado del lenguaje.
+                </p>
+
+                <p>
+                    Puede realizar tareas
+                    que van más allá
+                    de transcribir,
+                    como responder preguntas
+                    sobre una grabación.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplos:</strong>
+                    SALMONN,
+                    Qwen2-Audio,
+                    AudioPaLM.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="multimodal"
+            data-categoria="habla"
+        >
+
+            <summary>
+                Multimodalidad
+            </summary>
+
+            <div>
+
+                <p>
+                    Integración de información
+                    procedente de varias
+                    modalidades,
+                    como audio,
+                    texto,
+                    imagen
+                    o vídeo.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>En tu línea:</strong>
+                    interesa especialmente
+                    relacionar audio
+                    y lenguaje natural.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="zero-shot"
+            data-categoria="habla"
+        >
+
+            <summary>
+                Zero-Shot
+            </summary>
+
+            <div>
+
+                <p>
+                    Capacidad de realizar
+                    una tarea o reconocer
+                    una categoría
+                    sin haber recibido
+                    ejemplos de entrenamiento
+                    específicos
+                    de esa categoría.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    CLAP puede utilizar
+                    descripciones textuales
+                    para clasificación
+                    zero-shot.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="grounding"
+            data-categoria="habla"
+        >
+
+            <summary>
+                Acoustic Grounding
+            </summary>
+
+            <div>
+
+                <p>
+                    Vinculación explícita
+                    entre una respuesta,
+                    predicción
+                    o razonamiento
+                    y la evidencia real
+                    presente en el audio.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Pregunta:</strong>
+                    no solo “¿qué responde?”,
+                    sino “¿qué parte del audio
+                    demuestra que esa respuesta
+                    es correcta?”
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     04 ADAPTACIÓN
+=========================================== -->
+
+<section
+    class="detalle-contenedor concepto-seccion"
+    data-seccion="adaptacion"
+>
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            04 · ADAPTACIÓN
+        </p>
+
+        <h2>
+            Aprender
+            cuando el mundo cambia
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-grid">
+
+
+        <details
+            class="concepto-card"
+            id="domain-shift"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                Domain Shift
+            </summary>
+
+            <div>
+
+                <p>
+                    Cambio entre
+                    las condiciones
+                    de los datos
+                    utilizados para entrenar
+                    y los encontrados
+                    posteriormente.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplos:</strong>
+                    otro micrófono,
+                    ruido,
+                    hablante,
+                    acento,
+                    entorno
+                    o dispositivo.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="domain-adaptation"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                Domain Adaptation
+            </summary>
+
+            <div>
+
+                <p>
+                    Técnicas utilizadas
+                    para mejorar
+                    el funcionamiento
+                    de un modelo
+                    cuando el dominio objetivo
+                    es diferente
+                    del dominio original.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="tta"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                Test-Time Adaptation
+            </summary>
+
+            <div>
+
+                <p>
+                    Adaptación realizada
+                    durante la fase
+                    de inferencia,
+                    utilizando los datos
+                    que el modelo
+                    está recibiendo
+                    en ese momento.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplos estudiados:</strong>
+                    SGEM,
+                    Dynamic SUTA.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="continual-learning"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                Continual Learning
+            </summary>
+
+            <div>
+
+                <p>
+                    Aprendizaje continuo
+                    a partir de datos
+                    o tareas
+                    que aparecen
+                    secuencialmente.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Objetivo:</strong>
+                    aprender información nueva
+                    sin destruir
+                    lo aprendido anteriormente.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="catastrophic-forgetting"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                Catastrophic Forgetting
+            </summary>
+
+            <div>
+
+                <p>
+                    Pérdida brusca
+                    de rendimiento
+                    sobre conocimientos anteriores
+                    después de adaptar
+                    el modelo
+                    a nuevos datos.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Problema central:</strong>
+                    aprender lo nuevo
+                    sin olvidar lo anterior.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="personalizacion"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                Personalización
+            </summary>
+
+            <div>
+
+                <p>
+                    Adaptación
+                    de un modelo general
+                    a las características
+                    de un usuario,
+                    hablante,
+                    dispositivo
+                    o entorno concreto.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="pseudo-label"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                Pseudo-Label
+            </summary>
+
+            <div>
+
+                <p>
+                    Etiqueta producida
+                    automáticamente
+                    por el propio modelo
+                    y utilizada posteriormente
+                    como si fuera
+                    una etiqueta real
+                    para aprender.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Riesgo:</strong>
+                    una predicción incorrecta
+                    puede convertirse
+                    en información
+                    de entrenamiento incorrecta.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="lora"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                LoRA
+            </summary>
+
+            <div>
+
+                <p>
+                    Low-Rank Adaptation.
+                </p>
+
+                <p>
+                    Técnica que congela
+                    la mayor parte
+                    de un modelo
+                    y aprende únicamente
+                    pequeñas matrices
+                    adicionales
+                    de bajo rango.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ventaja:</strong>
+                    adaptar muchos menos
+                    parámetros que
+                    con fine-tuning completo.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="peft"
+            data-categoria="adaptacion"
+        >
+
+            <summary>
+                PEFT
+            </summary>
+
+            <div>
+
+                <p>
+                    Parameter-Efficient Fine-Tuning.
+                </p>
+
+                <p>
+                    Familia de técnicas
+                    que adapta
+                    una pequeña parte
+                    de los parámetros
+                    de un modelo
+                    en lugar
+                    de actualizarlo completamente.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>LoRA</strong>
+                    es una técnica PEFT.
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     05 XAI
+=========================================== -->
+
+<section
+    class="detalle-contenedor concepto-seccion"
+    data-seccion="xai"
+>
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            05 · EXPLICABILIDAD
+        </p>
+
+        <h2>
+            Por qué
+            decide el modelo
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-grid">
+
+
+        <details
+            class="concepto-card"
+            id="xai"
+            data-categoria="xai"
+        >
+
+            <summary>
+                XAI
+            </summary>
+
+            <div>
+
+                <p>
+                    Explainable
+                    Artificial Intelligence.
+                </p>
+
+                <p>
+                    Técnicas orientadas
+                    a hacer comprensible
+                    cómo o por qué
+                    un modelo
+                    obtiene una decisión.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="saliency"
+            data-categoria="xai"
+        >
+
+            <summary>
+                Saliency Map
+            </summary>
+
+            <div>
+
+                <p>
+                    Mapa que asigna
+                    relevancia
+                    a diferentes zonas
+                    de la entrada.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>En audio:</strong>
+                    puede indicar
+                    regiones temporales
+                    o tiempo-frecuencia
+                    relevantes.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="integrated-gradients"
+            data-categoria="xai"
+        >
+
+            <summary>
+                Integrated Gradients
+            </summary>
+
+            <div>
+
+                <p>
+                    Método de atribución
+                    que acumula gradientes
+                    a lo largo
+                    de un camino
+                    entre una referencia
+                    y la entrada real.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Pregunta:</strong>
+                    qué características
+                    contribuyeron
+                    a la predicción.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="lime"
+            data-categoria="xai"
+        >
+
+            <summary>
+                LIME
+            </summary>
+
+            <div>
+
+                <p>
+                    Método post hoc
+                    que genera pequeñas
+                    perturbaciones
+                    alrededor de una entrada
+                    y aprende
+                    un modelo sencillo
+                    que aproxima localmente
+                    el comportamiento
+                    del modelo complejo.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="shap"
+            data-categoria="xai"
+        >
+
+            <summary>
+                SHAP
+            </summary>
+
+            <div>
+
+                <p>
+                    Familia de métodos
+                    de atribución
+                    basados en valores
+                    de Shapley.
+                </p>
+
+                <p>
+                    Estima cuánto contribuye
+                    cada característica
+                    a una predicción.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="faithfulness"
+            data-categoria="xai"
+        >
+
+            <summary>
+                Faithfulness
+            </summary>
+
+            <div>
+
+                <p>
+                    Fidelidad
+                    de una explicación
+                    respecto al mecanismo
+                    realmente utilizado
+                    por el modelo.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Importante:</strong>
+                    una explicación
+                    puede parecer razonable
+                    y no ser fiel.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="neurofuzzy"
+            data-categoria="xai"
+        >
+
+            <summary>
+                Sistema neurodifuso
+            </summary>
+
+            <div>
+
+                <p>
+                    Arquitectura híbrida
+                    que combina
+                    redes neuronales
+                    con lógica difusa.
+                </p>
+
+                <p>
+                    La red puede extraer
+                    representaciones complejas
+                    mientras el componente difuso
+                    expresa decisiones
+                    mediante variables
+                    y reglas lingüísticas.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>En tu tesis:</strong>
+                    es uno de los caminos
+                    hacia explicabilidad
+                    intrínseca y auditable.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="regla-difusa"
+            data-categoria="xai"
+        >
+
+            <summary>
+                Regla difusa
+            </summary>
+
+            <div>
+
+                <p>
+                    Regla expresada
+                    mediante conceptos
+                    lingüísticos
+                    que pueden cumplirse
+                    de forma gradual.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    “SI energía media
+                    es alta
+                    Y ritmo es lento,
+                    ENTONCES evidencia
+                    de anomalía es moderada”.
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     06 FIABILIDAD
+=========================================== -->
+
+<section
+    class="detalle-contenedor concepto-seccion"
+    data-seccion="fiabilidad"
+>
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            06 · FIABILIDAD
+        </p>
+
+        <h2>
+            Saber cuándo
+            podemos confiar
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-grid">
+
+
+        <details
+            class="concepto-card"
+            id="confidence"
+            data-categoria="fiabilidad"
+        >
+
+            <summary>
+                Confidence
+            </summary>
+
+            <div>
+
+                <p>
+                    Valor utilizado
+                    para estimar
+                    cuánto confía
+                    el modelo
+                    en una predicción.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Cuidado:</strong>
+                    confianza alta
+                    no implica necesariamente
+                    predicción correcta.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="calibration"
+            data-categoria="fiabilidad"
+        >
+
+            <summary>
+                Calibration
+            </summary>
+
+            <div>
+
+                <p>
+                    Propiedad que relaciona
+                    la confianza declarada
+                    por un modelo
+                    con su frecuencia
+                    real de aciertos.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    predicciones con confianza
+                    del 80 %
+                    deberían acertar
+                    aproximadamente
+                    el 80 % de las veces.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="ece"
+            data-categoria="fiabilidad"
+        >
+
+            <summary>
+                ECE
+            </summary>
+
+            <div>
+
+                <p>
+                    Expected Calibration Error.
+                </p>
+
+                <p>
+                    Métrica destinada
+                    a cuantificar
+                    la diferencia
+                    entre confianza
+                    y precisión observada.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Interpretación:</strong>
+                    menor suele indicar
+                    mejor calibración.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="ood"
+            data-categoria="fiabilidad"
+        >
+
+            <summary>
+                OOD
+            </summary>
+
+            <div>
+
+                <p>
+                    Out-of-Distribution.
+                </p>
+
+                <p>
+                    Entrada que pertenece
+                    a condiciones,
+                    clases
+                    o distribuciones
+                    diferentes
+                    de las conocidas
+                    durante entrenamiento.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplos:</strong>
+                    nueva máquina,
+                    nuevo dialecto,
+                    evento desconocido
+                    o mezcla acústica
+                    no observada.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="abstention"
+            data-categoria="fiabilidad"
+        >
+
+            <summary>
+                Abstention
+            </summary>
+
+            <div>
+
+                <p>
+                    Capacidad del sistema
+                    de decidir
+                    no emitir
+                    una respuesta definitiva
+                    cuando la evidencia
+                    es insuficiente.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Opciones:</strong>
+                    solicitar otra muestra,
+                    pedir supervisión humana
+                    o mantener la respuesta
+                    como provisional.
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     07 EFICIENCIA
+=========================================== -->
+
+<section
+    class="detalle-contenedor concepto-seccion"
+    data-seccion="eficiencia"
+>
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            07 · EFICIENCIA Y EDGE AI
+        </p>
+
+        <h2>
+            Conseguir más
+            con menos recursos
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-grid">
+
+
+        <details
+            class="concepto-card"
+            id="quantization"
+            data-categoria="eficiencia"
+        >
+
+            <summary>
+                Quantization
+            </summary>
+
+            <div>
+
+                <p>
+                    Cuantización.
+                </p>
+
+                <p>
+                    Reducción de la precisión
+                    numérica utilizada
+                    para representar
+                    pesos o activaciones.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    pasar de FP32
+                    a INT8.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="pruning"
+            data-categoria="eficiencia"
+        >
+
+            <summary>
+                Pruning
+            </summary>
+
+            <div>
+
+                <p>
+                    Poda de parámetros,
+                    conexiones
+                    o componentes
+                    considerados
+                    poco relevantes.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Objetivo:</strong>
+                    reducir coste
+                    manteniendo
+                    el mayor rendimiento posible.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="distillation"
+            data-categoria="eficiencia"
+        >
+
+            <summary>
+                Knowledge Distillation
+            </summary>
+
+            <div>
+
+                <p>
+                    Entrenamiento
+                    de un modelo pequeño,
+                    denominado estudiante,
+                    para reproducir
+                    parte del comportamiento
+                    de un modelo mayor,
+                    denominado profesor.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="edge-ai"
+            data-categoria="eficiencia"
+        >
+
+            <summary>
+                Edge AI
+            </summary>
+
+            <div>
+
+                <p>
+                    Ejecución
+                    de inteligencia artificial
+                    cerca del lugar
+                    donde se generan
+                    los datos,
+                    en lugar
+                    de depender siempre
+                    de servidores remotos.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ventajas:</strong>
+                    latencia,
+                    disponibilidad
+                    y privacidad.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="tinyml"
+            data-categoria="eficiencia"
+        >
+
+            <summary>
+                TinyML
+            </summary>
+
+            <div>
+
+                <p>
+                    Aplicación
+                    de machine learning
+                    en microcontroladores
+                    y dispositivos
+                    extremadamente limitados
+                    en memoria,
+                    energía
+                    y capacidad de cálculo.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="latency"
+            data-categoria="eficiencia"
+        >
+
+            <summary>
+                Latencia
+            </summary>
+
+            <div>
+
+                <p>
+                    Tiempo transcurrido
+                    entre la entrada
+                    de información
+                    y la producción
+                    de una respuesta.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Importancia:</strong>
+                    es crítica
+                    en sistemas conversacionales
+                    y procesamiento
+                    en tiempo real.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="rtf"
+            data-categoria="eficiencia"
+        >
+
+            <summary>
+                Real-Time Factor
+            </summary>
+
+            <div>
+
+                <p>
+                    Relación entre
+                    el tiempo necesario
+                    para procesar un audio
+                    y la duración
+                    del propio audio.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    RTF 0,5 significa
+                    que 10 segundos
+                    de audio
+                    se procesan
+                    en aproximadamente 5 segundos.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="green-ai"
+            data-categoria="eficiencia"
+        >
+
+            <summary>
+                Green AI
+            </summary>
+
+            <div>
+
+                <p>
+                    Enfoque que considera
+                    la eficiencia computacional
+                    como parte
+                    del valor científico
+                    de un sistema,
+                    junto con
+                    su rendimiento.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>No basta:</strong>
+                    con reportar accuracy;
+                    también importan
+                    cómputo,
+                    memoria,
+                    energía
+                    y coste experimental.
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     08 DATOS Y SEGURIDAD
+=========================================== -->
+
+<section
+    class="detalle-contenedor concepto-seccion"
+    data-seccion="datos"
+>
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            08 · DATOS, EQUIDAD Y SEGURIDAD
+        </p>
+
+        <h2>
+            Evaluar correctamente
+            y proteger el sistema
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-grid">
+
+
+        <details
+            class="concepto-card"
+            id="multi-label"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Multi-Label
+            </summary>
+
+            <div>
+
+                <p>
+                    Problema donde
+                    una misma muestra
+                    puede pertenecer
+                    simultáneamente
+                    a varias categorías.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Audio:</strong>
+                    un clip puede contener
+                    habla,
+                    música
+                    y tráfico
+                    al mismo tiempo.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="weak-label"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Weak Label
+            </summary>
+
+            <div>
+
+                <p>
+                    Etiqueta que indica
+                    que un evento
+                    aparece dentro
+                    de una grabación,
+                    pero sin señalar
+                    necesariamente
+                    el instante exacto
+                    en el que ocurre.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="cross-validation"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Cross-Validation
+            </summary>
+
+            <div>
+
+                <p>
+                    Procedimiento
+                    que divide los datos
+                    en varias particiones
+                    o folds
+                    y repite entrenamiento
+                    y evaluación
+                    intercambiando
+                    el conjunto de test.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ventaja:</strong>
+                    reduce la dependencia
+                    de una única partición.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="data-leakage"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Data Leakage
+            </summary>
+
+            <div>
+
+                <p>
+                    Situación en la que
+                    información que debería
+                    permanecer fuera
+                    del entrenamiento
+                    termina influyendo
+                    en el modelo.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    fragmentos de una misma
+                    grabación original
+                    en train y test.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="fairness"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Fairness
+            </summary>
+
+            <div>
+
+                <p>
+                    Estudio de si
+                    el rendimiento
+                    y comportamiento
+                    de un sistema
+                    presentan diferencias
+                    sistemáticas
+                    entre grupos
+                    de usuarios.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>No basta:</strong>
+                    con una métrica
+                    promedio global.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="federated-learning"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Federated Learning
+            </summary>
+
+            <div>
+
+                <p>
+                    Aprendizaje federado.
+                </p>
+
+                <p>
+                    Los datos permanecen
+                    en los dispositivos
+                    y se comparten
+                    actualizaciones
+                    del modelo
+                    para construir
+                    un modelo común.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Cuidado:</strong>
+                    no garantiza
+                    privacidad absoluta.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="differential-privacy"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Differential Privacy
+            </summary>
+
+            <div>
+
+                <p>
+                    Marco matemático
+                    que introduce mecanismos,
+                    normalmente basados
+                    en limitar contribuciones
+                    y añadir ruido,
+                    para reducir
+                    cuánto puede inferirse
+                    sobre una persona
+                    concreta.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="deepfake"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Audio Deepfake
+            </summary>
+
+            <div>
+
+                <p>
+                    Audio sintético
+                    o manipulado
+                    generado para imitar
+                    habla real
+                    o alterar
+                    su contenido
+                    o identidad aparente.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Problema:</strong>
+                    los detectores
+                    pueden no generalizar
+                    a generadores
+                    desconocidos.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details
+            class="concepto-card"
+            id="adversarial-audio"
+            data-categoria="datos"
+        >
+
+            <summary>
+                Adversarial Audio
+            </summary>
+
+            <div>
+
+                <p>
+                    Señal diseñada
+                    o modificada
+                    intencionadamente
+                    para provocar
+                    un comportamiento
+                    incorrecto
+                    de un modelo.
+                </p>
+
+                <p class="concepto-en-una-frase">
+                    <strong>Ejemplo:</strong>
+                    modificar audio
+                    para forzar
+                    una transcripción
+                    concreta.
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     MAP
+=========================================== -->
+
+<section class="detalle-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            MAPA MENTAL
+        </p>
+
+        <h2>
+            Cómo se relaciona
+            todo
+        </h2>
+
+    </div>
+
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+
+            <span>INPUT</span>
+
+            <h3>
+                Audio
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            →
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>REPRESENT</span>
+
+            <h3>
+                Embedding
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            →
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>MODEL</span>
+
+            <h3>
+                Transformer
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            →
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>TASK</span>
+
+            <h3>
+                ASR /
+                Audio Understanding
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            →
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>REAL WORLD</span>
+
+            <h3>
+                Domain Shift
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            →
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>REACT</span>
+
+            <h3>
+                Adapt
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <div class="arquitectura-flujo">
+
+        <div class="arquitectura-bloque">
+
+            <span>CONTROL</span>
+
+            <h3>
+                OOD
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            +
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>CONTROL</span>
+
+            <h3>
+                Calibration
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            +
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>CONTROL</span>
+
+            <h3>
+                XAI
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            +
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>CONTROL</span>
+
+            <h3>
+                Efficiency
+            </h3>
+
+        </div>
+
+
+        <div class="arquitectura-flecha">
+            =
+        </div>
+
+
+        <div class="arquitectura-bloque">
+
+            <span>GOAL</span>
+
+            <h3>
+                Reliable
+                Adaptive AI
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     STUDY ROUTE
+=========================================== -->
+
+<section class="detalle-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            RUTA DE ESTUDIO
+        </p>
+
+        <h2>
+            Orden recomendado
+        </h2>
+
+    </div>
+
+
+    <div class="entrenamiento-pasos">
+
+        <article>
+
+            <div class="entrenamiento-numero">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    Representación
+                </h3>
+
+                <p>
+                    Espectrograma,
+                    log-Mel,
+                    MFCC,
+                    embedding
+                    y tokens.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article>
+
+            <div class="entrenamiento-numero">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    Arquitecturas
+                </h3>
+
+                <p>
+                    Transformer,
+                    Conformer,
+                    SSL
+                    y foundation models.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article>
+
+            <div class="entrenamiento-numero">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    Tareas
+                </h3>
+
+                <p>
+                    ASR,
+                    WER,
+                    embeddings
+                    y audio-language models.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article>
+
+            <div class="entrenamiento-numero">
+                04
+            </div>
+
+            <div>
+
+                <h3>
+                    Adaptación
+                </h3>
+
+                <p>
+                    Domain shift,
+                    LoRA,
+                    TTA,
+                    continual learning
+                    y forgetting.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article>
+
+            <div class="entrenamiento-numero">
+                05
+            </div>
+
+            <div>
+
+                <h3>
+                    Fiabilidad
+                </h3>
+
+                <p>
+                    Confidence,
+                    calibration,
+                    OOD
+                    y abstention.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article>
+
+            <div class="entrenamiento-numero">
+                06
+            </div>
+
+            <div>
+
+                <h3>
+                    Explicabilidad
+                </h3>
+
+                <p>
+                    Saliency,
+                    IG,
+                    SHAP,
+                    faithfulness
+                    y neurofuzzy.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article>
+
+            <div class="entrenamiento-numero">
+                07
+            </div>
+
+            <div>
+
+                <h3>
+                    Eficiencia
+                </h3>
+
+                <p>
+                    Quantization,
+                    pruning,
+                    distillation
+                    y Edge AI.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article>
+
+            <div class="entrenamiento-numero">
+                08
+            </div>
+
+            <div>
+
+                <h3>
+                    Seguridad
+                </h3>
+
+                <p>
+                    Privacy,
+                    fairness,
+                    deepfakes
+                    y adversarial audio.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     THESIS CONNECTION
+=========================================== -->
+
+<section class="detalle-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            CONEXIÓN CON LA TESIS
+        </p>
+
+        <h2>
+            No son conceptos aislados
+        </h2>
+
+        <p>
+            La línea doctoral
+            combina representación,
+            adaptación,
+            eficiencia,
+            explicabilidad,
+            incertidumbre
+            y comprensión
+            del audio.
+        </p>
+
+        <p>
+            Por ello,
+            el objetivo de esta guía
+            es entender cómo
+            estos conceptos
+            se relacionan entre sí,
+            en lugar de estudiarlos
+            como definiciones independientes.
+        </p>
+
+        <a
+            href="../estado-arte/sintesis-critica-oportunidad.html"
+            class="boton-referencia"
+        >
+            Ver síntesis del Estado del arte →
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Seguimiento de tesis doctoral · Universidad de Huelva
+    </p>
+
+</footer>
+
+
+<script src="../js/conceptos-clave.js"></script>
+
+
+</body>
+
+</html>
