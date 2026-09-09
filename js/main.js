@@ -128,7 +128,7 @@ function actualizarNavegacion() {
 
                 link.setAttribute(
                     "aria-current",
-                    "page"
+                    "location"
                 );
 
             } else {

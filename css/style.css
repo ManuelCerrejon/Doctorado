@@ -1877,7 +1877,8 @@ nav a.active::after {
     font-weight: 600;
 }
 
-#resultados-conceptos {
+#resultados-conceptos,
+#resultados-referencias {
     margin-top: 0.7rem;
     font-size: 0.9rem;
     opacity: 0.7;
