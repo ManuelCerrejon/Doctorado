@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Referencias científicas | Doctorado
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVEGACIÓN
+=========================================== -->
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+
+            <h1>
+                Doctorado
+            </h1>
+
+            <span>
+                Seguimiento de investigación
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="../index.html#inicio">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#investigacion">
+                        Investigación
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#estado-arte">
+                        Estado del arte
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#experimentos">
+                        Experimentos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../seguimiento/seguimiento.html">
+                        Seguimiento
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#documentos">
+                        Documentos
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- ==========================================
+     HERO
+=========================================== -->
+
+<section class="tema-hero">
+
+    <div class="tema-hero-contenido">
+
+        <a
+            href="../index.html#estado-arte"
+            class="volver"
+        >
+            ← Volver al Estado del arte
+        </a>
+
+
+        <p class="etiqueta">
+            BIBLIOTECA CIENTÍFICA
+        </p>
+
+
+        <h1>
+            Referencias científicas
+        </h1>
+
+
+        <p class="tema-introduccion">
+
+            Índice general de las publicaciones
+            y recursos científicos
+            analizados durante
+            la construcción
+            del Estado del arte.
+
+            Cada ficha recoge
+            la metodología,
+            los datos utilizados,
+            la configuración experimental,
+            los resultados,
+            las limitaciones
+            y su relación
+            con la tesis doctoral.
+
+        </p>
+
+
+        <div class="tema-tags">
+
+            <span>Speech</span>
+            <span>Audio</span>
+            <span>SSL</span>
+            <span>Adaptation</span>
+            <span>XAI</span>
+            <span>OOD</span>
+            <span>Edge AI</span>
+            <span>Security</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SEARCH
+=========================================== -->
+
+<section class="detalle-contenedor">
+
+    <div class="detalle-cabecera">
+
+        <p class="etiqueta">
+            BUSCAR
+        </p>
+
+        <h2>
+            Biblioteca de referencias
+        </h2>
+
+    </div>
+
+
+    <div class="conceptos-buscador">
+
+        <label for="buscar-referencia">
+            Buscar referencia
+        </label>
+
+
+        <div class="conceptos-buscador-fila">
+
+            <input
+                type="search"
+                id="buscar-referencia"
+                placeholder="Ej.: Whisper, LoRA, OOD, wav2vec..."
+                autocomplete="off"
+            >
+
+
+            <button
+                type="button"
+                id="limpiar-referencias"
+            >
+                Limpiar
+            </button>
+
+        </div>
+
+
+        <p id="resultados-referencias">
+            Cargando referencias...
+        </p>
+
+    </div>
+
+
+    <!-- FILTROS -->
+
+    <div class="conceptos-filtros">
+
+
+        <button
+            type="button"
+            class="concepto-filtro activo"
+            data-filter="todos"
+        >
+            Todas
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="ssl"
+        >
+            SSL
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="asr"
+        >
+            ASR
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="audio"
+        >
+            Audio
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="audio-language"
+        >
+            Audio-Language
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="reasoning"
+        >
+            Reasoning
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="adaptacion"
+        >
+            Adaptación
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="xai"
+        >
+            XAI
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="fiabilidad"
+        >
+            Fiabilidad
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="eficiencia"
+        >
+            Eficiencia
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="datasets"
+        >
+            Datasets
+        </button>
+
+
+        <button
+            type="button"
+            class="concepto-filtro"
+            data-filter="seguridad"
+        >
+            Privacidad y seguridad
+        </button>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     INFORMATION
+=========================================== -->
+
+<section class="detalle-contenedor">
+
+    <div class="detalle-destacado">
+
+        <p class="etiqueta">
+            ORGANIZACIÓN
+        </p>
+
+        <h3>
+            Las referencias mantienen
+            la estructura
+            del Estado del arte
+        </h3>
+
+        <p>
+            Las fichas se agrupan
+            según el bloque temático
+            en el que fueron utilizadas.
+
+            Puedes acceder
+            tanto a la ficha individual
+            como al tema completo
+            del Estado del arte.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     REFERENCES GENERATED BY JS
+=========================================== -->
+
+<div id="biblioteca-referencias">
+
+    <!--
+        El contenido se genera
+        automáticamente desde
+        js/referencias.js
+    -->
+
+</div>
+
+
+<!-- ==========================================
+     STATE OF ART
+=========================================== -->
+
+<section class="detalle-contenedor">
+
+    <div class="relacion-tesis">
+
+        <p class="etiqueta">
+            ESTADO DEL ARTE
+        </p>
+
+        <h2>
+            De las referencias
+            a la síntesis científica
+        </h2>
+
+        <p>
+            Las publicaciones
+            de esta biblioteca
+            constituyen la base
+            utilizada para analizar
+            la evolución del campo,
+            comparar metodologías
+            e identificar
+            las oportunidades
+            de investigación.
+        </p>
+
+
+        <a
+            href="../estado-arte/sintesis-critica-oportunidad.html"
+            class="boton-referencia"
+        >
+            Ver síntesis crítica →
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Seguimiento de tesis doctoral
+        ·
+        Universidad de Huelva
+    </p>
+
+</footer>
+
+
+<script src="../js/referencias.js"></script>
+
+
+</body>
+
+</html>
