@@ -114,7 +114,41 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
 
 
+    const seccionRecientes = document.getElementById("nueva-informacion");
+    const listaRecientes = document.getElementById("investigaciones-recientes");
+
     let filtroActivo = "todos";
+
+    // ISO estricto y días de calendario locales del navegador. Convertimos
+    // a UTC solo para contar días sin desviaciones por cambios de horario.
+    function fechaIncorporacionValida(valor) {
+        if (typeof valor !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(valor)) {
+            return null;
+        }
+        const fecha = new Date(`${valor}T00:00:00Z`);
+        return !Number.isNaN(fecha.getTime())
+            && fecha.toISOString().slice(0, 10) === valor ? fecha : null;
+    }
+
+    function esReciente(referencia) {
+        const fecha = fechaIncorporacionValida(referencia.fechaIncorporacion);
+        if (!fecha) return false;
+        const ahora = new Date();
+        const hoy = Date.UTC(ahora.getFullYear(), ahora.getMonth(), ahora.getDate());
+        const dias = (hoy - fecha.getTime()) / 86400000;
+        // Hoy y los 13 días anteriores; a los 14 días deja de ser nueva.
+        return dias >= 0 && dias < 14;
+    }
+
+    function renderizarRecientes() {
+        const recientes = referencias.filter(esReciente).sort(
+            (a, b) => b.fechaIncorporacion.localeCompare(a.fechaIncorporacion)
+        );
+        listaRecientes.replaceChildren(
+            ...recientes.map((referencia) => crearTarjeta(referencia, true))
+        );
+        seccionRecientes.hidden = recientes.length === 0;
+    }
 
 
     // ==========================================
@@ -193,7 +227,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // CREAR TARJETA
     // ==========================================
 
-    function crearTarjeta(referencia) {
+    function crearTarjeta(referencia, destacada = false) {
 
         const articulo =
             document.createElement(
@@ -227,6 +261,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         contenido.className =
             "modelo-contenido";
 
+
+        if (esReciente(referencia)) {
+            const insignia = document.createElement("span");
+            insignia.className = "referencia-nueva";
+            insignia.textContent = destacada ? "NUEVA INFORMACIÓN" : "Nueva";
+            contenido.appendChild(insignia);
+        }
+
+        if (destacada) {
+            const tema = document.createElement("p");
+            tema.textContent = temas[referencia.tema].nombre;
+            contenido.appendChild(tema);
+        }
 
         const titulo =
             document.createElement(
@@ -309,6 +356,15 @@ document.addEventListener("DOMContentLoaded", async () => {
             tags
         );
 
+        if (destacada) {
+            const fecha = document.createElement("time");
+            fecha.className = "referencia-fecha";
+            fecha.dateTime = referencia.fechaIncorporacion;
+            const [anio, mes, dia] = referencia.fechaIncorporacion.split("-");
+            fecha.textContent = `Incorporada el ${dia}/${mes}/${anio}`;
+            contenido.appendChild(fecha);
+        }
+
         if (enlace.hasAttribute("href")) {
             contenido.appendChild(
                 enlace
@@ -335,6 +391,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     // ==========================================
 
     function renderizar() {
+
+        renderizarRecientes();
 
         const filtradas =
             obtenerReferenciasFiltradas();
@@ -712,5 +770,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     renderizar();
 
+    // Actualiza también una pestaña que permanezca abierta varios días.
+    function actualizarAlCambiarDia() {
+        const ahora = new Date();
+        const medianoche = new Date(
+            ahora.getFullYear(), ahora.getMonth(), ahora.getDate() + 1
+        );
+        setTimeout(() => {
+            renderizar();
+            actualizarAlCambiarDia();
+        }, medianoche - ahora);
+    }
+    actualizarAlCambiarDia();
+    document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) renderizar();
+    });
 
 });
