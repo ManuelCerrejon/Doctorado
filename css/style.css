@@ -2231,3 +2231,80 @@ summary:focus-visible {
     color: #6b7280;
     font-size: 0.85rem;
 }
+
+/* Fichas dinámicas: componentes de las referencias históricas. */
+.ficha-dinamica [hidden] {
+    display: none !important;
+}
+
+.ficha-dinamica .ficha-bloque {
+    overflow-wrap: anywhere;
+    margin-top: 35px;
+    color: #4b5563;
+}
+
+.ficha-dinamica .ficha-bloque h3 {
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.ficha-dinamica .ficha-bloque p,
+.ficha-dinamica .ficha-bloque li {
+    max-width: 850px;
+    line-height: 1.75;
+}
+
+.ficha-dinamica .ficha-bloque ul,
+.ficha-dinamica .ficha-bloque ol {
+    padding-left: 1.5rem;
+}
+
+.ficha-dinamica .ficha-bloque li + li {
+    margin-top: 12px;
+}
+
+.ficha-dinamica .ficha-metricas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 15px;
+}
+
+.ficha-dinamica .ficha-metricas > div {
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.ficha-dinamica .ficha-metricas dt {
+    margin-bottom: 10px;
+    color: #6b7280;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.ficha-dinamica .ficha-metricas dd {
+    margin: 0;
+    line-height: 1.65;
+}
+
+.ficha-dinamica .relacion-tesis .ficha-bloque {
+    color: #d1d5db;
+}
+
+.ficha-dinamica .relacion-tesis .ficha-bloque h3 {
+    color: #ffffff;
+}
+
+.ficha-dinamica .ficha-fuentes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ficha-dinamica h1,
+.ficha-dinamica h2,
+.ficha-dinamica dd,
+.ficha-dinamica a {
+    overflow-wrap: anywhere;
+}
