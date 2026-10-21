@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación | Referencia científica</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/investigacion.js" defer></script>
+</head>
+<body>
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <div class="logo">
+
+            <h1>
+                Doctorado
+            </h1>
+
+            <span>
+                Seguimiento de investigación
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="../index.html#inicio">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#investigacion">
+                        Investigación
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#estado-arte">
+                        Estado del arte
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#experimentos">
+                        Experimentos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../seguimiento/seguimiento.html">
+                        Seguimiento
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../index.html#documentos">
+                        Documentos
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="ficha-dinamica">
+    <section class="referencia-hero">
+        <div class="referencia-hero-contenido">
+            <a href="index.html" class="volver">← Volver a la biblioteca científica</a>
+            <p class="etiqueta">REFERENCIA CIENTÍFICA</p>
+            <h1 id="titulo-investigacion">Investigación</h1>
+            <h2 id="subtitulo-investigacion" hidden></h2>
+            <p id="autores-investigacion" class="autores-referencia" hidden></p>
+            <div id="etiquetas-investigacion" class="referencia-tags" hidden></div>
+        </div>
+    </section>
+    <p id="estado-investigacion" class="referencia-contenedor" role="status">Cargando ficha científica…</p>
+    <noscript><p class="referencia-contenedor">Activa JavaScript para consultar esta ficha dinámica. Puedes volver a la biblioteca mediante el enlace superior.</p></noscript>
+    <div id="ficha-investigacion" hidden>
+        <section class="referencia-contenedor" aria-labelledby="titulo-datos-autores">
+            <div class="detalle-cabecera">
+                <p class="etiqueta">PUBLICACIÓN CIENTÍFICA</p>
+                <h2 id="titulo-datos-autores">DATOS PUBLICADOS POR LOS AUTORES</h2>
+                <p>Síntesis de la publicación enlazada en las fuentes. Las mediciones conservan sus condiciones y alcance.</p>
+            </div>
+            <div id="datos-autores"></div>
+        </section>
+        <section id="interes-tesis" class="referencia-contenedor" aria-labelledby="titulo-interes-tesis" hidden>
+            <div class="relacion-tesis">
+                <p class="etiqueta">INTERPRETACIÓN PARA LA TESIS</p>
+                <h2 id="titulo-interes-tesis">INTERÉS PARA LA TESIS</h2>
+                <p>Valoración para la línea doctoral. Las hipótesis y propuestas de esta sección no son resultados demostrados por los autores.</p>
+                <div id="analisis-tesis"></div>
+            </div>
+        </section>
+        <section id="fuentes-investigacion" class="referencia-contenedor" aria-labelledby="titulo-fuentes" hidden>
+            <div class="detalle-cabecera"><h2 id="titulo-fuentes">Fuentes</h2></div>
+            <div id="enlaces-fuentes" class="ficha-fuentes"></div>
+        </section>
+    </div>
+</main>
+<footer>
+
+    <p>
+        Seguimiento de tesis doctoral
+        ·
+        Universidad de Huelva
+    </p>
+
+</footer>
+
+
+</body>
+</html>

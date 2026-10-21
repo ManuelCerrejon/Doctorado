@@ -2528,7 +2528,58 @@
     ],
     "relevanciaTesis": "Interpretación para la tesis: demuestra la viabilidad de ASR abierto en un microcontrolador y permite estudiar compromisos de precisión, memoria y latencia. No demuestra ASR en tiempo real, aprendizaje en dispositivo ni adaptación continua consciente de energía; estos siguen siendo posibles objetivos de investigación, no resultados del artículo.",
     "fechaIncorporacion": "2026-10-21",
-    "fuenteVerificada": true
+    "fuenteVerificada": true,
+    "resumen": "Oído estudia cómo ejecutar reconocimiento de habla de vocabulario abierto en un microcontrolador comercial sin acelerador neuronal. Implementa un motor Conformer cuantizado para ESP32-S3, con planificación de memoria y kernels SIMD. Evalúa exactitud, robustez, ejecución física y una variante streaming; distingue explícitamente que el sistema aún no alcanza tiempo real.",
+    "objetivoInvestigacion": "Superar la restricción habitual de los microcontroladores a palabras clave o listas de comandos, ejecutando un reconocedor abierto completo con una pérdida pequeña frente al modelo de precisión completa y documentando las limitaciones reales del hardware.",
+    "metodologia": [
+      "Arquitectura: parten de los pesos de NVIDIA Conformer-CTC Small y reimplementan el modelo en PyTorch y C. El encoder tiene 16 bloques, dimensión 176, FF 704, cuatro cabezas y salida de 1024 tokens SentencePiece más blank (tabla 1).",
+      "Datos y entrenamiento: reutilizan el modelo preentrenado; el int8 emplea cuantización dinámica por frame sin reentrenamiento. El int4 se ajusta mediante QAT durante 8000 pasos con corpora públicos.",
+      "Adaptación a streaming: ajustan el modelo con atención por chunks, convolución limitada al chunk y estadísticas globales de normalización. Añaden ruido, música y babble de MUSAN y reverberación simulada para conservar robustez.",
+      "Compresión y ejecución: pesos int8 por canal, activaciones dinámicas int8 y atención int8. La variante int4 mantiene frontend, salida, proyecciones posicionales, activaciones y atención en int8. Los kernels usan instrucciones SIMD Xtensa.",
+      "Memoria: almacenan pesos en flash y parte en PSRAM; reutilizan cada bloque de pesos para 64 frames, conservando activaciones y acumuladores por bloques en SRAM. El espacio ocupado por pesos no se presenta como RAM de ejecución.",
+      "Despliegue: ESP32-S3-WROOM-1-N16R8 a 240 MHz, validado en un núcleo. Captura I2S a 16 kHz, AGC y VAD energético; el enunciado acaba tras 0,8 s de silencio o a los 20 s. La versión de dos núcleos a 240 MHz no es correcta en silicio.",
+      "Evaluación: WER del build host en LibriSpeech y otros corpus, mezclas de ruido y reverberación; RTF y latencia medidos en placa. Contrastan placa, emulador y host para delimitar qué cifras pertenecen a cada entorno."
+    ],
+    "procedimiento": [
+      "Verifican la equivalencia de la reimplementación con el modelo de referencia antes de introducir cuantización y kernels embebidos.",
+      "Comparan decodificación greedy, CTC con un LM GRU opcional de 1,3 M y una cabeza transducer; separan las variantes int8, int4 y streaming.",
+      "Ejecutan el firmware sobre una placa física y sobre QEMU. En 27 clips de 3,6–10,6 s, placa y emulador producen las mismas transcripciones; el host coincide con ellos en 22 de 27.",
+      "Cronometran con temporizador de 64 bits. Definen RTF como tiempo de cómputo dividido por duración del audio, incluyendo beam search del LM pero excluyendo captura; no lo confunden con la espera desde el final de la voz.",
+      "Miden por separado el tiempo al texto final en modo streaming y documentan el coste de esperar al VAD en modo por enunciado."
+    ],
+    "datosEntrenamiento": [
+      "Pesos base de NVIDIA Conformer-CTC Small; los autores describen NeMo ASRSET como un compuesto de aproximadamente 16000 horas según las model cards, no como entrenamiento propio desde cero.",
+      "QAT int4: Common Voice, VoxPopuli, LibriSpeech, MLS, AMI, VCTK, People’s Speech con transcripciones regeneradas y OpenSLR SLR70/SLR83 (sección 5.4).",
+      "Streaming: entrenamiento con chunks de 8–32 frames de 40 ms, contextos izquierdos variables, contexto completo con probabilidad 0,3 y aumentación MUSAN/reverberación (sección 5.5)."
+    ],
+    "datosEvaluacion": [
+      "LibriSpeech test-clean completo: 2620 enunciados; test-other completo: 2939. Las cifras de exactitud del artículo proceden del build host.",
+      "Common Voice (1500), VoxPopuli (1200), AMI IHM (1000), People’s Speech (1000) y Earnings-22 (4179 segmentos). Las comparaciones de algunos modelos de portátil usan subconjuntos de hasta 500 enunciados.",
+      "Robustez: 300 enunciados test-clean con DEMAND a 5 y 10 dB SNR, babble de cuatro hablantes y reverberación simulada; también una condición combinada far-field.",
+      "Placa física: RTF CTC int8 sobre 27 clips de 3,6–10,6 s en una sola placa. El pico PSRAM para audio de 20 s se obtiene del emulador, no de una medición física de ese caso."
+    ],
+    "resultadosPrincipales": [
+      "WER host en LibriSpeech test-clean/test-other: CTC int8 greedy 3,70%/8,23%; con LM GRU 3,33%/7,15%; cabeza transducer 2,99%/6,67%. La variante streaming obtiene 4,86%/11,03%.",
+      "CTC int8+LM en un núcleo: RTF medido de 1,97. La tabla 10 informa 6,9–7,4 s desde el último sample hasta el texto en comandos de 3,6–3,8 s, a los que se añade la espera de 0,8 s del VAD en modo por enunciado.",
+      "La sección 8.2 sitúa un comando de 4 s alrededor de 8,7 s después de terminar en modo por enunciado, incluida la espera VAD. La variante streaming reduce la espera, pero no convierte el sistema en tiempo real.",
+      "Capacidades del módulo: 512 KB SRAM, 8 MB PSRAM y 16 MB flash. En placa quedan al menos 125 KB SRAM libres, o 72 KB con cachés streaming. El pico de trabajo PSRAM de 2,4 MB para 20 s es emulado.",
+      "Pesos almacenados: 14,0 MB int8, 8,3 MB int4 o 15,5 MB transducer, más 1,3 MB del LM opcional. No equivalen al consumo RAM.",
+      "Los autores publican código, firmware, modelos y mediciones de placa en el repositorio oficial enlazado. No se incorpora una cifra energética porque no hay una medición de energía verificada en la fuente."
+    ],
+    "conclusiones": [
+      "Los autores demuestran ASR abierto en un microcontrolador sin acelerador, con escasa pérdida por cuantización int8 frente a la referencia.",
+      "El cuello de ejecución física mantiene el sistema cerca de dos veces la duración del audio en un núcleo; el estado actual se orienta a comandos que admitan segundos de espera, no a conversación o transcripción en directo.",
+      "Streaming reduce la espera al final de la voz a costa de exactitud; acelerar kernels y resolver la ejecución en dos núcleos son líneas abiertas señaladas por los autores."
+    ],
+    "aportacionTesis": "Es una referencia directa para la pregunta de si cabe ASR abierto completo en TinyML. Permite fijar una línea base reproducible de exactitud, almacenamiento, RAM/PSRAM y latencia en ESP32-S3, sin confundir factibilidad de inferencia con tiempo real ni con entrenamiento en el dispositivo.",
+    "datosPublicadosAutores": [
+      "Secciones 3–4 y tabla 1: ESP32-S3 sin acelerador; Conformer de 13 M; arquitectura y capacidades de memoria.",
+      "Secciones 5.4–5.6: int4 con QAT, variante streaming, captura y VAD; código oficial https://github.com/lokutor-ai/oido enlazado por los autores.",
+      "Secciones 6–7 y tabla 10: exactitud en host frente a cronometraje físico, RTF 1,97 y latencias por modo.",
+      "Sección 8.2: estudio de una placa, pico PSRAM de 20 s emulado, modo de dos núcleos incorrecto y limitación para tiempo real."
+    ],
+    "interpretacionTesis": "Hipótesis doctoral: estudiar una política que seleccione precisión, modo de procesamiento o partes adaptables según recursos y cambio acústico, midiendo su efecto en WER, memoria, latencia y energía. Oído no demuestra actualización de pesos en el ESP32-S3, aprendizaje continuo ni una política energética; estas preguntas exigirían nuevos experimentos.",
+    "lecturaPrioritaria": "Muy alta: estudiar primero las secciones 3–7 para reproducibilidad y la 8 para evitar basar una propuesta doctoral en tiempo real o paralelismo todavía no demostrados."
   },
   {
     "id": "mope-lora",
@@ -2587,7 +2638,50 @@
     ],
     "relevanciaTesis": "Interpretación para la tesis: el routing por categorías fonéticas y la adaptación selectiva de capas son referencias para estudiar adaptación robusta a acentos con pocos parámetros. No constituyen por sí mismos aprendizaje continuo, adaptación durante inferencia ni una política que decida según RAM o energía.",
     "fechaIncorporacion": "2026-10-21",
-    "fuenteVerificada": true
+    "fuenteVerificada": true,
+    "resumen": "MoPE-LoRA adapta ASR a inglés con acentos no nativos mediante expertos de bajo rango organizados por categorías fonéticas, en lugar de un módulo por acento. Combina supervisión fonética y gating acústico por frame para compartir expertos entre acentos y transferir a acentos no vistos.",
+    "objetivoInvestigacion": "Conseguir adaptación eficiente y transferible de un Conformer, modelando distorsiones fonéticas comunes sin necesitar expertos específicos para cada identidad de acento.",
+    "metodologia": [
+      "Arquitectura: NeMo Conformer CTC Small de aproximadamente 13 M, con seis expertos LoRA asociados a clases de modo de articulación y routing híbrido top-2 por frame.",
+      "Datos: L2-ARCTIC para seis acentos no nativos y cuatro particiones disjuntas por hablante y oración; TIMIT para análisis de representaciones fonéticas.",
+      "Entrenamiento auxiliar: entrenan un Conformer CTC de fonemas sobre LibriSpeech con conversión g2p-en y lo mantienen congelado durante la adaptación.",
+      "Adaptación: introducen LoRA rango 8 y escala 16 en Q/K/V de las capas 6–16. Entrenan 50 épocas con batch 16 en una RTX 5090; la selección de expertos combina el prior fonético y el gating aprendido.",
+      "Evaluación: comparan ausencia de ajuste, fine-tuning completo, Single LoRA y variantes por capas; añaden un protocolo zero-shot excluyendo un acento completo del entrenamiento."
+    ],
+    "procedimiento": [
+      "Preparan particiones sin solapamiento de hablantes ni oraciones, rotando el hablante de prueba para evaluar a cada hablante una vez.",
+      "Entrenan el modelo fonético auxiliar y estudian la información fonética de las capas con TIMIT.",
+      "Ajustan los expertos y el routing sobre L2-ARCTIC y comparan configuraciones de proyecciones y rangos de capas.",
+      "Promedian los resultados de las cuatro particiones y repiten la comparación dejando un acento sin ver para medir transferencia."
+    ],
+    "datosEntrenamiento": [
+      "L2-ARCTIC: aproximadamente 24 h, 24 hablantes, cuatro por cada acento árabe, hindi, coreano, mandarín, español y vietnamita. En cada split se reservan seis hablantes para prueba y 18 para entrenamiento/desarrollo.",
+      "LibriSpeech: modelo fonético CTC auxiliar de 16 capas y dimensión 176, entrenado 25 épocas y posteriormente congelado.",
+      "Audio remuestreado a 16 kHz; adaptación 50 épocas, batch 16, tasa inicial 1e-3 con annealing coseno."
+    ],
+    "datosEvaluacion": [
+      "Cuatro particiones L2-ARCTIC disjuntas por hablante y oración; resultados promediados. La tabla 2 informa por split una media de 16 h 12 min de entrenamiento, 2 h 03 min de validación y 41 min de test.",
+      "Transferencia zero-shot: un acento se excluye por completo del entrenamiento y se usa para prueba.",
+      "TIMIT se utiliza para analizar fonemas y capas; no debe presentarse como el benchmark principal de WER de adaptación."
+    ],
+    "resultadosPrincipales": [
+      "Tabla 5: MoPE-QKV (6–16) alcanza 10,43% WER con 13,6 M totales y 13,2 M activos, frente a 11,33% para Single LoRA-QKV (1–16) y 12,80% para fine-tuning completo.",
+      "El resumen reporta una mejora relativa de 12,3% sobre Single LoRA en acentos no vistos; esta cifra no es una reducción absoluta de WER.",
+      "El modelo fonético congelado alcanza 36,04% top-1 y 61,56% top-2 en L2-ARCTIC, mostrando el desajuste de dominio de la supervisión auxiliar."
+    ],
+    "conclusiones": [
+      "La descomposición por categorías fonéticas permite compartir un conjunto fijo de expertos entre acentos.",
+      "Los resultados de L2-ARCTIC respaldan la adaptación con pocos parámetros y la transferencia a acentos no vistos; no constituyen un ensayo de entrenamiento continuo en un dispositivo embebido."
+    ],
+    "aportacionTesis": "Aporta una estrategia concreta para decidir qué partes del encoder adaptar ante variación de acento. La separación de expertos y el análisis por capas sirven para formular experimentos de adaptación selectiva de ASR abierto.",
+    "datosPublicadosAutores": [
+      "Secciones 2–3: seis expertos fonéticos, routing híbrido top-2 y configuración LoRA Q/K/V.",
+      "Sección 3: RTX 5090, L2-ARCTIC con separación por hablante y oración y modelo auxiliar LibriSpeech.",
+      "Tabla 5: comparación de WER, parámetros totales y activos; tabla 6 y resumen: generalización a acentos no vistos.",
+      "La página oficial de Interspeech 2026 en ISCA Archive confirma el título, los autores y el DOI 10.21437/Interspeech.2026-322, también declarado en arXiv."
+    ],
+    "interpretacionTesis": "Propuesta a investigar: limitar la actualización a expertos y capas informativas, incorporando presupuestos de memoria, latencia o energía. El artículo elige expertos por evidencia fonética, no por recursos; tampoco prueba adaptación durante inferencia, aprendizaje continuo ni entrenamiento TinyML.",
+    "lecturaPrioritaria": "Alta: secciones 2–4, con atención a la necesidad del modelo fonético auxiliar y a qué incluyen los recuentos de parámetros. Nota de verificación (21/10/2026): el DOI declarado por ambas fuentes devuelve «DOI Not Found» en el resolvedor; la versión arXiv enlazada sí está accesible y permite estudiar el trabajo."
   },
   {
     "id": "cafe-asr",
@@ -2656,7 +2750,52 @@
     ],
     "relevanciaTesis": "Interpretación para la tesis: ofrece una forma de confinar cambios a partes del modelo para reducir interferencia entre idiomas y estudiar destilación selectiva. Sus medidas de memoria y latencia son referencias GPU; no demuestran ejecución TinyML, aprendizaje continuo ni adaptación consciente de recursos.",
     "fechaIncorporacion": "2026-10-21",
-    "fuenteVerificada": true
+    "fuenteVerificada": true,
+    "resumen": "CAFE estudia por qué la destilación de características puede ayudar a idiomas no ingleses y perjudicar al inglés en ASR multilingüe compacto. Propone confinar el gradiente de la pérdida CKA a adapters encaminados por idioma, protegiendo el encoder compartido del gradiente de características.",
+    "objetivoInvestigacion": "Mejorar el estudiante multilingüe sin sacrificar inglés, resolviendo la interferencia entre objetivos mediante separación de parámetros en lugar de ajustar únicamente los pesos de las pérdidas.",
+    "metodologia": [
+      "Arquitectura: estudiante transducer de 24 capas y dimensión 640, inicializado por poda estructurada del profesor Parakeet-TDT-0.6B-v3.",
+      "Datos y entrenamiento: 564000 h en 25 idiomas; entrenamiento común con AdamW y 350000 pasos en H100 para comparar de forma controlada las pérdidas.",
+      "Destilación: combinan objetivo supervisado, destilación de logits y pérdida CKA en seis capas. Los adapters tienen rango 64.",
+      "Encaminamiento: el inglés omite los adapters; la señal CKA no actualiza el encoder compartido mediante stop-gradient, mientras las pérdidas supervisada y de logits siguen entrenándolo.",
+      "Controles: comparan baseline, CKA compartida, capacidad adicional sin pérdida de características y eliminación del stop-gradient; replican el método en ocho idiomas.",
+      "Evaluación: WER inglés y multilingüe, variación entre checkpoints y coste de adapters; eficiencia cronometrada en una H100 de 80 GB con protocolo común MLS-8."
+    ],
+    "procedimiento": [
+      "Diagnostican orientación y solapamiento de gradientes, y comparan remedios en la pérdida con la separación mediante adapters.",
+      "Entrenan todas las variantes con los mismos datos y calendario y guardan checkpoints cada 6000 pasos.",
+      "Promedian los últimos siete checkpoints y comprueban ventanas de cinco y diez para estudiar estabilidad.",
+      "Evalúan el routing con idioma conocido y con un gate de idioma publicado; separan la mediana de latencia, el throughput RTFx y el pico de memoria GPU."
+    ],
+    "datosEntrenamiento": [
+      "Unos 116,9 millones de enunciados, 564000 h en 25 idiomas de diez corpus, principalmente VoxPopuli, YODAS, MLS y Libri-Light.",
+      "VoxPopuli, YODAS y Libri-Light usan pseudoetiquetas Granary. El muestreo reduce la fracción inglesa de 35% de horas a 14% de frames.",
+      "350000 pasos de AdamW en H100, 10000 pasos de warmup; adapters de rango 64 en capas 3, 7, 11, 15, 19 y 23."
+    ],
+    "datosEvaluacion": [
+      "48 conjuntos de test, aproximadamente 296000 enunciados en 24 idiomas: Open ASR Leaderboard, Common Voice v25 y MLS-8.",
+      "Open ASR Leaderboard: EN-7 de inglés y ML-9 de FLEURS/MLS; se mantienen resultados ingleses y multilingües separados.",
+      "Eficiencia: 4000 clips MLS-8 de hasta 30 s, WAV preparados; una H100 de 80 GB por medición, repetida en tres GPU; batch 1 para mediana de latencia y batch 32 para pico de memoria."
+    ],
+    "resultadosPrincipales": [
+      "WER medio 8,02% frente a 8,55% del baseline; EN-7 9,03% y ML-9 7,00%, con promedio de checkpoints.",
+      "El control con adapters pero sin CKA obtiene EN-7 9,67% y ML-9 7,34%; quitar el stop-gradient vuelve a degradar inglés (10,44%).",
+      "El gate de idioma añade 0,19% de parámetros y eleva el WER medio a 8,07%.",
+      "Tabla 4: 254,45 M de parámetros, mediana de latencia 0,089 ± 0,001 s a batch 1 y pico GPU 2593,4 MB a batch 32; no son medidas de un dispositivo TinyML."
+    ],
+    "conclusiones": [
+      "La utilidad de la destilación de características depende del idioma y de dónde se aplica su gradiente.",
+      "Confinar CKA a adapters mejora el compromiso entre inglés y otros idiomas y reduce la oscilación del WER inglés entre checkpoints.",
+      "Los autores limitan la generalización al estudiante inicializado por poda y reconocen que una ejecución por configuración no sustituye una evaluación multisemilla completa."
+    ],
+    "aportacionTesis": "Aporta una técnica de aislamiento de cambios para estudiar cómo adaptar un ASR sin perjudicar capacidades previas. Es útil como antecedente para seleccionar módulos entrenables y evaluar interferencia, aunque no es un experimento de aprendizaje continuo.",
+    "datosPublicadosAutores": [
+      "Secciones 4–5: diagnóstico de interferencia, adapters por idioma y stop-gradient.",
+      "Secciones 6–7 y tablas 3–4: datos de entrenamiento, WER, controles, número de parámetros y coste de inferencia.",
+      "Limitaciones y apéndice A: inicialización mediante poda, necesidad de routing y medición en H100 con condiciones de batch específicas."
+    ],
+    "interpretacionTesis": "Hipótesis doctoral: combinar aislamiento de módulos con una política que decida qué actualizar según cambio de dominio y presupuesto disponible. Los resultados publicados no demuestran ejecución Edge/TinyML, actualización en dispositivo ni optimización energética; no deben extrapolarse las latencias H100 a microcontroladores.",
+    "lecturaPrioritaria": "Alta: secciones 4–7 y apéndice A; priorizar el control de capacidad y las condiciones de las mediciones antes de comparar costes con modelos embebidos."
   },
   {
     "id": "ad-mamba",
@@ -2719,7 +2858,51 @@
     ],
     "relevanciaTesis": "Interpretación para la tesis: referencia complementaria para destilación entre arquitecturas y robustez de representaciones acústicas con menor número de parámetros. Sus resultados no demuestran ASR abierto, TinyML ni aprendizaje continuo; transferir estas ideas al ASR requeriría evaluarlo.",
     "fechaIncorporacion": "2026-10-21",
-    "fuenteVerificada": true
+    "fuenteVerificada": true,
+    "resumen": "AD-Mamba combina la eficiencia secuencial de Mamba con destilación desde una CNN y un Transformer para clasificar audio. La transferencia se organiza de lo local a lo global y se evalúa en eventos, sonidos y escenas acústicas, no en transcripción de habla.",
+    "objetivoInvestigacion": "Reducir la brecha de los modelos de espacio de estados frente a clasificadores Transformer aprovechando el conocimiento complementario de profesores de distinta arquitectura.",
+    "metodologia": [
+      "Arquitectura: estudiante Mamba con módulos de percepción local y escaneo multidireccional para espectrogramas; inicialización con pesos SSM preentrenados en ImageNet.",
+      "Datos: entrenamiento en AudioSet a 16 kHz con espectrogramas log-mel; emplean SpecAugment, inyección de ruido, mixup y desplazamiento temporal.",
+      "Primera etapa: profesor CNN DyMN para adaptar el backbone SSM, todavía sin los módulos locales, espaciales y de canal adicionales.",
+      "Segunda etapa: congelan el backbone y añaden esos módulos, conservando el profesor CNN para capturar detalle local.",
+      "Tercera etapa: descongelan el estudiante y cambian a un profesor Transformer ASDA para discriminación semántica global.",
+      "Evaluación: mAP AudioSet, pruebas de duración, información dispersa y ruido; transferencia a FSD50K, ESC-50 y DCASE16."
+    ],
+    "procedimiento": [
+      "Remuestrean audio a 16 kHz y extraen log-mel con ventanas de 25 ms y salto de 10 ms.",
+      "Realizan dos etapas CNN de 100 épocas cada una y una etapa Transformer de 200 épocas, con 100000 clips por época.",
+      "Usan Adam, batch 48 y tasa máxima 2e-4; comparan variantes de 30 M y 49 M.",
+      "Separan métricas de clasificación y complejidad computacional de cualquier afirmación sobre WER o despliegue en microcontrolador."
+    ],
+    "datosEntrenamiento": [
+      "AudioSet accesible: 1912134 clips, 527 clases de eventos, a partir de vídeos; se usa el subconjunto todavía disponible.",
+      "Pesos iniciales SSM preentrenados en ImageNet; profesores CNN/Transformer previamente entrenados, con ajuste del procesamiento a 16 kHz.",
+      "Aumentación SpecAugment, ruido, mixup y rolling temporal durante el entrenamiento."
+    ],
+    "datosEvaluacion": [
+      "AudioSet eval oficial: 18884 clips, 527 clases; métrica principal mAP por ser clasificación multietiqueta.",
+      "Pruebas de generalización a audio largo, información dispersa y ruido, según la sección V.",
+      "Transferencia a FSD50K, ESC-50 y clasificación de escenas DCASE16; no es evaluación ASR ni KWS de comandos."
+    ],
+    "resultadosPrincipales": [
+      "AudioSet: 50,3% mAP con 30 M de parámetros y 50,6% con 49 M.",
+      "La conclusión informa mejoras frente a las CNN y Transformer comparadas en audio largo, información dispersa y ruido.",
+      "La transferencia incluye 93,3% de accuracy en DCASE16 para AD-Mamba(S), frente a 92,2% de CED; son resultados de clasificación de escenas.",
+      "La mención de 24 GB de memoria corresponde al entrenamiento GPU; no aporta una cifra de RAM de inferencia en TinyML."
+    ],
+    "conclusiones": [
+      "La destilación complementaria permite a Mamba combinar inducción local de CNN y discriminación global de Transformer.",
+      "Los resultados respaldan una relación favorable entre parámetros y clasificación en los conjuntos estudiados; el potencial en dispositivos restringidos no equivale a una demostración de despliegue TinyML."
+    ],
+    "aportacionTesis": "Antecedente metodológico para estudiar destilación entre arquitecturas y robustez de representaciones acústicas. Su interés es complementario: no resuelve ASR abierto ni acredita inferencia o aprendizaje en microcontroladores.",
+    "datosPublicadosAutores": [
+      "Sección IV: estudiante SSM y etapas CNN → CNN con backbone congelado → Transformer.",
+      "Sección V: AudioSet, procesamiento, entrenamiento y mAP; sección VI: transferencia a tareas de clasificación.",
+      "Conclusión: 30 M/50,3% y 49 M/50,6% mAP; no se reporta WER de ASR."
+    ],
+    "interpretacionTesis": "Hipótesis doctoral: evaluar si una destilación complementaria mejora robustez de un estudiante ASR con presupuesto restringido. La transferencia de clasificación a transcripción requeriría nuevos experimentos y medidas de RAM, latencia y energía; no debe asumirse a partir del número de parámetros.",
+    "lecturaPrioritaria": "Media: secciones IV–VI como referencia de compresión y robustez acústica, después de los trabajos directamente centrados en ASR y adaptación."
   },
   {
     "id": "april-sonidos-respiratorios",
@@ -2778,7 +2961,52 @@
     ],
     "relevanciaTesis": "Interpretación para la tesis: especialmente relevante para investigar adaptación continua sin replay, reducción de olvido y selección de expertos cuando el dominio es desconocido. La selección usa ambigüedad y confianza, no presupuestos de RAM o energía. Es clasificación respiratoria, no ASR; su traslado al reconocimiento abierto es una hipótesis doctoral.",
     "fechaIncorporacion": "2026-10-21",
-    "fuenteVerificada": true
+    "fuenteVerificada": true,
+    "resumen": "APRIL aborda clasificación respiratoria cuando llegan nuevos dispositivos o períodos de adquisición y no se pueden reutilizar grabaciones antiguas. Congela BEATs, conserva expertos LoRA por dominio y elige entre candidatos mediante prototipos, confianza y ambigüedad, evitando que aprender un dominio sobrescriba los anteriores.",
+    "objetivoInvestigacion": "Adaptarse secuencialmente a dominios acústicos sin replay ni identidad de dominio en inferencia, reteniendo conocimiento previo y resolviendo el encaminamiento cuando las distribuciones se solapan.",
+    "metodologia": [
+      "Arquitectura: backbone BEATs preentrenado en AudioSet y congelado, clasificador independiente y LoRA rango 16 en K/V de cada bloque por dominio.",
+      "Datos: protocolos de dispositivos ICBHI y dominios anuales SPRSound 2022–2025, con cuatro dominios por dataset y clases fijas.",
+      "Aprendizaje secuencial: cada experto hereda adapter y clasificador del anterior, se entrena en el dominio actual y después queda aislado de futuras actualizaciones.",
+      "Routing: prototipos multinivel recuperan dos candidatos; una selección posterior combina evidencia de dominio y confianza de clasificación ponderada por ambigüedad.",
+      "Entrenamiento: audio a 16 kHz y eventos de 5 s, 100 épocas por experto, SGD; no almacena grabaciones históricas para replay.",
+      "Evaluación: secuencias directa e inversa, cinco semillas, retención y Score final; coste por banco de expertos y tiempo GPU batch 32."
+    ],
+    "procedimiento": [
+      "Construyen particiones disjuntas por paciente y mantienen los mismos splits y secuencias para todos los métodos comparados.",
+      "Introducen dominios uno a uno, inicializando el experto nuevo a partir del previo y manteniendo intactos backbone y expertos anteriores.",
+      "Crean prototipos de dominio en un espacio de referencia fijo y evalúan la clasificación sin facilitar el dominio de cada grabación.",
+      "Comparan router, preservación de expertos y variantes de prototipos; separan coste incremental del banco del coste del backbone compartido."
+    ],
+    "datosEntrenamiento": [
+      "BEATs preentrenado en AudioSet permanece congelado. Los eventos respiratorios se remuestrean a 16 kHz y se llevan a 5 s mediante truncado o repetición, sin aumentación de waveform/espectrograma.",
+      "ICBHI: 76 pacientes de entrenamiento, 539 grabaciones y 4148 ciclos, disjuntos globalmente de los pacientes de prueba.",
+      "Dominios temporales de SPRSound 2022–2025; expertos entrenados 100 épocas con batch 16 en una RTX 4090 por ejecución, cinco semillas."
+    ],
+    "datosEvaluacion": [
+      "ICBHI: 50 pacientes de test, 381 grabaciones y 2750 ciclos; cuatro dominios Meditron, LittC2SE, Litt3200 y AKGC417L.",
+      "SPRSound: cuatro releases anuales; ambas secuencias se prueban en orden directo e inverso con particiones disjuntas por paciente.",
+      "Se informa Score medio de sesión final, olvido y transferencia, no WER/CER; latencia por muestra con batch 32, tres repeticiones en GPU."
+    ],
+    "resultadosPrincipales": [
+      "Score medio final: 64,43/65,41 en ICBHI y 83,12/82,23 en SPRSound, en órdenes directo/inverso.",
+      "El resumen reporta olvido medio inferior a 1,0% en los cuatro protocolos; la discusión atribuye la retención al aislamiento de expertos.",
+      "Cada nuevo dominio añade aproximadamente 0,59 M de parámetros. Banco y prototipos ocupan 9,12 MiB en ICBHI y 9,09 MiB en SPRSound, excluyendo BEATs.",
+      "Tabla 7: 4,81 ± 0,01 y 4,97 ± 0,04 ms por muestra, respectivamente, con batch 32; no es latencia de una muestra aislada en dispositivo portátil."
+    ],
+    "conclusiones": [
+      "La preservación de expertos reduce interferencia y la combinación de dominio y confianza ayuda cuando los dominios acústicos se solapan.",
+      "Identificar el dominio de procedencia y seleccionar un clasificador útil no son problemas equivalentes.",
+      "Los autores reconocen crecimiento del banco, cuatro dominios predefinidos y necesidad de evaluación y optimización en hardware portátil."
+    ],
+    "aportacionTesis": "Referencia central para formular adaptación continua sin replay y selección de módulos ante cambio de micrófono o dominio. Permite estudiar retención frente a coste incremental de expertos, distinguiendo el coste adicional del backbone que también debe ejecutarse.",
+    "datosPublicadosAutores": [
+      "Secciones 3–4: herencia y aislamiento LoRA, router y protocolo de dispositivos/tiempo con pacientes disjuntos.",
+      "Secciones 5–6: Score, olvido y ablations; tabla 7: coste del banco sin backbone y latencia GPU por lotes.",
+      "Discusión: el crecimiento del banco y la portabilidad de las mediciones son limitaciones abiertas."
+    ],
+    "interpretacionTesis": "Hipótesis doctoral: trasladar la selección de expertos al ASR abierto y condicionarla a RAM, energía y latencia además de confianza. APRIL clasifica sonidos respiratorios; no demuestra transcripción, aprendizaje en el dispositivo ni selección consciente de recursos. La consolidación del banco sería una pregunta experimental, no un resultado ya obtenido.",
+    "lecturaPrioritaria": "Muy alta para adaptación continua: secciones 3–6, especialmente separación de parámetros, routing, olvido y coste excluido del backbone."
   },
   {
     "id": "vish-asr",
@@ -2843,7 +3071,47 @@
     ],
     "relevanciaTesis": "Interpretación para la tesis: aporta un compromiso verificable entre precisión contextual y coste de búsqueda, útil para estudiar decisiones de cómputo selectivo. Preseleccionar una lista cerrada de hotwords es un componente del ASR abierto evaluado, no una demostración de KWS TinyML ni de aprendizaje continuo.",
     "fechaIncorporacion": "2026-10-21",
-    "fuenteVerificada": true
+    "fuenteVerificada": true,
+    "resumen": "VISH-ASR selecciona hotwords para contextualizar un ASR abierto usando evidencia acústica CTC, sin entrenar un recuperador específico. M-VISH comparte prefijos en una búsqueda Viterbi podada; Bi-MVISH añade evidencia inversa para candidatos con comienzos débiles.",
+    "objetivoInvestigacion": "Obtener un subconjunto compacto y fiable de palabras contextuales desde listas grandes sin perder evidencia acústica al depender únicamente de una transcripción previa.",
+    "metodologia": [
+      "Arquitectura: scorers Viterbi sobre posteriores CTC internos del ASR o de SenseVoice-Small externo congelado; reconocedores Whisper-medium y Prompt-SLAM-ASR.",
+      "Búsqueda: M-VISH organiza candidatos en un trie de prefijos compartidos, con poda top-K por frame; Bi-MVISH combina búsquedas hacia delante y hacia atrás.",
+      "Contextualización: seleccionan diez hotwords para el mismo prompt de transcripción; no modifican ni afinan los pesos del reconocedor.",
+      "Evaluación de selección: Best-F1 mide separación entre candidatos verdaderos y distractores en cinco benchmarks.",
+      "Evaluación ASR: comparan WER/B-WER inglés y CER/B-CER mandarín y miden búsqueda GPU por separado de extracción acústica."
+    ],
+    "procedimiento": [
+      "Construyen listas idénticas para los métodos, con verdaderas palabras raras y distractores; en LibriSpeech fijan 2000 candidatos por enunciado.",
+      "Obtienen posteriores CTC congelados, puntúan candidatos y usan top-10 para contextualizar la transcripción.",
+      "Comparan con CTC-Assistant y GLCLAP, y repiten con fuentes CTC internas y externas.",
+      "Cronometran listas de 100, 500, 1000 y 2000 candidatos a batch 1, excluyendo representación acústica del tiempo de búsqueda."
+    ],
+    "datosEntrenamiento": [],
+    "datosEvaluacion": [
+      "STOP1/STOP2, derivados de STOP: nombres de persona y lugar, empleados solo para preselección.",
+      "AISHELL-1-NE: preselección y ASR contextual en mandarín.",
+      "LibriSpeech test-clean/test-other: listas fijas de 2000 candidatos; las palabras raras excluyen las 5000 más frecuentes del entrenamiento.",
+      "El método es training-free respecto a entrenamiento adicional del selector; utiliza reconocedores y scorers ya preentrenados."
+    ],
+    "resultadosPrincipales": [
+      "Bi-MVISH + Whisper-medium: WER 2,3%/5,9% y B-WER 6,9%/17,3% en LibriSpeech clean/other con listas de 2000 candidatos.",
+      "Bi-MVISH + Prompt-SLAM-ASR: WER 1,4%/3,1% y B-WER 3,7%/8,0%. En AISHELL-1-NE con Whisper: CER 4,4% y B-CER 7,6%.",
+      "Con 2000 candidatos, M-VISH reduce búsqueda de 817 a 203 ms/enunciado frente a CTC-Assistant; Bi-MVISH tarda 400 ms. Las cifras excluyen extracción de representaciones.",
+      "El scorer externo aporta 234 M de parámetros adicionales; la opción CTC interna no añade encoder. La comparación de coste exige incluir esa diferencia."
+    ],
+    "conclusiones": [
+      "La evidencia CTC permite contextualización sin entrenamiento adicional y un compromiso entre recuperación, búsqueda y exactitud ASR.",
+      "Los posteriores internos reducen coste adicional; la fuente externa ofrece mayor flexibilidad pero requiere más cómputo."
+    ],
+    "aportacionTesis": "Sirve para estudiar contextualización selectiva y compromisos entre precisión y coste. La separación entre coste de búsqueda y del encoder ayuda a diseñar comparaciones completas de eficiencia.",
+    "datosPublicadosAutores": [
+      "Secciones 2–3: búsqueda Viterbi y preselección training-free; cinco benchmarks y selección top-10.",
+      "Tablas 2–3: WER/CER, métricas sesgadas y coste de la fuente CTC externa.",
+      "Tabla 4: tiempo de búsqueda sobre posteriores ya disponibles, no latencia total del reconocedor."
+    ],
+    "interpretacionTesis": "Hipótesis doctoral: elegir cuándo activar búsqueda bidireccional o scorer externo según incertidumbre y recursos. El artículo no demuestra ese control dinámico por energía ni aprendizaje continuo. Verificar candidatos de una lista no convierte al sistema completo en KWS: el resultado evaluado sigue siendo una transcripción abierta.",
+    "lecturaPrioritaria": "Alta para contextualización eficiente: secciones 2–4 y el alcance de las latencias de la tabla 4."
   },
   {
     "id": "pardon",
@@ -2909,7 +3177,53 @@
     ],
     "relevanciaTesis": "Interpretación para la tesis: especialmente útil para estudiar cuándo intervenir ante errores bajo ruido y cómo usar confianza y ganancia esperada. El mecanismo publicado decide cuándo pedir aclaración, no cuándo adaptar pesos según energía o RAM; ofrece una referencia para esa posible contribución, no su solución.",
     "fechaIncorporacion": "2026-10-21",
-    "fuenteVerificada": true
+    "fuenteVerificada": true,
+    "resumen": "PARDON localiza fragmentos de transcripción que podrían mejorar si el usuario repite el habla en mejores condiciones. Entrena un estimador de ganancia contrafactual a partir de audio far-field y limpio, solicita repetición de spans y limita al fragmento elegido la revisión mediante un LLM.",
+    "objetivoInvestigacion": "Pasar de una confianza genérica a estimar qué errores se beneficiarían de una aclaración, reduciendo WER bajo un presupuesto explícito de interrupciones y palabras repetidas.",
+    "metodologia": [
+      "Arquitectura: Nemotron Speech Streaming inglés de 0,6 B, FastConformer RNN-transducer congelado, y CF-Gain Scorer LSTM unidireccional de 128 unidades con tres cabezas.",
+      "Supervisión: el mismo ASR decodifica audio ruidoso y una versión limpia; un pair-HMM alinea probabilísticamente ambas hipótesis para producir etiquetas suaves de ganancia.",
+      "Características: estados del encoder de bloques 13 y 24, predictor y señales escalares del alineamiento; usan probabilidades de voz Silero VAD.",
+      "Entrenamiento: ajustan el scorer por corpus, seleccionan y calibran en desarrollo y evalúan en los splits oficiales de prueba; el ASR no se actualiza.",
+      "Interacción simulada: agrupan tokens en spans y eligen cuándo pedir repetición; la respuesta es close-talking o TTS y un LLM corrige únicamente el span.",
+      "Evaluación: precisión/recall y AP de localización, transferencia de scorer entre corpus y reducción relativa de WER frente a carga de re-enunciación."
+    ],
+    "procedimiento": [
+      "Extraen turnos emparejados far-field/close-talking y decodifican ambos con el reconocedor congelado.",
+      "Entrenan el estimador con la ganancia derivada del alineamiento y comparan confianza aprendida y entropía.",
+      "Prueban generalización de AMI a NOTSOFAR-1 y de CHiME-6 a DiPCo sin reajustar el scorer.",
+      "Simulan aclaraciones con grabaciones close-talking o Kokoro-82M y comparan WER relativo bajo el mismo presupuesto de interrupción."
+    ],
+    "datosEntrenamiento": [
+      "Splits oficiales de entrenamiento de AMI, NOTSOFAR-1, CHiME-6 y DiPCo, con señales far-field y close-talking emparejadas por turno.",
+      "Se excluyen del entrenamiento turnos muy cortos o con referencias ininteligibles; desarrollo se reserva para selección y calibración.",
+      "Variante de supervisión sin grabación limpia: sintetizan la transcripción de referencia con Kokoro-82M. El reconocedor Nemotron queda congelado."
+    ],
+    "datosEvaluacion": [
+      "Splits eval oficiales de los cuatro corpus; las etiquetas de desarrollo/evaluación proceden del canal close-talking.",
+      "Transferencia del scorer entre corpus de reuniones y entre corpus de cenas; no es aprendizaje continuo durante la prueba.",
+      "Recourse en AMI y CHiME-6 con respuestas simuladas, spans de hasta seis palabras y cargas ponderadas de interrupciones más palabras repetidas.",
+      "Experimentos en una NVIDIA L4; el corrector LLM y el baseline N-best se consultan mediante API Gemini."
+    ],
+    "resultadosPrincipales": [
+      "En AMI eval, con presupuesto 6/min y beta=0,05, reduce relativamente WER un 23% con respuesta TTS y 16% con close-talking; no son tasas WER absolutas.",
+      "En CHiME-6, a carga 7/min, las reducciones respectivas son 18% y 13%.",
+      "El scorer alcanza el mejor AP entre los comparados en los cuatro corpus; las transferencias entre corpus del mismo género se prueban con el scorer sin cambios.",
+      "Los autores reconocen que las respuestas simuladas y la dependencia de alineamientos RNN-transducer limitan la generalización a interacción real y otras arquitecturas."
+    ],
+    "conclusiones": [
+      "La ganancia contrafactual ofrece una señal útil para escoger aclaraciones dirigidas en ASR streaming con ruido.",
+      "Preguntar por fragmentos concretos reduce errores bajo una carga controlada de repetición, sin adaptar los pesos del reconocedor.",
+      "La evaluación con usuarios reales, en lugar de respuestas simuladas, queda como siguiente paso."
+    ],
+    "aportacionTesis": "Referencia directa para decidir cuándo intervenir ante cambio acústico y errores. Ayuda a diferenciar detección de error, ganancia esperada de una acción y coste de la intervención, además de una puntuación de confianza aislada.",
+    "datosPublicadosAutores": [
+      "Secciones 3–4: pair-HMM, CF-Gain, reconocedor congelado y corpus emparejados.",
+      "Sección 5.2: reducción relativa de WER frente a presupuesto de re-enunciación; respuestas simuladas.",
+      "Limitaciones y apéndice N: dependencia del transducer, interacción no real y recursos de cómputo."
+    ],
+    "interpretacionTesis": "Hipótesis doctoral: sustituir o complementar la solicitud de repetición por una acción de adaptación condicionada a ganancia prevista y coste en RAM/energía/latencia. PARDON no demuestra esta política ni aprendizaje continuo: la corrección de texto y la contextualización no equivalen a entrenar el ASR.",
+    "lecturaPrioritaria": "Muy alta para confianza y decisión de intervención: secciones 3–5 y limitaciones, especialmente definición del coste y diferencia entre ganancia contrafactual y error real."
   },
   {
     "id": "ms-bench",
@@ -2980,6 +3294,49 @@
     ],
     "relevanciaTesis": "Interpretación para la tesis: útil para diseñar evaluaciones de robustez por calidad acústica, solapamiento, hablantes y dispositivos, evitando que una media oculte fallos. Es un benchmark de evaluación, no una demostración de inferencia TinyML, adaptación de dominio o aprendizaje continuo.",
     "fechaIncorporacion": "2026-10-21",
-    "fuenteVerificada": true
+    "fuenteVerificada": true,
+    "resumen": "MS-Bench organiza la evaluación de ASR multihablante por condiciones acústicas e interacción, en lugar de depender únicamente de promedios por corpus. Analiza reconocimiento, atribución de hablante y tiempo en sistemas comerciales, abiertos y en cascada.",
+    "objetivoInvestigacion": "Revelar fallos que las métricas agregadas ocultan al variar número de hablantes, solapamiento, similitud entre voces, intervalo de turnos y calidad acústica.",
+    "metodologia": [
+      "Datos: reúnen grabaciones de benchmarks públicos e internos y describen escenarios, idiomas y dispositivos.",
+      "Caracterización: extraen hablantes, solapamiento e intervalos desde anotaciones; similitud mediante CAM++ y calidad mediante DNSMOS P.835/NISQA.",
+      "Construcción: estratifican las cinco dimensiones y seleccionan una muestra que combina cobertura, coocurrencia de dificultad, diversidad de condiciones y diversidad de fuentes.",
+      "Control de calidad: revisan manualmente audio, transcripción, hablantes y timestamps, sustituyendo muestras no válidas por candidatas de perfil similar.",
+      "Evaluación: ejecutan sistemas de transcripción multihablante y calculan DER, cpWER, tcpWER y WER, con trazabilidad de unidades inválidas o degradadas.",
+      "Análisis: relacionan errores con condiciones específicas y controlan composición del dataset y solapamiento al estudiar número de hablantes; no identifican esas asociaciones como causalidad."
+    ],
+    "procedimiento": [
+      "Construyen un espacio de condiciones y un pool de candidatos evitando que una fuente domine por su tamaño.",
+      "Seleccionan y revisan el benchmark final de 32,72 h con grabaciones de 2–14 hablantes.",
+      "Adaptan las unidades de inferencia a los límites de entrada de cada sistema y puntúan cada unidad contra la referencia correspondiente.",
+      "Separan exactitud sobre salidas válidas, unidades excluidas y degradaciones de salida para evitar comparar solo el mejor subconjunto.",
+      "Desglosan errores por condición y por reconocimiento, atribución o predicción temporal."
+    ],
+    "datosEntrenamiento": [],
+    "datosEvaluacion": [
+      "MS-Bench: 32,72 h; grabaciones de 1,38–159,07 min y mediana 16,50 min; 2–14 hablantes y solapamiento medio ponderado por duración de 21,87%.",
+      "Incluye AISHELL-4, AliMeeting, AISHELL-5 y otras fuentes públicas/internas; principalmente chino e inglés, más portugués, japonés, tailandés, italiano y español.",
+      "Escenarios de reuniones, conversación, audiovisual, podcasts, cenas, educación, streaming, vehículos y gafas inteligentes; dispositivos de captura heterogéneos.",
+      "Métricas: DER con collar de 0,5 s, cpWER con permutación óptima y tcpWER con restricción temporal de 5 s, además de WER sin identidad de hablante."
+    ],
+    "resultadosPrincipales": [
+      "MOSS-Transcribe-Diarize-Pro: DER 10,96%, cpWER 21,95%, tcpWER 22,81% y WER 22,49% sobre unidades válidas; excluye 15, tres rechazadas por API y 12 con timestamps inválidos.",
+      "MOSS-Transcribe-Diarize y la cascada evaluada no excluyen unidades; cobertura y exactitud no mantienen necesariamente el mismo orden.",
+      "El solapamiento empeora reconocimiento léxico y atribución; similitud de voz y turnos rápidos aumentan confusión de hablante; degradación acústica se asocia con errores léxicos y tiempos predichos más cortos.",
+      "El estudio controla dataset y solapamiento al analizar número de hablantes y evita afirmar una relación causal a partir de correlaciones."
+    ],
+    "conclusiones": [
+      "Los promedios globales no bastan para caracterizar fiabilidad MSASR en condiciones difíciles.",
+      "Persisten limitaciones en solapamiento, atribución de hablante y fidelidad temporal, incluso con modelos recientes.",
+      "La evaluación estratificada permite distinguir mecanismos de fallo y orientar mejoras futuras."
+    ],
+    "aportacionTesis": "Ayuda a diseñar protocolos de robustez y cambio de condiciones que evalúen cuándo un ASR falla, sin esconder degradaciones detrás de una media. Es una referencia para elegir escenarios y métricas de una futura política adaptativa, no un método de adaptación.",
+    "datosPublicadosAutores": [
+      "Sección 2: construcción, dimensiones, control de calidad y estadísticas de 32,72 h.",
+      "Sección 3 y tabla 1: definición de métricas, unidades de inferencia, exclusiones y resultados por sistema.",
+      "Sección 4: asociaciones por condiciones, controles frente a confusión por dataset y ausencia de interpretación causal."
+    ],
+    "interpretacionTesis": "Propuesta doctoral: evaluar una política de adaptación por niveles de ruido, dispositivo y solapamiento, informando tanto errores como cobertura, recursos y energía. El benchmark no demuestra aprendizaje continuo ni ejecución Edge/TinyML; sus resultados no proporcionan por sí solos un criterio para activar adaptación.",
+    "lecturaPrioritaria": "Alta para diseñar evaluación: secciones 2–4, especialmente exclusiones de salida y controles de composición de datasets."
   }
 ]

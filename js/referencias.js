@@ -326,9 +326,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 "a"
             );
 
-        // Las nuevas incorporaciones pueden enlazar a la publicación original
-        // sin necesitar una ficha HTML adicional.
-        const destino = referencia.archivo || referencia.urlPublicacion;
+        // Conservamos las fichas históricas. Las nuevas incorporaciones se
+        // estudian dentro de la web; las fuentes externas quedan en la ficha.
+        const destino = referencia.archivo
+            || `investigacion.html?id=${encodeURIComponent(referencia.id)}`;
 
         if (destino) {
             const url = new URL(destino, window.location.href);
